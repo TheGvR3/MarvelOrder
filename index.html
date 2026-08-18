@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ordine Cronologico Marvel — La linea temporale</title>
+<meta name="description" content="Tutti i film e le serie Marvel, ordinabili per continuity narrativa o per data di uscita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">MCU//</span>
+      <h1>Ordine Cronologico<span class="brand-sub">Marvel Watch Order</span></h1>
+    </div>
+    <p class="header-tagline">140 titoli. Due modi di guardarli: come li vive l'universo, o come li ha vissuti il pubblico.</p>
+  </div>
+</header>
+
+<main>
+
+  <section class="controls" aria-label="Filtri e ordinamento">
+    <div class="controls-inner">
+
+      <div class="mode-switch" role="tablist" aria-label="Modalità ordinamento">
+        <button class="mode-btn is-active" data-mode="cronologico" role="tab" aria-selected="true">
+          <span class="mode-num">01</span>
+          <span class="mode-label">In-Universe<em>ordine narrativo</em></span>
+        </button>
+        <button class="mode-btn" data-mode="uscita" role="tab" aria-selected="false">
+          <span class="mode-num">02</span>
+          <span class="mode-label">Uscita<em>ordine di pubblicazione</em></span>
+        </button>
+      </div>
+
+      <div class="filters">
+        <div class="filter-group">
+          <label for="search">Cerca</label>
+          <input type="search" id="search" placeholder="Titolo…" autocomplete="off">
+        </div>
+
+        <div class="filter-group">
+          <label for="tipo-filter">Tipo</label>
+          <select id="tipo-filter">
+            <option value="">Tutti</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="cat-filter">Saga / Categoria</label>
+          <select id="cat-filter">
+            <option value="">Tutte</option>
+          </select>
+        </div>
+
+        <div class="filter-group filter-checkbox">
+          <label>
+            <input type="checkbox" id="required-only">
+            Solo visione essenziale
+          </label>
+        </div>
+      </div>
+
+      <p class="result-count"><span id="result-count">140</span> titoli</p>
+    </div>
+  </section>
+
+  <section class="timeline-wrap">
+    <div id="timeline" class="timeline" aria-live="polite"></div>
+    <p id="empty-state" class="empty-state" hidden>Nessun titolo corrisponde ai filtri selezionati. <button id="reset-filters" type="button">Azzera i filtri</button></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Dati importati dal foglio di lavoro originale · Ordine narrativo curato manualmente, date di uscita da fonti pubbliche · Alcune uscite future sono indicative.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

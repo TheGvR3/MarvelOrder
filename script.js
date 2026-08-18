@@ -1,0 +1,375 @@
+(function () {
+  'use strict';
+
+  const els = {
+    timeline: document.getElementById('timeline'),
+    empty: document.getElementById('empty-state'),
+    resetBtn: document.getElementById('reset-filters'),
+    resultCount: document.getElementById('result-count'),
+    search: document.getElementById('search'),
+    tipoFilter: document.getElementById('tipo-filter'),
+    catFilter: document.getElementById('cat-filter'),
+    requiredOnly: document.getElementById('required-only'),
+    modeBtns: Array.from(document.querySelectorAll('.mode-btn')),
+  };
+
+  const state = {
+    data: [],
+    mode: 'cronologico', // 'cronologico' | 'uscita'
+    search: '',
+    tipo: '',
+    categoria: '',
+    requiredOnly: false,
+  };
+
+  const MONTHS = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+
+  function formatDate(iso) {
+    if (!iso) return null;
+    const [y, m, d] = iso.split('-').map(Number);
+    return `${d} ${MONTHS[m - 1]} ${y}`;
+  }
+
+  function decadeLabel(iso) {
+    const year = Number(iso.slice(0, 4));
+    const decadeStart = Math.floor(year / 10) * 10;
+    return `${decadeStart}s`;
+  }
+
+  // Groups multi-season / multi-part entries so a part isn't shown as an
+  // unrelated standalone show. Grouping key is titolo+tipo (a film and a
+  // TV series can share the same name, e.g. "Daredevil", without being merged).
+  // Sort/label also accounts for shows split into episode blocks within the
+  // same season (e.g. "Agents of S.H.I.E.L.D." S01 split into 1-7 / 8-16 / 17-22).
+  function episodeStart(item) {
+    if (!item.episodi) return 0;
+    const n = parseInt(item.episodi.split('-')[0], 10);
+    return Number.isNaN(n) ? 0 : n;
+  }
+
+  function linkSeries(data) {
+    const byKey = new Map();
+
+    data.forEach(item => {
+      item.displayTitle = item.titolo;
+      item.seasonNumber = item.stagione || null;
+      const key = `${item.titolo}::${item.tipo}`;
+      if (!byKey.has(key)) byKey.set(key, []);
+      byKey.get(key).push(item);
+    });
+
+    byKey.forEach(group => {
+      if (group.length < 2) return; // single-part shows don't need cross-links
+      group.sort((a, b) => (a.seasonNumber || 0) - (b.seasonNumber || 0) || episodeStart(a) - episodeStart(b));
+      group.forEach(item => {
+        item.siblings = group
+          .filter(other => other !== item)
+          .map(other => ({ ordine: other.ordine, season: other.seasonNumber, episodi: other.episodi }));
+      });
+    });
+
+    return data;
+  }
+
+  async function init() {
+    try {
+      const res = await fetch('data.json');
+      const raw = await res.json();
+      state.data = linkSeries(raw);
+    } catch (err) {
+      els.timeline.innerHTML = '<p class="empty-state">Impossibile caricare i dati (data.json). Se stai aprendo il file localmente, prova a servirlo con un piccolo server HTTP.</p>';
+      return;
+    }
+    populateFilters();
+    bindEvents();
+    render();
+  }
+
+  function populateFilters() {
+    const tipi = Array.from(new Set(state.data.map(d => d.tipo))).sort((a, b) => a.localeCompare(b, 'it'));
+    const cats = Array.from(new Set(state.data.map(d => d.categoria).filter(Boolean))).sort((a, b) => a.localeCompare(b, 'it'));
+
+    tipi.forEach(t => {
+      const opt = document.createElement('option');
+      opt.value = t;
+      opt.textContent = t;
+      els.tipoFilter.appendChild(opt);
+    });
+    cats.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = c;
+      els.catFilter.appendChild(opt);
+    });
+  }
+
+  function bindEvents() {
+    els.modeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.mode = btn.dataset.mode;
+        els.modeBtns.forEach(b => {
+          b.classList.toggle('is-active', b === btn);
+          b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+        });
+        render();
+      });
+    });
+
+    let searchTimer;
+    els.search.addEventListener('input', () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        state.search = els.search.value.trim().toLowerCase();
+        render();
+      }, 120);
+    });
+
+    els.tipoFilter.addEventListener('change', () => {
+      state.tipo = els.tipoFilter.value;
+      render();
+    });
+    els.catFilter.addEventListener('change', () => {
+      state.categoria = els.catFilter.value;
+      render();
+    });
+    els.requiredOnly.addEventListener('change', () => {
+      state.requiredOnly = els.requiredOnly.checked;
+      render();
+    });
+
+    els.resetBtn.addEventListener('click', () => {
+      state.search = '';
+      state.tipo = '';
+      state.categoria = '';
+      state.requiredOnly = false;
+      els.search.value = '';
+      els.tipoFilter.value = '';
+      els.catFilter.value = '';
+      els.requiredOnly.checked = false;
+      render();
+    });
+  }
+
+  function getFiltered() {
+    return state.data.filter(item => {
+      if (state.search && !item.titolo.toLowerCase().includes(state.search) && !item.displayTitle.toLowerCase().includes(state.search)) return false;
+      if (state.tipo && item.tipo !== state.tipo) return false;
+      if (state.categoria && item.categoria !== state.categoria) return false;
+      if (state.requiredOnly && !item.obbligatorio) return false;
+      return true;
+    });
+  }
+
+  function getSorted(list) {
+    const copy = list.slice();
+    if (state.mode === 'cronologico') {
+      copy.sort((a, b) => a.ordine - b.ordine);
+    } else {
+      copy.sort((a, b) => {
+        if (a.uscita && b.uscita) return a.uscita.localeCompare(b.uscita);
+        if (a.uscita && !b.uscita) return -1;
+        if (!a.uscita && b.uscita) return 1;
+        return a.ordine - b.ordine;
+      });
+    }
+    return copy;
+  }
+
+  function groupItems(list) {
+    // returns array of { label, sublabel, items: [] }
+    const groups = [];
+    if (state.mode === 'cronologico') {
+      let current = null;
+      list.forEach(item => {
+        const key = item.categoria || 'Storie indipendenti';
+        if (!current || current.label !== key) {
+          current = { label: key, items: [] };
+          groups.push(current);
+        }
+        current.items.push(item);
+      });
+    } else {
+      let current = null;
+      list.forEach(item => {
+        const key = item.uscita ? decadeLabel(item.uscita) : 'Uscita da definire';
+        if (!current || current.label !== key) {
+          current = { label: key, items: [] };
+          groups.push(current);
+        }
+        current.items.push(item);
+      });
+    }
+    return groups;
+  }
+
+  function chipLabel(part) {
+    return part.episodi ? `S${part.season} · ${part.episodi.replace('-', '–')}` : `S${part.season}`;
+  }
+
+  function buildSeasonsRow(item) {
+    const row = document.createElement('div');
+    row.className = 'card-seasons';
+
+    const label = document.createElement('span');
+    label.className = 'seasons-label';
+    label.textContent = 'Serie in più parti:';
+    row.appendChild(label);
+
+    const all = item.siblings
+      .concat([{ ordine: item.ordine, season: item.seasonNumber, episodi: item.episodi }])
+      .sort((a, b) => (a.season || 0) - (b.season || 0) || episodeStart({ episodi: a.episodi }) - episodeStart({ episodi: b.episodi }));
+
+    all.forEach(s => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'season-chip' + (s.ordine === item.ordine ? ' is-current' : '');
+      chip.textContent = chipLabel(s);
+      if (s.ordine !== item.ordine) {
+        chip.title = `Vai a ${chipLabel(s)} (posizione #${s.ordine})`;
+        chip.addEventListener('click', () => jumpToItem(s.ordine));
+      } else {
+        chip.disabled = true;
+      }
+      row.appendChild(chip);
+    });
+
+    return row;
+  }
+
+  function jumpToItem(ordine) {
+    let target = document.getElementById(`tl-item-${ordine}`);
+    if (!target) {
+      // the sibling season is hidden by an active filter: clear filters so it's reachable
+      state.search = '';
+      state.tipo = '';
+      state.categoria = '';
+      state.requiredOnly = false;
+      els.search.value = '';
+      els.tipoFilter.value = '';
+      els.catFilter.value = '';
+      els.requiredOnly.checked = false;
+      render();
+      target = document.getElementById(`tl-item-${ordine}`);
+      if (!target) return;
+    }
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    target.classList.add('flash');
+    setTimeout(() => target.classList.remove('flash'), 1400);
+  }
+
+  function buildCard(item, displayIndex) {
+    const li = document.createElement('article');
+    li.className = 'tl-item' + (item.obbligatorio ? '' : ' is-optional');
+    li.style.animationDelay = (Math.min(displayIndex, 12) * 0.02) + 's';
+    li.id = `tl-item-${item.ordine}`;
+
+    const dot = document.createElement('span');
+    dot.className = 'tl-dot';
+    li.appendChild(dot);
+
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const top = document.createElement('div');
+    top.className = 'card-top';
+
+    const order = document.createElement('span');
+    order.className = 'card-order';
+    order.textContent = String(item.ordine).padStart(3, '0');
+    top.appendChild(order);
+
+    const titleWrap = document.createElement('div');
+    titleWrap.className = 'card-title-wrap';
+    const title = document.createElement('h3');
+    title.className = 'card-title';
+    title.textContent = item.displayTitle;
+    titleWrap.appendChild(title);
+
+    if (item.seasonNumber && (item.tipo === 'Serie TV' || item.tipo === 'Miniserie')) {
+      const sub = document.createElement('p');
+      sub.className = 'card-sub';
+      sub.textContent = item.episodi
+        ? `Stagione ${item.seasonNumber} · Episodi ${item.episodi.replace('-', '–')}`
+        : `Stagione ${item.seasonNumber}`;
+      titleWrap.appendChild(sub);
+    }
+    top.appendChild(titleWrap);
+    card.appendChild(top);
+
+    if (item.siblings && item.siblings.length) {
+      card.appendChild(buildSeasonsRow(item));
+    }
+
+    const meta = document.createElement('div');
+    meta.className = 'card-meta';
+
+    const tipoBadge = document.createElement('span');
+    tipoBadge.className = 'badge badge-tipo';
+    tipoBadge.textContent = item.tipo;
+    meta.appendChild(tipoBadge);
+
+    if (item.categoria) {
+      const catBadge = document.createElement('span');
+      catBadge.className = 'badge badge-cat';
+      catBadge.textContent = item.categoria;
+      meta.appendChild(catBadge);
+    }
+
+    if (item.obbligatorio) {
+      const reqBadge = document.createElement('span');
+      reqBadge.className = 'badge badge-required';
+      reqBadge.textContent = 'Essenziale';
+      meta.appendChild(reqBadge);
+    }
+
+    const dateBadge = document.createElement('span');
+    if (item.uscita) {
+      dateBadge.className = 'badge-date';
+      dateBadge.textContent = formatDate(item.uscita);
+    } else {
+      dateBadge.className = 'badge-date is-tbd';
+      dateBadge.textContent = item.uscitaRaw ? `Uscita: ${item.uscitaRaw}` : 'Uscita da definire';
+    }
+    meta.appendChild(dateBadge);
+
+    card.appendChild(meta);
+    li.appendChild(card);
+    return li;
+  }
+
+  function render() {
+    const filtered = getFiltered();
+    const sorted = getSorted(filtered);
+    const groups = groupItems(sorted);
+
+    els.resultCount.textContent = filtered.length;
+    els.timeline.innerHTML = '';
+
+    if (filtered.length === 0) {
+      els.empty.hidden = false;
+      return;
+    }
+    els.empty.hidden = true;
+
+    let idx = 0;
+    groups.forEach(group => {
+      const divider = document.createElement('div');
+      divider.className = 'era-divider';
+      const h2 = document.createElement('h2');
+      h2.textContent = group.label;
+      divider.appendChild(h2);
+      const count = document.createElement('span');
+      count.className = 'era-count';
+      count.textContent = group.items.length === 1 ? '1 titolo' : `${group.items.length} titoli`;
+      divider.appendChild(count);
+      els.timeline.appendChild(divider);
+
+      group.items.forEach(item => {
+        els.timeline.appendChild(buildCard(item, idx));
+        idx++;
+      });
+    });
+  }
+
+  init();
+})();
