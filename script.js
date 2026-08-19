@@ -29,6 +29,8 @@
   };
 
   const MONTHS = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+  const PHASE_LABELS = { 1: 'Fase Uno', 2: 'Fase Due', 3: 'Fase Tre', 4: 'Fase Quattro', 5: 'Fase Cinque', 6: 'Fase Sei' };
+  const NO_PHASE_LABEL = 'Fuori Fase';
 
   function formatDate(iso) {
     if (!iso) return null;
@@ -183,6 +185,15 @@
     const copy = list.slice();
     if (state.mode === 'cronologico') {
       copy.sort((a, b) => a.ordine - b.ordine);
+    } else if (state.mode === 'fase') {
+      copy.sort((a, b) => {
+        const fa = a.fase || 99, fb = b.fase || 99;
+        if (fa !== fb) return fa - fb;
+        if (a.uscita && b.uscita) return a.uscita.localeCompare(b.uscita);
+        if (a.uscita && !b.uscita) return -1;
+        if (!a.uscita && b.uscita) return 1;
+        return a.ordine - b.ordine;
+      });
     } else {
       copy.sort((a, b) => {
         if (a.uscita && b.uscita) return a.uscita.localeCompare(b.uscita);
@@ -201,6 +212,16 @@
       let current = null;
       list.forEach(item => {
         const key = item.categoria || 'Storie indipendenti';
+        if (!current || current.label !== key) {
+          current = { label: key, items: [] };
+          groups.push(current);
+        }
+        current.items.push(item);
+      });
+    } else if (state.mode === 'fase') {
+      let current = null;
+      list.forEach(item => {
+        const key = item.fase ? PHASE_LABELS[item.fase] : NO_PHASE_LABEL;
         if (!current || current.label !== key) {
           current = { label: key, items: [] };
           groups.push(current);
@@ -298,6 +319,13 @@
     tipoBadge.className = 'badge badge-tipo';
     tipoBadge.textContent = item.tipo;
     wrap.appendChild(tipoBadge);
+
+    if (item.fase) {
+      const faseBadge = document.createElement('span');
+      faseBadge.className = 'badge badge-fase';
+      faseBadge.textContent = PHASE_LABELS[item.fase];
+      wrap.appendChild(faseBadge);
+    }
 
     if (item.categoria) {
       const catBadge = document.createElement('span');

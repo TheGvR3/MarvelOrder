@@ -9,7 +9,8 @@
     "uscita": "2004-07-07",
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "uscita": "2011-07-22",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 1
   },
   {
     "id": 3,
@@ -30,10 +32,11 @@
     "tipo": "Serie TV",
     "stagione": 1,
     "episodi": null,
-    "uscita": "2015-01-06",
+    "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 4,
@@ -42,10 +45,11 @@
     "tipo": "Serie TV",
     "stagione": 2,
     "episodi": null,
-    "uscita": "2016-01-19",
+    "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 10,
@@ -117,7 +126,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 11,
@@ -129,7 +139,8 @@
     "uscita": "2005-07-08",
     "uscitaRaw": null,
     "categoria": "Tim Story",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 12,
@@ -141,7 +152,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 13,
@@ -150,10 +162,11 @@
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
-    "uscita": "2019-05-08",
+    "uscita": "2019-03-08",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 14,
@@ -165,7 +178,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 15,
@@ -177,7 +191,8 @@
     "uscita": "2007-06-17",
     "uscitaRaw": null,
     "categoria": "Tim Story",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 16,
@@ -189,7 +204,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 17,
@@ -201,7 +217,8 @@
     "uscita": "2008-05-02",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 1
   },
   {
     "id": 18,
@@ -213,7 +230,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 19,
@@ -225,7 +243,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "Sam Raimi/MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 20,
@@ -237,7 +256,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 21,
@@ -249,7 +269,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 22,
@@ -261,7 +282,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "Sam Raimi/MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 23,
@@ -273,7 +295,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 24,
@@ -285,7 +308,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 25,
@@ -297,7 +321,8 @@
     "uscita": "2010-05-07",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 1
   },
   {
     "id": 26,
@@ -309,7 +334,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "Sam Raimi/MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 27,
@@ -321,7 +347,8 @@
     "uscita": "2008-06-13",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 1
   },
   {
     "id": 28,
@@ -333,7 +360,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 29,
@@ -345,7 +373,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 30,
@@ -357,7 +386,8 @@
     "uscita": "2011-05-06",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 1
   },
   {
     "id": 31,
@@ -369,7 +399,8 @@
     "uscita": "2012-05-04",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 1
   },
   {
     "id": 32,
@@ -381,7 +412,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 33,
@@ -393,7 +425,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "Marc Webb/MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 34,
@@ -405,7 +438,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 35,
@@ -417,7 +451,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 36,
@@ -429,7 +464,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "Marc Webb/MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 37,
@@ -441,7 +477,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 38,
@@ -450,10 +487,11 @@
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
-    "uscita": "2012-05-03",
+    "uscita": "2013-05-03",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 2
   },
   {
     "id": 39,
@@ -465,7 +503,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 40,
@@ -477,7 +516,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 41,
@@ -486,10 +526,11 @@
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
-    "uscita": "2113-11-08",
+    "uscita": "2013-11-08",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 2
   },
   {
     "id": 42,
@@ -501,7 +542,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 43,
@@ -513,7 +555,8 @@
     "uscita": "2014-04-04",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 2
   },
   {
     "id": 44,
@@ -525,7 +568,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 45,
@@ -537,7 +581,8 @@
     "uscita": "2014-08-01",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 2
   },
   {
     "id": 46,
@@ -549,7 +594,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 47,
@@ -561,7 +607,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 48,
@@ -573,7 +620,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 49,
@@ -585,7 +633,8 @@
     "uscita": "2015-05-01",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 2
   },
   {
     "id": 50,
@@ -597,7 +646,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 51,
@@ -609,7 +659,8 @@
     "uscita": "2017-05-05",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 52,
@@ -621,7 +672,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 53,
@@ -633,7 +685,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 54,
@@ -645,7 +698,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 55,
@@ -657,7 +711,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 56,
@@ -669,7 +724,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 57,
@@ -681,7 +737,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 58,
@@ -693,7 +750,8 @@
     "uscita": "2015-07-17",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 2
   },
   {
     "id": 59,
@@ -705,7 +763,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 60,
@@ -717,7 +776,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 61,
@@ -729,7 +789,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 62,
@@ -741,7 +802,8 @@
     "uscita": "2016-05-06",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 63,
@@ -753,7 +815,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 64,
@@ -765,7 +828,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 65,
@@ -777,7 +841,8 @@
     "uscita": "2018-02-16",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 66,
@@ -789,7 +854,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 67,
@@ -801,7 +867,8 @@
     "uscita": "2021-07-09",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 4
   },
   {
     "id": 68,
@@ -813,7 +880,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 69,
@@ -825,7 +893,8 @@
     "uscita": "2016-11-04",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 70,
@@ -837,7 +906,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 71,
@@ -849,7 +919,8 @@
     "uscita": "2017-07-07",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 72,
@@ -861,7 +932,8 @@
     "uscita": "2017-11-03",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 73,
@@ -873,7 +945,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN/MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 74,
@@ -885,7 +958,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 75,
@@ -897,7 +971,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 76,
@@ -909,7 +984,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 77,
@@ -921,7 +997,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 78,
@@ -933,7 +1010,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 79,
@@ -945,7 +1023,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 80,
@@ -957,7 +1036,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 81,
@@ -969,7 +1049,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 82,
@@ -981,7 +1062,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 83,
@@ -993,7 +1075,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 84,
@@ -1005,7 +1088,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 85,
@@ -1017,7 +1101,8 @@
     "uscita": "2018-07-06",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 86,
@@ -1029,7 +1114,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 87,
@@ -1041,7 +1127,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 88,
@@ -1053,7 +1140,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 89,
@@ -1065,7 +1153,8 @@
     "uscita": "2018-04-27",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 90,
@@ -1077,7 +1166,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 91,
@@ -1089,7 +1179,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 92,
@@ -1101,7 +1192,8 @@
     "uscita": "2019-04-26",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 93,
@@ -1113,7 +1205,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 94,
@@ -1122,10 +1215,11 @@
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
-    "uscita": "2021-07-03",
+    "uscita": "2021-09-03",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": 4
   },
   {
     "id": 95,
@@ -1137,7 +1231,8 @@
     "uscita": "2019-07-02",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 3
   },
   {
     "id": 96,
@@ -1149,7 +1244,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 97,
@@ -1161,7 +1257,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 98,
@@ -1173,7 +1270,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 99,
@@ -1185,7 +1283,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 100,
@@ -1197,7 +1296,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 101,
@@ -1209,7 +1309,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 102,
@@ -1221,7 +1322,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 103,
@@ -1233,7 +1335,8 @@
     "uscita": "2021-11-05",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": 4
   },
   {
     "id": 104,
@@ -1245,7 +1348,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 105,
@@ -1257,7 +1361,8 @@
     "uscita": "2021-12-17",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 4
   },
   {
     "id": 106,
@@ -1269,7 +1374,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 107,
@@ -1281,7 +1387,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 108,
@@ -1293,7 +1400,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 109,
@@ -1305,7 +1413,8 @@
     "uscita": "2022-05-06",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 4
   },
   {
     "id": 110,
@@ -1317,7 +1426,8 @@
     "uscita": "2022-07-08",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 4
   },
   {
     "id": 111,
@@ -1329,7 +1439,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 112,
@@ -1341,7 +1452,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 113,
@@ -1353,7 +1465,8 @@
     "uscita": "2022-11-11",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 4
   },
   {
     "id": 114,
@@ -1365,7 +1478,8 @@
     "uscita": "2023-02-17",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 5
   },
   {
     "id": 115,
@@ -1377,7 +1491,8 @@
     "uscita": "2023-05-05",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 5
   },
   {
     "id": 116,
@@ -1389,7 +1504,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 117,
@@ -1401,7 +1517,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 118,
@@ -1413,7 +1530,8 @@
     "uscita": "2023-11-10",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 5
   },
   {
     "id": 119,
@@ -1425,7 +1543,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 120,
@@ -1437,7 +1556,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "XMEN",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 121,
@@ -1449,7 +1569,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 122,
@@ -1461,7 +1582,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 123,
@@ -1473,7 +1595,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 124,
@@ -1485,7 +1608,8 @@
     "uscita": "2024-07-26",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": 5
   },
   {
     "id": 125,
@@ -1497,7 +1621,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": null
   },
   {
     "id": 126,
@@ -1509,7 +1634,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 127,
@@ -1521,7 +1647,8 @@
     "uscita": "2025-02-14",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 5
   },
   {
     "id": 128,
@@ -1533,7 +1660,8 @@
     "uscita": "2025-03-04",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 129,
@@ -1545,7 +1673,8 @@
     "uscita": "2025-05-02",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 5
   },
   {
     "id": 130,
@@ -1557,7 +1686,8 @@
     "uscita": "2025-06-24",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 131,
@@ -1566,10 +1696,11 @@
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
-    "uscita": "2025-06-25",
+    "uscita": "2025-07-25",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 6
   },
   {
     "id": 132,
@@ -1581,7 +1712,8 @@
     "uscita": "2025-08-01",
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 133,
@@ -1593,7 +1725,8 @@
     "uscita": "2025-09-24",
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 134,
@@ -1605,7 +1738,8 @@
     "uscita": "2026-01-27",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 135,
@@ -1617,7 +1751,8 @@
     "uscita": "2026-03-24",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 136,
@@ -1629,7 +1764,8 @@
     "uscita": "2026-05-12",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 137,
@@ -1641,7 +1777,8 @@
     "uscita": null,
     "uscitaRaw": "29/27/2026",
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 6
   },
   {
     "id": 138,
@@ -1653,7 +1790,8 @@
     "uscita": "2026-12-16",
     "uscitaRaw": null,
     "categoria": "MCU",
-    "obbligatorio": true
+    "obbligatorio": true,
+    "fase": 6
   },
   {
     "id": 139,
@@ -1665,7 +1803,8 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   },
   {
     "id": 140,
@@ -1677,6 +1816,7 @@
     "uscita": null,
     "uscitaRaw": null,
     "categoria": null,
-    "obbligatorio": false
+    "obbligatorio": false,
+    "fase": null
   }
 ]

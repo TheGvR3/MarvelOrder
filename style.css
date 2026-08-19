@@ -365,6 +365,7 @@ button{ font-family:inherit; }
   white-space:nowrap;
 }
 .badge-tipo{ border-color:var(--red-dim); color:#e7909c; background:rgba(208,16,42,0.08); }
+.badge-fase{ border-color:var(--gold); color:var(--gold); }
 .badge-cat{ color:var(--ink-dim); }
 .badge-required{
   border-color:transparent;
