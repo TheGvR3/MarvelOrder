@@ -11,6 +11,12 @@
     catFilter: document.getElementById('cat-filter'),
     requiredOnly: document.getElementById('required-only'),
     modeBtns: Array.from(document.querySelectorAll('.mode-btn')),
+    filtersToggle: document.getElementById('filters-toggle'),
+    filtersPanel: document.getElementById('filters-panel'),
+    modalOverlay: document.getElementById('modal-overlay'),
+    modalClose: document.getElementById('modal-close'),
+    modalBody: document.getElementById('modal-body'),
+    modal: document.querySelector('.modal'),
   };
 
   const state = {
@@ -115,6 +121,11 @@
       });
     });
 
+    els.filtersToggle.addEventListener('click', () => {
+      const isOpen = els.filtersPanel.classList.toggle('is-open');
+      els.filtersToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
     let searchTimer;
     els.search.addEventListener('input', () => {
       clearTimeout(searchTimer);
@@ -147,6 +158,14 @@
       els.catFilter.value = '';
       els.requiredOnly.checked = false;
       render();
+    });
+
+    els.modalClose.addEventListener('click', closeModal);
+    els.modalOverlay.addEventListener('click', e => {
+      if (e.target === els.modalOverlay) closeModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !els.modalOverlay.hidden) closeModal();
     });
   }
 
@@ -206,13 +225,19 @@
     return part.episodi ? `S${part.season} · ${part.episodi.replace('-', '–')}` : `S${part.season}`;
   }
 
-  function buildSeasonsRow(item) {
+  function findItemByOrdine(ordine) {
+    return state.data.find(i => i.ordine === ordine);
+  }
+
+  // labelText/onSelect let the same row work both in the timeline card
+  // (scrolls + flashes the sibling) and inside the modal (swaps content).
+  function buildSeasonsRow(item, { labelText, onSelect, className }) {
     const row = document.createElement('div');
-    row.className = 'card-seasons';
+    row.className = className;
 
     const label = document.createElement('span');
     label.className = 'seasons-label';
-    label.textContent = 'Serie in più parti:';
+    label.textContent = labelText;
     row.appendChild(label);
 
     const all = item.siblings
@@ -226,7 +251,10 @@
       chip.textContent = chipLabel(s);
       if (s.ordine !== item.ordine) {
         chip.title = `Vai a ${chipLabel(s)} (posizione #${s.ordine})`;
-        chip.addEventListener('click', () => jumpToItem(s.ordine));
+        chip.addEventListener('click', e => {
+          e.stopPropagation();
+          onSelect(s.ordine);
+        });
       } else {
         chip.disabled = true;
       }
@@ -257,6 +285,119 @@
     setTimeout(() => target.classList.remove('flash'), 1400);
   }
 
+  // ============================================================
+  // MODAL
+  // ============================================================
+  let lastFocusedEl = null;
+
+  function buildMetaBadges(item) {
+    const wrap = document.createElement('div');
+    wrap.className = 'modal-meta';
+
+    const tipoBadge = document.createElement('span');
+    tipoBadge.className = 'badge badge-tipo';
+    tipoBadge.textContent = item.tipo;
+    wrap.appendChild(tipoBadge);
+
+    if (item.categoria) {
+      const catBadge = document.createElement('span');
+      catBadge.className = 'badge badge-cat';
+      catBadge.textContent = item.categoria;
+      wrap.appendChild(catBadge);
+    }
+
+    if (item.obbligatorio) {
+      const reqBadge = document.createElement('span');
+      reqBadge.className = 'badge badge-required';
+      reqBadge.textContent = 'Essenziale';
+      wrap.appendChild(reqBadge);
+    }
+
+    const dateBadge = document.createElement('span');
+    if (item.uscita) {
+      dateBadge.className = 'badge-date';
+      dateBadge.textContent = formatDate(item.uscita);
+    } else {
+      dateBadge.className = 'badge-date is-tbd';
+      dateBadge.textContent = item.uscitaRaw ? `Uscita: ${item.uscitaRaw}` : 'Uscita da definire';
+    }
+    wrap.appendChild(dateBadge);
+
+    return wrap;
+  }
+
+  function renderModalContent(item) {
+    els.modalBody.innerHTML = '';
+
+    const eyebrow = document.createElement('p');
+    eyebrow.className = 'modal-eyebrow';
+    eyebrow.innerHTML = `Posizione <strong>#${String(item.ordine).padStart(3, '0')}</strong> nell'ordine narrativo`;
+    els.modalBody.appendChild(eyebrow);
+
+    const title = document.createElement('h2');
+    title.id = 'modal-title';
+    title.textContent = item.displayTitle;
+    els.modalBody.appendChild(title);
+
+    if (item.seasonNumber && (item.tipo === 'Serie TV' || item.tipo === 'Miniserie')) {
+      const sub = document.createElement('p');
+      sub.className = 'card-sub';
+      sub.style.marginBottom = '14px';
+      sub.textContent = item.episodi
+        ? `Stagione ${item.seasonNumber} · Episodi ${item.episodi.replace('-', '–')}`
+        : `Stagione ${item.seasonNumber}`;
+      els.modalBody.appendChild(sub);
+    }
+
+    els.modalBody.appendChild(buildMetaBadges(item));
+
+    if (item.siblings && item.siblings.length) {
+      const seasonsWrap = buildSeasonsRow(item, {
+        labelText: 'Altre parti di questa serie:',
+        className: 'modal-seasons',
+        onSelect: ordine => {
+          const sibling = findItemByOrdine(ordine);
+          if (sibling) openModal(sibling);
+        },
+      });
+      els.modalBody.appendChild(seasonsWrap);
+    }
+
+    const sections = document.createElement('div');
+    sections.className = 'modal-sections';
+    sections.innerHTML = `
+      <div class="modal-section">
+        <h3>Cast</h3>
+        <p class="is-placeholder">Informazioni in arrivo.</p>
+      </div>
+      <div class="modal-section">
+        <h3>Titoli collegati</h3>
+        <p class="is-placeholder">Informazioni in arrivo.</p>
+      </div>
+      <div class="modal-section">
+        <h3>Da vedere prima per capirlo bene</h3>
+        <p class="is-placeholder">Informazioni in arrivo.</p>
+      </div>
+      <div class="modal-section">
+        <h3>Sequel / Prequel</h3>
+        <p class="is-placeholder">Informazioni in arrivo.</p>
+      </div>
+    `;
+    els.modalBody.appendChild(sections);
+  }
+
+  function openModal(item) {
+    lastFocusedEl = document.activeElement;
+    renderModalContent(item);
+    els.modalOverlay.hidden = false;
+    els.modal.focus();
+  }
+
+  function closeModal() {
+    els.modalOverlay.hidden = true;
+    if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') lastFocusedEl.focus();
+  }
+
   function buildCard(item, displayIndex) {
     const li = document.createElement('article');
     li.className = 'tl-item' + (item.obbligatorio ? '' : ' is-optional');
@@ -269,6 +410,17 @@
 
     const card = document.createElement('div');
     card.className = 'card';
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-haspopup', 'dialog');
+    card.setAttribute('aria-label', `Apri scheda di ${item.displayTitle}`);
+    card.addEventListener('click', () => openModal(item));
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(item);
+      }
+    });
 
     const top = document.createElement('div');
     top.className = 'card-top';
@@ -297,41 +449,15 @@
     card.appendChild(top);
 
     if (item.siblings && item.siblings.length) {
-      card.appendChild(buildSeasonsRow(item));
+      card.appendChild(buildSeasonsRow(item, {
+        labelText: 'Serie in più parti:',
+        className: 'card-seasons',
+        onSelect: jumpToItem,
+      }));
     }
 
-    const meta = document.createElement('div');
+    const meta = buildMetaBadges(item);
     meta.className = 'card-meta';
-
-    const tipoBadge = document.createElement('span');
-    tipoBadge.className = 'badge badge-tipo';
-    tipoBadge.textContent = item.tipo;
-    meta.appendChild(tipoBadge);
-
-    if (item.categoria) {
-      const catBadge = document.createElement('span');
-      catBadge.className = 'badge badge-cat';
-      catBadge.textContent = item.categoria;
-      meta.appendChild(catBadge);
-    }
-
-    if (item.obbligatorio) {
-      const reqBadge = document.createElement('span');
-      reqBadge.className = 'badge badge-required';
-      reqBadge.textContent = 'Essenziale';
-      meta.appendChild(reqBadge);
-    }
-
-    const dateBadge = document.createElement('span');
-    if (item.uscita) {
-      dateBadge.className = 'badge-date';
-      dateBadge.textContent = formatDate(item.uscita);
-    } else {
-      dateBadge.className = 'badge-date is-tbd';
-      dateBadge.textContent = item.uscitaRaw ? `Uscita: ${item.uscitaRaw}` : 'Uscita da definire';
-    }
-    meta.appendChild(dateBadge);
-
     card.appendChild(meta);
     li.appendChild(card);
     return li;
