@@ -15,13 +15,14 @@
     filtersPanel: document.getElementById('filters-panel'),
     modalOverlay: document.getElementById('modal-overlay'),
     modalClose: document.getElementById('modal-close'),
+    modalSearch: document.getElementById('modal-search'),
     modalBody: document.getElementById('modal-body'),
     modal: document.querySelector('.modal'),
   };
 
   const state = {
     data: [],
-    mode: 'cronologico', // 'cronologico' | 'uscita'
+    mode: 'fase', // 'fase' | 'uscita' | 'cronologico'
     search: '',
     tipo: '',
     categoria: '',
@@ -354,6 +355,14 @@
     return wrap;
   }
 
+  function googleSearchUrl(item) {
+    let q = item.displayTitle;
+    if (item.seasonNumber && (item.tipo === 'Serie TV' || item.tipo === 'Miniserie')) {
+      q += ` stagione ${item.seasonNumber}`;
+    }
+    return `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+  }
+
   function renderModalContent(item) {
     els.modalBody.innerHTML = '';
 
@@ -395,6 +404,10 @@
     sections.className = 'modal-sections';
     sections.innerHTML = `
       <div class="modal-section">
+        <h3>Anno di ambientazione</h3>
+        <p class="is-placeholder">Informazioni in arrivo.</p>
+      </div>
+      <div class="modal-section">
         <h3>Cast</h3>
         <p class="is-placeholder">Informazioni in arrivo.</p>
       </div>
@@ -417,6 +430,7 @@
   function openModal(item) {
     lastFocusedEl = document.activeElement;
     renderModalContent(item);
+    els.modalSearch.href = googleSearchUrl(item);
     els.modalOverlay.hidden = false;
     els.modal.focus();
   }

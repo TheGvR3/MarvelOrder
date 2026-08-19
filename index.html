@@ -31,17 +31,17 @@
 
       <div class="controls-top">
         <div class="mode-switch" role="tablist" aria-label="Modalità ordinamento">
-          <button class="mode-btn is-active" data-mode="cronologico" role="tab" aria-selected="true">
+          <button class="mode-btn is-active" data-mode="fase" role="tab" aria-selected="true">
             <span class="mode-num">01</span>
-            <span class="mode-label">In-Universe<em>ordine narrativo</em></span>
+            <span class="mode-label">Fasi<em>saga ufficiale MCU</em></span>
           </button>
           <button class="mode-btn" data-mode="uscita" role="tab" aria-selected="false">
             <span class="mode-num">02</span>
             <span class="mode-label">Uscita<em>ordine di pubblicazione</em></span>
           </button>
-          <button class="mode-btn" data-mode="fase" role="tab" aria-selected="false">
+          <button class="mode-btn" data-mode="cronologico" role="tab" aria-selected="false">
             <span class="mode-num">03</span>
-            <span class="mode-label">Fasi<em>saga ufficiale MCU</em></span>
+            <span class="mode-label">In-Universe<em>ordine narrativo</em></span>
           </button>
         </div>
 
@@ -96,6 +96,9 @@
 
 <div class="modal-overlay" id="modal-overlay" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+    <a class="modal-search" id="modal-search" href="#" target="_blank" rel="noopener" aria-label="Cerca su Google">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="11.2" y1="11.2" x2="15" y2="15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </a>
     <button class="modal-close" id="modal-close" type="button" aria-label="Chiudi scheda">
       <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
     </button>

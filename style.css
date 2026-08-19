@@ -460,6 +460,19 @@ button{ font-family:inherit; }
 }
 .modal-close:hover{ color:var(--ink); border-color:var(--gold); }
 
+.modal-search{
+  position:absolute; top:14px; right:56px;
+  width:32px; height:32px;
+  display:flex; align-items:center; justify-content:center;
+  background:transparent;
+  border:1px solid var(--line-strong);
+  border-radius:50%;
+  color:var(--ink-dim);
+  cursor:pointer;
+  text-decoration:none;
+}
+.modal-search:hover{ color:#fff; border-color:var(--red); background:var(--red-dim); }
+
 .modal-eyebrow{
   font-size:11px; text-transform:uppercase; letter-spacing:0.09em;
   color:var(--ink-faint);
