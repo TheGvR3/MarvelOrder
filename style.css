@@ -2,6 +2,7 @@
    TOKENS
    ============================================================ */
 :root{
+  color-scheme:dark;              /* select, scrollbar e clear-button nativi in tema scuro */
   --bg:            #0a0a0d;
   --bg-raised:     #131318;
   --bg-card:       #17171d;
@@ -11,7 +12,7 @@
 
   --ink:           #efeef0;
   --ink-dim:       #a6a5ad;
-  --ink-faint:     #6b6a73;
+  --ink-faint:     #8b8a94;
 
   --red:           #d0102a;
   --red-dim:       #7a1420;
@@ -23,13 +24,15 @@
   --radius:        2px;
   --container:     1180px;
 
-  --spine-x-desktop: 50%;
+  --bp-mobile:     859.98px;      /* documentativo: le media query non accettano var() */
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
   margin:0;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
   background:var(--bg);
   color:var(--ink);
   font-family:var(--font-body);
@@ -125,7 +128,8 @@ button{ font-family:inherit; }
   background:var(--bg-raised);
   border:1px solid var(--line-strong);
   color:var(--ink-dim);
-  padding:8px 14px;
+  padding:11px 16px;
+  min-height:44px;
   border-radius:var(--radius);
   font-size:12.5px; font-weight:600;
   letter-spacing:0.03em;
@@ -157,7 +161,6 @@ button{ font-family:inherit; }
   border-right:1px solid var(--line-strong);
 }
 .mode-btn:last-child{ border-right:none; }
-.mode-btn:hover{ color:var(--ink); background:var(--bg-raised); }
 .mode-btn.is-active{ background:var(--red); color:#fff; }
 .mode-num{
   font-family:var(--font-display);
@@ -177,10 +180,15 @@ button{ font-family:inherit; }
   background:var(--bg-raised);
   border:1px solid var(--line);
   color:var(--ink);
-  padding:8px 10px;
-  font-size:13.5px;
+  padding:11px 12px;
+  font-size:16px;
+  min-height:44px;
   border-radius:var(--radius);
   min-width:150px;
+}
+@media (min-width:860px){
+  .filter-group input[type="search"],
+  .filter-group select{ font-size:13.5px; padding:8px 10px; min-height:0; }
 }
 .filter-group input[type="search"]:focus,
 .filter-group select:focus{ border-color:var(--gold); }
@@ -190,7 +198,8 @@ button{ font-family:inherit; }
   text-transform:none; letter-spacing:normal; font-size:13px; color:var(--ink-dim);
   cursor:pointer;
 }
-.filter-checkbox input{ accent-color:var(--red); width:15px; height:15px; }
+.filter-checkbox input{ accent-color:var(--red); width:20px; height:20px; }
+.filter-checkbox label{ min-height:44px; }
 
 .result-count{
   margin:0 0 0 auto;
@@ -202,26 +211,66 @@ button{ font-family:inherit; }
 .result-count span{ color:var(--gold); }
 
 /* mobile: filters are collapsed behind a toggle so the bar doesn't eat the screen */
-@media (max-width:859px){
+@media (max-width:859.98px){
+  .controls-inner{ padding:10px 16px; }
   .filters-toggle{ display:inline-flex; order:2; }
   .result-count{ order:3; margin-left:0; font-size:13px; }
   .mode-switch{ order:1; }
 
+  /* i tre tab non entravano in larghezza: overflow:hidden li tagliava in silenzio
+     (un flex item con overflow != visible ha min-width:auto = 0). */
+  .mode-switch{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    overflow:visible;
+  }
+  .mode-btn{
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    gap:2px;
+    padding:9px 10px;
+    min-height:52px;
+    min-width:0;
+    text-align:left;
+  }
+  .mode-label{ font-size:12.5px; line-height:1.15; }
+  .mode-label em{ font-size:10px; line-height:1.2; }
+
+  /* due colonne + tetto in vh: aperta, la barra sticky arrivava al 50% dello schermo */
   .filters{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:end;
+    gap:10px 12px;
     max-height:0;
     overflow:hidden;
     opacity:0;
     margin-top:0;
-    transition:max-height 0.25s ease, opacity 0.2s ease, margin-top 0.25s ease;
+    visibility:hidden;   /* altrimenti i campi restano nel tab order da chiusi */
+    transition:max-height 0.25s ease, opacity 0.2s ease, margin-top 0.25s ease,
+               visibility 0s linear 0.25s;
   }
   .filters.is-open{
-    max-height:420px;
+    max-height:min(420px, 42vh);
+    overflow-y:auto;
+    overscroll-behavior:contain;
     opacity:1;
-    margin-top:16px;
+    margin-top:12px;
+    visibility:visible;
+    transition:max-height 0.25s ease, opacity 0.2s ease, margin-top 0.25s ease, visibility 0s;
   }
   .filters .filter-group{ min-width:0; width:100%; }
+  .filters .filter-group:first-child,
+  .filters .filter-checkbox{ grid-column:1 / -1; }
   .filters .filter-group input[type="search"],
   .filters .filter-group select{ width:100%; }
+}
+
+@media (max-width:400px){
+  .mode-label em{ display:none; }   /* il numero 01/02/03 basta a distinguerli */
+  .mode-btn{ min-height:44px; }
 }
 
 /* ============================================================
@@ -285,7 +334,12 @@ button{ font-family:inherit; }
   opacity:0;
   transform:translateY(10px);
   animation:rise 0.4s ease forwards;
+  scroll-margin-top:170px;          /* la barra sticky copriva il bersaglio dei salti */
+  content-visibility:auto;
+  contain-intrinsic-size:auto 150px;
 }
+/* render da ricerca/filtri: niente fade-in, altrimenti la lista lampeggia a ogni tasto */
+.timeline.no-anim .tl-item{ animation:none; opacity:1; transform:none; }
 @keyframes rise{ to{ opacity:1; transform:none; } }
 
 .tl-dot{
@@ -307,12 +361,13 @@ button{ font-family:inherit; }
     padding-right:36px;
   }
   .tl-item .tl-dot{ left:auto; right:-40px; transform:translateX(50%); top:24px; }
-  .tl-item:nth-child(even){
+  .tl-item:nth-of-type(even){
     margin-left:calc(50% + 40px);
     padding-right:0;
     padding-left:36px;
   }
-  .tl-item:nth-child(even) .tl-dot{ right:auto; left:-40px; transform:translateX(-50%); }
+  .tl-item:nth-of-type(even) .tl-dot{ right:auto; left:-40px; transform:translateX(-50%); }
+  .tl-item{ scroll-margin-top:110px; }
 }
 
 .card{
@@ -322,7 +377,6 @@ button{ font-family:inherit; }
   padding:16px 18px;
   transition:background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
-.card:hover{ background:var(--bg-card-hover); border-color:var(--line-strong); transform:translateY(-1px); }
 
 .card-top{
   display:flex; align-items:flex-start; gap:12px;
@@ -332,7 +386,7 @@ button{ font-family:inherit; }
   font-family:var(--font-display);
   font-size:22px;
   color:var(--ink-faint);
-  min-width:2.4ch;
+  min-width:34px;   /* 3 cifre zero-padded; in ch il font-swap causava layout shift */
   line-height:1.15;
 }
 .card-title-wrap{ flex:1; min-width:0; }
@@ -375,6 +429,7 @@ button{ font-family:inherit; }
 }
 .badge-date{
   margin-left:auto;
+  margin-left:auto;
   font-family:var(--font-body);
   font-size:12px;
   color:var(--ink-faint);
@@ -395,17 +450,20 @@ button{ font-family:inherit; }
   margin-right:2px;
 }
 .season-chip{
+  position:relative;
   font-family:var(--font-body);
-  font-size:11.5px; font-weight:600;
+  font-size:12px; font-weight:600;
   border:1px solid var(--line-strong);
   background:transparent;
   color:var(--ink-dim);
   border-radius:100px;
-  padding:3px 10px;
+  padding:8px 12px;
+  min-height:36px;
   cursor:pointer;
   transition:background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
-.season-chip:hover:not(:disabled){ background:var(--red-dim); border-color:var(--red); color:#fff; }
+/* area di tap piena senza ingrassare il pill visivo */
+.season-chip::after{ content:""; position:absolute; inset:-6px -2px; }
 .season-chip.is-current{
   background:var(--gold); border-color:var(--gold); color:#1a1408; cursor:default;
 }
@@ -428,7 +486,12 @@ button{ font-family:inherit; }
   background:rgba(6,6,8,0.72);
   backdrop-filter:blur(3px);
   display:flex; align-items:center; justify-content:center;
-  padding:20px;
+  padding:
+    max(20px, env(safe-area-inset-top))
+    max(16px, env(safe-area-inset-right))
+    max(20px, env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
+  overscroll-behavior:contain;
   animation:overlay-in 0.15s ease;
 }
 .modal-overlay[hidden]{ display:none; }
@@ -437,20 +500,37 @@ button{ font-family:inherit; }
 .modal{
   position:relative;
   width:100%; max-width:560px;
-  max-height:85vh;
+  max-height:85dvh;                 /* dvh segue la barra URL di Safari */
   overflow-y:auto;
+  overscroll-behavior-y:contain;    /* niente scroll che prosegue sulla timeline dietro */
+  -webkit-overflow-scrolling:touch;
   background:var(--bg-card);
   border:1px solid var(--line-strong);
   border-radius:4px;
   padding:32px 28px 28px;
   animation:modal-in 0.2s ease;
 }
-.modal:focus{ outline:none; }
+@supports not (height:1dvh){ .modal{ max-height:85vh; } }
+.modal:focus{ outline:none; }   /* il focus e' programmatico su tabindex="-1" */
+
+/* con la scheda aperta la pagina dietro non deve scorrere */
+body.modal-open{ overflow:hidden; }
+
+/* su schermi bassi la scheda diventa un pannello ancorato in basso */
+@media (max-width:600px){
+  .modal-overlay{ align-items:flex-end; padding-left:0; padding-right:0; padding-bottom:0; }
+  .modal{
+    max-width:none;
+    max-height:88dvh;
+    border-radius:8px 8px 0 0;
+    padding:26px 20px calc(24px + env(safe-area-inset-bottom));
+  }
+}
 @keyframes modal-in{ from{ opacity:0; transform:translateY(8px) scale(0.98); } to{ opacity:1; transform:none; } }
 
 .modal-close{
-  position:absolute; top:14px; right:14px;
-  width:32px; height:32px;
+  position:absolute; top:10px; right:10px;
+  width:44px; height:44px;
   display:flex; align-items:center; justify-content:center;
   background:transparent;
   border:1px solid var(--line-strong);
@@ -458,11 +538,10 @@ button{ font-family:inherit; }
   color:var(--ink-dim);
   cursor:pointer;
 }
-.modal-close:hover{ color:var(--ink); border-color:var(--gold); }
 
 .modal-search{
-  position:absolute; top:14px; right:56px;
-  width:32px; height:32px;
+  position:absolute; top:10px; right:58px;
+  width:44px; height:44px;
   display:flex; align-items:center; justify-content:center;
   background:transparent;
   border:1px solid var(--line-strong);
@@ -471,12 +550,13 @@ button{ font-family:inherit; }
   cursor:pointer;
   text-decoration:none;
 }
-.modal-search:hover{ color:#fff; border-color:var(--red); background:var(--red-dim); }
 
 .modal-eyebrow{
   font-size:11px; text-transform:uppercase; letter-spacing:0.09em;
   color:var(--ink-faint);
   margin:0 0 6px;
+  padding-right:112px;   /* due bottoni da 44px piu' i margini */
+  min-height:34px;
 }
 .modal-eyebrow strong{ color:var(--gold); }
 
@@ -486,7 +566,7 @@ button{ font-family:inherit; }
   font-size:clamp(28px, 5vw, 38px);
   line-height:1.05;
   margin:0 0 14px;
-  padding-right:20px;
+  overflow-wrap:anywhere;
 }
 
 .modal-meta{
@@ -536,7 +616,6 @@ button{ font-family:inherit; }
   font-size:13px;
   font-weight:600;
 }
-.empty-state button:hover{ background:#e51530; }
 
 /* ============================================================
    FOOTER
@@ -549,4 +628,86 @@ button{ font-family:inherit; }
 .site-footer p{
   max-width:60ch; margin:0 auto;
   color:var(--ink-faint); font-size:12px; line-height:1.6;
+}
+
+
+/* ============================================================
+   PUNTATORE E TOUCH
+   ============================================================ */
+/* :hover solo dove esiste davvero un puntatore: su touch restava appiccicato dopo il tap */
+@media (hover:hover) and (pointer:fine){
+  .mode-btn:hover{ color:var(--ink); background:var(--bg-raised); }
+  .card:hover{ background:var(--bg-card-hover); border-color:var(--line-strong); transform:translateY(-1px); }
+  .season-chip:hover:not(:disabled){ background:var(--red-dim); border-color:var(--red); color:#fff; }
+  .modal-close:hover{ color:var(--ink); border-color:var(--gold); }
+  .modal-search:hover{ color:#fff; border-color:var(--red); background:var(--red-dim); }
+  .empty-state button:hover{ background:#e51530; }
+}
+.card, .season-chip, .mode-btn, .filters-toggle, .modal-close, .modal-search{
+  -webkit-tap-highlight-color:transparent;
+}
+.card:active{ background:var(--bg-card-hover); }   /* feedback esplicito al posto di :hover */
+
+/* ============================================================
+   TIMELINE SU SCHERMI STRETTI
+   ============================================================ */
+@media (max-width:859.98px){
+  /* 24px di padding + 56px di indent lasciavano alla card 256px su 360px di schermo */
+  .timeline-wrap{ padding:32px 16px 72px; }
+  .timeline::before{ left:7px; }
+  .tl-item{ padding-left:28px; margin-bottom:16px; }
+  .tl-item .tl-dot{ left:7px; top:20px; }
+  .era-divider{ padding-left:28px; margin:36px 0 20px; }
+  .era-divider h2{ padding:0; }
+  .card{ padding:14px 14px; }
+  .card-seasons{ gap:10px; }
+  .badge-date{ margin-left:0; width:100%; }
+
+  /* niente animazione di entrata: costa e su 360px non aggiunge nulla */
+  .tl-item{ opacity:1; transform:none; animation:none; }
+
+  /* blur su una barra sticky ricalcolato a ogni frame di scroll: opaco rende uguale a costo zero */
+  .controls{ backdrop-filter:none; background:var(--bg); }
+  .noise-overlay{ display:none; }
+}
+
+/* ============================================================
+   TIPOGRAFIA FLUIDA
+   ============================================================ */
+.card-title, .modal h2, .era-divider h2{ overflow-wrap:anywhere; }
+.card-title{ text-wrap:balance; }
+/* sotto i 500px il clamp precedente era sempre bloccato sul minimo: la parte fluida era inerte */
+.brand h1{ font-size:clamp(34px, 11vw, 84px); }
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+/* avvisa quando un salto a una stagione azzera i filtri: prima succedeva in silenzio */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:calc(20px + env(safe-area-inset-bottom));
+  transform:translate(-50%, 16px);
+  z-index:60;
+  margin:0;
+  max-width:min(420px, calc(100vw - 32px));
+  padding:11px 18px;
+  background:var(--bg-raised);
+  border:1px solid var(--gold);
+  border-radius:var(--radius);
+  color:var(--ink);
+  font-size:13px;
+  text-align:center;
+  box-shadow:0 8px 30px rgba(0,0,0,0.5);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+}
+.toast.is-visible{ opacity:1; transform:translate(-50%, 0); }
+
+/* ============================================================
+   FOCUS SU SCHERMI STRETTI
+   ============================================================ */
+@media (max-width:859.98px){
+  .empty-state button{ padding:12px 20px; min-height:44px; }
 }

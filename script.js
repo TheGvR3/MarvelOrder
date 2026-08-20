@@ -6,6 +6,8 @@
     empty: document.getElementById('empty-state'),
     resetBtn: document.getElementById('reset-filters'),
     resultCount: document.getElementById('result-count'),
+    resultCountLabel: document.getElementById('result-count-label'),
+    totalCount: document.getElementById('total-count'),
     search: document.getElementById('search'),
     tipoFilter: document.getElementById('tipo-filter'),
     catFilter: document.getElementById('cat-filter'),
@@ -33,16 +35,31 @@
   const PHASE_LABELS = { 1: 'Fase Uno', 2: 'Fase Due', 3: 'Fase Tre', 4: 'Fase Quattro', 5: 'Fase Cinque', 6: 'Fase Sei' };
   const NO_PHASE_LABEL = 'Fuori Fase';
 
+  // Accetta solo ISO YYYY-MM-DD con mese/giorno plausibili: qualsiasi altra cosa
+  // torna null e il chiamante ricade su uscitaRaw / "Uscita da definire".
   function formatDate(iso) {
-    if (!iso) return null;
-    const [y, m, d] = iso.split('-').map(Number);
-    return `${d} ${MONTHS[m - 1]} ${y}`;
+    const m = typeof iso === 'string' && /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+    if (!m) return null;
+    const year = Number(m[1]), month = Number(m[2]), day = Number(m[3]);
+    if (month < 1 || month > 12 || day < 1 || day > 31) return null;
+    return `${day} ${MONTHS[month - 1]} ${year}`;
   }
 
   function decadeLabel(iso) {
-    const year = Number(iso.slice(0, 4));
-    const decadeStart = Math.floor(year / 10) * 10;
-    return `${decadeStart}s`;
+    const year = Number(String(iso).slice(0, 4));
+    if (!Number.isFinite(year)) return 'Uscita da definire';
+    return `${Math.floor(year / 10) * 10}s`;
+  }
+
+  // Apostrofi curvi e dritti convivono nei dati e gli accenti si digitano a fatica:
+  // la ricerca confronta forme normalizzate, non le stringhe grezze.
+  function normalize(str) {
+    return String(str == null ? '' : str)
+      .toLowerCase()
+      .replace(/[‘’ʼ´`]/g, "'")
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
   }
 
   // Groups multi-season / multi-part entries so a part isn't shown as an
@@ -62,6 +79,7 @@
     data.forEach(item => {
       item.displayTitle = item.titolo;
       item.seasonNumber = item.stagione || null;
+      item.searchKey = normalize(item.titolo);
       const key = `${item.titolo}::${item.tipo}`;
       if (!byKey.has(key)) byKey.set(key, []);
       byKey.get(key).push(item);
@@ -83,15 +101,21 @@
   async function init() {
     try {
       const res = await fetch('data.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
       const raw = await res.json();
+      if (!Array.isArray(raw)) throw new Error('formato inatteso: atteso un array');
       state.data = linkSeries(raw);
     } catch (err) {
-      els.timeline.innerHTML = '<p class="empty-state">Impossibile caricare i dati (data.json). Se stai aprendo il file localmente, prova a servirlo con un piccolo server HTTP.</p>';
+      const hint = location.protocol === 'file:'
+        ? 'Stai aprendo la pagina dal filesystem: servila con un piccolo server HTTP (per esempio <code>python -m http.server</code>).'
+        : 'Dettaglio: ' + err.message;
+      els.timeline.innerHTML = '<p class="empty-state">Impossibile caricare i dati (data.json). ' + hint + '</p>';
       return;
     }
+    if (els.totalCount) els.totalCount.textContent = state.data.length;
     populateFilters();
     bindEvents();
-    render();
+    render({ animate: true });
   }
 
   function populateFilters() {
@@ -120,7 +144,7 @@
           b.classList.toggle('is-active', b === btn);
           b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
         });
-        render();
+        render({ animate: true });
       });
     });
 
@@ -133,7 +157,7 @@
     els.search.addEventListener('input', () => {
       clearTimeout(searchTimer);
       searchTimer = setTimeout(() => {
-        state.search = els.search.value.trim().toLowerCase();
+        state.search = normalize(els.search.value);
         render();
       }, 120);
     });
@@ -152,14 +176,7 @@
     });
 
     els.resetBtn.addEventListener('click', () => {
-      state.search = '';
-      state.tipo = '';
-      state.categoria = '';
-      state.requiredOnly = false;
-      els.search.value = '';
-      els.tipoFilter.value = '';
-      els.catFilter.value = '';
-      els.requiredOnly.checked = false;
+      resetFilters();
       render();
     });
 
@@ -172,9 +189,20 @@
     });
   }
 
+  function resetFilters() {
+    state.search = '';
+    state.tipo = '';
+    state.categoria = '';
+    state.requiredOnly = false;
+    els.search.value = '';
+    els.tipoFilter.value = '';
+    els.catFilter.value = '';
+    els.requiredOnly.checked = false;
+  }
+
   function getFiltered() {
     return state.data.filter(item => {
-      if (state.search && !item.titolo.toLowerCase().includes(state.search) && !item.displayTitle.toLowerCase().includes(state.search)) return false;
+      if (state.search && !item.searchKey.includes(state.search)) return false;
       if (state.tipo && item.tipo !== state.tipo) return false;
       if (state.categoria && item.categoria !== state.categoria) return false;
       if (state.requiredOnly && !item.obbligatorio) return false;
@@ -182,28 +210,19 @@
     });
   }
 
+  // I titoli senza data vanno in fondo; a parita' di data decide l'ordine narrativo.
+  function byDateThenOrder(a, b) {
+    if (a.uscita && b.uscita) return a.uscita.localeCompare(b.uscita) || a.ordine - b.ordine;
+    if (a.uscita) return -1;
+    if (b.uscita) return 1;
+    return a.ordine - b.ordine;
+  }
+
   function getSorted(list) {
     const copy = list.slice();
-    if (state.mode === 'cronologico') {
-      copy.sort((a, b) => a.ordine - b.ordine);
-    } else if (state.mode === 'fase') {
-      copy.sort((a, b) => {
-        const fa = a.fase || 99, fb = b.fase || 99;
-        if (fa !== fb) return fa - fb;
-        if (a.uscita && b.uscita) return a.uscita.localeCompare(b.uscita);
-        if (a.uscita && !b.uscita) return -1;
-        if (!a.uscita && b.uscita) return 1;
-        return a.ordine - b.ordine;
-      });
-    } else {
-      copy.sort((a, b) => {
-        if (a.uscita && b.uscita) return a.uscita.localeCompare(b.uscita);
-        if (a.uscita && !b.uscita) return -1;
-        if (!a.uscita && b.uscita) return 1;
-        return a.ordine - b.ordine;
-      });
-    }
-    return copy;
+    if (state.mode === 'cronologico') return copy.sort((a, b) => a.ordine - b.ordine);
+    if (state.mode === 'fase') return copy.sort((a, b) => ((a.fase ?? 99) - (b.fase ?? 99)) || byDateThenOrder(a, b));
+    return copy.sort(byDateThenOrder);
   }
 
   function groupItems(list) {
@@ -222,7 +241,7 @@
     } else if (state.mode === 'fase') {
       let current = null;
       list.forEach(item => {
-        const key = item.fase ? PHASE_LABELS[item.fase] : NO_PHASE_LABEL;
+        const key = PHASE_LABELS[item.fase] || NO_PHASE_LABEL;
         if (!current || current.label !== key) {
           current = { label: key, items: [] };
           groups.push(current);
@@ -289,22 +308,34 @@
   function jumpToItem(ordine) {
     let target = document.getElementById(`tl-item-${ordine}`);
     if (!target) {
-      // the sibling season is hidden by an active filter: clear filters so it's reachable
-      state.search = '';
-      state.tipo = '';
-      state.categoria = '';
-      state.requiredOnly = false;
-      els.search.value = '';
-      els.tipoFilter.value = '';
-      els.catFilter.value = '';
-      els.requiredOnly.checked = false;
+      // the sibling season is hidden by an active filter: clear filters so it's reachable,
+      // and say so — otherwise the result count silently jumps back to the full list.
+      resetFilters();
       render();
+      announce('Filtri azzerati per mostrare la parte selezionata.');
       target = document.getElementById(`tl-item-${ordine}`);
       if (!target) return;
     }
     target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     target.classList.add('flash');
     setTimeout(() => target.classList.remove('flash'), 1400);
+  }
+
+  let announceTimer;
+  function announce(message) {
+    let box = document.getElementById('toast');
+    if (!box) {
+      box = document.createElement('p');
+      box.id = 'toast';
+      box.className = 'toast';
+      box.setAttribute('role', 'status');
+      box.setAttribute('aria-live', 'polite');
+      document.body.appendChild(box);
+    }
+    box.textContent = message;
+    box.classList.add('is-visible');
+    clearTimeout(announceTimer);
+    announceTimer = setTimeout(() => box.classList.remove('is-visible'), 3200);
   }
 
   // ============================================================
@@ -343,9 +374,10 @@
     }
 
     const dateBadge = document.createElement('span');
-    if (item.uscita) {
+    const pretty = formatDate(item.uscita);
+    if (pretty) {
       dateBadge.className = 'badge-date';
-      dateBadge.textContent = formatDate(item.uscita);
+      dateBadge.textContent = pretty;
     } else {
       dateBadge.className = 'badge-date is-tbd';
       dateBadge.textContent = item.uscitaRaw ? `Uscita: ${item.uscitaRaw}` : 'Uscita da definire';
@@ -427,17 +459,39 @@
     els.modalBody.appendChild(sections);
   }
 
+  const FOCUSABLE = 'a[href], button:not(:disabled), input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+  // Tab non deve uscire dal dialog: aria-modal da solo non lo impedisce.
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    const items = Array.from(els.modal.querySelectorAll(FOCUSABLE)).filter(el => el.offsetParent !== null);
+    if (!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && (document.activeElement === first || document.activeElement === els.modal)) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault(); first.focus();
+    }
+  }
+
   function openModal(item) {
-    lastFocusedEl = document.activeElement;
+    // I chip dentro la scheda richiamano openModal: senza questa guardia
+    // lastFocusedEl finirebbe su un chip che sta per essere distrutto.
+    if (els.modalOverlay.hidden) lastFocusedEl = document.activeElement;
     renderModalContent(item);
     els.modalSearch.href = googleSearchUrl(item);
     els.modalOverlay.hidden = false;
+    document.body.classList.add('modal-open');
+    els.modal.addEventListener('keydown', trapFocus);
     els.modal.focus();
   }
 
   function closeModal() {
     els.modalOverlay.hidden = true;
-    if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') lastFocusedEl.focus();
+    document.body.classList.remove('modal-open');
+    els.modal.removeEventListener('keydown', trapFocus);
+    if (lastFocusedEl && lastFocusedEl.isConnected) lastFocusedEl.focus();
+    else els.search.focus({ preventScroll: true });
   }
 
   function buildCard(item, displayIndex) {
@@ -458,6 +512,7 @@
     card.setAttribute('aria-label', `Apri scheda di ${item.displayTitle}`);
     card.addEventListener('click', () => openModal(item));
     card.addEventListener('keydown', e => {
+      if (e.target !== card) return; // il tasto appartiene a un chip figlio: lascialo passare
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         openModal(item);
@@ -505,12 +560,16 @@
     return li;
   }
 
-  function render() {
+  function render(opts) {
+    const animate = !!(opts && opts.animate);
+    const keepScroll = window.scrollY;
     const filtered = getFiltered();
     const sorted = getSorted(filtered);
     const groups = groupItems(sorted);
 
     els.resultCount.textContent = filtered.length;
+    if (els.resultCountLabel) els.resultCountLabel.textContent = filtered.length === 1 ? 'titolo' : 'titoli';
+    els.timeline.classList.toggle('no-anim', !animate);
     els.timeline.innerHTML = '';
 
     if (filtered.length === 0) {
@@ -537,6 +596,9 @@
         idx++;
       });
     });
+
+    // innerHTML='' fa collassare l'altezza: senza questo lo scroll salta in alto a ogni tasto.
+    if (!animate && window.scrollY !== keepScroll) window.scrollTo({ top: keepScroll });
   }
 
   init();

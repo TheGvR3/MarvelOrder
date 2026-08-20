@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ordine Cronologico Marvel — La linea temporale</title>
-<meta name="description" content="Tutti i film e le serie Marvel, ordinabili per continuity narrativa o per data di uscita.">
+<meta name="description" content="Tutti i film e le serie Marvel in un'unica linea temporale: per Fasi ufficiali, per data di uscita o in ordine cronologico narrativo.">
+<meta name="theme-color" content="#0a0a0d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23d0102a'/%3E%3Cpath d='M7 24V8h4l5 9 5-9h4v16h-4v-8l-5 8-5-8v8z' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ordine Cronologico Marvel — La linea temporale">
+<meta property="og:description" content="Tutti i film e le serie Marvel in un'unica linea temporale: per Fasi ufficiali, per data di uscita o in ordine cronologico narrativo.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +27,7 @@
       <span class="brand-mark">MCU//</span>
       <h1>Ordine Cronologico<span class="brand-sub">Marvel Watch Order</span></h1>
     </div>
-    <p class="header-tagline">140 titoli. Due modi di guardarli: come li vive l'universo, o come li ha vissuti il pubblico.</p>
+    <p class="header-tagline"><span id="total-count">140</span> titoli, tre modi di guardarli: la mappa ufficiale delle Fasi, l'ordine in cui li ha visti il pubblico, l'ordine in cui li vive l'universo.</p>
   </div>
 </header>
 
@@ -41,7 +48,7 @@
           </button>
           <button class="mode-btn" data-mode="cronologico" role="tab" aria-selected="false">
             <span class="mode-num">03</span>
-            <span class="mode-label">In-Universe<em>ordine narrativo</em></span>
+            <span class="mode-label">Cronologia<em>ordine degli eventi</em></span>
           </button>
         </div>
 
@@ -50,7 +57,7 @@
           <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
 
-        <p class="result-count"><span id="result-count">140</span> titoli</p>
+        <p class="result-count" role="status" aria-live="polite"><span id="result-count">140</span> <span id="result-count-label">titoli</span></p>
       </div>
 
       <div id="filters-panel" class="filters">
@@ -84,7 +91,7 @@
   </section>
 
   <section class="timeline-wrap">
-    <div id="timeline" class="timeline" aria-live="polite"></div>
+    <div id="timeline" class="timeline"></div>
     <p id="empty-state" class="empty-state" hidden>Nessun titolo corrisponde ai filtri selezionati. <button id="reset-filters" type="button">Azzera i filtri</button></p>
   </section>
 
