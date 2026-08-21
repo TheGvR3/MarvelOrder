@@ -11,6 +11,7 @@
     search: document.getElementById('search'),
     tipoFilter: document.getElementById('tipo-filter'),
     catFilter: document.getElementById('cat-filter'),
+    universoFilter: document.getElementById('universo-filter'),
     requiredOnly: document.getElementById('required-only'),
     faseFilter: document.getElementById('fase-filter'),
     hideWatched: document.getElementById('hide-watched'),
@@ -36,6 +37,7 @@
     search: '',
     tipo: '',
     categoria: '',
+    universo: '',
     fase: '',
     requiredOnly: false,
     hideWatched: false,
@@ -91,6 +93,41 @@
     const i = SAGA_ORDER.indexOf(saga);
     return i === -1 ? SAGA_ORDER.length : i;
   };
+
+  // `categoria` e' una tassonomia di produzione, non di finzione: tiene separati
+  // MCU, Marvel Television e Marvel Netflix che sono lo stesso universo, e tiene
+  // insieme dentro "Sony / Spider-Man" e "Pre-MCU" continuita' che non si toccano.
+  // `universo` e' la lettura di finzione, ed e' quella che ordina la Cronologia.
+  // L'ordine di questo array e' l'ordine delle sezioni: la linea principale apre,
+  // gli universi paralleli seguono per dimensione.
+  const UNIVERSI = [
+    { id: 'terra-616',    nome: 'Terra-616',                       terra: 'Marvel Studios, Marvel Television e Marvel Netflix' },
+    { id: 'terra-10005',  nome: 'Terra-10005',                     terra: 'X-Men e Deadpool, Fox' },
+    { id: 'terra-688',    nome: 'Terra-688',                       terra: 'Universo Sony: Venom, Morbius, Madame Web, Kraven' },
+    { id: 'terra-26320',  nome: 'Terra-26320',                     terra: 'Blade, trilogia e serie' },
+    { id: 'terra-96283',  nome: 'Terra-96283',                     terra: 'Spider-Man, trilogia di Sam Raimi' },
+    { id: 'terra-120703', nome: 'Terra-120703',                    terra: 'The Amazing Spider-Man, duologia di Marc Webb' },
+    { id: 'terra-121698', nome: 'Terra-121698',                    terra: 'I Fantastici 4, dittico di Tim Story' },
+    { id: 'terra-701306', nome: 'Terra-701306',                    terra: 'Daredevil ed Elektra, 2003-2005' },
+    { id: 'terra-86445',  nome: 'Terra-86445',                     terra: 'Il tuo amichevole Spider-Man di quartiere' },
+    { id: 'terra-15866',  nome: 'Terra-15866',                     terra: 'Fantastic Four, reboot di Josh Trank' },
+    { id: 'terra-58732',  nome: 'Terra-58732',                     terra: 'The Punisher, 2004' },
+    { id: 'terra-828',    nome: 'Terra-828',                       terra: 'The Fantastic Four: First Steps' },
+    { id: 'multiverso',   nome: 'Multiverso',                      terra: 'What If...? e Marvel Zombies: nessuna Terra unica' },
+  ];
+  const UNIVERSI_BY_ID = new Map(UNIVERSI.map((u, i) => [u.id, Object.assign({ rank: i }, u)]));
+  const universoInfo = id => UNIVERSI_BY_ID.get(id) || null;
+  const universoRank = id => {
+    const u = UNIVERSI_BY_ID.get(id);
+    return u ? u.rank : UNIVERSI.length;
+  };
+
+  // annoAmbientazione vive in dettagli.json, che puo' mancare: senza anno il
+  // titolo scivola in fondo al proprio universo invece di rompere l'ordinamento.
+  function annoAmb(item) {
+    const det = state.dettagli[item.ordine];
+    return det && Number.isInteger(det.annoAmbientazione) ? det.annoAmbientazione : null;
+  }
 
   // Accetta solo ISO YYYY-MM-DD con mese/giorno plausibili: qualsiasi altra cosa
   // torna null e il chiamante ricade su uscitaRaw / "Uscita da definire".
@@ -214,6 +251,17 @@
       els.catFilter.appendChild(opt);
     });
 
+    // In ordine di UNIVERSI, non alfabetico: la tendina rispecchia le sezioni.
+    if (els.universoFilter) {
+      const presenti = new Set(state.data.map(d => d.universo).filter(Boolean));
+      UNIVERSI.filter(u => presenti.has(u.id)).forEach(u => {
+        const opt = document.createElement('option');
+        opt.value = u.id;
+        opt.textContent = u.nome + ' — ' + u.terra;
+        els.universoFilter.appendChild(opt);
+      });
+    }
+
     const fasi = Array.from(new Set(state.data.map(d => d.fase).filter(f => f != null))).sort((a, b) => a - b);
     fasi.forEach(f => {
       const opt = document.createElement('option');
@@ -261,6 +309,12 @@
       state.categoria = els.catFilter.value;
       render();
     });
+    if (els.universoFilter) {
+      els.universoFilter.addEventListener('change', () => {
+        state.universo = els.universoFilter.value;
+        render();
+      });
+    }
     els.requiredOnly.addEventListener('change', () => {
       state.requiredOnly = els.requiredOnly.checked;
       render();
@@ -300,12 +354,14 @@
     state.search = '';
     state.tipo = '';
     state.categoria = '';
+    state.universo = '';
     state.fase = '';
     state.requiredOnly = false;
     state.hideWatched = false;
     els.search.value = '';
     els.tipoFilter.value = '';
     els.catFilter.value = '';
+    if (els.universoFilter) els.universoFilter.value = '';
     els.faseFilter.value = '';
     els.requiredOnly.checked = false;
     els.hideWatched.checked = false;
@@ -316,6 +372,7 @@
       if (state.search && !item.searchKey.includes(state.search)) return false;
       if (state.tipo && item.tipo !== state.tipo) return false;
       if (state.categoria && item.categoria !== state.categoria) return false;
+      if (state.universo && item.universo !== state.universo) return false;
       if (state.fase === 'nessuna' ? item.fase != null : state.fase && String(item.fase) !== state.fase) return false;
       if (state.requiredOnly && !item.obbligatorio) return false;
       if (state.hideWatched && state.visti.has(item.ordine)) return false;
@@ -334,7 +391,15 @@
 
   function getSorted(list) {
     const copy = list.slice();
-    if (state.mode === 'cronologico') return copy.sort((a, b) => a.ordine - b.ordine);
+    if (state.mode === 'cronologico') {
+      // Universo prima, poi l'anno in cui e' ambientato, poi l'ordine curato come
+      // spareggio: annoAmbientazione ha la precisione dell'anno e 21 anni ne
+      // contengono piu' d'uno, quindi dentro l'anno decide la sequenza del foglio.
+      return copy.sort((a, b) =>
+        universoRank(a.universo) - universoRank(b.universo) ||
+        ((annoAmb(a) ?? Infinity) - (annoAmb(b) ?? Infinity)) ||
+        a.ordine - b.ordine);
+    }
     if (state.mode === 'fase') {
       return copy.sort((a, b) =>
         ((a.fase ?? 99) - (b.fase ?? 99)) ||
@@ -349,9 +414,19 @@
     // returns array of { label, sublabel, items: [] }
     const groups = [];
     if (state.mode === 'cronologico') {
-      // L'ordine narrativo salta di proposito da una saga all'altra: raggruppare per
-      // categoria produceva un divisore ogni 1,7 card. La saga resta leggibile dalla badge.
-      if (list.length) groups.push({ label: null, items: list.slice() });
+      // Una sezione per universo, e dentro la sezione il tempo scorre in avanti.
+      // Mescolarli per anno puro metterebbe First Steps (1964, Terra-828) in mezzo
+      // a due X-Men della Fox: cronologicamente esatto, ma sono universi diversi.
+      let current = null;
+      list.forEach(item => {
+        const u = universoInfo(item.universo);
+        const key = u ? u.nome : 'Universo non classificato';
+        if (!current || current.label !== key) {
+          current = { label: key, sublabel: u ? u.terra : null, items: [] };
+          groups.push(current);
+        }
+        current.items.push(item);
+      });
     } else if (state.mode === 'fase') {
       let current = null;
       list.forEach(item => {
@@ -361,6 +436,19 @@
           groups.push(current);
         }
         current.items.push(item);
+      });
+      // Le Fasi restano raggruppate per produzione, che li' e' il criterio giusto:
+      // per universo i blocchi Marvel Television e Netflix collasserebbero dentro
+      // Terra-616 e finirebbero a litigare con le sei Fasi, anch'esse Terra-616.
+      // L'universo lo si dichiara sotto l'intestazione, senza toccare i gruppi.
+      groups.forEach(g => {
+        const nomi = [];
+        g.items.forEach(item => {
+          const u = universoInfo(item.universo);
+          const nome = u ? u.nome : null;
+          if (nome && nomi.indexOf(nome) === -1) nomi.push(nome);
+        });
+        if (nomi.length) g.sublabel = nomi.join(' · ');
       });
     } else {
       let current = null;
@@ -484,6 +572,15 @@
       catBadge.className = 'badge badge-cat';
       catBadge.textContent = item.categoria;
       wrap.appendChild(catBadge);
+    }
+
+    const uni = universoInfo(item.universo);
+    if (uni) {
+      const uniBadge = document.createElement('span');
+      uniBadge.className = 'badge badge-universo';
+      uniBadge.textContent = uni.nome;
+      uniBadge.title = uni.terra;
+      wrap.appendChild(uniBadge);
     }
 
     if (item.obbligatorio) {
@@ -639,10 +736,27 @@
 
     if (det) {
       addSection('Anno di ambientazione', () => {
-        if (!det.ambientazione) return null;
-        const p = document.createElement('p');
-        p.textContent = det.ambientazione;
-        return p;
+        const anno = annoLabel(det.annoAmbientazione);
+        if (!anno && !det.ambientazione) return null;
+        const wrap = document.createDocumentFragment();
+        if (anno) {
+          const t = document.createElement('p');
+          t.className = 'modal-anno' + (det.annoStimato ? ' is-stimato' : '');
+          t.textContent = det.annoStimato ? `circa ${anno}` : anno;
+          wrap.appendChild(t);
+        }
+        if (det.annoNota) {
+          const nota = document.createElement('p');
+          nota.className = 'modal-anno-nota';
+          nota.textContent = det.annoNota;
+          wrap.appendChild(nota);
+        }
+        if (det.ambientazione) {
+          const p = document.createElement('p');
+          p.textContent = det.ambientazione;
+          wrap.appendChild(p);
+        }
+        return wrap;
       });
 
       addSection('Cast', () => {
@@ -823,7 +937,11 @@
       if (anno) {
         const amb = document.createElement('p');
         amb.className = 'card-ambientazione';
-        amb.textContent = `Ambientato nel ${anno}`;
+        // Sette anni sono dedotti dai titoli adiacenti, non documentati: il "circa"
+        // e' quello che distingue un dato da una deduzione, e va mostrato.
+        amb.textContent = det.annoStimato ? `Ambientato circa nel ${anno}` : `Ambientato nel ${anno}`;
+        if (det.annoStimato) amb.classList.add('is-stimato');
+        if (det.annoNota) amb.title = det.annoNota;
         card.appendChild(amb);
       }
     }
@@ -871,6 +989,12 @@
         const h2 = document.createElement('h2');
         h2.textContent = group.label;
         divider.appendChild(h2);
+        if (group.sublabel) {
+          const sub = document.createElement('p');
+          sub.className = 'era-sublabel';
+          sub.textContent = group.sublabel;
+          divider.appendChild(sub);
+        }
         const count = document.createElement('span');
         count.className = 'era-count';
         count.textContent = group.items.length === 1 ? '1 titolo' : `${group.items.length} titoli`;

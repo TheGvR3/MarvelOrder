@@ -26,12 +26,18 @@ python -m http.server 8000     # or: npx serve .
 |---|---|---|
 | `fase` | `fase` (null → 99), then `SAGA_ORDER` rank *among the fase-less only*, then release date, then `ordine` | `PHASE_LABELS`, then `categoria` |
 | `uscita` | `dataVisione()` (Italian date, US as fallback), then `ordine` | year (`2008`) |
-| `cronologico` | `ordine` (curated narrative order) | none — one unlabelled group |
+| `cronologico` | `universo` rank, then `annoAmbientazione`, then `ordine` | `universo` (13 sections) |
 
 Grouping is a *run-length* pass over the already-sorted list, not a bucket-by-key, so a label repeats whenever the sort interleaves it. Each mode's sort is built so that never happens:
 
 - `fase` used to dump the 101 titles without a `fase` into a single "Fuori Fase" block. They are now sub-sorted by `SAGA_ORDER` so each saga forms one contiguous run: 6 phase headings + 7 saga headings = 13 groups. `NO_PHASE_LABEL` survives only as a fallback for an item with neither `fase` nor `categoria`.
-- `cronologico` deliberately jumps between sagas, so grouping by `categoria` produced a divider every 1.7 cards ("MCU" 30 times). It now emits one group with `label: null`, and `render()` skips the divider for unlabelled groups. The saga stays readable from the card's `badge-cat`.
+- `cronologico` used to sort by `ordine` and emit a single unlabelled group. `ordine` is a *watch* order, so against setting year it ran backwards 35 times. It now sorts by universe rank, then by `annoAmbientazione`, and groups by `universo`: 13 contiguous sections, 0 backward steps inside a section, 0 seasons out of sequence. `render()` still skips the divider for a group whose `label` is null, which is now only a safety net.
+
+**Universes.** `universo` (in [data.json](data.json), 140/140) is the *fiction* taxonomy; `categoria` is the *production* one, and they disagree on purpose. `categoria` splits MCU / Marvel Television / Marvel Netflix, which are one universe (Terra-616, 100 titles), and merges continuities that never touch: `Sony / Spider-Man` holds three universes, `Pre-MCU` three, `Fantastici 4 (Fox)` two. Three titles filed under `MCU` are not Terra-616 at all — First Steps is Terra-828, `What If...?` spans the multiverse, Marvel Zombies is its own reality.
+
+`UNIVERSI` in [script.js](script.js) is the single source of truth: an ordered array of `{id, nome, terra}`. **Array order is section order** in the `cronologico` view and option order in the filter — Terra-616 opens, the parallel universes follow by size. Adding a universe means adding a row there *and* setting `universo` on the entries; an id with no row sorts last and renders as "Universo non classificato".
+
+The `fase` view deliberately keeps grouping by `categoria`. Grouping it by universe would collapse the Marvel Television and Marvel Netflix blocks into Terra-616 and put them in conflict with the six Phases, which are also Terra-616. The universe is declared in the divider's `sublabel` instead (`Sony / Spider-Man` reads `Terra-96283 · Terra-120703 · Terra-688`), so nothing is hidden and no group is broken.
 
 **Series linking.** `linkSeries()` runs once at load and mutates each item in place, adding `displayTitle`, `seasonNumber`, and (for multi-part titles) `siblings`. The grouping key is `titolo::tipo`, so a film and a TV series with the same name are never merged. Ordering within a group is season, then `episodeStart()` — a season can be split into episode blocks (`"1-7"`, `"8-16"`). `siblings` is what powers the season chips.
 
@@ -63,6 +69,8 @@ Array of 140 objects. Fields: `id` (unused, always equal to `ordine`), `ordine` 
 
 `categoria` is a closed set of 7 values covering 140/140: `MCU`, `Marvel Television`, `Marvel Netflix`, `X-Men (Fox)`, `Fantastici 4 (Fox)`, `Sony / Spider-Man`, `Pre-MCU`. Adding a value means adding it to `SAGA_ORDER` in [script.js](script.js) too, otherwise it sorts last in the `fase` view.
 
+`universo` is a closed set of 13 ids covering 140/140, one per `UNIVERSI` row: `terra-616` (100), `terra-10005` (13), `terra-688` (5), `terra-26320` (4), `multiverso` (4), `terra-96283` (3), then `terra-120703`, `terra-121698`, `terra-701306`, `terra-86445` (2 each), then `terra-15866`, `terra-58732`, `terra-828` (1 each). The designations are the ones Marvel actually uses — 616, 10005 and 828 were stated on screen, the rest come from the Official Handbook — so do not invent one for a new title: research it or file the title under `multiverso`.
+
 `fase` is null for 82 entries and that is correct: only Marvel Studios titles belong to an official Phase. Fox, Sony, Netflix, Marvel Television and pre-MCU titles are grouped by `categoria` instead.
 
 `uscitaItalia` (136/140) is the Italian theatrical or platform release; it is null only where no Italian distribution exists (the two `WHIH Newsfront` entries, `Slingshot`) or the title is unreleased. **It is the date the UI shows and sorts by** — `dataVisione()` falls back to `uscita` — because the `uscita` view promises the order the audience saw them in, and this audience is Italian. Do not assume Italy is later: on 47 of the 103 entries where the two differ the Italian date is *earlier* (Europe releases on Wednesday, the US on Friday). The large gaps are historical — Blade is 504 days.
@@ -73,11 +81,15 @@ Array of 140 objects. Fields: `id` (unused, always equal to `ordine`), `ordine` 
 
 An object keyed by `ordine` (string keys — it is JSON), one entry per title, ~150 KB. Fetched **in parallel with `data.json` and allowed to fail**: `init()` swallows a missing or malformed `dettagli.json` and the site runs with the modal sections hidden. Keep it that way — this file is researched data, `data.json` is the spreadsheet export, and they have different provenance and update cadence. Merging them would mean losing all of this on the next re-export from the .xlsx.
 
-Fields per entry: `ambientazione` (free Italian prose, 137/140), `annoAmbientazione` (integer, 133/140), `cast` (`{attore, personaggio}`, 140/140), `prerequisiti` / `collegati` (arrays of `ordine`), `sequelPrequel` (`{ordine, relazione}` with `relazione` in `sequel|prequel|spin-off`), `note`.
+Fields per entry: `ambientazione` (free Italian prose, 137/140), `annoAmbientazione` (integer, 140/140), `annoStimato` (`true` on the 6 deduced years, absent otherwise), `annoNota` (why that year, on the 7 titles that needed one), `cast` (`{attore, personaggio}`, 140/140), `prerequisiti` / `collegati` (arrays of `ordine`), `sequelPrequel` (`{ordine, relazione}` with `relazione` in `sequel|prequel|spin-off`), `note`.
 
-`annoAmbientazione` is null where an anchor year would be a lie (Loki S2 is outside time, the two `What If...?` anthologies span universes, three 2026-2027 titles are unreleased) and **negative for BC settings** (Eyes of Wakanda is `-1260`) — `annoLabel()` handles the sign. Any consumer must tolerate null and negative values.
+`annoAmbientazione` is **negative for BC settings** (Eyes of Wakanda is `-1260`) — `annoLabel()` handles the sign. It is now populated on all 140, but 7 of those years were not documented and had to be placed: Loki S2 (the TVA is outside time), `What If...?` S2 and S3 (multiverse anthologies), the second season of the animated Spider-Man, and the three unreleased titles. Six of the seven carry `annoStimato: true` and the UI renders them as *circa 2028*, dimmed, with `annoNota` as the tooltip. **Keep that distinction.** Dropping the flag would turn a deduction into a fact on a site whose whole point is getting the order right. The seventh, `Il tuo amichevole Spider-Man` S1, is documented (autumn 2015) and is not flagged.
 
-**Do not group the `cronologico` view by `annoAmbientazione`.** It is tempting and it is wrong: the curated `ordine` is a *watch* order, not a chronology of events. Measured against setting year it has 35 inversions, and a run-length pass by decade yields 37 dividers for 140 cards. The year is surfaced per-card instead (`.card-ambientazione`, only in that mode).
+Sorting still has to tolerate a null year — `getSorted()` maps it to `Infinity` — because `dettagli.json` is allowed to fail to load entirely.
+
+**Do not group the `cronologico` view by decade, and do not sort it by year alone.** Both were tried and both are wrong, for different reasons. Grouping the curated `ordine` by decade yielded 37 dividers for 140 cards, because `ordine` is a *watch* order and runs backwards 35 times. Sorting by year alone fixes the sequence but interleaves universes — First Steps (1964, Terra-828) lands between two Fox X-Men films, which is chronologically exact and fictionally nonsense. Universe first, year second is what holds: 13 sections, and inside each one the year only ever moves forward.
+
+Within a universe the year is the only sort key, and its resolution is one year — 21 years hold more than one title and 2016 holds 16. The tiebreaker is the curated `ordine`, which is the best micro-sequence available. Do not promise more precision than that. The year is also surfaced per-card (`.card-ambientazione`, only in that mode).
 
 ## style.css
 
