@@ -24,6 +24,7 @@
 
   const state = {
     data: [],
+    dettagli: {},   // indicizzati per ordine; vuoto se dettagli.json non c'e'
     mode: 'fase', // 'fase' | 'uscita' | 'cronologico'
     search: '',
     tipo: '',
@@ -33,7 +34,21 @@
 
   const MONTHS = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
   const PHASE_LABELS = { 1: 'Fase Uno', 2: 'Fase Due', 3: 'Fase Tre', 4: 'Fase Quattro', 5: 'Fase Cinque', 6: 'Fase Sei' };
-  const NO_PHASE_LABEL = 'Fuori Fase';
+  // I titoli senza fase (Fox, Sony, TV, pre-MCU) finivano tutti in un unico blocco da 82 card.
+  // Qui definisce l'ordine con cui le saghe si susseguono dopo le sei Fasi.
+  const SAGA_ORDER = [
+    'Pre-MCU',
+    'X-Men (Fox)',
+    'Fantastici 4 (Fox)',
+    'Sony / Spider-Man',
+    'Marvel Television',
+    'Marvel Netflix',
+    'MCU',
+  ];
+  const sagaRank = saga => {
+    const i = SAGA_ORDER.indexOf(saga);
+    return i === -1 ? SAGA_ORDER.length : i;
+  };
 
   // Accetta solo ISO YYYY-MM-DD con mese/giorno plausibili: qualsiasi altra cosa
   // torna null e il chiamante ricade su uscitaRaw / "Uscita da definire".
@@ -100,11 +115,18 @@
 
   async function init() {
     try {
-      const res = await fetch('data.json');
+      const [res, resDet] = await Promise.all([
+        fetch('data.json'),
+        // i dettagli sono un di piu': un errore qui non deve impedire il caricamento
+        fetch('dettagli.json').catch(() => null),
+      ]);
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const raw = await res.json();
       if (!Array.isArray(raw)) throw new Error('formato inatteso: atteso un array');
       state.data = linkSeries(raw);
+      if (resDet && resDet.ok) {
+        try { state.dettagli = await resDet.json(); } catch (e) { state.dettagli = {}; }
+      }
     } catch (err) {
       const hint = location.protocol === 'file:'
         ? 'Stai aprendo la pagina dal filesystem: servila con un piccolo server HTTP (per esempio <code>python -m http.server</code>).'
@@ -221,7 +243,13 @@
   function getSorted(list) {
     const copy = list.slice();
     if (state.mode === 'cronologico') return copy.sort((a, b) => a.ordine - b.ordine);
-    if (state.mode === 'fase') return copy.sort((a, b) => ((a.fase ?? 99) - (b.fase ?? 99)) || byDateThenOrder(a, b));
+    if (state.mode === 'fase') {
+      return copy.sort((a, b) =>
+        ((a.fase ?? 99) - (b.fase ?? 99)) ||
+        // solo fra i senza-fase: raggruppa per saga invece di interlacciarle per data
+        (a.fase == null && b.fase == null ? sagaRank(a.categoria) - sagaRank(b.categoria) : 0) ||
+        byDateThenOrder(a, b));
+    }
     return copy.sort(byDateThenOrder);
   }
 
@@ -229,19 +257,13 @@
     // returns array of { label, sublabel, items: [] }
     const groups = [];
     if (state.mode === 'cronologico') {
-      let current = null;
-      list.forEach(item => {
-        const key = item.categoria || 'Storie indipendenti';
-        if (!current || current.label !== key) {
-          current = { label: key, items: [] };
-          groups.push(current);
-        }
-        current.items.push(item);
-      });
+      // L'ordine narrativo salta di proposito da una saga all'altra: raggruppare per
+      // categoria produceva un divisore ogni 1,7 card. La saga resta leggibile dalla badge.
+      if (list.length) groups.push({ label: null, items: list.slice() });
     } else if (state.mode === 'fase') {
       let current = null;
       list.forEach(item => {
-        const key = PHASE_LABELS[item.fase] || NO_PHASE_LABEL;
+        const key = PHASE_LABELS[item.fase] || item.categoria || NO_PHASE_LABEL;
         if (!current || current.label !== key) {
           current = { label: key, items: [] };
           groups.push(current);
@@ -260,6 +282,11 @@
       });
     }
     return groups;
+  }
+
+  function annoLabel(anno) {
+    if (!Number.isInteger(anno)) return null;
+    return anno < 0 ? `${Math.abs(anno)} a.C.` : String(anno);
   }
 
   function chipLabel(part) {
@@ -434,28 +461,113 @@
 
     const sections = document.createElement('div');
     sections.className = 'modal-sections';
-    sections.innerHTML = `
-      <div class="modal-section">
-        <h3>Anno di ambientazione</h3>
-        <p class="is-placeholder">Informazioni in arrivo.</p>
-      </div>
-      <div class="modal-section">
-        <h3>Cast</h3>
-        <p class="is-placeholder">Informazioni in arrivo.</p>
-      </div>
-      <div class="modal-section">
-        <h3>Titoli collegati</h3>
-        <p class="is-placeholder">Informazioni in arrivo.</p>
-      </div>
-      <div class="modal-section">
-        <h3>Da vedere prima per capirlo bene</h3>
-        <p class="is-placeholder">Informazioni in arrivo.</p>
-      </div>
-      <div class="modal-section">
-        <h3>Sequel / Prequel</h3>
-        <p class="is-placeholder">Informazioni in arrivo.</p>
-      </div>
-    `;
+    const det = state.dettagli[item.ordine] || null;
+
+    // una sezione senza dati non viene emessa: cinque scatole con la stessa frase
+    // di attesa erano peggio che non mostrarle affatto
+    function addSection(titolo, build) {
+      const body = build();
+      if (!body) return;
+      const box = document.createElement('div');
+      box.className = 'modal-section';
+      const h3 = document.createElement('h3');
+      h3.textContent = titolo;
+      box.appendChild(h3);
+      box.appendChild(body);
+      sections.appendChild(box);
+    }
+
+    const giaMostrati = new Set();
+
+    // riga di collegamenti ad altri titoli: aprono la loro scheda, come i chip stagione
+    function titleLinks(ordini, etichetta) {
+      const validi = (ordini || [])
+        .filter(o => !giaMostrati.has(o))
+        .map(findItemByOrdine)
+        .filter(Boolean);
+      if (!validi.length) return null;
+      validi.forEach(v => giaMostrati.add(v.ordine));
+      const wrap = document.createElement('div');
+      wrap.className = 'link-row';
+      validi.forEach(other => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'title-link';
+        const num = document.createElement('span');
+        num.className = 'title-link-num';
+        num.textContent = String(other.ordine).padStart(3, '0');
+        b.appendChild(num);
+        b.appendChild(document.createTextNode(
+          other.displayTitle + (other.seasonNumber && other.tipo !== 'Film' ? ` (st. ${other.seasonNumber})` : '')
+        ));
+        if (etichetta) b.title = `${etichetta}: ${other.displayTitle}`;
+        b.addEventListener('click', () => openModal(other));
+        wrap.appendChild(b);
+      });
+      return wrap;
+    }
+
+    if (det) {
+      addSection('Anno di ambientazione', () => {
+        if (!det.ambientazione) return null;
+        const p = document.createElement('p');
+        p.textContent = det.ambientazione;
+        return p;
+      });
+
+      addSection('Cast', () => {
+        if (!det.cast || !det.cast.length) return null;
+        const ul = document.createElement('ul');
+        ul.className = 'cast-list';
+        det.cast.forEach(c => {
+          const li = document.createElement('li');
+          const a = document.createElement('span');
+          a.className = 'cast-attore';
+          a.textContent = c.attore;
+          const r = document.createElement('span');
+          r.className = 'cast-ruolo';
+          r.textContent = c.personaggio;
+          li.appendChild(a);
+          li.appendChild(r);
+          ul.appendChild(li);
+        });
+        return ul;
+      });
+
+      addSection('Da vedere prima per capirlo bene', () => titleLinks(det.prerequisiti, 'Prerequisito'));
+
+      addSection('Sequel / Prequel', () => {
+        if (!det.sequelPrequel || !det.sequelPrequel.length) return null;
+        const wrap = document.createElement('div');
+        ['prequel', 'sequel', 'spin-off'].forEach(rel => {
+          const ordini = det.sequelPrequel.filter(x => x.relazione === rel).map(x => x.ordine);
+          const row = titleLinks(ordini, rel);
+          if (!row) return;
+          const lab = document.createElement('p');
+          lab.className = 'rel-label';
+          lab.textContent = rel === 'spin-off' ? 'Spin-off' : rel.charAt(0).toUpperCase() + rel.slice(1);
+          wrap.appendChild(lab);
+          wrap.appendChild(row);
+        });
+        return wrap.children.length ? wrap : null;
+      });
+
+      addSection('Titoli collegati', () => titleLinks(det.collegati, 'Collegato'));
+
+      if (det.note) {
+        const nota = document.createElement('p');
+        nota.className = 'modal-nota';
+        nota.textContent = det.note;
+        sections.appendChild(nota);
+      }
+    }
+
+    if (!sections.children.length) {
+      const vuoto = document.createElement('p');
+      vuoto.className = 'is-placeholder';
+      vuoto.textContent = 'Per questo titolo non ci sono ancora schede di approfondimento.';
+      sections.appendChild(vuoto);
+    }
     els.modalBody.appendChild(sections);
   }
 
@@ -556,6 +668,17 @@
     const meta = buildMetaBadges(item);
     meta.className = 'card-meta';
     card.appendChild(meta);
+
+    if (state.mode === 'cronologico') {
+      const det = state.dettagli[item.ordine];
+      const anno = det && annoLabel(det.annoAmbientazione);
+      if (anno) {
+        const amb = document.createElement('p');
+        amb.className = 'card-ambientazione';
+        amb.textContent = `Ambientato nel ${anno}`;
+        card.appendChild(amb);
+      }
+    }
     li.appendChild(card);
     return li;
   }
@@ -580,16 +703,18 @@
 
     let idx = 0;
     groups.forEach(group => {
-      const divider = document.createElement('div');
-      divider.className = 'era-divider';
-      const h2 = document.createElement('h2');
-      h2.textContent = group.label;
-      divider.appendChild(h2);
-      const count = document.createElement('span');
-      count.className = 'era-count';
-      count.textContent = group.items.length === 1 ? '1 titolo' : `${group.items.length} titoli`;
-      divider.appendChild(count);
-      els.timeline.appendChild(divider);
+      if (group.label) {
+        const divider = document.createElement('div');
+        divider.className = 'era-divider';
+        const h2 = document.createElement('h2');
+        h2.textContent = group.label;
+        divider.appendChild(h2);
+        const count = document.createElement('span');
+        count.className = 'era-count';
+        count.textContent = group.items.length === 1 ? '1 titolo' : `${group.items.length} titoli`;
+        divider.appendChild(count);
+        els.timeline.appendChild(divider);
+      }
 
       group.items.forEach(item => {
         els.timeline.appendChild(buildCard(item, idx));
