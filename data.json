@@ -10,6 +10,7 @@
     "uscitaItalia": "2004-07-02",
     "uscitaRaw": null,
     "categoria": "Pre-MCU",
+    "universo": "terra-58732",
     "obbligatorio": false,
     "fase": null
   },
@@ -24,6 +25,7 @@
     "uscitaItalia": "2011-07-27",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 1
   },
@@ -38,6 +40,7 @@
     "uscitaItalia": "2016-02-02",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -52,6 +55,7 @@
     "uscitaItalia": "2016-06-23",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -66,6 +70,7 @@
     "uscitaItalia": "2013-08-28",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -80,6 +85,7 @@
     "uscitaItalia": "2000-01-07",
     "uscitaRaw": null,
     "categoria": "Pre-MCU",
+    "universo": "terra-26320",
     "obbligatorio": false,
     "fase": null
   },
@@ -94,6 +100,7 @@
     "uscitaItalia": "2002-08-16",
     "uscitaRaw": null,
     "categoria": "Pre-MCU",
+    "universo": "terra-26320",
     "obbligatorio": false,
     "fase": null
   },
@@ -108,6 +115,7 @@
     "uscitaItalia": "2005-03-04",
     "uscitaRaw": null,
     "categoria": "Pre-MCU",
+    "universo": "terra-26320",
     "obbligatorio": false,
     "fase": null
   },
@@ -122,6 +130,7 @@
     "uscitaItalia": "2008-09-22",
     "uscitaRaw": null,
     "categoria": "Pre-MCU",
+    "universo": "terra-26320",
     "obbligatorio": false,
     "fase": null
   },
@@ -136,6 +145,7 @@
     "uscitaItalia": "2011-06-08",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -150,6 +160,7 @@
     "uscitaItalia": "2005-09-16",
     "uscitaRaw": null,
     "categoria": "Fantastici 4 (Fox)",
+    "universo": "terra-121698",
     "obbligatorio": false,
     "fase": null
   },
@@ -164,6 +175,7 @@
     "uscitaItalia": "2009-04-29",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -178,6 +190,7 @@
     "uscitaItalia": "2019-03-06",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -192,6 +205,7 @@
     "uscitaItalia": "2000-10-27",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -206,6 +220,7 @@
     "uscitaItalia": "2007-06-15",
     "uscitaRaw": null,
     "categoria": "Fantastici 4 (Fox)",
+    "universo": "terra-121698",
     "obbligatorio": false,
     "fase": null
   },
@@ -220,6 +235,7 @@
     "uscitaItalia": "2003-04-30",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -234,6 +250,7 @@
     "uscitaItalia": "2008-05-01",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 1
   },
@@ -248,6 +265,7 @@
     "uscitaItalia": "2006-05-26",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -262,6 +280,7 @@
     "uscitaItalia": "2002-06-07",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-96283",
     "obbligatorio": true,
     "fase": null
   },
@@ -276,6 +295,7 @@
     "uscitaItalia": "2003-04-04",
     "uscitaRaw": null,
     "categoria": "Pre-MCU",
+    "universo": "terra-701306",
     "obbligatorio": false,
     "fase": null
   },
@@ -290,6 +310,7 @@
     "uscitaItalia": "2013-07-25",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -304,6 +325,7 @@
     "uscitaItalia": "2004-09-16",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-96283",
     "obbligatorio": true,
     "fase": null
   },
@@ -318,6 +340,7 @@
     "uscitaItalia": "2005-02-04",
     "uscitaRaw": null,
     "categoria": "Pre-MCU",
+    "universo": "terra-701306",
     "obbligatorio": false,
     "fase": null
   },
@@ -332,6 +355,7 @@
     "uscitaItalia": "2014-05-22",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -346,6 +370,7 @@
     "uscitaItalia": "2010-04-30",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 1
   },
@@ -360,6 +385,7 @@
     "uscitaItalia": "2007-05-01",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-96283",
     "obbligatorio": true,
     "fase": null
   },
@@ -374,6 +400,7 @@
     "uscitaItalia": "2008-06-18",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 1
   },
@@ -388,6 +415,7 @@
     "uscitaItalia": "2011-09-21",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -402,6 +430,7 @@
     "uscitaItalia": "2011-12-14",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -416,6 +445,7 @@
     "uscitaItalia": "2011-04-27",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 1
   },
@@ -430,6 +460,7 @@
     "uscitaItalia": "2012-04-25",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 1
   },
@@ -444,6 +475,7 @@
     "uscitaItalia": "2016-05-18",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -458,6 +490,7 @@
     "uscitaItalia": "2012-07-04",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-120703",
     "obbligatorio": true,
     "fase": null
   },
@@ -472,6 +505,7 @@
     "uscitaItalia": "2015-09-10",
     "uscitaRaw": null,
     "categoria": "Fantastici 4 (Fox)",
+    "universo": "terra-15866",
     "obbligatorio": false,
     "fase": null
   },
@@ -486,6 +520,7 @@
     "uscitaItalia": "2019-06-06",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -500,6 +535,7 @@
     "uscitaItalia": "2014-04-23",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-120703",
     "obbligatorio": true,
     "fase": null
   },
@@ -514,6 +550,7 @@
     "uscitaItalia": "2012-08-29",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -528,6 +565,7 @@
     "uscitaItalia": "2013-04-24",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 2
   },
@@ -542,6 +580,7 @@
     "uscitaItalia": "2014-03-12",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -556,6 +595,7 @@
     "uscitaItalia": "2014-03-04",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -570,6 +610,7 @@
     "uscitaItalia": "2013-11-20",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 2
   },
@@ -584,6 +625,7 @@
     "uscitaItalia": "2014-04-01",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -598,6 +640,7 @@
     "uscitaItalia": "2014-03-26",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 2
   },
@@ -612,6 +655,7 @@
     "uscitaItalia": "2014-06-03",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -626,6 +670,7 @@
     "uscitaItalia": "2014-10-22",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 2
   },
@@ -640,6 +685,7 @@
     "uscitaItalia": "2015-10-22",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -654,6 +700,7 @@
     "uscitaItalia": "2015-11-20",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -668,6 +715,7 @@
     "uscitaItalia": "2014-10-15",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -682,6 +730,7 @@
     "uscitaItalia": "2015-04-22",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 2
   },
@@ -696,6 +745,7 @@
     "uscitaItalia": "2015-05-22",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -710,6 +760,7 @@
     "uscitaItalia": "2017-04-25",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -724,6 +775,7 @@
     "uscitaItalia": "2016-09-30",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -738,6 +790,7 @@
     "uscitaItalia": "2022-08-10",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 4
   },
@@ -752,6 +805,7 @@
     "uscitaItalia": "2023-09-06",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 5
   },
@@ -766,6 +820,7 @@
     "uscitaItalia": "2016-03-18",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -780,6 +835,7 @@
     "uscitaItalia": null,
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -794,6 +850,7 @@
     "uscitaItalia": "2016-02-18",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -808,6 +865,7 @@
     "uscitaItalia": "2015-08-12",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 2
   },
@@ -822,6 +880,7 @@
     "uscitaItalia": "2017-03-17",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -836,6 +895,7 @@
     "uscitaItalia": "2015-10-22",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -850,6 +910,7 @@
     "uscitaItalia": null,
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -864,6 +925,7 @@
     "uscitaItalia": "2016-05-04",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -878,6 +940,7 @@
     "uscitaItalia": "2016-06-02",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -892,6 +955,7 @@
     "uscitaItalia": null,
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -906,6 +970,7 @@
     "uscitaItalia": "2018-02-14",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -920,6 +985,7 @@
     "uscitaItalia": "2017-08-18",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -934,6 +1000,7 @@
     "uscitaItalia": "2021-07-07",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -948,6 +1015,7 @@
     "uscitaItalia": "2016-10-12",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -962,6 +1030,7 @@
     "uscitaItalia": "2016-10-26",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -976,6 +1045,7 @@
     "uscitaItalia": "2017-03-22",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -990,6 +1060,7 @@
     "uscitaItalia": "2017-07-06",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -1004,6 +1075,7 @@
     "uscitaItalia": "2017-10-25",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -1018,6 +1090,7 @@
     "uscitaItalia": "2017-10-11",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1032,6 +1105,7 @@
     "uscitaItalia": "2018-11-15",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1046,6 +1120,7 @@
     "uscitaItalia": "2017-11-17",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1060,6 +1135,7 @@
     "uscitaItalia": "2018-03-08",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1074,6 +1150,7 @@
     "uscitaItalia": "2018-06-08",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1088,6 +1165,7 @@
     "uscitaItalia": "2019-04-05",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1102,6 +1180,7 @@
     "uscitaItalia": "2018-06-22",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1116,6 +1195,7 @@
     "uscitaItalia": "2018-09-07",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1130,6 +1210,7 @@
     "uscitaItalia": "2018-10-19",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1144,6 +1225,7 @@
     "uscitaItalia": "2020-03-24",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1158,6 +1240,7 @@
     "uscitaItalia": "2019-01-18",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1172,6 +1255,7 @@
     "uscitaItalia": "2019-06-14",
     "uscitaRaw": null,
     "categoria": "Marvel Netflix",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1186,6 +1270,7 @@
     "uscitaItalia": "2018-08-14",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -1200,6 +1285,7 @@
     "uscitaItalia": "2018-05-15",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -1214,6 +1300,7 @@
     "uscitaItalia": "2020-07-17",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1228,6 +1315,7 @@
     "uscitaItalia": "2017-12-20",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1242,6 +1330,7 @@
     "uscitaItalia": "2018-04-25",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -1256,6 +1345,7 @@
     "uscitaItalia": "2019-06-03",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1270,6 +1360,7 @@
     "uscitaItalia": "2020-09-02",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -1284,6 +1375,7 @@
     "uscitaItalia": "2019-04-24",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -1298,6 +1390,7 @@
     "uscitaItalia": "2018-10-04",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-688",
     "obbligatorio": false,
     "fase": null
   },
@@ -1312,6 +1405,7 @@
     "uscitaItalia": "2021-09-01",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 4
   },
@@ -1326,6 +1420,7 @@
     "uscitaItalia": "2019-07-10",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 3
   },
@@ -1340,6 +1435,7 @@
     "uscitaItalia": "2020-06-05",
     "uscitaRaw": null,
     "categoria": "Marvel Television",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1354,6 +1450,7 @@
     "uscitaItalia": "2021-01-15",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1368,6 +1465,7 @@
     "uscitaItalia": "2021-03-19",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1382,6 +1480,7 @@
     "uscitaItalia": "2021-06-09",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1396,6 +1495,7 @@
     "uscitaItalia": "2021-08-11",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "multiverso",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1410,6 +1510,7 @@
     "uscitaItalia": "2024-02-14",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-688",
     "obbligatorio": false,
     "fase": null
   },
@@ -1424,6 +1525,7 @@
     "uscitaItalia": "2021-11-24",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1438,6 +1540,7 @@
     "uscitaItalia": "2021-11-03",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 4
   },
@@ -1452,6 +1555,7 @@
     "uscitaItalia": "2021-10-14",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-688",
     "obbligatorio": false,
     "fase": null
   },
@@ -1466,6 +1570,7 @@
     "uscitaItalia": "2021-12-15",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1480,6 +1585,7 @@
     "uscitaItalia": "2022-03-30",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 4
   },
@@ -1494,6 +1600,7 @@
     "uscitaItalia": "2022-08-18",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1508,6 +1615,7 @@
     "uscitaItalia": "2022-03-31",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-688",
     "obbligatorio": false,
     "fase": null
   },
@@ -1522,6 +1630,7 @@
     "uscitaItalia": "2022-05-04",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1536,6 +1645,7 @@
     "uscitaItalia": "2022-07-06",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1550,6 +1660,7 @@
     "uscitaItalia": "2022-10-07",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 4
   },
@@ -1564,6 +1675,7 @@
     "uscitaItalia": "2022-11-25",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 4
   },
@@ -1578,6 +1690,7 @@
     "uscitaItalia": "2022-11-09",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 4
   },
@@ -1592,6 +1705,7 @@
     "uscitaItalia": "2023-02-15",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1606,6 +1720,7 @@
     "uscitaItalia": "2023-05-03",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1620,6 +1735,7 @@
     "uscitaItalia": "2023-06-21",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1634,6 +1750,7 @@
     "uscitaItalia": "2023-10-06",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1648,6 +1765,7 @@
     "uscitaItalia": "2023-11-08",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1662,6 +1780,7 @@
     "uscitaItalia": "2023-12-22",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "multiverso",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1676,6 +1795,7 @@
     "uscitaItalia": "2017-03-01",
     "uscitaRaw": null,
     "categoria": "X-Men (Fox)",
+    "universo": "terra-10005",
     "obbligatorio": false,
     "fase": null
   },
@@ -1690,6 +1810,7 @@
     "uscitaItalia": "2024-01-10",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 5
   },
@@ -1704,6 +1825,7 @@
     "uscitaItalia": "2024-12-11",
     "uscitaRaw": null,
     "categoria": "Sony / Spider-Man",
+    "universo": "terra-688",
     "obbligatorio": false,
     "fase": null
   },
@@ -1718,6 +1840,7 @@
     "uscitaItalia": "2024-09-19",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 5
   },
@@ -1732,6 +1855,7 @@
     "uscitaItalia": "2024-07-24",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 5
   },
@@ -1746,6 +1870,7 @@
     "uscitaItalia": "2024-12-22",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "multiverso",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1760,6 +1885,7 @@
     "uscitaItalia": "2025-01-29",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-86445",
     "obbligatorio": false,
     "fase": null
   },
@@ -1774,6 +1900,7 @@
     "uscitaItalia": "2025-02-12",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1788,6 +1915,7 @@
     "uscitaItalia": "2025-03-05",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 5
   },
@@ -1802,6 +1930,7 @@
     "uscitaItalia": "2025-04-30",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 5
   },
@@ -1816,6 +1945,7 @@
     "uscitaItalia": "2025-06-25",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": 5
   },
@@ -1830,6 +1960,7 @@
     "uscitaItalia": "2025-07-23",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-828",
     "obbligatorio": true,
     "fase": 6
   },
@@ -1844,6 +1975,7 @@
     "uscitaItalia": "2025-08-01",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1858,6 +1990,7 @@
     "uscitaItalia": "2025-09-24",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "multiverso",
     "obbligatorio": false,
     "fase": null
   },
@@ -1872,6 +2005,7 @@
     "uscitaItalia": "2026-01-28",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1886,6 +2020,7 @@
     "uscitaItalia": "2026-03-25",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1900,6 +2035,7 @@
     "uscitaItalia": "2026-05-13",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1914,6 +2050,7 @@
     "uscitaItalia": "2026-07-29",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 6
   },
@@ -1928,6 +2065,7 @@
     "uscitaItalia": "2026-12-16",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": true,
     "fase": 6
   },
@@ -1942,6 +2080,7 @@
     "uscitaItalia": "2026-10-14",
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   },
@@ -1956,6 +2095,7 @@
     "uscitaItalia": null,
     "uscitaRaw": null,
     "categoria": "MCU",
+    "universo": "terra-86445",
     "obbligatorio": false,
     "fase": null
   }

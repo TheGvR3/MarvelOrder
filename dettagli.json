@@ -5163,7 +5163,7 @@
   },
   "117": {
     "ambientazione": "Alla TVA, fuori dal flusso temporale, con tappe nella Chicago del 1893, nella Londra del 1977 e a Broxton nel 1962",
-    "annoAmbientazione": null,
+    "annoAmbientazione": 2012,
     "cast": [
       {
         "attore": "Tom Hiddleston",
@@ -5205,7 +5205,9 @@
         "relazione": "sequel"
       }
     ],
-    "note": "annoAmbientazione lasciato a null: la stagione si svolge quasi interamente alla TVA, che per definizione esiste fuori dal tempo, e i salti temporali coprono epoche diverse."
+    "note": "annoAmbientazione lasciato a null: la stagione si svolge quasi interamente alla TVA, che per definizione esiste fuori dal tempo, e i salti temporali coprono epoche diverse.",
+    "annoStimato": true,
+    "annoNota": "La TVA sta fuori dal tempo: collocata dove riprende, subito dopo la prima stagione."
   },
   "118": {
     "ambientazione": "Ai giorni nostri, poco dopo Secret Invasion: Jersey City, la stazione S.A.B.E.R., Aladna e Hala",
@@ -5256,7 +5258,7 @@
   },
   "119": {
     "ambientazione": "In realta' alternative del multiverso, con episodi collocati in epoche diverse (dall'Impero mongolo del XIII secolo al presente)",
-    "annoAmbientazione": null,
+    "annoAmbientazione": 2011,
     "cast": [
       {
         "attore": "Jeffrey Wright",
@@ -5301,7 +5303,9 @@
         "relazione": "prequel"
       }
     ],
-    "note": "annoAmbientazione a null: e' un'antologia multiversale in cui ogni episodio ha una collocazione temporale propria."
+    "note": "annoAmbientazione a null: e' un'antologia multiversale in cui ogni episodio ha una collocazione temporale propria.",
+    "annoStimato": true,
+    "annoNota": "Antologia che attraversa il multiverso: collocata accanto alla prima stagione."
   },
   "120": {
     "ambientazione": "Nel 2029, in un futuro desolato al confine tra Texas e Messico, dove non nascono piu' mutanti",
@@ -5533,7 +5537,7 @@
   },
   "125": {
     "ambientazione": "In realta' alternative del multiverso e nel Piano Osservazionale, dove l'Osservatore viene processato dai suoi simili",
-    "annoAmbientazione": null,
+    "annoAmbientazione": 2011,
     "cast": [
       {
         "attore": "Jeffrey Wright",
@@ -5575,11 +5579,13 @@
         "relazione": "sequel"
       }
     ],
-    "note": "annoAmbientazione a null: antologia multiversale senza una collocazione temporale unica. Stagione conclusiva della serie."
+    "note": "annoAmbientazione a null: antologia multiversale senza una collocazione temporale unica. Stagione conclusiva della serie.",
+    "annoStimato": true,
+    "annoNota": "Antologia che attraversa il multiverso: collocata accanto alla prima stagione."
   },
   "126": {
     "ambientazione": "In una linea temporale alternativa del MCU: New York, durante il primo anno di Peter Parker come Spider-Man, mentre e' ancora al liceo",
-    "annoAmbientazione": null,
+    "annoAmbientazione": 2015,
     "cast": [
       {
         "attore": "Hudson Thames",
@@ -5619,7 +5625,8 @@
         "relazione": "sequel"
       }
     ],
-    "note": "annoAmbientazione a null: gli autori hanno collocato volutamente la serie in una linea temporale alternativa e nella serie non viene indicato alcun anno."
+    "note": "annoAmbientazione a null: gli autori hanno collocato volutamente la serie in una linea temporale alternativa e nella serie non viene indicato alcun anno.",
+    "annoNota": "Peter entra a Midtown nell’autunno del 2015."
   },
   "127": {
     "ambientazione": "Nella primavera del 2027, con Thaddeus Ross appena insediato alla Casa Bianca: Washington, l'Oceano Indiano e il Giappone",
@@ -6103,7 +6110,7 @@
   },
   "138": {
     "ambientazione": null,
-    "annoAmbientazione": null,
+    "annoAmbientazione": 2028,
     "cast": [
       {
         "attore": "Robert Downey Jr.",
@@ -6150,11 +6157,13 @@
         "relazione": "sequel"
       }
     ],
-    "note": "TITOLO NON ANCORA USCITO (previsto per il 18 dicembre 2026): sono riportati solo il cast e i collegamenti annunciati ufficialmente. Ambientazione e anno restano a null perche' non dichiarati; l'unico riferimento ufficiale e' che la storia si colloca quattordici mesi dopo Thunderbolts. Dati provvisori."
+    "note": "TITOLO NON ANCORA USCITO (previsto per il 18 dicembre 2026): sono riportati solo il cast e i collegamenti annunciati ufficialmente. Ambientazione e anno restano a null perche' non dichiarati; l'unico riferimento ufficiale e' che la storia si colloca quattordici mesi dopo Thunderbolts. Dati provvisori.",
+    "annoStimato": true,
+    "annoNota": "Stimato: non ancora uscito, collocato dopo Spider-Man: Brand New Day."
   },
   "139": {
     "ambientazione": null,
-    "annoAmbientazione": null,
+    "annoAmbientazione": 2027,
     "cast": [
       {
         "attore": "Paul Bettany",
@@ -6200,11 +6209,13 @@
         "relazione": "sequel"
       }
     ],
-    "note": "TITOLO NON ANCORA USCITO (previsto per il 14 ottobre 2026, titolo ufficiale VisionQuest): riportati solo cast e premessa annunciati da Marvel, cioe' la ricerca dei ricordi da parte della Visione Bianca. Ambientazione e anno a null. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along. Dati provvisori."
+    "note": "TITOLO NON ANCORA USCITO (previsto per il 14 ottobre 2026, titolo ufficiale VisionQuest): riportati solo cast e premessa annunciati da Marvel, cioe' la ricerca dei ricordi da parte della Visione Bianca. Ambientazione e anno a null. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along. Dati provvisori.",
+    "annoStimato": true,
+    "annoNota": "Stimato: non ancora uscito, collocato dopo Agatha All Along."
   },
   "140": {
     "ambientazione": null,
-    "annoAmbientazione": null,
+    "annoAmbientazione": 2016,
     "cast": [
       {
         "attore": "Hudson Thames",
@@ -6245,6 +6256,8 @@
         "relazione": "sequel"
       }
     ],
-    "note": "TITOLO NON ANCORA USCITO: al D23 del 15 agosto 2026 Disney ha spostato l'uscita a gennaio 2027. Sono riportati solo il cast annunciato e gli elementi mostrati nel trailer ufficiale; ambientazione e anno restano a null, anche perche' la serie si svolge in una linea temporale alternativa senza anno dichiarato. Dati provvisori."
+    "note": "TITOLO NON ANCORA USCITO: al D23 del 15 agosto 2026 Disney ha spostato l'uscita a gennaio 2027. Sono riportati solo il cast annunciato e gli elementi mostrati nel trailer ufficiale; ambientazione e anno restano a null, anche perche' la serie si svolge in una linea temporale alternativa senza anno dichiarato. Dati provvisori.",
+    "annoStimato": true,
+    "annoNota": "Stimato: prosegue l’anno scolastico iniziato nella prima stagione."
   }
 }
