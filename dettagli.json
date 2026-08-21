@@ -1,0 +1,6250 @@
+{
+  "1": {
+    "ambientazione": "presente narrativo, primi anni Duemila; Tampa, Florida",
+    "annoAmbientazione": 2004,
+    "cast": [
+      {
+        "attore": "Thomas Jane",
+        "personaggio": "Frank Castle / Punisher"
+      },
+      {
+        "attore": "John Travolta",
+        "personaggio": "Howard Saint"
+      },
+      {
+        "attore": "Will Patton",
+        "personaggio": "Quentin Glass"
+      },
+      {
+        "attore": "Rebecca Romijn",
+        "personaggio": "Joan"
+      },
+      {
+        "attore": "Samantha Mathis",
+        "personaggio": "Maria Castle"
+      },
+      {
+        "attore": "Roy Scheider",
+        "personaggio": "Frank Castle Sr."
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      75,
+      83,
+      136
+    ],
+    "sequelPrequel": [],
+    "note": "L'anno non è mai dichiarato nel film: si assume il presente dell'uscita. Continuità autonoma, slegata sia dall'MCU sia dal Punisher Netflix; il sequel Punisher - Zona di guerra (2008) non è presente in questa lista."
+  },
+  "2": {
+    "ambientazione": "1942-1945 (seconda guerra mondiale), con prologo e finale ai giorni nostri",
+    "annoAmbientazione": 1943,
+    "cast": [
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Steve Rogers / Capitan America"
+      },
+      {
+        "attore": "Hayley Atwell",
+        "personaggio": "Peggy Carter"
+      },
+      {
+        "attore": "Sebastian Stan",
+        "personaggio": "Bucky Barnes"
+      },
+      {
+        "attore": "Hugo Weaving",
+        "personaggio": "Johann Schmidt / Teschio Rosso"
+      },
+      {
+        "attore": "Tommy Lee Jones",
+        "personaggio": "colonnello Chester Phillips"
+      },
+      {
+        "attore": "Stanley Tucci",
+        "personaggio": "dottor Abraham Erskine"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      3,
+      5,
+      31,
+      92
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 43,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 62,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Quasi tutto il film è un lungo flashback: la cornice moderna è ambientata poco prima di The Avengers."
+  },
+  "3": {
+    "ambientazione": "1946, New York, un anno dopo la scomparsa di Steve Rogers",
+    "annoAmbientazione": 1946,
+    "cast": [
+      {
+        "attore": "Hayley Atwell",
+        "personaggio": "Peggy Carter"
+      },
+      {
+        "attore": "James D'Arcy",
+        "personaggio": "Edwin Jarvis"
+      },
+      {
+        "attore": "Chad Michael Murray",
+        "personaggio": "Jack Thompson"
+      },
+      {
+        "attore": "Enver Gjokaj",
+        "personaggio": "Daniel Sousa"
+      },
+      {
+        "attore": "Shea Whigham",
+        "personaggio": "Roger Dooley"
+      },
+      {
+        "attore": "Dominic Cooper",
+        "personaggio": "Howard Stark"
+      }
+    ],
+    "prerequisiti": [
+      2
+    ],
+    "collegati": [
+      5,
+      96
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 4,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Prima stagione: 8 episodi ambientati nell'arco di poche settimane del 1946."
+  },
+  "4": {
+    "ambientazione": "1947, Los Angeles",
+    "annoAmbientazione": 1947,
+    "cast": [
+      {
+        "attore": "Hayley Atwell",
+        "personaggio": "Peggy Carter"
+      },
+      {
+        "attore": "James D'Arcy",
+        "personaggio": "Edwin Jarvis"
+      },
+      {
+        "attore": "Enver Gjokaj",
+        "personaggio": "Daniel Sousa"
+      },
+      {
+        "attore": "Wynn Everett",
+        "personaggio": "Whitney Frost / Madame Masque"
+      },
+      {
+        "attore": "Chad Michael Murray",
+        "personaggio": "Jack Thompson"
+      },
+      {
+        "attore": "Dominic Cooper",
+        "personaggio": "Howard Stark"
+      }
+    ],
+    "prerequisiti": [
+      3
+    ],
+    "collegati": [
+      2,
+      96
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 3,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "La serie è stata cancellata dopo questa stagione: il finale lascia diversi archi narrativi aperti."
+  },
+  "5": {
+    "ambientazione": "1946, un anno dopo la scomparsa di Steve Rogers",
+    "annoAmbientazione": 1946,
+    "cast": [
+      {
+        "attore": "Hayley Atwell",
+        "personaggio": "Peggy Carter"
+      },
+      {
+        "attore": "Bradley Whitford",
+        "personaggio": "agente John Flynn"
+      },
+      {
+        "attore": "Dominic Cooper",
+        "personaggio": "Howard Stark"
+      },
+      {
+        "attore": "Neal McDonough",
+        "personaggio": "Timothy \"Dum Dum\" Dugan"
+      },
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Steve Rogers / Capitan America (filmati d'archivio)"
+      }
+    ],
+    "prerequisiti": [
+      2
+    ],
+    "collegati": [
+      3,
+      4
+    ],
+    "sequelPrequel": [],
+    "note": "Cortometraggio di circa 15 minuti. Ha dato origine alla serie Agent Carter, che però riscrive in parte gli stessi mesi: le due versioni non combaciano del tutto."
+  },
+  "6": {
+    "ambientazione": "presente narrativo, fine anni Novanta",
+    "annoAmbientazione": 1998,
+    "cast": [
+      {
+        "attore": "Wesley Snipes",
+        "personaggio": "Blade"
+      },
+      {
+        "attore": "Stephen Dorff",
+        "personaggio": "Deacon Frost"
+      },
+      {
+        "attore": "Kris Kristofferson",
+        "personaggio": "Abraham Whistler"
+      },
+      {
+        "attore": "N'Bushe Wright",
+        "personaggio": "Karen Jenson"
+      },
+      {
+        "attore": "Donal Logue",
+        "personaggio": "Quinn"
+      },
+      {
+        "attore": "Udo Kier",
+        "personaggio": "Dragonetti"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      8,
+      9
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 7,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Anno mai dichiarato: si assume il presente dell'uscita. Continuità autonoma New Line, senza legami con l'MCU."
+  },
+  "7": {
+    "ambientazione": "presente narrativo, inizio anni Duemila; Praga",
+    "annoAmbientazione": 2002,
+    "cast": [
+      {
+        "attore": "Wesley Snipes",
+        "personaggio": "Blade"
+      },
+      {
+        "attore": "Kris Kristofferson",
+        "personaggio": "Abraham Whistler"
+      },
+      {
+        "attore": "Ron Perlman",
+        "personaggio": "Reinhardt"
+      },
+      {
+        "attore": "Leonor Varela",
+        "personaggio": "Nyssa Damaskinos"
+      },
+      {
+        "attore": "Luke Goss",
+        "personaggio": "Jared Nomak"
+      },
+      {
+        "attore": "Norman Reedus",
+        "personaggio": "Scud"
+      }
+    ],
+    "prerequisiti": [
+      6
+    ],
+    "collegati": [
+      9
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 6,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 8,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Anno mai dichiarato: si assume il presente dell'uscita."
+  },
+  "8": {
+    "ambientazione": "presente narrativo, metà anni Duemila",
+    "annoAmbientazione": 2004,
+    "cast": [
+      {
+        "attore": "Wesley Snipes",
+        "personaggio": "Blade"
+      },
+      {
+        "attore": "Ryan Reynolds",
+        "personaggio": "Hannibal King"
+      },
+      {
+        "attore": "Jessica Biel",
+        "personaggio": "Abigail Whistler"
+      },
+      {
+        "attore": "Dominic Purcell",
+        "personaggio": "Drake / Dracula"
+      },
+      {
+        "attore": "Parker Posey",
+        "personaggio": "Danica Talos"
+      },
+      {
+        "attore": "Kris Kristofferson",
+        "personaggio": "Abraham Whistler"
+      }
+    ],
+    "prerequisiti": [
+      6,
+      7
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "ordine": 7,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 9,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Anno mai dichiarato: si assume il presente dell'uscita."
+  },
+  "9": {
+    "ambientazione": "presente narrativo, 2006; Detroit, dopo gli eventi di Blade: Trinity",
+    "annoAmbientazione": 2006,
+    "cast": [
+      {
+        "attore": "Kirk \"Sticky Fingaz\" Jones",
+        "personaggio": "Blade"
+      },
+      {
+        "attore": "Jill Wagner",
+        "personaggio": "Krista Starr"
+      },
+      {
+        "attore": "Neil Jackson",
+        "personaggio": "Marcus Van Sciver"
+      },
+      {
+        "attore": "Jessica Gower",
+        "personaggio": "Chase"
+      },
+      {
+        "attore": "Nelson Lee",
+        "personaggio": "Shen"
+      }
+    ],
+    "prerequisiti": [
+      6,
+      8
+    ],
+    "collegati": [
+      7
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 8,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Blade non è più interpretato da Wesley Snipes. Serie cancellata dopo 13 episodi, con il finale lasciato in sospeso."
+  },
+  "10": {
+    "ambientazione": "1962 (crisi dei missili di Cuba), con prologo nel 1944",
+    "annoAmbientazione": 1962,
+    "cast": [
+      {
+        "attore": "James McAvoy",
+        "personaggio": "Charles Xavier / Professor X"
+      },
+      {
+        "attore": "Michael Fassbender",
+        "personaggio": "Erik Lehnsherr / Magneto"
+      },
+      {
+        "attore": "Kevin Bacon",
+        "personaggio": "Sebastian Shaw"
+      },
+      {
+        "attore": "Jennifer Lawrence",
+        "personaggio": "Raven / Mystica"
+      },
+      {
+        "attore": "Nicholas Hoult",
+        "personaggio": "Hank McCoy / Bestia"
+      },
+      {
+        "attore": "Rose Byrne",
+        "personaggio": "Moira MacTaggert"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      12,
+      14,
+      32
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 24,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Prequel della trilogia originale X-Men, con alcune incongruenze rispetto a essa poi in parte riscritte da Giorni di un futuro passato."
+  },
+  "11": {
+    "ambientazione": "presente narrativo, metà anni Duemila; New York",
+    "annoAmbientazione": 2005,
+    "cast": [
+      {
+        "attore": "Ioan Gruffudd",
+        "personaggio": "Reed Richards / Mr. Fantastic"
+      },
+      {
+        "attore": "Jessica Alba",
+        "personaggio": "Susan Storm / la Donna Invisibile"
+      },
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Johnny Storm / la Torcia Umana"
+      },
+      {
+        "attore": "Michael Chiklis",
+        "personaggio": "Ben Grimm / la Cosa"
+      },
+      {
+        "attore": "Julian McMahon",
+        "personaggio": "Victor Von Doom / il Dottor Destino"
+      },
+      {
+        "attore": "Kerry Washington",
+        "personaggio": "Alicia Masters"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      34,
+      131
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 15,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Versione Fox del 2005 diretta da Tim Story: continuità autonoma, senza legami né con gli X-Men Fox né con l'MCU. Da non confondere con il reboot del 2015 (ordine 34)."
+  },
+  "12": {
+    "ambientazione": "1979, con prologo nel 1845 e un montaggio che attraversa le guerre dal XIX al XX secolo",
+    "annoAmbientazione": 1979,
+    "cast": [
+      {
+        "attore": "Hugh Jackman",
+        "personaggio": "Logan / Wolverine"
+      },
+      {
+        "attore": "Liev Schreiber",
+        "personaggio": "Victor Creed / Sabretooth"
+      },
+      {
+        "attore": "Danny Huston",
+        "personaggio": "William Stryker"
+      },
+      {
+        "attore": "Lynn Collins",
+        "personaggio": "Kayla Silverfox"
+      },
+      {
+        "attore": "Ryan Reynolds",
+        "personaggio": "Wade Wilson / Deadpool"
+      },
+      {
+        "attore": "Taylor Kitsch",
+        "personaggio": "Remy LeBeau / Gambit"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      10,
+      14,
+      16,
+      57
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 21,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Il climax si colloca al 28 marzo 1979 (Three Mile Island). Il Deadpool di questo film viene di fatto rinnegato dal film del 2016 (ordine 57)."
+  },
+  "13": {
+    "ambientazione": "1995, con flashback al 1989 e una scena post-credit ambientata ai giorni nostri",
+    "annoAmbientazione": 1995,
+    "cast": [
+      {
+        "attore": "Brie Larson",
+        "personaggio": "Carol Danvers / Captain Marvel"
+      },
+      {
+        "attore": "Samuel L. Jackson",
+        "personaggio": "Nick Fury"
+      },
+      {
+        "attore": "Ben Mendelsohn",
+        "personaggio": "Talos"
+      },
+      {
+        "attore": "Jude Law",
+        "personaggio": "Yon-Rogg"
+      },
+      {
+        "attore": "Annette Bening",
+        "personaggio": "la Suprema Intelligenza / dottoressa Wendy Lawson (Mar-Vell)"
+      },
+      {
+        "attore": "Lashana Lynch",
+        "personaggio": "Maria Rambeau"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      2,
+      89,
+      92,
+      116
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 118,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Uscito nel 2019 ma ambientato tredici anni prima di Iron Man: mostra le origini dello S.H.I.E.L.D. moderno e del progetto Vendicatori. La scena post-credit si aggancia direttamente a Avengers: Endgame."
+  },
+  "14": {
+    "ambientazione": "un imprecisato \"futuro non troppo lontano\", di fatto contemporaneo all'uscita, con prologo nel 1944 in un campo di concentramento in Polonia",
+    "annoAmbientazione": 2000,
+    "cast": [
+      {
+        "attore": "Hugh Jackman",
+        "personaggio": "Logan / Wolverine"
+      },
+      {
+        "attore": "Patrick Stewart",
+        "personaggio": "Charles Xavier / Professor X"
+      },
+      {
+        "attore": "Ian McKellen",
+        "personaggio": "Erik Lehnsherr / Magneto"
+      },
+      {
+        "attore": "Famke Janssen",
+        "personaggio": "Jean Grey"
+      },
+      {
+        "attore": "Halle Berry",
+        "personaggio": "Ororo Munroe / Tempesta"
+      },
+      {
+        "attore": "Anna Paquin",
+        "personaggio": "Marie / Rogue"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      10,
+      12
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 10,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 16,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "L'anno non è mai dichiarato: la didascalia iniziale parla solo di un \"futuro non troppo lontano\". Le cronologie ricostruite a posteriori lo collocano nei primi anni Duemila; 2000 è quindi una stima."
+  },
+  "15": {
+    "ambientazione": "presente narrativo, poco dopo il primo film",
+    "annoAmbientazione": 2007,
+    "cast": [
+      {
+        "attore": "Ioan Gruffudd",
+        "personaggio": "Reed Richards / Mr. Fantastic"
+      },
+      {
+        "attore": "Jessica Alba",
+        "personaggio": "Susan Storm / la Donna Invisibile"
+      },
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Johnny Storm / la Torcia Umana"
+      },
+      {
+        "attore": "Michael Chiklis",
+        "personaggio": "Ben Grimm / la Cosa"
+      },
+      {
+        "attore": "Julian McMahon",
+        "personaggio": "Victor Von Doom / il Dottor Destino"
+      },
+      {
+        "attore": "Doug Jones",
+        "personaggio": "Silver Surfer"
+      }
+    ],
+    "prerequisiti": [
+      11
+    ],
+    "collegati": [
+      34,
+      131
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 11,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Silver Surfer è interpretato fisicamente da Doug Jones e doppiato in originale da Laurence Fishburne. Il terzo capitolo della serie non è mai stato realizzato: il finale resta aperto."
+  },
+  "16": {
+    "ambientazione": "presente narrativo, poco dopo il primo film",
+    "annoAmbientazione": 2003,
+    "cast": [
+      {
+        "attore": "Hugh Jackman",
+        "personaggio": "Logan / Wolverine"
+      },
+      {
+        "attore": "Patrick Stewart",
+        "personaggio": "Charles Xavier / Professor X"
+      },
+      {
+        "attore": "Ian McKellen",
+        "personaggio": "Erik Lehnsherr / Magneto"
+      },
+      {
+        "attore": "Brian Cox",
+        "personaggio": "William Stryker"
+      },
+      {
+        "attore": "Famke Janssen",
+        "personaggio": "Jean Grey"
+      },
+      {
+        "attore": "Halle Berry",
+        "personaggio": "Ororo Munroe / Tempesta"
+      }
+    ],
+    "prerequisiti": [
+      14
+    ],
+    "collegati": [
+      12
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 14,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 18,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Come il primo film non dichiara mai l'anno: si assume il presente dell'uscita."
+  },
+  "17": {
+    "ambientazione": "presente narrativo, fine anni Duemila; Afghanistan e Malibu",
+    "annoAmbientazione": 2008,
+    "cast": [
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Gwyneth Paltrow",
+        "personaggio": "Pepper Potts"
+      },
+      {
+        "attore": "Jeff Bridges",
+        "personaggio": "Obadiah Stane / Iron Monger"
+      },
+      {
+        "attore": "Terrence Howard",
+        "personaggio": "James \"Rhodey\" Rhodes"
+      },
+      {
+        "attore": "Shaun Toub",
+        "personaggio": "Ho Yinsen"
+      },
+      {
+        "attore": "Samuel L. Jackson",
+        "personaggio": "Nick Fury"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      27,
+      28,
+      31
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 25,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 38,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "La cronologia ufficiale Marvel pubblicata nel 2023 colloca il film nella primavera del 2008; alcune ricostruzioni precedenti lo indicavano invece nel 2010. La scena post-credit introduce l'Iniziativa Vendicatori."
+  },
+  "18": {
+    "ambientazione": "presente narrativo, pochi mesi dopo X-Men 2",
+    "annoAmbientazione": 2006,
+    "cast": [
+      {
+        "attore": "Hugh Jackman",
+        "personaggio": "Logan / Wolverine"
+      },
+      {
+        "attore": "Patrick Stewart",
+        "personaggio": "Charles Xavier / Professor X"
+      },
+      {
+        "attore": "Ian McKellen",
+        "personaggio": "Erik Lehnsherr / Magneto"
+      },
+      {
+        "attore": "Famke Janssen",
+        "personaggio": "Jean Grey / Fenice Nera"
+      },
+      {
+        "attore": "Halle Berry",
+        "personaggio": "Ororo Munroe / Tempesta"
+      },
+      {
+        "attore": "Kelsey Grammer",
+        "personaggio": "Hank McCoy / Bestia"
+      }
+    ],
+    "prerequisiti": [
+      14,
+      16
+    ],
+    "collegati": [
+      24
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 16,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 21,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Il finale viene poi cancellato dalla linea temporale in X-Men: Giorni di un futuro passato."
+  },
+  "19": {
+    "ambientazione": "presente narrativo, inizio anni Duemila; New York",
+    "annoAmbientazione": 2002,
+    "cast": [
+      {
+        "attore": "Tobey Maguire",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Willem Dafoe",
+        "personaggio": "Norman Osborn / Green Goblin"
+      },
+      {
+        "attore": "Kirsten Dunst",
+        "personaggio": "Mary Jane Watson"
+      },
+      {
+        "attore": "James Franco",
+        "personaggio": "Harry Osborn"
+      },
+      {
+        "attore": "Cliff Robertson",
+        "personaggio": "zio Ben Parker"
+      },
+      {
+        "attore": "Rosemary Harris",
+        "personaggio": "zia May Parker"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 22,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Trilogia di Sam Raimi, continuità autonoma poi riagganciata all'MCU dal multiverso di Spider-Man: No Way Home."
+  },
+  "20": {
+    "ambientazione": "presente narrativo, inizio anni Duemila; Hell's Kitchen, New York",
+    "annoAmbientazione": 2003,
+    "cast": [
+      {
+        "attore": "Ben Affleck",
+        "personaggio": "Matt Murdock / Daredevil"
+      },
+      {
+        "attore": "Jennifer Garner",
+        "personaggio": "Elektra Natchios"
+      },
+      {
+        "attore": "Colin Farrell",
+        "personaggio": "Bullseye"
+      },
+      {
+        "attore": "Michael Clarke Duncan",
+        "personaggio": "Wilson Fisk / Kingpin"
+      },
+      {
+        "attore": "Jon Favreau",
+        "personaggio": "Franklin \"Foggy\" Nelson"
+      },
+      {
+        "attore": "Joe Pantoliano",
+        "personaggio": "Ben Urich"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      46,
+      128
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 23,
+        "relazione": "spin-off"
+      }
+    ],
+    "note": "Continuità Fox autonoma, senza rapporto con la serie Netflix (ordine 46) né con Daredevil: Rinascita."
+  },
+  "21": {
+    "ambientazione": "presente narrativo, circa dieci anni dopo la morte di Jean Grey; Giappone, con prologo a Nagasaki nel 1945",
+    "annoAmbientazione": 2013,
+    "cast": [
+      {
+        "attore": "Hugh Jackman",
+        "personaggio": "Logan / Wolverine"
+      },
+      {
+        "attore": "Tao Okamoto",
+        "personaggio": "Mariko Yashida"
+      },
+      {
+        "attore": "Rila Fukushima",
+        "personaggio": "Yukio"
+      },
+      {
+        "attore": "Hiroyuki Sanada",
+        "personaggio": "Shingen Yashida"
+      },
+      {
+        "attore": "Svetlana Khodchenkova",
+        "personaggio": "Viper"
+      },
+      {
+        "attore": "Famke Janssen",
+        "personaggio": "Jean Grey"
+      }
+    ],
+    "prerequisiti": [
+      14,
+      18
+    ],
+    "collegati": [
+      12,
+      24
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 120,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "La scena a metà dei titoli di coda si aggancia direttamente a X-Men: Giorni di un futuro passato (ordine 24)."
+  },
+  "22": {
+    "ambientazione": "presente narrativo, due anni dopo il primo film; New York",
+    "annoAmbientazione": 2004,
+    "cast": [
+      {
+        "attore": "Tobey Maguire",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Alfred Molina",
+        "personaggio": "dottor Otto Octavius / Doctor Octopus"
+      },
+      {
+        "attore": "Kirsten Dunst",
+        "personaggio": "Mary Jane Watson"
+      },
+      {
+        "attore": "James Franco",
+        "personaggio": "Harry Osborn"
+      },
+      {
+        "attore": "Rosemary Harris",
+        "personaggio": "zia May Parker"
+      },
+      {
+        "attore": "J.K. Simmons",
+        "personaggio": "J. Jonah Jameson"
+      }
+    ],
+    "prerequisiti": [
+      19
+    ],
+    "collegati": [
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 19,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 26,
+        "relazione": "sequel"
+      }
+    ],
+    "note": null
+  },
+  "23": {
+    "ambientazione": "presente narrativo, qualche tempo dopo Daredevil",
+    "annoAmbientazione": 2005,
+    "cast": [
+      {
+        "attore": "Jennifer Garner",
+        "personaggio": "Elektra Natchios"
+      },
+      {
+        "attore": "Goran Višnjić",
+        "personaggio": "Mark Miller"
+      },
+      {
+        "attore": "Kirsten Prout",
+        "personaggio": "Abby Miller"
+      },
+      {
+        "attore": "Terence Stamp",
+        "personaggio": "Stick"
+      },
+      {
+        "attore": "Will Yun Lee",
+        "personaggio": "Kirigi"
+      },
+      {
+        "attore": "Natassia Malthe",
+        "personaggio": "Typhoid"
+      }
+    ],
+    "prerequisiti": [
+      20
+    ],
+    "collegati": [
+      46,
+      55
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 20,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Spin-off di Daredevil (2003): la resurrezione di Elektra non viene spiegata. Nessun rapporto con la Elektra della serie Netflix. Anno mai dichiarato: si assume il presente dell'uscita."
+  },
+  "24": {
+    "ambientazione": "1973, con cornice ambientata in un futuro distopico del 2023",
+    "annoAmbientazione": 1973,
+    "cast": [
+      {
+        "attore": "Hugh Jackman",
+        "personaggio": "Logan / Wolverine"
+      },
+      {
+        "attore": "James McAvoy",
+        "personaggio": "Charles Xavier / Professor X (giovane)"
+      },
+      {
+        "attore": "Michael Fassbender",
+        "personaggio": "Erik Lehnsherr / Magneto (giovane)"
+      },
+      {
+        "attore": "Jennifer Lawrence",
+        "personaggio": "Raven / Mystica"
+      },
+      {
+        "attore": "Peter Dinklage",
+        "personaggio": "Bolivar Trask"
+      },
+      {
+        "attore": "Patrick Stewart",
+        "personaggio": "Charles Xavier / Professor X"
+      }
+    ],
+    "prerequisiti": [
+      10,
+      18
+    ],
+    "collegati": [
+      12,
+      16,
+      21
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 10,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 32,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Fa da ponte tra la trilogia originale e quella prequel e riscrive il finale di Conflitto finale, azzerando buona parte della continuità precedente."
+  },
+  "25": {
+    "ambientazione": "presente narrativo, circa sei mesi dopo Iron Man; primavera 2010 secondo la cronologia ufficiale Marvel",
+    "annoAmbientazione": 2010,
+    "cast": [
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Gwyneth Paltrow",
+        "personaggio": "Pepper Potts"
+      },
+      {
+        "attore": "Don Cheadle",
+        "personaggio": "James \"Rhodey\" Rhodes / War Machine"
+      },
+      {
+        "attore": "Mickey Rourke",
+        "personaggio": "Ivan Vanko / Whiplash"
+      },
+      {
+        "attore": "Sam Rockwell",
+        "personaggio": "Justin Hammer"
+      },
+      {
+        "attore": "Scarlett Johansson",
+        "personaggio": "Natasha Romanoff / Vedova Nera"
+      }
+    ],
+    "prerequisiti": [
+      17
+    ],
+    "collegati": [
+      27,
+      30,
+      31
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 17,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 38,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Secondo la cronologia ufficiale Marvel si svolge nella stessa settimana di L'incredibile Hulk e Thor (la cosiddetta \"settimana campale di Fury\"). Rhodey passa da Terrence Howard a Don Cheadle."
+  },
+  "26": {
+    "ambientazione": "presente narrativo, qualche mese dopo Spider-Man 2; New York",
+    "annoAmbientazione": 2007,
+    "cast": [
+      {
+        "attore": "Tobey Maguire",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Kirsten Dunst",
+        "personaggio": "Mary Jane Watson"
+      },
+      {
+        "attore": "James Franco",
+        "personaggio": "Harry Osborn / New Goblin"
+      },
+      {
+        "attore": "Thomas Haden Church",
+        "personaggio": "Flint Marko / l'Uomo Sabbia"
+      },
+      {
+        "attore": "Topher Grace",
+        "personaggio": "Eddie Brock / Venom"
+      },
+      {
+        "attore": "Bryce Dallas Howard",
+        "personaggio": "Gwen Stacy"
+      }
+    ],
+    "prerequisiti": [
+      19,
+      22
+    ],
+    "collegati": [
+      93,
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 22,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Ultimo capitolo della trilogia di Raimi: il quarto film non è mai stato realizzato."
+  },
+  "27": {
+    "ambientazione": "presente narrativo, alcuni anni dopo l'incidente che ha trasformato Banner; primavera 2010 secondo la cronologia ufficiale Marvel",
+    "annoAmbientazione": 2010,
+    "cast": [
+      {
+        "attore": "Edward Norton",
+        "personaggio": "Bruce Banner / Hulk"
+      },
+      {
+        "attore": "Liv Tyler",
+        "personaggio": "Betty Ross"
+      },
+      {
+        "attore": "Tim Roth",
+        "personaggio": "Emil Blonsky / Abominio"
+      },
+      {
+        "attore": "William Hurt",
+        "personaggio": "generale Thaddeus \"Thunderbolt\" Ross"
+      },
+      {
+        "attore": "Tim Blake Nelson",
+        "personaggio": "Samuel Sterns"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      25,
+      28,
+      31,
+      127
+    ],
+    "sequelPrequel": [],
+    "note": "Bruce Banner è interpretato da Edward Norton, sostituito da Mark Ruffalo a partire da The Avengers. Non ha mai avuto un sequel diretto; la scena finale con Tony Stark viene ripresa e spiegata dal one-shot Il consulente (ordine 28)."
+  },
+  "28": {
+    "ambientazione": "presente narrativo, subito dopo L'incredibile Hulk",
+    "annoAmbientazione": 2010,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "agente Phil Coulson"
+      },
+      {
+        "attore": "Maximiliano Hernández",
+        "personaggio": "agente Jasper Sitwell"
+      },
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man (filmati d'archivio)"
+      },
+      {
+        "attore": "William Hurt",
+        "personaggio": "generale Thaddeus Ross (filmati d'archivio)"
+      },
+      {
+        "attore": "Tim Roth",
+        "personaggio": "Emil Blonsky / Abominio (filmati d'archivio)"
+      }
+    ],
+    "prerequisiti": [
+      27
+    ],
+    "collegati": [
+      17,
+      31
+    ],
+    "sequelPrequel": [],
+    "note": "Cortometraggio di circa quattro minuti che reincornicia la scena post-credit di L'incredibile Hulk: solo due attori compaiono in scene nuove, gli altri tre sono materiale di repertorio."
+  },
+  "29": {
+    "ambientazione": "presente narrativo, poche ore prima dell'arrivo di Coulson in New Mexico in Thor",
+    "annoAmbientazione": 2010,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "agente Phil Coulson"
+      },
+      {
+        "attore": "Jessica Manuel",
+        "personaggio": "la commessa"
+      },
+      {
+        "attore": "Jeff Prewett",
+        "personaggio": "primo rapinatore"
+      },
+      {
+        "attore": "Zach Hudson",
+        "personaggio": "secondo rapinatore"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      28,
+      30
+    ],
+    "sequelPrequel": [],
+    "note": "Cortometraggio di circa quattro minuti con un cast di soli quattro interpreti: si aggancia direttamente a Thor."
+  },
+  "30": {
+    "ambientazione": "presente narrativo, primavera 2010 secondo la cronologia ufficiale Marvel, con prologo ad Asgard e in Norvegia nel 965 d.C.",
+    "annoAmbientazione": 2010,
+    "cast": [
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Tom Hiddleston",
+        "personaggio": "Loki"
+      },
+      {
+        "attore": "Natalie Portman",
+        "personaggio": "Jane Foster"
+      },
+      {
+        "attore": "Anthony Hopkins",
+        "personaggio": "Odino"
+      },
+      {
+        "attore": "Stellan Skarsgård",
+        "personaggio": "Erik Selvig"
+      },
+      {
+        "attore": "Idris Elba",
+        "personaggio": "Heimdall"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      25,
+      27,
+      29,
+      31
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 41,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Secondo la cronologia ufficiale Marvel si svolge nella stessa settimana di Iron Man 2 e L'incredibile Hulk. La scena post-credit introduce il Tesseract e prepara The Avengers."
+  },
+  "31": {
+    "ambientazione": "2012; la battaglia di New York",
+    "annoAmbientazione": 2012,
+    "cast": [
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Steve Rogers / Capitan America"
+      },
+      {
+        "attore": "Mark Ruffalo",
+        "personaggio": "Bruce Banner / Hulk"
+      },
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Scarlett Johansson",
+        "personaggio": "Natasha Romanoff / Vedova Nera"
+      },
+      {
+        "attore": "Tom Hiddleston",
+        "personaggio": "Loki"
+      }
+    ],
+    "prerequisiti": [
+      2,
+      17,
+      27,
+      30
+    ],
+    "collegati": [
+      25,
+      37,
+      40
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 49,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Confluenza di tutta la Fase 1: è utile aver visto anche Iron Man 2 (ordine 25). Hulk passa da Edward Norton a Mark Ruffalo. La scena a metà dei titoli di coda introduce Thanos."
+  },
+  "32": {
+    "ambientazione": "1983, con prologo nell'antico Egitto attorno al 3600 a.C.",
+    "annoAmbientazione": 1983,
+    "cast": [
+      {
+        "attore": "Oscar Isaac",
+        "personaggio": "En Sabah Nur / Apocalisse"
+      },
+      {
+        "attore": "James McAvoy",
+        "personaggio": "Charles Xavier / Professor X"
+      },
+      {
+        "attore": "Michael Fassbender",
+        "personaggio": "Erik Lehnsherr / Magneto"
+      },
+      {
+        "attore": "Jennifer Lawrence",
+        "personaggio": "Raven / Mystica"
+      },
+      {
+        "attore": "Sophie Turner",
+        "personaggio": "Jean Grey"
+      },
+      {
+        "attore": "Nicholas Hoult",
+        "personaggio": "Hank McCoy / Bestia"
+      }
+    ],
+    "prerequisiti": [
+      10,
+      24
+    ],
+    "collegati": [
+      14,
+      16
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 24,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 35,
+        "relazione": "sequel"
+      }
+    ],
+    "note": null
+  },
+  "33": {
+    "ambientazione": "presente narrativo, inizio anni Dieci; New York",
+    "annoAmbientazione": 2012,
+    "cast": [
+      {
+        "attore": "Andrew Garfield",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Emma Stone",
+        "personaggio": "Gwen Stacy"
+      },
+      {
+        "attore": "Rhys Ifans",
+        "personaggio": "dottor Curt Connors / Lizard"
+      },
+      {
+        "attore": "Denis Leary",
+        "personaggio": "capitano George Stacy"
+      },
+      {
+        "attore": "Martin Sheen",
+        "personaggio": "zio Ben Parker"
+      },
+      {
+        "attore": "Sally Field",
+        "personaggio": "zia May Parker"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      19,
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 36,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Reboot Sony del 2012, continuità separata dalla trilogia di Raimi; il personaggio verrà riagganciato all'MCU dal multiverso di Spider-Man: No Way Home."
+  },
+  "34": {
+    "ambientazione": "2014-2015, con prologo nel 2007",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Miles Teller",
+        "personaggio": "Reed Richards / Mr. Fantastic"
+      },
+      {
+        "attore": "Michael B. Jordan",
+        "personaggio": "Johnny Storm / la Torcia Umana"
+      },
+      {
+        "attore": "Kate Mara",
+        "personaggio": "Sue Storm / la Donna Invisibile"
+      },
+      {
+        "attore": "Jamie Bell",
+        "personaggio": "Ben Grimm / la Cosa"
+      },
+      {
+        "attore": "Toby Kebbell",
+        "personaggio": "Victor Von Doom / Doom"
+      },
+      {
+        "attore": "Reg E. Cathey",
+        "personaggio": "Franklin Storm"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      11,
+      15,
+      131
+    ],
+    "sequelPrequel": [],
+    "note": "Reboot del 2015 diretto da Josh Trank, senza alcun legame con i film Fox del 2005-2007 (ordini 11 e 15) né con l'MCU. Il sequel annunciato non è mai stato realizzato."
+  },
+  "35": {
+    "ambientazione": "1992, nove anni dopo X-Men: Apocalypse",
+    "annoAmbientazione": 1992,
+    "cast": [
+      {
+        "attore": "Sophie Turner",
+        "personaggio": "Jean Grey / Fenice"
+      },
+      {
+        "attore": "James McAvoy",
+        "personaggio": "Charles Xavier / Professor X"
+      },
+      {
+        "attore": "Michael Fassbender",
+        "personaggio": "Erik Lehnsherr / Magneto"
+      },
+      {
+        "attore": "Jennifer Lawrence",
+        "personaggio": "Raven / Mystica"
+      },
+      {
+        "attore": "Nicholas Hoult",
+        "personaggio": "Hank McCoy / Bestia"
+      },
+      {
+        "attore": "Jessica Chastain",
+        "personaggio": "Vuk"
+      }
+    ],
+    "prerequisiti": [
+      32
+    ],
+    "collegati": [
+      10,
+      18,
+      24
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 32,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Ultimo film della saga X-Men Fox nella continuità principale; rilegge la storia della Fenice Nera già raccontata in X-Men: Conflitto finale (ordine 18)."
+  },
+  "36": {
+    "ambientazione": "New York, 2014 circa, circa un anno dopo il primo film: Peter e Gwen si diplomano",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Andrew Garfield",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Emma Stone",
+        "personaggio": "Gwen Stacy"
+      },
+      {
+        "attore": "Jamie Foxx",
+        "personaggio": "Max Dillon / Electro"
+      },
+      {
+        "attore": "Dane DeHaan",
+        "personaggio": "Harry Osborn / Green Goblin"
+      },
+      {
+        "attore": "Sally Field",
+        "personaggio": "Zia May Parker"
+      },
+      {
+        "attore": "Paul Giamatti",
+        "personaggio": "Aleksei Sytsevich / Rhino"
+      }
+    ],
+    "prerequisiti": [
+      33
+    ],
+    "collegati": [
+      33,
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 33,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Universo Sony di The Amazing Spider-Man, separato dall'MCU. Questo Peter Parker ed Electro tornano in Spider-Man: No Way Home."
+  },
+  "37": {
+    "ambientazione": "Stati Uniti, 2012, poche settimane dopo la battaglia di New York",
+    "annoAmbientazione": 2012,
+    "cast": [
+      {
+        "attore": "Jesse Bradford",
+        "personaggio": "Benny Pollack"
+      },
+      {
+        "attore": "Lizzy Caplan",
+        "personaggio": "Claire Wise"
+      },
+      {
+        "attore": "Titus Welliver",
+        "personaggio": "Agente Felix Blake"
+      },
+      {
+        "attore": "Maximiliano Hernandez",
+        "personaggio": "Agente Jasper Sitwell"
+      }
+    ],
+    "prerequisiti": [
+      31
+    ],
+    "collegati": [
+      31,
+      40
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 31,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Cortometraggio: una coppia trova un'arma Chitauri abbandonata dopo The Avengers. Blake e Sitwell ricompaiono in Agents of S.H.I.E.L.D."
+  },
+  "38": {
+    "ambientazione": "Natale 2012, dopo la battaglia di New York (prologo a Berna, capodanno 1999)",
+    "annoAmbientazione": 2012,
+    "cast": [
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Gwyneth Paltrow",
+        "personaggio": "Pepper Potts"
+      },
+      {
+        "attore": "Don Cheadle",
+        "personaggio": "James Rhodes / War Machine"
+      },
+      {
+        "attore": "Guy Pearce",
+        "personaggio": "Aldrich Killian"
+      },
+      {
+        "attore": "Ben Kingsley",
+        "personaggio": "Trevor Slattery / il falso Mandarino"
+      },
+      {
+        "attore": "Rebecca Hall",
+        "personaggio": "Maya Hansen"
+      }
+    ],
+    "prerequisiti": [
+      17,
+      31
+    ],
+    "collegati": [
+      31,
+      39,
+      94
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 25,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Tony soffre di attacchi di panico causati dalla battaglia di New York: il film si capisce davvero solo dopo The Avengers."
+  },
+  "39": {
+    "ambientazione": "Carcere di Seagate, 2014 circa, qualche tempo dopo Iron Man 3",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Ben Kingsley",
+        "personaggio": "Trevor Slattery"
+      },
+      {
+        "attore": "Scoot McNairy",
+        "personaggio": "Jackson Norriss"
+      },
+      {
+        "attore": "Lester Speight",
+        "personaggio": "Herman"
+      },
+      {
+        "attore": "Sam Rockwell",
+        "personaggio": "Justin Hammer"
+      }
+    ],
+    "prerequisiti": [
+      38
+    ],
+    "collegati": [
+      38,
+      25,
+      94
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 38,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Rivela che il vero Mandarino esiste: filo narrativo ripreso in Shang-Chi e la leggenda dei Dieci Anelli, dove Slattery ricompare."
+  },
+  "40": {
+    "ambientazione": "2013, circa un anno dopo la battaglia di New York, con Coulson tornato in servizio",
+    "annoAmbientazione": 2013,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Brett Dalton",
+        "personaggio": "Grant Ward"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Skye / Daisy Johnson"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      }
+    ],
+    "prerequisiti": [
+      31
+    ],
+    "collegati": [
+      31,
+      37,
+      42
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 42,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Primo blocco della stagione 1 (episodi 1-7), collocato prima dell'incrocio con Thor: The Dark World. Il ritorno di Coulson ha senso solo dopo The Avengers."
+  },
+  "41": {
+    "ambientazione": "2013, tra Asgard, Svartalfheim e Londra, durante la Convergenza (prologo migliaia di anni prima)",
+    "annoAmbientazione": 2013,
+    "cast": [
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Natalie Portman",
+        "personaggio": "Jane Foster"
+      },
+      {
+        "attore": "Tom Hiddleston",
+        "personaggio": "Loki"
+      },
+      {
+        "attore": "Anthony Hopkins",
+        "personaggio": "Odino"
+      },
+      {
+        "attore": "Christopher Eccleston",
+        "personaggio": "Malekith"
+      },
+      {
+        "attore": "Idris Elba",
+        "personaggio": "Heimdall"
+      }
+    ],
+    "prerequisiti": [
+      30,
+      31
+    ],
+    "collegati": [
+      42,
+      45,
+      89
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 30,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 72,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "La scena a meta titoli di coda, con l'Etere consegnato al Collezionista, si collega direttamente a Guardiani della Galassia."
+  },
+  "42": {
+    "ambientazione": "Fine 2013 - inizio 2014, subito dopo la battaglia di Greenwich",
+    "annoAmbientazione": 2013,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Brett Dalton",
+        "personaggio": "Grant Ward"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Skye / Daisy Johnson"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      }
+    ],
+    "prerequisiti": [
+      40,
+      41
+    ],
+    "collegati": [
+      41,
+      40,
+      44
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 40,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 44,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Blocco che interseca Thor: The Dark World: l'episodio 8 (The Well) si apre con la squadra impegnata a ripulire i detriti dello scontro di Greenwich."
+  },
+  "43": {
+    "ambientazione": "2014, a Washington D.C., due anni dopo la battaglia di New York",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Steve Rogers / Capitan America"
+      },
+      {
+        "attore": "Scarlett Johansson",
+        "personaggio": "Natasha Romanoff / Vedova Nera"
+      },
+      {
+        "attore": "Sebastian Stan",
+        "personaggio": "Bucky Barnes / Soldato d'Inverno"
+      },
+      {
+        "attore": "Anthony Mackie",
+        "personaggio": "Sam Wilson / Falcon"
+      },
+      {
+        "attore": "Samuel L. Jackson",
+        "personaggio": "Nick Fury"
+      },
+      {
+        "attore": "Robert Redford",
+        "personaggio": "Alexander Pierce"
+      }
+    ],
+    "prerequisiti": [
+      2,
+      31
+    ],
+    "collegati": [
+      44,
+      49,
+      62
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 2,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 62,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "La caduta dello S.H.I.E.L.D. e la rivelazione dell'infiltrazione HYDRA cambiano l'intero universo televisivo Marvel dell'epoca."
+  },
+  "44": {
+    "ambientazione": "Primavera 2014, durante e subito dopo il crollo dello S.H.I.E.L.D.",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Brett Dalton",
+        "personaggio": "Grant Ward"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Skye / Daisy Johnson"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Bill Paxton",
+        "personaggio": "John Garrett"
+      }
+    ],
+    "prerequisiti": [
+      42,
+      43
+    ],
+    "collegati": [
+      43,
+      42,
+      48
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 42,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 48,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Blocco che interseca Captain America: The Winter Soldier: l'episodio 17 (Turn, Turn, Turn) si svolge nelle stesse ore della rivelazione dell'HYDRA dentro lo S.H.I.E.L.D. e va visto dopo il film."
+  },
+  "45": {
+    "ambientazione": "2014, nello spazio profondo tra Morag e Xandar (prologo sulla Terra nel 1988)",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Chris Pratt",
+        "personaggio": "Peter Quill / Star-Lord"
+      },
+      {
+        "attore": "Zoe Saldana",
+        "personaggio": "Gamora"
+      },
+      {
+        "attore": "Dave Bautista",
+        "personaggio": "Drax il Distruttore"
+      },
+      {
+        "attore": "Vin Diesel",
+        "personaggio": "Groot (voce)"
+      },
+      {
+        "attore": "Bradley Cooper",
+        "personaggio": "Rocket (voce)"
+      },
+      {
+        "attore": "Lee Pace",
+        "personaggio": "Ronan l'Accusatore"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      41,
+      51,
+      89
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 51,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Si puo vedere quasi come storia autonoma; il Collezionista e la Gemma del Potere lo collegano a Thor: The Dark World e a Infinity War."
+  },
+  "46": {
+    "ambientazione": "Hell's Kitchen, New York, 2015, durante la ricostruzione del quartiere devastato dalla battaglia di New York",
+    "annoAmbientazione": 2015,
+    "cast": [
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil"
+      },
+      {
+        "attore": "Deborah Ann Woll",
+        "personaggio": "Karen Page"
+      },
+      {
+        "attore": "Elden Henson",
+        "personaggio": "Foggy Nelson"
+      },
+      {
+        "attore": "Vincent D'Onofrio",
+        "personaggio": "Wilson Fisk / Kingpin"
+      },
+      {
+        "attore": "Rosario Dawson",
+        "personaggio": "Claire Temple"
+      },
+      {
+        "attore": "Toby Leonard Moore",
+        "personaggio": "James Wesley"
+      }
+    ],
+    "prerequisiti": [
+      31
+    ],
+    "collegati": [
+      47,
+      55,
+      66
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 55,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Serie quasi autonoma: basta sapere che New York e stata attaccata dagli alieni in The Avengers (in serie chiamato solo l'incidente)."
+  },
+  "47": {
+    "ambientazione": "New York, 2015, pochi mesi dopo i fatti di Daredevil",
+    "annoAmbientazione": 2015,
+    "cast": [
+      {
+        "attore": "Krysten Ritter",
+        "personaggio": "Jessica Jones"
+      },
+      {
+        "attore": "David Tennant",
+        "personaggio": "Kilgrave / l'Uomo Viola"
+      },
+      {
+        "attore": "Mike Colter",
+        "personaggio": "Luke Cage"
+      },
+      {
+        "attore": "Rachael Taylor",
+        "personaggio": "Trish Walker"
+      },
+      {
+        "attore": "Carrie-Anne Moss",
+        "personaggio": "Jeri Hogarth"
+      },
+      {
+        "attore": "Eka Darville",
+        "personaggio": "Malcolm Ducasse"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      52,
+      66,
+      76
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 76,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Introduce Luke Cage e prepara la sua serie. Storia autonoma, non richiede altri titoli."
+  },
+  "48": {
+    "ambientazione": "Autunno 2014 - primavera 2015, con lo S.H.I.E.L.D. ricostruito in clandestinita (apertura in flashback nel 1945)",
+    "annoAmbientazione": 2015,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Skye / Daisy Johnson"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      },
+      {
+        "attore": "Kyle MacLachlan",
+        "personaggio": "Calvin Zabo"
+      }
+    ],
+    "prerequisiti": [
+      43,
+      44
+    ],
+    "collegati": [
+      44,
+      50,
+      3
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 44,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 50,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Blocco precedente all'incrocio con Avengers: Age of Ultron. L'apertura della stagione contiene un flashback del 1945 con Peggy Carter e Daniel Whitehall."
+  },
+  "49": {
+    "ambientazione": "2015, tra Sokovia, Wakanda, Seoul e il Sudafrica",
+    "annoAmbientazione": 2015,
+    "cast": [
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Steve Rogers / Capitan America"
+      },
+      {
+        "attore": "Mark Ruffalo",
+        "personaggio": "Bruce Banner / Hulk"
+      },
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Scarlett Johansson",
+        "personaggio": "Natasha Romanoff / Vedova Nera"
+      },
+      {
+        "attore": "James Spader",
+        "personaggio": "Ultron (voce)"
+      }
+    ],
+    "prerequisiti": [
+      31,
+      43
+    ],
+    "collegati": [
+      50,
+      58,
+      62
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 31,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 89,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "La distruzione di Sokovia e la causa diretta degli Accordi di Sokovia in Captain America: Civil War."
+  },
+  "50": {
+    "ambientazione": "Maggio 2015, subito dopo la battaglia di Sokovia",
+    "annoAmbientazione": 2015,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Henry Simmons",
+        "personaggio": "Alphonso Mack MacKenzie"
+      },
+      {
+        "attore": "Adrianne Palicki",
+        "personaggio": "Bobbi Morse / Mockingbird"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      }
+    ],
+    "prerequisiti": [
+      48,
+      49
+    ],
+    "collegati": [
+      49,
+      48,
+      60
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 48,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 60,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Blocco che segue Avengers: Age of Ultron (l'episodio 20 si apre con i riferimenti alla battaglia di Sokovia) e chiude la stagione con la diffusione della Nebbia Terrigena."
+  },
+  "51": {
+    "ambientazione": "2014, pochi mesi dopo il primo film (prologo sulla Terra nel 1980)",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Chris Pratt",
+        "personaggio": "Peter Quill / Star-Lord"
+      },
+      {
+        "attore": "Zoe Saldana",
+        "personaggio": "Gamora"
+      },
+      {
+        "attore": "Dave Bautista",
+        "personaggio": "Drax il Distruttore"
+      },
+      {
+        "attore": "Kurt Russell",
+        "personaggio": "Ego"
+      },
+      {
+        "attore": "Michael Rooker",
+        "personaggio": "Yondu Udonta"
+      },
+      {
+        "attore": "Karen Gillan",
+        "personaggio": "Nebula"
+      }
+    ],
+    "prerequisiti": [
+      45
+    ],
+    "collegati": [
+      53,
+      54,
+      89
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 45,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 115,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Nonostante l'uscita nel 2017, la vicenda si colloca pochi mesi dopo il primo film, quindi ancora nel 2014."
+  },
+  "52": {
+    "ambientazione": "Harlem, New York, 2016 circa, qualche mese dopo Jessica Jones",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Mike Colter",
+        "personaggio": "Luke Cage"
+      },
+      {
+        "attore": "Simone Missick",
+        "personaggio": "Misty Knight"
+      },
+      {
+        "attore": "Mahershala Ali",
+        "personaggio": "Cornell Cottonmouth Stokes"
+      },
+      {
+        "attore": "Alfre Woodard",
+        "personaggio": "Mariah Dillard"
+      },
+      {
+        "attore": "Theo Rossi",
+        "personaggio": "Hernan Shades Alvarez"
+      },
+      {
+        "attore": "Rosario Dawson",
+        "personaggio": "Claire Temple"
+      }
+    ],
+    "prerequisiti": [
+      47
+    ],
+    "collegati": [
+      47,
+      66,
+      79
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 79,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Le cronologie non concordano: alcune collocano la stagione a fine 2015, in parallelo con Daredevil stagione 2, altre nel 2016."
+  },
+  "53": {
+    "ambientazione": "2014, nell'epoca in cui Groot e ancora una piantina: il primo corto sta tra i due film, gli altri subito dopo il Vol. 2",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Vin Diesel",
+        "personaggio": "Groot (voce)"
+      },
+      {
+        "attore": "Bradley Cooper",
+        "personaggio": "Rocket (voce, cameo)"
+      },
+      {
+        "attore": "Trevor Devall",
+        "personaggio": "Iwua (voce)"
+      },
+      {
+        "attore": "James Gunn",
+        "personaggio": "Orologio da polso (voce)"
+      }
+    ],
+    "prerequisiti": [
+      45,
+      51
+    ],
+    "collegati": [
+      45,
+      51,
+      54
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 54,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Cinque cortometraggi muti senza dialoghi: il cast vocale accreditato e molto ridotto, per questo l'elenco ha meno di quattro voci principali. James Gunn ha dichiarato che i corti non fanno necessariamente parte della saga dei Guardiani."
+  },
+  "54": {
+    "ambientazione": "2014, stessa finestra della prima stagione, con Groot ancora piccolo",
+    "annoAmbientazione": 2014,
+    "cast": [
+      {
+        "attore": "Vin Diesel",
+        "personaggio": "Groot (voce)"
+      },
+      {
+        "attore": "Bradley Cooper",
+        "personaggio": "Rocket (voce, cameo)"
+      },
+      {
+        "attore": "Jeffrey Wright",
+        "personaggio": "Uatu l'Osservatore (voce)"
+      }
+    ],
+    "prerequisiti": [
+      53
+    ],
+    "collegati": [
+      51,
+      53,
+      100
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 53,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Cast vocale minimo, come nella prima stagione. La comparsa dell'Osservatore doppiato da Jeffrey Wright collega i corti a What If...?"
+  },
+  "55": {
+    "ambientazione": "Hell's Kitchen, New York, 2016 circa, qualche mese dopo la prima stagione",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil"
+      },
+      {
+        "attore": "Jon Bernthal",
+        "personaggio": "Frank Castle / Punisher"
+      },
+      {
+        "attore": "Elodie Yung",
+        "personaggio": "Elektra Natchios"
+      },
+      {
+        "attore": "Deborah Ann Woll",
+        "personaggio": "Karen Page"
+      },
+      {
+        "attore": "Elden Henson",
+        "personaggio": "Foggy Nelson"
+      },
+      {
+        "attore": "Vincent D'Onofrio",
+        "personaggio": "Wilson Fisk / Kingpin"
+      }
+    ],
+    "prerequisiti": [
+      46
+    ],
+    "collegati": [
+      66,
+      75,
+      81
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 46,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 81,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 75,
+        "relazione": "spin-off"
+      }
+    ],
+    "note": "Introduce Punisher (che avra una serie propria) ed Elektra, decisiva per The Defenders. Alcune cronologie collocano la stagione a fine 2015."
+  },
+  "56": {
+    "ambientazione": "2015, nelle settimane tra la battaglia di Sokovia e il colpo alla Pym Technologies",
+    "annoAmbientazione": 2015,
+    "cast": [
+      {
+        "attore": "Leslie Bibb",
+        "personaggio": "Christine Everhart"
+      },
+      {
+        "attore": "Paul Rudd",
+        "personaggio": "Scott Lang"
+      },
+      {
+        "attore": "Corey Stoll",
+        "personaggio": "Darren Cross"
+      }
+    ],
+    "prerequisiti": [
+      49
+    ],
+    "collegati": [
+      58,
+      49,
+      61
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 61,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Serie di brevi finti telegiornali nata come marketing virale per Ant-Man: il cast accreditato e minimo, per questo l'elenco ha meno di quattro voci."
+  },
+  "57": {
+    "ambientazione": "Epoca contemporanea, 2016 circa, in una citta nordamericana non identificata",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Ryan Reynolds",
+        "personaggio": "Wade Wilson / Deadpool"
+      },
+      {
+        "attore": "Morena Baccarin",
+        "personaggio": "Vanessa Carlysle"
+      },
+      {
+        "attore": "Ed Skrein",
+        "personaggio": "Francis Freeman / Ajax"
+      },
+      {
+        "attore": "T.J. Miller",
+        "personaggio": "Weasel"
+      },
+      {
+        "attore": "Brianna Hildebrand",
+        "personaggio": "Testata Nucleare Negasonica"
+      },
+      {
+        "attore": "Stefan Kapicic",
+        "personaggio": "Colosso (voce)"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      12,
+      24,
+      86
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 86,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 124,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Appartiene all'universo X-Men della Fox e prende in giro apertamente la versione di Wade Wilson vista in X-Men le origini - Wolverine. Non richiede prerequisiti."
+  },
+  "58": {
+    "ambientazione": "2015, a San Francisco, dopo la battaglia di Sokovia (prologo nel 1989)",
+    "annoAmbientazione": 2015,
+    "cast": [
+      {
+        "attore": "Paul Rudd",
+        "personaggio": "Scott Lang / Ant-Man"
+      },
+      {
+        "attore": "Michael Douglas",
+        "personaggio": "Hank Pym"
+      },
+      {
+        "attore": "Evangeline Lilly",
+        "personaggio": "Hope van Dyne"
+      },
+      {
+        "attore": "Corey Stoll",
+        "personaggio": "Darren Cross / Yellowjacket"
+      },
+      {
+        "attore": "Michael Pena",
+        "personaggio": "Luis"
+      },
+      {
+        "attore": "Bobby Cannavale",
+        "personaggio": "Jim Paxton"
+      }
+    ],
+    "prerequisiti": [
+      49
+    ],
+    "collegati": [
+      56,
+      62,
+      85
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 85,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "La scena nei titoli di coda anticipa direttamente il coinvolgimento di Scott Lang in Captain America: Civil War."
+  },
+  "59": {
+    "ambientazione": "New York, 2016 circa, quindici anni dopo la scomparsa di Danny Rand",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Finn Jones",
+        "personaggio": "Danny Rand / Iron Fist"
+      },
+      {
+        "attore": "Jessica Henwick",
+        "personaggio": "Colleen Wing"
+      },
+      {
+        "attore": "Tom Pelphrey",
+        "personaggio": "Ward Meachum"
+      },
+      {
+        "attore": "Jessica Stroup",
+        "personaggio": "Joy Meachum"
+      },
+      {
+        "attore": "David Wenham",
+        "personaggio": "Harold Meachum"
+      },
+      {
+        "attore": "Rosario Dawson",
+        "personaggio": "Claire Temple"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      46,
+      52,
+      66
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 80,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Ultimo tassello prima di The Defenders: chiarisce chi e la Mano, l'organizzazione al centro del crossover."
+  },
+  "60": {
+    "ambientazione": "Novembre 2015 - primavera 2016, durante l'emergenza Inumani provocata dalla Nebbia Terrigena",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Henry Simmons",
+        "personaggio": "Alphonso Mack MacKenzie"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      }
+    ],
+    "prerequisiti": [
+      50
+    ],
+    "collegati": [
+      50,
+      63,
+      73
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 50,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 63,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Blocco precedente all'incrocio con Captain America: Civil War. La stagione lancia il tema Inumani ripreso poi dalla serie Inhumans."
+  },
+  "61": {
+    "ambientazione": "2016, nelle settimane in cui si discutono gli Accordi di Sokovia",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Leslie Bibb",
+        "personaggio": "Christine Everhart"
+      },
+      {
+        "attore": "Al Madrigal",
+        "personaggio": "Will Adams"
+      },
+      {
+        "attore": "William Sadler",
+        "personaggio": "Presidente Matthew Ellis"
+      }
+    ],
+    "prerequisiti": [
+      49,
+      56
+    ],
+    "collegati": [
+      62,
+      56,
+      58
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 56,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Marketing virale per Captain America: Civil War, con il dibattito pubblico sugli Avengers. Anche qui il cast accreditato e ridotto a poche persone."
+  },
+  "62": {
+    "ambientazione": "2016, tra Lagos, Vienna, Berlino e la Siberia (prologo a Mosca nel 1991)",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Steve Rogers / Capitan America"
+      },
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Sebastian Stan",
+        "personaggio": "Bucky Barnes / Soldato d'Inverno"
+      },
+      {
+        "attore": "Scarlett Johansson",
+        "personaggio": "Natasha Romanoff / Vedova Nera"
+      },
+      {
+        "attore": "Chadwick Boseman",
+        "personaggio": "T'Challa / Pantera Nera"
+      },
+      {
+        "attore": "Tom Holland",
+        "personaggio": "Peter Parker / Spider-Man"
+      }
+    ],
+    "prerequisiti": [
+      43,
+      49
+    ],
+    "collegati": [
+      65,
+      67,
+      71
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 43,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 89,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Snodo centrale: introduce Pantera Nera e lo Spider-Man dell'MCU e fa da innesco diretto a Black Panther, Black Widow e Spider-Man: Homecoming."
+  },
+  "63": {
+    "ambientazione": "Maggio 2016, con gli Accordi di Sokovia ormai in vigore",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Brett Dalton",
+        "personaggio": "Hive / Grant Ward"
+      },
+      {
+        "attore": "Natalia Cordova-Buckley",
+        "personaggio": "Elena Yo-Yo Rodriguez"
+      },
+      {
+        "attore": "Henry Simmons",
+        "personaggio": "Alphonso Mack MacKenzie"
+      }
+    ],
+    "prerequisiti": [
+      60,
+      62
+    ],
+    "collegati": [
+      62,
+      64,
+      68
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 60,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 68,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Blocco che segue Captain America: Civil War: gli Accordi di Sokovia entrano esplicitamente nella trama e condizionano il finale di stagione."
+  },
+  "64": {
+    "ambientazione": "2016, nei mesi tra la terza e la quarta stagione, con lo S.H.I.E.L.D. di nuovo legale sotto gli Accordi",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Natalia Cordova-Buckley",
+        "personaggio": "Elena Yo-Yo Rodriguez"
+      },
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Jason O'Mara",
+        "personaggio": "Jeffrey Mace"
+      },
+      {
+        "attore": "Henry Simmons",
+        "personaggio": "Alphonso Mack MacKenzie"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      }
+    ],
+    "prerequisiti": [
+      63
+    ],
+    "collegati": [
+      63,
+      68,
+      62
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 63,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 68,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Webserie di sei episodi brevi, prequel diretto della quarta stagione: Yo-Yo deve firmare gli Accordi di Sokovia mentre porta avanti una vendetta personale."
+  },
+  "65": {
+    "ambientazione": "2016, in Wakanda, circa una settimana dopo la morte di re T'Chaka (prologo a Oakland nel 1992)",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Chadwick Boseman",
+        "personaggio": "T'Challa / Pantera Nera"
+      },
+      {
+        "attore": "Michael B. Jordan",
+        "personaggio": "Erik Killmonger Stevens"
+      },
+      {
+        "attore": "Lupita Nyong'o",
+        "personaggio": "Nakia"
+      },
+      {
+        "attore": "Danai Gurira",
+        "personaggio": "Okoye"
+      },
+      {
+        "attore": "Letitia Wright",
+        "personaggio": "Shuri"
+      },
+      {
+        "attore": "Andy Serkis",
+        "personaggio": "Ulysses Klaue"
+      }
+    ],
+    "prerequisiti": [
+      62
+    ],
+    "collegati": [
+      62,
+      89,
+      113
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 113,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Nonostante l'uscita nel 2018, la vicenda si svolge pochi giorni dopo Civil War, quindi nel 2016."
+  },
+  "66": {
+    "ambientazione": "New York, 2016 circa, alcuni mesi dopo le storie dei quattro protagonisti",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil"
+      },
+      {
+        "attore": "Krysten Ritter",
+        "personaggio": "Jessica Jones"
+      },
+      {
+        "attore": "Mike Colter",
+        "personaggio": "Luke Cage"
+      },
+      {
+        "attore": "Finn Jones",
+        "personaggio": "Danny Rand / Iron Fist"
+      },
+      {
+        "attore": "Sigourney Weaver",
+        "personaggio": "Alexandra Reid"
+      },
+      {
+        "attore": "Elodie Yung",
+        "personaggio": "Elektra Natchios"
+      }
+    ],
+    "prerequisiti": [
+      46,
+      47,
+      52,
+      55,
+      59
+    ],
+    "collegati": [
+      75,
+      81,
+      84
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 81,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Crossover che chiude il primo ciclo delle serie Netflix: e l'unico titolo del blocco che richiede davvero di aver visto tutte e quattro le serie precedenti."
+  },
+  "67": {
+    "ambientazione": "2016, tra Norvegia, Budapest, Marocco e la Stanza Rossa, subito dopo la fuga dal Raft (prologo in Ohio nel 1995)",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Scarlett Johansson",
+        "personaggio": "Natasha Romanoff / Vedova Nera"
+      },
+      {
+        "attore": "Florence Pugh",
+        "personaggio": "Yelena Belova"
+      },
+      {
+        "attore": "David Harbour",
+        "personaggio": "Alexei Shostakov / Guardiano Rosso"
+      },
+      {
+        "attore": "Rachel Weisz",
+        "personaggio": "Melina Vostokoff"
+      },
+      {
+        "attore": "Ray Winstone",
+        "personaggio": "Dreykov"
+      },
+      {
+        "attore": "O-T Fagbenle",
+        "personaggio": "Rick Mason"
+      }
+    ],
+    "prerequisiti": [
+      62
+    ],
+    "collegati": [
+      62,
+      92,
+      102
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 62,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Il film e ambientato nel 2016 subito dopo Civil War, ma la scena nei titoli di coda si svolge dopo Avengers: Endgame e prepara la serie Hawkeye."
+  },
+  "68": {
+    "ambientazione": "Autunno 2016, con lo S.H.I.E.L.D. di nuovo agenzia ufficiale guidata dal direttore Jeffrey Mace",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Gabriel Luna",
+        "personaggio": "Robbie Reyes / Ghost Rider"
+      },
+      {
+        "attore": "Jason O'Mara",
+        "personaggio": "Jeffrey Mace"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Henry Simmons",
+        "personaggio": "Alphonso Mack MacKenzie"
+      }
+    ],
+    "prerequisiti": [
+      63
+    ],
+    "collegati": [
+      64,
+      63,
+      70
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 63,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 70,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Primo blocco della quarta stagione (arco Ghost Rider), collocato prima dell'incrocio con Doctor Strange."
+  },
+  "69": {
+    "ambientazione": "2016, da febbraio a novembre, tra New York, Kathmandu, Londra e Hong Kong",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Benedict Cumberbatch",
+        "personaggio": "Stephen Strange"
+      },
+      {
+        "attore": "Chiwetel Ejiofor",
+        "personaggio": "Karl Mordo"
+      },
+      {
+        "attore": "Rachel McAdams",
+        "personaggio": "Christine Palmer"
+      },
+      {
+        "attore": "Benedict Wong",
+        "personaggio": "Wong"
+      },
+      {
+        "attore": "Mads Mikkelsen",
+        "personaggio": "Kaecilius"
+      },
+      {
+        "attore": "Tilda Swinton",
+        "personaggio": "l'Antico"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      70,
+      72,
+      89
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 109,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Storia autonoma che apre il lato magico dell'MCU; la scena a meta titoli di coda si collega a Thor: Ragnarok."
+  },
+  "70": {
+    "ambientazione": "Fine 2016, tra la crisi degli LMD e la realta virtuale del Framework",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Mallory Jansen",
+        "personaggio": "Aida / Madame Hydra"
+      },
+      {
+        "attore": "John Hannah",
+        "personaggio": "Holden Radcliffe"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      }
+    ],
+    "prerequisiti": [
+      68
+    ],
+    "collegati": [
+      69,
+      68,
+      88
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 68,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 88,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Blocco collocato dopo Doctor Strange: l'episodio 7 (Deals with Our Devils) usa il Darkhold e una dimensione parallela sulla scia del film, riprendendone anche gli effetti visivi."
+  },
+  "71": {
+    "ambientazione": "2016, pochi mesi dopo gli eventi di Captain America: Civil War, a New York (Queens)",
+    "annoAmbientazione": 2016,
+    "cast": [
+      {
+        "attore": "Tom Holland",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Michael Keaton",
+        "personaggio": "Adrian Toomes / Avvoltoio"
+      },
+      {
+        "attore": "Zendaya",
+        "personaggio": "Michelle 'MJ' Jones"
+      },
+      {
+        "attore": "Marisa Tomei",
+        "personaggio": "Zia May Parker"
+      },
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Jon Favreau",
+        "personaggio": "Harold 'Happy' Hogan"
+      }
+    ],
+    "prerequisiti": [
+      62
+    ],
+    "collegati": [
+      31,
+      62
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 95,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 105,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Il prologo mostra Adrian Toomes che recupera i detriti alieni dopo la battaglia di New York del 2012 (The Avengers). Il cartello \"otto anni dopo\" è un noto errore del film: la collocazione ufficiale resta il 2016."
+  },
+  "72": {
+    "ambientazione": "2017, tra Asgard, Sakaar e la Terra; circa due anni dopo Avengers: Age of Ultron",
+    "annoAmbientazione": 2017,
+    "cast": [
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Tom Hiddleston",
+        "personaggio": "Loki"
+      },
+      {
+        "attore": "Cate Blanchett",
+        "personaggio": "Hela"
+      },
+      {
+        "attore": "Mark Ruffalo",
+        "personaggio": "Bruce Banner / Hulk"
+      },
+      {
+        "attore": "Tessa Thompson",
+        "personaggio": "Valchiria"
+      },
+      {
+        "attore": "Jeff Goldblum",
+        "personaggio": "Gran Maestro"
+      }
+    ],
+    "prerequisiti": [
+      30,
+      41,
+      49
+    ],
+    "collegati": [
+      69,
+      89
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 41,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 110,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "La scena a metà dei titoli di coda si collega direttamente all'incipit di Avengers: Infinity War."
+  },
+  "73": {
+    "ambientazione": "Presumibilmente 2017, tra la città lunare di Attilan e le isole Hawaii",
+    "annoAmbientazione": 2017,
+    "cast": [
+      {
+        "attore": "Anson Mount",
+        "personaggio": "Freccia Nera (Black Bolt)"
+      },
+      {
+        "attore": "Serinda Swan",
+        "personaggio": "Medusa"
+      },
+      {
+        "attore": "Iwan Rheon",
+        "personaggio": "Maximus"
+      },
+      {
+        "attore": "Ken Leung",
+        "personaggio": "Karnak"
+      },
+      {
+        "attore": "Eme Ikwuakor",
+        "personaggio": "Gorgon"
+      },
+      {
+        "attore": "Isabelle Cornish",
+        "personaggio": "Crystal"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      48,
+      60,
+      70
+    ],
+    "sequelPrequel": [],
+    "note": "La serie non dichiara mai l'anno: le fonti oscillano tra il 2016 (durante l'Epidemia Inumana raccontata in Agents of S.H.I.E.L.D.) e il 2017, anno di messa in onda. È autoconclusiva: condivide la mitologia Inumana con Agents of S.H.I.E.L.D. ma i legami non furono mai sviluppati."
+  },
+  "74": {
+    "ambientazione": "Dicembre 2017 - inizio 2018, a Los Angeles",
+    "annoAmbientazione": 2017,
+    "cast": [
+      {
+        "attore": "Rhenzy Feliz",
+        "personaggio": "Alex Wilder"
+      },
+      {
+        "attore": "Lyrica Okano",
+        "personaggio": "Nico Minoru"
+      },
+      {
+        "attore": "Virginia Gardner",
+        "personaggio": "Karolina Dean"
+      },
+      {
+        "attore": "Ariela Barer",
+        "personaggio": "Gert Yorkes"
+      },
+      {
+        "attore": "Gregg Sulkin",
+        "personaggio": "Chase Stein"
+      },
+      {
+        "attore": "Allegra Acosta",
+        "personaggio": "Molly Hernandez"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      77
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 82,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 87,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Serie autoconclusiva: non richiede la visione di altri titoli MCU."
+  },
+  "75": {
+    "ambientazione": "2017, a New York, alcuni mesi dopo la seconda stagione di Daredevil",
+    "annoAmbientazione": 2017,
+    "cast": [
+      {
+        "attore": "Jon Bernthal",
+        "personaggio": "Frank Castle / Punisher"
+      },
+      {
+        "attore": "Ebon Moss-Bachrach",
+        "personaggio": "David Lieberman / Micro"
+      },
+      {
+        "attore": "Amber Rose Revah",
+        "personaggio": "Dinah Madani"
+      },
+      {
+        "attore": "Ben Barnes",
+        "personaggio": "Billy Russo"
+      },
+      {
+        "attore": "Deborah Ann Woll",
+        "personaggio": "Karen Page"
+      }
+    ],
+    "prerequisiti": [
+      55
+    ],
+    "collegati": [
+      81,
+      128
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 83,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 136,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Frank Castle viene introdotto nella seconda stagione di Daredevil: è l'unica visione davvero necessaria."
+  },
+  "76": {
+    "ambientazione": "2018, a New York (Hell's Kitchen), dopo The Defenders",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Krysten Ritter",
+        "personaggio": "Jessica Jones"
+      },
+      {
+        "attore": "Rachael Taylor",
+        "personaggio": "Trish Walker"
+      },
+      {
+        "attore": "Carrie-Anne Moss",
+        "personaggio": "Jeri Hogarth"
+      },
+      {
+        "attore": "Eka Darville",
+        "personaggio": "Malcolm Ducasse"
+      },
+      {
+        "attore": "Janet McTeer",
+        "personaggio": "Alisa Jones"
+      }
+    ],
+    "prerequisiti": [
+      47,
+      66
+    ],
+    "collegati": [
+      46
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 47,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 84,
+        "relazione": "sequel"
+      }
+    ],
+    "note": null
+  },
+  "77": {
+    "ambientazione": "New Orleans, circa 2017-2018, otto anni dopo l'incidente della piattaforma Roxxon",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Olivia Holt",
+        "personaggio": "Tandy Bowen / Dagger"
+      },
+      {
+        "attore": "Aubrey Joseph",
+        "personaggio": "Tyrone Johnson / Cloak"
+      },
+      {
+        "attore": "Emma Lahana",
+        "personaggio": "Brigid O'Reilly"
+      },
+      {
+        "attore": "Gloria Reuben",
+        "personaggio": "Adina Johnson"
+      },
+      {
+        "attore": "Andrea Roth",
+        "personaggio": "Melissa Bowen"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      74,
+      79
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 78,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "L'anno esatto è dibattuto: un riferimento a Luke Cage suggerisce il 2015-2016, gli indizi interni della serie il 2017-2018. Adottata la collocazione più diffusa, vicina all'anno di messa in onda."
+  },
+  "78": {
+    "ambientazione": "Fine 2018, a New Orleans, pochi mesi dopo la prima stagione",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Olivia Holt",
+        "personaggio": "Tandy Bowen / Dagger"
+      },
+      {
+        "attore": "Aubrey Joseph",
+        "personaggio": "Tyrone Johnson / Cloak"
+      },
+      {
+        "attore": "Emma Lahana",
+        "personaggio": "Brigid O'Reilly / Mayhem"
+      },
+      {
+        "attore": "Gloria Reuben",
+        "personaggio": "Adina Johnson"
+      },
+      {
+        "attore": "Andrea Roth",
+        "personaggio": "Melissa Bowen"
+      }
+    ],
+    "prerequisiti": [
+      77
+    ],
+    "collegati": [
+      87
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 77,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Ultima stagione della serie; i due protagonisti tornano poi nella terza stagione di Runaways."
+  },
+  "79": {
+    "ambientazione": "2018, ad Harlem (New York), dopo The Defenders",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Mike Colter",
+        "personaggio": "Luke Cage"
+      },
+      {
+        "attore": "Simone Missick",
+        "personaggio": "Misty Knight"
+      },
+      {
+        "attore": "Alfre Woodard",
+        "personaggio": "Mariah Dillard"
+      },
+      {
+        "attore": "Theo Rossi",
+        "personaggio": "Hernan 'Shades' Alvarez"
+      },
+      {
+        "attore": "Mustafa Shakir",
+        "personaggio": "John McIver / Bushmaster"
+      },
+      {
+        "attore": "Rosario Dawson",
+        "personaggio": "Claire Temple"
+      }
+    ],
+    "prerequisiti": [
+      52,
+      66
+    ],
+    "collegati": [
+      59,
+      80
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 52,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Danny Rand (Iron Fist) compare in un episodio; la sottotrama di Misty Knight prosegue nella seconda stagione di Iron Fist."
+  },
+  "80": {
+    "ambientazione": "2018, a New York, alcuni mesi dopo The Defenders",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Finn Jones",
+        "personaggio": "Danny Rand / Iron Fist"
+      },
+      {
+        "attore": "Jessica Henwick",
+        "personaggio": "Colleen Wing"
+      },
+      {
+        "attore": "Tom Pelphrey",
+        "personaggio": "Ward Meachum"
+      },
+      {
+        "attore": "Jessica Stroup",
+        "personaggio": "Joy Meachum"
+      },
+      {
+        "attore": "Sacha Dhawan",
+        "personaggio": "Davos"
+      },
+      {
+        "attore": "Alice Eve",
+        "personaggio": "Mary Walker"
+      }
+    ],
+    "prerequisiti": [
+      59,
+      66
+    ],
+    "collegati": [
+      79
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 59,
+        "relazione": "prequel"
+      }
+    ],
+    "note": null
+  },
+  "81": {
+    "ambientazione": "Fine 2018, a New York (Hell's Kitchen), circa un anno dopo The Defenders",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil"
+      },
+      {
+        "attore": "Vincent D'Onofrio",
+        "personaggio": "Wilson Fisk / Kingpin"
+      },
+      {
+        "attore": "Deborah Ann Woll",
+        "personaggio": "Karen Page"
+      },
+      {
+        "attore": "Elden Henson",
+        "personaggio": "Franklin 'Foggy' Nelson"
+      },
+      {
+        "attore": "Wilson Bethel",
+        "personaggio": "Benjamin Poindexter / Bullseye"
+      },
+      {
+        "attore": "Joanne Whalley",
+        "personaggio": "Suor Maggie"
+      }
+    ],
+    "prerequisiti": [
+      46,
+      55,
+      66
+    ],
+    "collegati": [
+      75,
+      105,
+      128
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 55,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 128,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Adatta la storia a fumetti \"Rinascita\"; Matt Murdock e Kingpin tornano poi nell'MCU con Spider-Man: No Way Home, Hawkeye e Daredevil: Rinascita."
+  },
+  "82": {
+    "ambientazione": "2018, a Los Angeles, pochi mesi dopo la prima stagione",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Rhenzy Feliz",
+        "personaggio": "Alex Wilder"
+      },
+      {
+        "attore": "Lyrica Okano",
+        "personaggio": "Nico Minoru"
+      },
+      {
+        "attore": "Virginia Gardner",
+        "personaggio": "Karolina Dean"
+      },
+      {
+        "attore": "Ariela Barer",
+        "personaggio": "Gert Yorkes"
+      },
+      {
+        "attore": "Gregg Sulkin",
+        "personaggio": "Chase Stein"
+      },
+      {
+        "attore": "Allegra Acosta",
+        "personaggio": "Molly Hernandez"
+      }
+    ],
+    "prerequisiti": [
+      74
+    ],
+    "collegati": [
+      77
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 74,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 87,
+        "relazione": "sequel"
+      }
+    ],
+    "note": null
+  },
+  "83": {
+    "ambientazione": "Fine 2018 - inizio 2019, tra il Michigan e New York, circa un anno dopo la prima stagione",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Jon Bernthal",
+        "personaggio": "Frank Castle / Punisher"
+      },
+      {
+        "attore": "Ben Barnes",
+        "personaggio": "Billy Russo / Jigsaw"
+      },
+      {
+        "attore": "Amber Rose Revah",
+        "personaggio": "Dinah Madani"
+      },
+      {
+        "attore": "Josh Stewart",
+        "personaggio": "John Pilgrim"
+      },
+      {
+        "attore": "Giorgia Whigham",
+        "personaggio": "Amy Bendix"
+      },
+      {
+        "attore": "Floriana Lima",
+        "personaggio": "Krista Dumont"
+      }
+    ],
+    "prerequisiti": [
+      75
+    ],
+    "collegati": [
+      55,
+      136
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 75,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 136,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Ultima stagione Netflix del personaggio, ambientata poco prima dello Schiocco ma senza mai farvi riferimento."
+  },
+  "84": {
+    "ambientazione": "2019, a New York, dopo la seconda stagione",
+    "annoAmbientazione": 2019,
+    "cast": [
+      {
+        "attore": "Krysten Ritter",
+        "personaggio": "Jessica Jones"
+      },
+      {
+        "attore": "Rachael Taylor",
+        "personaggio": "Trish Walker / Hellcat"
+      },
+      {
+        "attore": "Carrie-Anne Moss",
+        "personaggio": "Jeri Hogarth"
+      },
+      {
+        "attore": "Eka Darville",
+        "personaggio": "Malcolm Ducasse"
+      },
+      {
+        "attore": "Benjamin Walker",
+        "personaggio": "Erik Gelden"
+      }
+    ],
+    "prerequisiti": [
+      47,
+      76
+    ],
+    "collegati": [
+      66
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 76,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Ultima serie Marvel/Netflix prodotta; come le altre non menziona mai lo Schiocco, pur collocandosi cronologicamente nel periodo del Blip."
+  },
+  "85": {
+    "ambientazione": "2018, a San Francisco, circa due anni dopo Captain America: Civil War; la scena post-credit coincide con lo Schiocco",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Paul Rudd",
+        "personaggio": "Scott Lang / Ant-Man"
+      },
+      {
+        "attore": "Evangeline Lilly",
+        "personaggio": "Hope van Dyne / Wasp"
+      },
+      {
+        "attore": "Michael Douglas",
+        "personaggio": "Hank Pym"
+      },
+      {
+        "attore": "Michelle Pfeiffer",
+        "personaggio": "Janet van Dyne"
+      },
+      {
+        "attore": "Michael Peña",
+        "personaggio": "Luis"
+      },
+      {
+        "attore": "Hannah John-Kamen",
+        "personaggio": "Ava Starr / Ghost"
+      }
+    ],
+    "prerequisiti": [
+      58,
+      62
+    ],
+    "collegati": [
+      89,
+      92
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 58,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 114,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Il film si svolge prima di Infinity War, ma la scena a metà dei titoli di coda avviene nell'istante dello Schiocco: è quella scena a innescare la soluzione di Endgame (il Regno Quantico)."
+  },
+  "86": {
+    "ambientazione": "Circa 2018, a New York e Vancouver, due anni dopo il primo film",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Ryan Reynolds",
+        "personaggio": "Wade Wilson / Deadpool"
+      },
+      {
+        "attore": "Josh Brolin",
+        "personaggio": "Nathan Summers / Cable"
+      },
+      {
+        "attore": "Zazie Beetz",
+        "personaggio": "Neena Thurman / Domino"
+      },
+      {
+        "attore": "Julian Dennison",
+        "personaggio": "Russell Collins / Firefist"
+      },
+      {
+        "attore": "Morena Baccarin",
+        "personaggio": "Vanessa Carlysle"
+      },
+      {
+        "attore": "Brianna Hildebrand",
+        "personaggio": "Testata Nucleare Adolescente"
+      }
+    ],
+    "prerequisiti": [
+      57
+    ],
+    "collegati": [
+      120
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 57,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 124,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Appartiene alla continuità X-Men della Fox, separata dall'MCU fino a Deadpool & Wolverine. La gag iniziale con il carillon di Logan è uno scherzo, non un indizio cronologico."
+  },
+  "87": {
+    "ambientazione": "2018-2019 a Los Angeles, con un salto temporale nel finale che porta i protagonisti a ridosso del 2021",
+    "annoAmbientazione": 2019,
+    "cast": [
+      {
+        "attore": "Rhenzy Feliz",
+        "personaggio": "Alex Wilder"
+      },
+      {
+        "attore": "Lyrica Okano",
+        "personaggio": "Nico Minoru"
+      },
+      {
+        "attore": "Virginia Gardner",
+        "personaggio": "Karolina Dean"
+      },
+      {
+        "attore": "Ariela Barer",
+        "personaggio": "Gert Yorkes"
+      },
+      {
+        "attore": "Gregg Sulkin",
+        "personaggio": "Chase Stein"
+      },
+      {
+        "attore": "Elizabeth Hurley",
+        "personaggio": "Morgan le Fay"
+      }
+    ],
+    "prerequisiti": [
+      74,
+      82
+    ],
+    "collegati": [
+      77,
+      78
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 82,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Cloak e Dagger compaiono in un crossover di due episodi. La datazione interna è incoerente (un cartello indica il 25 luglio 2019) e il salto temporale finale dovrebbe cadere durante il Blip, mai citato dalla serie."
+  },
+  "88": {
+    "ambientazione": "2018: la prima metà della stagione si svolge nel 2091 su una Terra distrutta, la seconda nel presente, fino a sovrapporsi allo Schiocco",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      },
+      {
+        "attore": "Henry Simmons",
+        "personaggio": "Alphonso 'Mack' Mackenzie"
+      }
+    ],
+    "prerequisiti": [
+      70
+    ],
+    "collegati": [
+      89
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 70,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 90,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Il finale di stagione è esplicitamente contemporaneo agli eventi di Avengers: Infinity War, che viene citato come \"minaccia da New York\"."
+  },
+  "89": {
+    "ambientazione": "2018, su scala galattica (Terra, Titano, Nidavellir, Vormir, Wakanda); si chiude con lo Schiocco che dà inizio al Blip",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Josh Brolin",
+        "personaggio": "Thanos"
+      },
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Steve Rogers / Capitan America"
+      },
+      {
+        "attore": "Zoe Saldaña",
+        "personaggio": "Gamora"
+      },
+      {
+        "attore": "Benedict Cumberbatch",
+        "personaggio": "Stephen Strange / Doctor Strange"
+      }
+    ],
+    "prerequisiti": [
+      51,
+      62,
+      69,
+      72
+    ],
+    "collegati": [
+      13,
+      45,
+      65,
+      85
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 49,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 92,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Riprende esattamente dalla scena post-credit di Thor: Ragnarok. La scena finale, con il cercapersone di Nick Fury, prepara l'arrivo di Captain Marvel."
+  },
+  "90": {
+    "ambientazione": "2019, un anno dopo la quinta stagione (quindi in pieno Blip), tra la Terra e il pianeta Chronyca-2",
+    "annoAmbientazione": 2019,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Sarge / Phil Coulson"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      },
+      {
+        "attore": "Henry Simmons",
+        "personaggio": "Alphonso 'Mack' Mackenzie"
+      }
+    ],
+    "prerequisiti": [
+      88
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "ordine": 88,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 96,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Cronologicamente cade durante il Blip, ma per ragioni produttive la serie evita ogni riferimento a Infinity War e Endgame: la sua continuità con i film qui si interrompe di fatto."
+  },
+  "91": {
+    "ambientazione": "Epoca contemporanea non dichiarata, indicativamente 2019-2020, in un ospedale psichiatrico isolato",
+    "annoAmbientazione": 2019,
+    "cast": [
+      {
+        "attore": "Blu Hunt",
+        "personaggio": "Danielle Moonstar / Mirage"
+      },
+      {
+        "attore": "Maisie Williams",
+        "personaggio": "Rahne Sinclair / Wolfsbane"
+      },
+      {
+        "attore": "Anya Taylor-Joy",
+        "personaggio": "Illyana Rasputina / Magik"
+      },
+      {
+        "attore": "Charlie Heaton",
+        "personaggio": "Sam Guthrie / Cannonball"
+      },
+      {
+        "attore": "Henry Zaga",
+        "personaggio": "Roberto da Costa / Sunspot"
+      },
+      {
+        "attore": "Alice Braga",
+        "personaggio": "Dott.ssa Cecilia Reyes"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      35,
+      120
+    ],
+    "sequelPrequel": [],
+    "note": "Ultimo film del filone X-Men prodotto dalla Fox. Il film non dichiara mai l'anno di ambientazione; il riferimento alla Essex Corp lo lega vagamente a Logan, creando incoerenze con il resto della saga."
+  },
+  "92": {
+    "ambientazione": "2023, cinque anni dopo lo Schiocco, con la \"rapina temporale\" che tocca il 2012, il 2013, il 1970 e il 2014; si chiude con la fine del Blip",
+    "annoAmbientazione": 2023,
+    "cast": [
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Tony Stark / Iron Man"
+      },
+      {
+        "attore": "Chris Evans",
+        "personaggio": "Steve Rogers / Capitan America"
+      },
+      {
+        "attore": "Scarlett Johansson",
+        "personaggio": "Natasha Romanoff / Vedova Nera"
+      },
+      {
+        "attore": "Mark Ruffalo",
+        "personaggio": "Bruce Banner / Hulk"
+      },
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Josh Brolin",
+        "personaggio": "Thanos"
+      }
+    ],
+    "prerequisiti": [
+      13,
+      85,
+      89
+    ],
+    "collegati": [
+      31,
+      41,
+      45,
+      97
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 89,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 138,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Snodo assoluto: il ritorno dei dispersi (fine del Blip) nel 2023 e la fuga di Loki con il Tesseract nel 2012 innescano quasi tutte le serie Disney+ della Fase 4."
+  },
+  "93": {
+    "ambientazione": "2018, a San Francisco",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Tom Hardy",
+        "personaggio": "Eddie Brock / Venom"
+      },
+      {
+        "attore": "Michelle Williams",
+        "personaggio": "Anne Weying"
+      },
+      {
+        "attore": "Riz Ahmed",
+        "personaggio": "Carlton Drake / Riot"
+      },
+      {
+        "attore": "Jenny Slate",
+        "personaggio": "Dora Skirth"
+      },
+      {
+        "attore": "Reid Scott",
+        "personaggio": "Dan Lewis"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      101,
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 104,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Appartiene all'universo Sony (SSU), separato dall'MCU: nessun prerequisito. Il contatto con l'MCU arriverà solo con la scena post-credit del secondo film."
+  },
+  "94": {
+    "ambientazione": "2024, dopo la fine del Blip, tra San Francisco, Macao e il villaggio nascosto di Ta Lo",
+    "annoAmbientazione": 2024,
+    "cast": [
+      {
+        "attore": "Simu Liu",
+        "personaggio": "Shang-Chi / Xu Shang-Chi"
+      },
+      {
+        "attore": "Tony Leung",
+        "personaggio": "Xu Wenwu / Il Mandarino"
+      },
+      {
+        "attore": "Awkwafina",
+        "personaggio": "Katy Chen"
+      },
+      {
+        "attore": "Meng'er Zhang",
+        "personaggio": "Xu Xialing"
+      },
+      {
+        "attore": "Michelle Yeoh",
+        "personaggio": "Ying Nan"
+      },
+      {
+        "attore": "Ben Kingsley",
+        "personaggio": "Trevor Slattery"
+      }
+    ],
+    "prerequisiti": [
+      39,
+      92
+    ],
+    "collegati": [
+      17,
+      38,
+      130
+    ],
+    "sequelPrequel": [],
+    "note": "Chiarisce l'inganno del \"Mandarino\" di Iron Man 3 e del corto All Hail the King. Nella scena post-credit compaiono Wong, Bruce Banner e Carol Danvers."
+  },
+  "95": {
+    "ambientazione": "Estate 2024, circa otto mesi dopo Endgame, in viaggio d'istruzione tra Venezia, Praga, Berlino e Londra",
+    "annoAmbientazione": 2024,
+    "cast": [
+      {
+        "attore": "Tom Holland",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Jake Gyllenhaal",
+        "personaggio": "Quentin Beck / Mysterio"
+      },
+      {
+        "attore": "Zendaya",
+        "personaggio": "Michelle 'MJ' Jones"
+      },
+      {
+        "attore": "Samuel L. Jackson",
+        "personaggio": "Nick Fury / Talos"
+      },
+      {
+        "attore": "Jon Favreau",
+        "personaggio": "Harold 'Happy' Hogan"
+      },
+      {
+        "attore": "Marisa Tomei",
+        "personaggio": "Zia May Parker"
+      }
+    ],
+    "prerequisiti": [
+      71,
+      92
+    ],
+    "collegati": [
+      13,
+      116
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 71,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 105,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Racconta il mondo subito dopo la fine del Blip. Il colpo di scena finale (Fury era in realtà lo Skrull Talos) viene ripreso in Secret Invasion; la scena post-credit apre direttamente No Way Home."
+  },
+  "96": {
+    "ambientazione": "Viaggio nel tempo attraverso il 1931, il 1955, il 1973, il 1976 e il 1983, con partenza e ritorno nel presente della serie (2019)",
+    "annoAmbientazione": 2019,
+    "cast": [
+      {
+        "attore": "Clark Gregg",
+        "personaggio": "Phil Coulson (LMD)"
+      },
+      {
+        "attore": "Chloe Bennet",
+        "personaggio": "Daisy Johnson / Quake"
+      },
+      {
+        "attore": "Ming-Na Wen",
+        "personaggio": "Melinda May"
+      },
+      {
+        "attore": "Iain De Caestecker",
+        "personaggio": "Leo Fitz"
+      },
+      {
+        "attore": "Elizabeth Henstridge",
+        "personaggio": "Jemma Simmons"
+      },
+      {
+        "attore": "Henry Simmons",
+        "personaggio": "Alphonso 'Mack' Mackenzie"
+      }
+    ],
+    "prerequisiti": [
+      90
+    ],
+    "collegati": [
+      3,
+      4
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 90,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Stagione conclusiva: gran parte degli episodi si svolge nel passato (dagli anni Trenta agli anni Ottanta, con incursioni nella S.H.I.E.L.D. di Peggy Carter), ma la cornice narrativa e il finale restano nel presente della serie."
+  },
+  "97": {
+    "ambientazione": "2023, circa tre settimane dopo la fine del Blip, a Westview (New Jersey), con sitcom che imitano i decenni dagli anni Cinquanta ai Duemila",
+    "annoAmbientazione": 2023,
+    "cast": [
+      {
+        "attore": "Elizabeth Olsen",
+        "personaggio": "Wanda Maximoff / Scarlet Witch"
+      },
+      {
+        "attore": "Paul Bettany",
+        "personaggio": "Visione"
+      },
+      {
+        "attore": "Kathryn Hahn",
+        "personaggio": "Agatha Harkness"
+      },
+      {
+        "attore": "Teyonah Parris",
+        "personaggio": "Monica Rambeau"
+      },
+      {
+        "attore": "Randall Park",
+        "personaggio": "Jimmy Woo"
+      },
+      {
+        "attore": "Kat Dennings",
+        "personaggio": "Darcy Lewis"
+      }
+    ],
+    "prerequisiti": [
+      49,
+      89,
+      92
+    ],
+    "collegati": [
+      13,
+      109,
+      123,
+      139
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 123,
+        "relazione": "spin-off"
+      },
+      {
+        "ordine": 139,
+        "relazione": "spin-off"
+      }
+    ],
+    "note": "Prima serie della Fase 4 e diretta conseguenza di Infinity War (la morte di Visione) e di Endgame (il ritorno di Wanda dopo cinque anni). Monica Rambeau è la figlia adulta di Maria Rambeau vista in Captain Marvel."
+  },
+  "98": {
+    "ambientazione": "2024, circa sei mesi dopo la fine del Blip, tra Stati Uniti, Germania, Lettonia e Madripoor",
+    "annoAmbientazione": 2024,
+    "cast": [
+      {
+        "attore": "Anthony Mackie",
+        "personaggio": "Sam Wilson / Falcon"
+      },
+      {
+        "attore": "Sebastian Stan",
+        "personaggio": "Bucky Barnes / Soldato d'Inverno"
+      },
+      {
+        "attore": "Wyatt Russell",
+        "personaggio": "John Walker / US Agent"
+      },
+      {
+        "attore": "Erin Kellyman",
+        "personaggio": "Karli Morgenthau"
+      },
+      {
+        "attore": "Daniel Brühl",
+        "personaggio": "Helmut Zemo"
+      },
+      {
+        "attore": "Emily VanCamp",
+        "personaggio": "Sharon Carter"
+      }
+    ],
+    "prerequisiti": [
+      43,
+      62,
+      92
+    ],
+    "collegati": [
+      2,
+      127,
+      129
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 127,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Parte dal passaggio dello scudo nel finale di Endgame e racconta le conseguenze sociali del ritorno di metà popolazione. Porta direttamente a Captain America: Brave New World."
+  },
+  "99": {
+    "ambientazione": "Parte dal 2012 (la fuga della variante di Loki con il Tesseract durante la rapina temporale di Endgame) e prosegue nella TVA, al di fuori del tempo",
+    "annoAmbientazione": 2012,
+    "cast": [
+      {
+        "attore": "Tom Hiddleston",
+        "personaggio": "Loki"
+      },
+      {
+        "attore": "Owen Wilson",
+        "personaggio": "Mobius M. Mobius"
+      },
+      {
+        "attore": "Sophia Di Martino",
+        "personaggio": "Sylvie"
+      },
+      {
+        "attore": "Gugu Mbatha-Raw",
+        "personaggio": "Ravonna Renslayer"
+      },
+      {
+        "attore": "Wunmi Mosaku",
+        "personaggio": "Cacciatrice B-15"
+      },
+      {
+        "attore": "Jonathan Majors",
+        "personaggio": "Colui che rimane"
+      }
+    ],
+    "prerequisiti": [
+      31,
+      92
+    ],
+    "collegati": [
+      100,
+      114,
+      124
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 117,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Il Loki protagonista non è quello morto in Infinity War, ma la variante creata nel 2012 dalla rapina temporale di Endgame: vedere Endgame prima è indispensabile. Il finale apre ufficialmente il Multiverso e prepara la saga di Kang."
+  },
+  "100": {
+    "ambientazione": "Universi alternativi che divergono da punti diversi della Saga dell'Infinito (dal 1943 al 2018); il ramo più ricorrente riparte dagli eventi del 2011-2012",
+    "annoAmbientazione": 2011,
+    "cast": [
+      {
+        "attore": "Jeffrey Wright",
+        "personaggio": "Uatu, l'Osservatore (voce)"
+      },
+      {
+        "attore": "Hayley Atwell",
+        "personaggio": "Peggy Carter / Capitan Carter (voce)"
+      },
+      {
+        "attore": "Chadwick Boseman",
+        "personaggio": "T'Challa / Star-Lord (voce)"
+      },
+      {
+        "attore": "Benedict Cumberbatch",
+        "personaggio": "Stephen Strange (voce)"
+      },
+      {
+        "attore": "Samuel L. Jackson",
+        "personaggio": "Nick Fury (voce)"
+      },
+      {
+        "attore": "Jeff Goldblum",
+        "personaggio": "Gran Maestro (voce)"
+      }
+    ],
+    "prerequisiti": [
+      31,
+      92,
+      99
+    ],
+    "collegati": [
+      2,
+      65,
+      69,
+      109
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 119,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 125,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Antologia animata: per definizione non ha un'unica ambientazione, perché ogni episodio è un universo che devia da un momento diverso della continuità principale (Capitan Carter nel 1943, T'Challa Star-Lord dal 1988, la morte degli Avengers nel 2011, Doctor Strange Supremo nel 2016, gli zombie nel 2018). L'anno indicato è quello del ramo narrativo più frequente, non una collocazione reale. Ultima interpretazione di Chadwick Boseman."
+  },
+  "101": {
+    "ambientazione": "2003, a New York, con un prologo nel 1973 nella foresta amazzonica",
+    "annoAmbientazione": 2003,
+    "cast": [
+      {
+        "attore": "Dakota Johnson",
+        "personaggio": "Cassandra Webb / Madame Web"
+      },
+      {
+        "attore": "Sydney Sweeney",
+        "personaggio": "Julia Cornwall"
+      },
+      {
+        "attore": "Isabela Merced",
+        "personaggio": "Anya Corazon"
+      },
+      {
+        "attore": "Celeste O'Connor",
+        "personaggio": "Mattie Franklin"
+      },
+      {
+        "attore": "Tahar Rahim",
+        "personaggio": "Ezekiel Sims"
+      },
+      {
+        "attore": "Emma Roberts",
+        "personaggio": "Mary Parker"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      93,
+      104
+    ],
+    "sequelPrequel": [],
+    "note": "Universo Sony (SSU), del tutto slegato dall'MCU. È il titolo cronologicamente più \"antico\" del blocco: ambientato nel 2003, viene inserito qui solo per comodità di raggruppamento con gli altri film Sony."
+  },
+  "102": {
+    "ambientazione": "Natale 2024, a New York, dopo la fine del Blip",
+    "annoAmbientazione": 2024,
+    "cast": [
+      {
+        "attore": "Jeremy Renner",
+        "personaggio": "Clint Barton / Occhio di Falco"
+      },
+      {
+        "attore": "Hailee Steinfeld",
+        "personaggio": "Kate Bishop"
+      },
+      {
+        "attore": "Florence Pugh",
+        "personaggio": "Yelena Belova"
+      },
+      {
+        "attore": "Vincent D'Onofrio",
+        "personaggio": "Wilson Fisk / Kingpin"
+      },
+      {
+        "attore": "Alaqua Cox",
+        "personaggio": "Maya Lopez / Echo"
+      },
+      {
+        "attore": "Tony Dalton",
+        "personaggio": "Jack Duquesne"
+      }
+    ],
+    "prerequisiti": [
+      67,
+      92
+    ],
+    "collegati": [
+      31,
+      81,
+      121,
+      129
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 121,
+        "relazione": "spin-off"
+      }
+    ],
+    "note": "Presuppone la morte di Natasha in Endgame e la scena post-credit di Black Widow, in cui Yelena riceve l'incarico di uccidere Clint. Riporta nell'MCU il Kingpin della serie Netflix."
+  },
+  "103": {
+    "ambientazione": "Fine 2023, pochi mesi dopo la fine del Blip, con flashback che coprono settemila anni di storia umana dal 5000 a.C. in poi",
+    "annoAmbientazione": 2023,
+    "cast": [
+      {
+        "attore": "Gemma Chan",
+        "personaggio": "Sersi"
+      },
+      {
+        "attore": "Richard Madden",
+        "personaggio": "Ikaris"
+      },
+      {
+        "attore": "Angelina Jolie",
+        "personaggio": "Thena"
+      },
+      {
+        "attore": "Kumail Nanjiani",
+        "personaggio": "Kingo"
+      },
+      {
+        "attore": "Salma Hayek",
+        "personaggio": "Ajak"
+      },
+      {
+        "attore": "Barry Keoghan",
+        "personaggio": "Druig"
+      }
+    ],
+    "prerequisiti": [
+      92
+    ],
+    "collegati": [
+      89
+    ],
+    "sequelPrequel": [],
+    "note": "Il ritorno di metà della popolazione (fine del Blip) è la causa diretta dell'Emersione che innesca la trama. Le scene post-credit introducono Eros/Starfox e legano Dane Whitman a Blade. Alcune fonti lo collocano nel 2024: la datazione interna (Ajak parla dello Schiocco come avvenuto \"cinque anni fa\") indica però il 2023."
+  },
+  "104": {
+    "ambientazione": "Circa 2020, a San Francisco, poco più di un anno dopo il primo film",
+    "annoAmbientazione": 2020,
+    "cast": [
+      {
+        "attore": "Tom Hardy",
+        "personaggio": "Eddie Brock / Venom"
+      },
+      {
+        "attore": "Woody Harrelson",
+        "personaggio": "Cletus Kasady / Carnage"
+      },
+      {
+        "attore": "Michelle Williams",
+        "personaggio": "Anne Weying"
+      },
+      {
+        "attore": "Naomie Harris",
+        "personaggio": "Frances Barrison / Shriek"
+      },
+      {
+        "attore": "Stephen Graham",
+        "personaggio": "Patrick Mulligan"
+      }
+    ],
+    "prerequisiti": [
+      93
+    ],
+    "collegati": [
+      101,
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 93,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "L'anno non è dichiarato: un fermo immagine su un articolo del Daily Bugle indica ottobre 2020. Nella scena post-credit Eddie viene trasportato nell'MCU dall'incantesimo di Spider-Man: No Way Home, che è però ambientato nel 2024."
+  },
+  "105": {
+    "ambientazione": "Fine 2024, a New York, subito dopo Spider-Man: Far From Home",
+    "annoAmbientazione": 2024,
+    "cast": [
+      {
+        "attore": "Tom Holland",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Zendaya",
+        "personaggio": "Michelle 'MJ' Jones"
+      },
+      {
+        "attore": "Benedict Cumberbatch",
+        "personaggio": "Stephen Strange / Doctor Strange"
+      },
+      {
+        "attore": "Jacob Batalon",
+        "personaggio": "Ned Leeds"
+      },
+      {
+        "attore": "Willem Dafoe",
+        "personaggio": "Norman Osborn / Goblin"
+      },
+      {
+        "attore": "Alfred Molina",
+        "personaggio": "Otto Octavius / Doctor Octopus"
+      }
+    ],
+    "prerequisiti": [
+      69,
+      95
+    ],
+    "collegati": [
+      19,
+      26,
+      36,
+      104
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 95,
+        "relazione": "prequel"
+      },
+      {
+        "ordine": 109,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 137,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Riprende esattamente dalla scena post-credit di Far From Home. Il multiverso riporta in scena i cattivi e i due Peter Parker delle saghe Raimi e Webb: aver visto quei film arricchisce molto la visione, pur non essendo obbligatorio. La scena post-credit introduce Doctor Strange nel Multiverso della Follia."
+  },
+  "106": {
+    "ambientazione": "Ai giorni nostri, dopo il Blip: Londra, Il Cairo e il deserto egiziano, con incursioni nel pantheon egizio",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Oscar Isaac",
+        "personaggio": "Marc Spector / Steven Grant / Moon Knight"
+      },
+      {
+        "attore": "Ethan Hawke",
+        "personaggio": "Arthur Harrow"
+      },
+      {
+        "attore": "May Calamawy",
+        "personaggio": "Layla El-Faouly / Scarlet Scarab"
+      },
+      {
+        "attore": "F. Murray Abraham",
+        "personaggio": "Khonshu (voce)"
+      },
+      {
+        "attore": "Gaspard Ulliel",
+        "personaggio": "Anton Mogart / Midnight Man"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [],
+    "note": "Serie autoconclusiva: non richiede altre visioni e non ha crossover diretti con le altre voci. L'anno di ambientazione non e' dichiarato sullo schermo, e' la collocazione standard post-Blip."
+  },
+  "107": {
+    "ambientazione": "Ai giorni nostri, a Los Angeles, nello studio legale GLK&H specializzato in diritto sovrumano",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Tatiana Maslany",
+        "personaggio": "Jennifer Walters / She-Hulk"
+      },
+      {
+        "attore": "Mark Ruffalo",
+        "personaggio": "Bruce Banner / Hulk"
+      },
+      {
+        "attore": "Tim Roth",
+        "personaggio": "Emil Blonsky / Abominio"
+      },
+      {
+        "attore": "Ginger Gonzaga",
+        "personaggio": "Nikki Ramos"
+      },
+      {
+        "attore": "Jameela Jamil",
+        "personaggio": "Titania"
+      },
+      {
+        "attore": "Benedict Wong",
+        "personaggio": "Wong"
+      }
+    ],
+    "prerequisiti": [
+      27,
+      92,
+      94
+    ],
+    "collegati": [
+      39,
+      69,
+      128
+    ],
+    "sequelPrequel": [],
+    "note": "Riprende Abominio da L'incredibile Hulk e dal one-shot All Hail the King, e rilancia Matt Murdock verso Daredevil: Rinascita."
+  },
+  "108": {
+    "ambientazione": "Ai giorni nostri, tra New York, il Costa Rica e la Grecia",
+    "annoAmbientazione": 2022,
+    "cast": [
+      {
+        "attore": "Jared Leto",
+        "personaggio": "Michael Morbius"
+      },
+      {
+        "attore": "Matt Smith",
+        "personaggio": "Loxias Crown / Milo"
+      },
+      {
+        "attore": "Adria Arjona",
+        "personaggio": "Martine Bancroft"
+      },
+      {
+        "attore": "Jared Harris",
+        "personaggio": "Emil Nicholas"
+      },
+      {
+        "attore": "Tyrese Gibson",
+        "personaggio": "Simon Stroud"
+      },
+      {
+        "attore": "Michael Keaton",
+        "personaggio": "Adrian Toomes / Avvoltoio"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      71,
+      93,
+      104,
+      105
+    ],
+    "sequelPrequel": [],
+    "note": "Film dell'universo Sony: le scene post-credit portano Adrian Toomes da Spider-Man: Homecoming in questa realta' sfruttando la rottura del multiverso di No Way Home, ma il legame narrativo resta ambiguo."
+  },
+  "109": {
+    "ambientazione": "Ai giorni nostri, poco dopo Spider-Man: No Way Home: New York, Kamar-Taj, l'universo 838 e il Monte Wundagore",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Benedict Cumberbatch",
+        "personaggio": "Stephen Strange"
+      },
+      {
+        "attore": "Elizabeth Olsen",
+        "personaggio": "Wanda Maximoff / Scarlet Witch"
+      },
+      {
+        "attore": "Xochitl Gomez",
+        "personaggio": "America Chavez"
+      },
+      {
+        "attore": "Benedict Wong",
+        "personaggio": "Wong"
+      },
+      {
+        "attore": "Chiwetel Ejiofor",
+        "personaggio": "Karl Mordo"
+      },
+      {
+        "attore": "Rachel McAdams",
+        "personaggio": "Christine Palmer"
+      }
+    ],
+    "prerequisiti": [
+      69,
+      97,
+      105
+    ],
+    "collegati": [
+      92,
+      100,
+      123
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 69,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 97,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "WandaVision e' un prerequisito narrativo di fatto: l'arco di Wanda parte direttamente dal finale della serie."
+  },
+  "110": {
+    "ambientazione": "Ai giorni nostri, tra Nuova Asgard, la Citta' dell'Onnipotenza e il Regno delle Ombre",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Natalie Portman",
+        "personaggio": "Jane Foster / Mighty Thor"
+      },
+      {
+        "attore": "Christian Bale",
+        "personaggio": "Gorr il Macellatore di Dei"
+      },
+      {
+        "attore": "Tessa Thompson",
+        "personaggio": "Valchiria"
+      },
+      {
+        "attore": "Taika Waititi",
+        "personaggio": "Korg"
+      },
+      {
+        "attore": "Russell Crowe",
+        "personaggio": "Zeus"
+      }
+    ],
+    "prerequisiti": [
+      41,
+      72,
+      92
+    ],
+    "collegati": [
+      45,
+      89,
+      115
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 72,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Si apre agganciandosi al viaggio di Thor con i Guardiani della Galassia lasciato in sospeso da Endgame."
+  },
+  "111": {
+    "ambientazione": "Ai giorni nostri, nell'arco di una sola notte, nella tenuta della famiglia Bloodstone",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Gael Garcia Bernal",
+        "personaggio": "Jack Russell / Licantropus"
+      },
+      {
+        "attore": "Laura Donnelly",
+        "personaggio": "Elsa Bloodstone"
+      },
+      {
+        "attore": "Harriet Sansom Harris",
+        "personaggio": "Verussa Bloodstone"
+      },
+      {
+        "attore": "Kirk R. Thatcher",
+        "personaggio": "Jovan"
+      },
+      {
+        "attore": "Carey Jones",
+        "personaggio": "Ted / Man-Thing"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [],
+    "note": "Speciale autoconclusivo in bianco e nero (Werewolf by Night in originale): introduce i Bloodstone e Man-Thing ma non ha agganci diretti con le altre voci dell'elenco."
+  },
+  "112": {
+    "ambientazione": "Natale, subito dopo l'acquisto di Knowhere da parte dei Guardiani; Knowhere e Hollywood",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Chris Pratt",
+        "personaggio": "Peter Quill / Star-Lord"
+      },
+      {
+        "attore": "Dave Bautista",
+        "personaggio": "Drax"
+      },
+      {
+        "attore": "Pom Klementieff",
+        "personaggio": "Mantis"
+      },
+      {
+        "attore": "Karen Gillan",
+        "personaggio": "Nebula"
+      },
+      {
+        "attore": "Vin Diesel",
+        "personaggio": "Groot (voce)"
+      },
+      {
+        "attore": "Kevin Bacon",
+        "personaggio": "se stesso"
+      }
+    ],
+    "prerequisiti": [
+      51,
+      92
+    ],
+    "collegati": [
+      45,
+      110,
+      115
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 115,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Speciale natalizio che fa da ponte diretto verso Guardiani della Galassia Vol. 3: rivela il legame di sangue tra Mantis e Quill."
+  },
+  "113": {
+    "ambientazione": "Ai giorni nostri, circa un anno dopo la morte di T'Challa: Wakanda, il regno sommerso di Talokan, Boston e Haiti",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Letitia Wright",
+        "personaggio": "Shuri / Black Panther"
+      },
+      {
+        "attore": "Angela Bassett",
+        "personaggio": "Regina Ramonda"
+      },
+      {
+        "attore": "Tenoch Huerta",
+        "personaggio": "Namor"
+      },
+      {
+        "attore": "Lupita Nyong'o",
+        "personaggio": "Nakia"
+      },
+      {
+        "attore": "Danai Gurira",
+        "personaggio": "Okoye"
+      },
+      {
+        "attore": "Dominique Thorne",
+        "personaggio": "Riri Williams / Ironheart"
+      }
+    ],
+    "prerequisiti": [
+      65,
+      92
+    ],
+    "collegati": [
+      89,
+      130,
+      132,
+      138
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 65,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 130,
+        "relazione": "spin-off"
+      }
+    ],
+    "note": "Introduce Riri Williams, protagonista poi della serie Ironheart, e Namor, annunciato nel cast di Avengers: Doomsday."
+  },
+  "114": {
+    "ambientazione": "Ai giorni nostri, tra San Francisco e il Regno Quantico",
+    "annoAmbientazione": 2026,
+    "cast": [
+      {
+        "attore": "Paul Rudd",
+        "personaggio": "Scott Lang / Ant-Man"
+      },
+      {
+        "attore": "Evangeline Lilly",
+        "personaggio": "Hope van Dyne / Wasp"
+      },
+      {
+        "attore": "Jonathan Majors",
+        "personaggio": "Kang il Conquistatore"
+      },
+      {
+        "attore": "Michelle Pfeiffer",
+        "personaggio": "Janet van Dyne"
+      },
+      {
+        "attore": "Michael Douglas",
+        "personaggio": "Hank Pym"
+      },
+      {
+        "attore": "Kathryn Newton",
+        "personaggio": "Cassie Lang"
+      }
+    ],
+    "prerequisiti": [
+      58,
+      85,
+      92
+    ],
+    "collegati": [
+      99,
+      117,
+      138
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 85,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Presenta Kang come antagonista della Saga del Multiverso; il ruolo e' stato poi ridimensionato dopo l'uscita di Jonathan Majors dal franchise."
+  },
+  "115": {
+    "ambientazione": "Ai giorni nostri, su Knowhere, Contro-Terra e la stazione Orgoscope, con lunghi flashback sull'infanzia di Rocket in laboratorio",
+    "annoAmbientazione": 2026,
+    "cast": [
+      {
+        "attore": "Chris Pratt",
+        "personaggio": "Peter Quill / Star-Lord"
+      },
+      {
+        "attore": "Zoe Saldana",
+        "personaggio": "Gamora"
+      },
+      {
+        "attore": "Dave Bautista",
+        "personaggio": "Drax"
+      },
+      {
+        "attore": "Karen Gillan",
+        "personaggio": "Nebula"
+      },
+      {
+        "attore": "Bradley Cooper",
+        "personaggio": "Rocket (voce)"
+      },
+      {
+        "attore": "Chukwudi Iwuji",
+        "personaggio": "l'Alto Evoluzionario"
+      }
+    ],
+    "prerequisiti": [
+      51,
+      92,
+      112
+    ],
+    "collegati": [
+      53,
+      54,
+      110
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 51,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 112,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Chiude la trilogia; la Gamora presente e' la variante del 2014 arrivata nel presente in Endgame."
+  },
+  "116": {
+    "ambientazione": "Ai giorni nostri, tra Mosca, Londra e una centrale nucleare in Finlandia, durante l'infiltrazione skrull sulla Terra",
+    "annoAmbientazione": 2026,
+    "cast": [
+      {
+        "attore": "Samuel L. Jackson",
+        "personaggio": "Nick Fury"
+      },
+      {
+        "attore": "Ben Mendelsohn",
+        "personaggio": "Talos"
+      },
+      {
+        "attore": "Kingsley Ben-Adir",
+        "personaggio": "Gravik"
+      },
+      {
+        "attore": "Emilia Clarke",
+        "personaggio": "G'iah"
+      },
+      {
+        "attore": "Olivia Colman",
+        "personaggio": "Sonya Falsworth"
+      },
+      {
+        "attore": "Don Cheadle",
+        "personaggio": "James Rhodes / War Machine"
+      }
+    ],
+    "prerequisiti": [
+      13,
+      92,
+      95
+    ],
+    "collegati": [
+      43,
+      118,
+      127
+    ],
+    "sequelPrequel": [],
+    "note": "Raccoglie la promessa fatta agli skrull in Captain Marvel e prepara il ritorno di Fury in The Marvels."
+  },
+  "117": {
+    "ambientazione": "Alla TVA, fuori dal flusso temporale, con tappe nella Chicago del 1893, nella Londra del 1977 e a Broxton nel 1962",
+    "annoAmbientazione": null,
+    "cast": [
+      {
+        "attore": "Tom Hiddleston",
+        "personaggio": "Loki"
+      },
+      {
+        "attore": "Owen Wilson",
+        "personaggio": "Mobius M. Mobius"
+      },
+      {
+        "attore": "Sophia Di Martino",
+        "personaggio": "Sylvie"
+      },
+      {
+        "attore": "Ke Huy Quan",
+        "personaggio": "Ouroboros / O.B."
+      },
+      {
+        "attore": "Wunmi Mosaku",
+        "personaggio": "Hunter B-15"
+      },
+      {
+        "attore": "Jonathan Majors",
+        "personaggio": "Victor Timely / Colui Che Rimane"
+      }
+    ],
+    "prerequisiti": [
+      31,
+      99
+    ],
+    "collegati": [
+      92,
+      114,
+      138
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 99,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "annoAmbientazione lasciato a null: la stagione si svolge quasi interamente alla TVA, che per definizione esiste fuori dal tempo, e i salti temporali coprono epoche diverse."
+  },
+  "118": {
+    "ambientazione": "Ai giorni nostri, poco dopo Secret Invasion: Jersey City, la stazione S.A.B.E.R., Aladna e Hala",
+    "annoAmbientazione": 2026,
+    "cast": [
+      {
+        "attore": "Brie Larson",
+        "personaggio": "Carol Danvers / Captain Marvel"
+      },
+      {
+        "attore": "Teyonah Parris",
+        "personaggio": "Monica Rambeau"
+      },
+      {
+        "attore": "Iman Vellani",
+        "personaggio": "Kamala Khan / Ms. Marvel"
+      },
+      {
+        "attore": "Zawe Ashton",
+        "personaggio": "Dar-Benn"
+      },
+      {
+        "attore": "Samuel L. Jackson",
+        "personaggio": "Nick Fury"
+      },
+      {
+        "attore": "Park Seo-joon",
+        "personaggio": "principe Yan"
+      }
+    ],
+    "prerequisiti": [
+      13,
+      97,
+      116
+    ],
+    "collegati": [
+      92,
+      130,
+      138
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 13,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "La serie Ms. Marvel, che introduce Kamala Khan e ne prepara direttamente l'arco, non e' presente in questo elenco di 140 titoli."
+  },
+  "119": {
+    "ambientazione": "In realta' alternative del multiverso, con episodi collocati in epoche diverse (dall'Impero mongolo del XIII secolo al presente)",
+    "annoAmbientazione": null,
+    "cast": [
+      {
+        "attore": "Jeffrey Wright",
+        "personaggio": "Uatu l'Osservatore (voce)"
+      },
+      {
+        "attore": "Hayley Atwell",
+        "personaggio": "Peggy Carter / Capitan Carter (voce)"
+      },
+      {
+        "attore": "Tom Hiddleston",
+        "personaggio": "Loki (voce)"
+      },
+      {
+        "attore": "Samuel L. Jackson",
+        "personaggio": "Nick Fury (voce)"
+      },
+      {
+        "attore": "Devery Jacobs",
+        "personaggio": "Kahhori (voce)"
+      },
+      {
+        "attore": "Karen Gillan",
+        "personaggio": "Nebula (voce)"
+      }
+    ],
+    "prerequisiti": [
+      100
+    ],
+    "collegati": [
+      92,
+      99,
+      125
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 100,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 125,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "annoAmbientazione a null: e' un'antologia multiversale in cui ogni episodio ha una collocazione temporale propria."
+  },
+  "120": {
+    "ambientazione": "Nel 2029, in un futuro desolato al confine tra Texas e Messico, dove non nascono piu' mutanti",
+    "annoAmbientazione": 2029,
+    "cast": [
+      {
+        "attore": "Hugh Jackman",
+        "personaggio": "Logan / Wolverine"
+      },
+      {
+        "attore": "Patrick Stewart",
+        "personaggio": "Charles Xavier / Professor X"
+      },
+      {
+        "attore": "Dafne Keen",
+        "personaggio": "Laura / X-23"
+      },
+      {
+        "attore": "Boyd Holbrook",
+        "personaggio": "Donald Pierce"
+      },
+      {
+        "attore": "Stephen Merchant",
+        "personaggio": "Caliban"
+      },
+      {
+        "attore": "Richard E. Grant",
+        "personaggio": "dottor Zander Rice"
+      }
+    ],
+    "prerequisiti": [
+      21,
+      24
+    ],
+    "collegati": [
+      14,
+      86,
+      124
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 21,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "L'anno 2029 e' esplicitato nel film; chiude l'arco di Wolverine nella saga Fox, ripreso poi in Deadpool & Wolverine."
+  },
+  "121": {
+    "ambientazione": "Nel maggio 2025, circa cinque mesi dopo Hawkeye, a Tamaha in Oklahoma, con flashback sugli antenati Choctaw di Maya",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Alaqua Cox",
+        "personaggio": "Maya Lopez / Echo"
+      },
+      {
+        "attore": "Vincent D'Onofrio",
+        "personaggio": "Wilson Fisk / Kingpin"
+      },
+      {
+        "attore": "Chaske Spencer",
+        "personaggio": "Henry Lopez"
+      },
+      {
+        "attore": "Tantoo Cardinal",
+        "personaggio": "Chula"
+      },
+      {
+        "attore": "Devery Jacobs",
+        "personaggio": "Bonnie"
+      },
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil"
+      }
+    ],
+    "prerequisiti": [
+      46,
+      102
+    ],
+    "collegati": [
+      66,
+      81,
+      128
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 102,
+        "relazione": "spin-off"
+      }
+    ],
+    "note": "Prima serie del marchio Marvel Spotlight; il finale rilancia Kingpin verso Daredevil: Rinascita."
+  },
+  "122": {
+    "ambientazione": "Ai giorni nostri, tra la Russia, Londra e la Turchia, con un lungo prologo nella savana africana durante l'infanzia di Sergei",
+    "annoAmbientazione": 2024,
+    "cast": [
+      {
+        "attore": "Aaron Taylor-Johnson",
+        "personaggio": "Sergei Kravinoff / Kraven"
+      },
+      {
+        "attore": "Russell Crowe",
+        "personaggio": "Nikolai Kravinoff"
+      },
+      {
+        "attore": "Ariana DeBose",
+        "personaggio": "Calypso Ezili"
+      },
+      {
+        "attore": "Fred Hechinger",
+        "personaggio": "Dmitri Kravinoff / Camaleonte"
+      },
+      {
+        "attore": "Alessandro Nivola",
+        "personaggio": "Aleksei Sytsevich / Rhino"
+      },
+      {
+        "attore": "Christopher Abbott",
+        "personaggio": "lo Straniero"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      93,
+      101,
+      104,
+      108
+    ],
+    "sequelPrequel": [],
+    "note": "Ultimo film dell'universo Sony legato a Spider-Man: e' autoconclusivo e non ha legami narrativi diretti con il MCU."
+  },
+  "123": {
+    "ambientazione": "Ai giorni nostri, circa tre anni dopo WandaVision, tra Westview (New Jersey) e la Strada delle Streghe",
+    "annoAmbientazione": 2026,
+    "cast": [
+      {
+        "attore": "Kathryn Hahn",
+        "personaggio": "Agatha Harkness"
+      },
+      {
+        "attore": "Joe Locke",
+        "personaggio": "Billy Maximoff / Wiccan"
+      },
+      {
+        "attore": "Aubrey Plaza",
+        "personaggio": "Rio Vidal"
+      },
+      {
+        "attore": "Patti LuPone",
+        "personaggio": "Lilia Calderu"
+      },
+      {
+        "attore": "Sasheer Zamata",
+        "personaggio": "Jennifer Kale"
+      },
+      {
+        "attore": "Debra Jo Rupp",
+        "personaggio": "Sharon Davis"
+      }
+    ],
+    "prerequisiti": [
+      97
+    ],
+    "collegati": [
+      49,
+      109,
+      139
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 97,
+        "relazione": "spin-off"
+      },
+      {
+        "ordine": 139,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Secondo capitolo della trilogia iniziata con WandaVision e conclusa da VisionQuest."
+  },
+  "124": {
+    "ambientazione": "Ai giorni nostri, tra la Terra-10005 della saga Fox, gli uffici della TVA e la discarica temporale del Vuoto",
+    "annoAmbientazione": 2024,
+    "cast": [
+      {
+        "attore": "Ryan Reynolds",
+        "personaggio": "Wade Wilson / Deadpool"
+      },
+      {
+        "attore": "Hugh Jackman",
+        "personaggio": "Logan / Wolverine"
+      },
+      {
+        "attore": "Emma Corrin",
+        "personaggio": "Cassandra Nova"
+      },
+      {
+        "attore": "Matthew Macfadyen",
+        "personaggio": "Mr. Paradox"
+      },
+      {
+        "attore": "Morena Baccarin",
+        "personaggio": "Vanessa Carlysle"
+      },
+      {
+        "attore": "Rob Delaney",
+        "personaggio": "Peter"
+      }
+    ],
+    "prerequisiti": [
+      57,
+      86,
+      99
+    ],
+    "collegati": [
+      24,
+      34,
+      91,
+      120
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 86,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Chiude formalmente l'universo Fox e lo assorbe nel MCU; e' pieno di camei che presuppongono la conoscenza dei film X-Men e Fantastici 4 della Fox."
+  },
+  "125": {
+    "ambientazione": "In realta' alternative del multiverso e nel Piano Osservazionale, dove l'Osservatore viene processato dai suoi simili",
+    "annoAmbientazione": null,
+    "cast": [
+      {
+        "attore": "Jeffrey Wright",
+        "personaggio": "Uatu l'Osservatore (voce)"
+      },
+      {
+        "attore": "Hayley Atwell",
+        "personaggio": "Peggy Carter / Capitan Carter (voce)"
+      },
+      {
+        "attore": "Devery Jacobs",
+        "personaggio": "Kahhori (voce)"
+      },
+      {
+        "attore": "Anthony Mackie",
+        "personaggio": "Sam Wilson / Captain America (voce)"
+      },
+      {
+        "attore": "Oscar Isaac",
+        "personaggio": "Marc Spector / Moon Knight (voce)"
+      },
+      {
+        "attore": "Kathryn Hahn",
+        "personaggio": "Agatha Harkness (voce)"
+      }
+    ],
+    "prerequisiti": [
+      100,
+      119
+    ],
+    "collegati": [
+      49,
+      92,
+      133
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 119,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "annoAmbientazione a null: antologia multiversale senza una collocazione temporale unica. Stagione conclusiva della serie."
+  },
+  "126": {
+    "ambientazione": "In una linea temporale alternativa del MCU: New York, durante il primo anno di Peter Parker come Spider-Man, mentre e' ancora al liceo",
+    "annoAmbientazione": null,
+    "cast": [
+      {
+        "attore": "Hudson Thames",
+        "personaggio": "Peter Parker / Spider-Man (voce)"
+      },
+      {
+        "attore": "Colman Domingo",
+        "personaggio": "Norman Osborn (voce)"
+      },
+      {
+        "attore": "Grace Song",
+        "personaggio": "Nico Minoru (voce)"
+      },
+      {
+        "attore": "Zeno Robinson",
+        "personaggio": "Harry Osborn (voce)"
+      },
+      {
+        "attore": "Hugh Dancy",
+        "personaggio": "Otto Octavius / Dottor Octopus (voce)"
+      },
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil (voce)"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      46,
+      105,
+      128,
+      140
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 140,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "annoAmbientazione a null: gli autori hanno collocato volutamente la serie in una linea temporale alternativa e nella serie non viene indicato alcun anno."
+  },
+  "127": {
+    "ambientazione": "Nella primavera del 2027, con Thaddeus Ross appena insediato alla Casa Bianca: Washington, l'Oceano Indiano e il Giappone",
+    "annoAmbientazione": 2027,
+    "cast": [
+      {
+        "attore": "Anthony Mackie",
+        "personaggio": "Sam Wilson / Captain America"
+      },
+      {
+        "attore": "Harrison Ford",
+        "personaggio": "Thaddeus Ross / Hulk Rosso"
+      },
+      {
+        "attore": "Danny Ramirez",
+        "personaggio": "Joaquin Torres / Falcon"
+      },
+      {
+        "attore": "Tim Blake Nelson",
+        "personaggio": "Samuel Sterns / il Leader"
+      },
+      {
+        "attore": "Shira Haas",
+        "personaggio": "Ruth Bat-Seraph"
+      },
+      {
+        "attore": "Carl Lumbly",
+        "personaggio": "Isaiah Bradley"
+      }
+    ],
+    "prerequisiti": [
+      27,
+      98,
+      103
+    ],
+    "collegati": [
+      92,
+      116,
+      129
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 98,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Recupera Samuel Sterns da L'incredibile Hulk e il Celestiale emerso in Eternals, ora fonte dell'adamantio. Un invito mostrato sullo schermo data l'azione all'aprile 2027."
+  },
+  "128": {
+    "ambientazione": "A New York: un prologo con Matt Murdock ancora in attivita', poi un salto di un anno con l'avvocato che ha appeso il costume al chiodo e Wilson Fisk candidato sindaco",
+    "annoAmbientazione": 2026,
+    "cast": [
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil"
+      },
+      {
+        "attore": "Vincent D'Onofrio",
+        "personaggio": "Wilson Fisk / Kingpin"
+      },
+      {
+        "attore": "Margarita Levieva",
+        "personaggio": "Heather Glenn"
+      },
+      {
+        "attore": "Deborah Ann Woll",
+        "personaggio": "Karen Page"
+      },
+      {
+        "attore": "Elden Henson",
+        "personaggio": "Foggy Nelson"
+      },
+      {
+        "attore": "Jon Bernthal",
+        "personaggio": "Frank Castle / Punisher"
+      }
+    ],
+    "prerequisiti": [
+      46,
+      81,
+      121
+    ],
+    "collegati": [
+      66,
+      75,
+      107,
+      135
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 81,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 135,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Le fonti divergono sull'anno esatto: il prologo e' collocato nel 2025, il corpo della stagione tra 2026 e 2027, in parallelo a Captain America: Brave New World."
+  },
+  "129": {
+    "ambientazione": "Nel 2027, circa un anno dopo l'insediamento di Ross: Malesia, il bunker segreto della Volta e New York",
+    "annoAmbientazione": 2027,
+    "cast": [
+      {
+        "attore": "Florence Pugh",
+        "personaggio": "Yelena Belova"
+      },
+      {
+        "attore": "Sebastian Stan",
+        "personaggio": "Bucky Barnes / Soldato d'Inverno"
+      },
+      {
+        "attore": "Wyatt Russell",
+        "personaggio": "John Walker / U.S. Agent"
+      },
+      {
+        "attore": "David Harbour",
+        "personaggio": "Alexei Shostakov / Guardiano Rosso"
+      },
+      {
+        "attore": "Lewis Pullman",
+        "personaggio": "Bob Reynolds / Sentry / il Vuoto"
+      },
+      {
+        "attore": "Julia Louis-Dreyfus",
+        "personaggio": "Valentina Allegra de Fontaine"
+      }
+    ],
+    "prerequisiti": [
+      67,
+      98,
+      102
+    ],
+    "collegati": [
+      85,
+      127,
+      131,
+      138
+    ],
+    "sequelPrequel": [],
+    "note": "La scena post-credit salta di quattordici mesi e aggancia direttamente The Fantastic Four: First Steps e Avengers: Doomsday."
+  },
+  "130": {
+    "ambientazione": "Circa sei mesi dopo Black Panther: Wakanda Forever, a Chicago, tra tecnologia e magia",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Dominique Thorne",
+        "personaggio": "Riri Williams / Ironheart"
+      },
+      {
+        "attore": "Anthony Ramos",
+        "personaggio": "Parker Robbins / il Cappuccio"
+      },
+      {
+        "attore": "Lyric Ross",
+        "personaggio": "Natalie Washington / N.A.T.A.L.I.E."
+      },
+      {
+        "attore": "Alden Ehrenreich",
+        "personaggio": "Zeke Stane"
+      },
+      {
+        "attore": "Manny Montana",
+        "personaggio": "John"
+      },
+      {
+        "attore": "Sacha Baron Cohen",
+        "personaggio": "Mefisto"
+      }
+    ],
+    "prerequisiti": [
+      113
+    ],
+    "collegati": [
+      17,
+      62,
+      123
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 113,
+        "relazione": "spin-off"
+      }
+    ],
+    "note": "Debutto di Mefisto nel MCU; Zeke Stane e' figlio di Obadiah Stane, l'antagonista di Iron Man."
+  },
+  "131": {
+    "ambientazione": "Nel 1964 di Terra-828, un universo alternativo retro-futuristico, quattro anni dopo che l'equipaggio ha ottenuto i poteri",
+    "annoAmbientazione": 1964,
+    "cast": [
+      {
+        "attore": "Pedro Pascal",
+        "personaggio": "Reed Richards / Mr. Fantastic"
+      },
+      {
+        "attore": "Vanessa Kirby",
+        "personaggio": "Sue Storm / Donna Invisibile"
+      },
+      {
+        "attore": "Joseph Quinn",
+        "personaggio": "Johnny Storm / Torcia Umana"
+      },
+      {
+        "attore": "Ebon Moss-Bachrach",
+        "personaggio": "Ben Grimm / la Cosa"
+      },
+      {
+        "attore": "Julia Garner",
+        "personaggio": "Shalla-Bal / Silver Surfer"
+      },
+      {
+        "attore": "Ralph Ineson",
+        "personaggio": "Galactus"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      11,
+      15,
+      34,
+      138
+    ],
+    "sequelPrequel": [],
+    "note": "Ambientato in un universo separato (Terra-828), quindi non richiede la visione dei film MCU precedenti; la scena post-credit compie un salto di quattro anni e porta direttamente ad Avengers: Doomsday."
+  },
+  "132": {
+    "ambientazione": "Antologia storica in quattro episodi: Creta minoica nel 1260 a.C., la guerra di Troia intorno al 1200 a.C., K'un-Lun nel 1400 e Adua in Etiopia nel 1896",
+    "annoAmbientazione": -1260,
+    "cast": [
+      {
+        "attore": "Winnie Harlow",
+        "personaggio": "Noni (voce)"
+      },
+      {
+        "attore": "Cress Williams",
+        "personaggio": "N'Kati / il Leone (voce)"
+      },
+      {
+        "attore": "Larry Herron",
+        "personaggio": "B'Kai / Memnone (voce)"
+      },
+      {
+        "attore": "Jacques Colimon",
+        "personaggio": "Basha (voce)"
+      },
+      {
+        "attore": "Jona Xiao",
+        "personaggio": "Jorani / Iron Fist (voce)"
+      },
+      {
+        "attore": "Anika Noni Rose",
+        "personaggio": "Black Panther (voce)"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      59,
+      65,
+      113
+    ],
+    "sequelPrequel": [],
+    "note": "annoAmbientazione fissato al 1260 a.C. (episodio d'apertura), ma la miniserie e' un'antologia che copre oltre tremila anni, fino al 1896."
+  },
+  "133": {
+    "ambientazione": "In una linea temporale alternativa del multiverso, circa cinque anni dopo l'epidemia zombie mostrata nella prima stagione di What If...?",
+    "annoAmbientazione": 2023,
+    "cast": [
+      {
+        "attore": "Iman Vellani",
+        "personaggio": "Kamala Khan / Ms. Marvel (voce)"
+      },
+      {
+        "attore": "Hailee Steinfeld",
+        "personaggio": "Kate Bishop (voce)"
+      },
+      {
+        "attore": "Dominique Thorne",
+        "personaggio": "Riri Williams / Ironheart (voce)"
+      },
+      {
+        "attore": "Florence Pugh",
+        "personaggio": "Yelena Belova (voce)"
+      },
+      {
+        "attore": "Elizabeth Olsen",
+        "personaggio": "Wanda Maximoff / la Regina Rossa (voce)"
+      },
+      {
+        "attore": "David Harbour",
+        "personaggio": "Alexei Shostakov / Guardiano Rosso (voce)"
+      }
+    ],
+    "prerequisiti": [
+      100
+    ],
+    "collegati": [
+      89,
+      119,
+      125
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 100,
+        "relazione": "spin-off"
+      }
+    ],
+    "note": "Nasce dall'episodio zombie della prima stagione di What If...?, ambientato nel 2018 della sua realta': da qui la collocazione al 2023 dello stesso universo alternativo."
+  },
+  "134": {
+    "ambientazione": "Ai giorni nostri a Hollywood, nell'arco di circa due anni: dall'inverno 2025 fino al 2027, mentre Simon Williams prova a farsi ingaggiare nel remake di un film di supereroi",
+    "annoAmbientazione": 2026,
+    "cast": [
+      {
+        "attore": "Yahya Abdul-Mateen II",
+        "personaggio": "Simon Williams / Wonder Man"
+      },
+      {
+        "attore": "Ben Kingsley",
+        "personaggio": "Trevor Slattery"
+      },
+      {
+        "attore": "Zlatko Buric",
+        "personaggio": "Von Kovak"
+      },
+      {
+        "attore": "Arian Moayed",
+        "personaggio": "agente Cleary"
+      },
+      {
+        "attore": "X Mayo",
+        "personaggio": "Janelle Jackson"
+      },
+      {
+        "attore": "Olivia Thirlby",
+        "personaggio": "Vivian"
+      }
+    ],
+    "prerequisiti": [
+      38,
+      39
+    ],
+    "collegati": [
+      94,
+      129
+    ],
+    "sequelPrequel": [],
+    "note": "Riprende Trevor Slattery da Iron Man 3, dal one-shot All Hail the King e da Shang-Chi, e l'agente Cleary da Spider-Man: No Way Home. La serie copre un arco di tempo lungo, quindi l'anno indicato e' il baricentro."
+  },
+  "135": {
+    "ambientazione": "A New York, subito dopo la prima stagione: Wilson Fisk governa la citta' da sindaco con una task force anti-vigilanti e Matt Murdock organizza la resistenza dall'ombra",
+    "annoAmbientazione": 2027,
+    "cast": [
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil"
+      },
+      {
+        "attore": "Vincent D'Onofrio",
+        "personaggio": "Wilson Fisk / Kingpin"
+      },
+      {
+        "attore": "Deborah Ann Woll",
+        "personaggio": "Karen Page"
+      },
+      {
+        "attore": "Krysten Ritter",
+        "personaggio": "Jessica Jones"
+      },
+      {
+        "attore": "Wilson Bethel",
+        "personaggio": "Benjamin Poindexter / Bullseye"
+      },
+      {
+        "attore": "Matthew Lillard",
+        "personaggio": "Mr. Charles"
+      }
+    ],
+    "prerequisiti": [
+      128
+    ],
+    "collegati": [
+      47,
+      79,
+      136,
+      137
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 128,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Riporta Jessica Jones e Luke Cage nel MCU; si coordina con lo speciale The Punisher: One Last Kill e con Spider-Man: Brand New Day. L'anno e' dedotto dalla continuita' con la prima stagione, non dichiarato sullo schermo."
+  },
+  "136": {
+    "ambientazione": "A New York, nel quartiere di Little Sicily, in parallelo alla seconda stagione di Daredevil: Rinascita, con Frank Castle che prova a lasciarsi alle spalle la vendetta",
+    "annoAmbientazione": 2027,
+    "cast": [
+      {
+        "attore": "Jon Bernthal",
+        "personaggio": "Frank Castle / Punisher"
+      },
+      {
+        "attore": "Judith Light",
+        "personaggio": "Ma Gnucci"
+      },
+      {
+        "attore": "Deborah Ann Woll",
+        "personaggio": "Karen Page"
+      },
+      {
+        "attore": "Jason R. Moore",
+        "personaggio": "Curtis Hoyle"
+      }
+    ],
+    "prerequisiti": [
+      75,
+      128
+    ],
+    "collegati": [
+      83,
+      135,
+      137
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 75,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Speciale di circa 51 minuti scritto dallo stesso Bernthal; si svolge in contemporanea alla seconda stagione di Daredevil: Rinascita e precede l'apparizione di Castle in Spider-Man: Brand New Day. L'anno e' dedotto da quella continuita', non e' dichiarato."
+  },
+  "137": {
+    "ambientazione": "Circa quattro anni dopo No Way Home, a New York: Peter Parker, cancellato dalla memoria di tutti, fa il vigilante solitario contro la criminalita' di strada",
+    "annoAmbientazione": 2028,
+    "cast": [
+      {
+        "attore": "Tom Holland",
+        "personaggio": "Peter Parker / Spider-Man"
+      },
+      {
+        "attore": "Zendaya",
+        "personaggio": "Michelle 'MJ' Jones-Watson"
+      },
+      {
+        "attore": "Sadie Sink",
+        "personaggio": "Jean Grey"
+      },
+      {
+        "attore": "Jacob Batalon",
+        "personaggio": "Ned Leeds"
+      },
+      {
+        "attore": "Jon Bernthal",
+        "personaggio": "Frank Castle / Punisher"
+      },
+      {
+        "attore": "Mark Ruffalo",
+        "personaggio": "Bruce Banner / Hulk"
+      }
+    ],
+    "prerequisiti": [
+      105,
+      128
+    ],
+    "collegati": [
+      107,
+      129,
+      135,
+      136
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 105,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "annoAmbientazione dedotto: il film e' dichiarato ambientato circa quattro anni dopo No Way Home, collocato nel dicembre 2024 dalle cronologie MCU. Marvel non ha mai indicato un anno esplicito."
+  },
+  "138": {
+    "ambientazione": null,
+    "annoAmbientazione": null,
+    "cast": [
+      {
+        "attore": "Robert Downey Jr.",
+        "personaggio": "Victor von Doom / Dottor Destino"
+      },
+      {
+        "attore": "Chris Hemsworth",
+        "personaggio": "Thor"
+      },
+      {
+        "attore": "Anthony Mackie",
+        "personaggio": "Sam Wilson / Captain America"
+      },
+      {
+        "attore": "Pedro Pascal",
+        "personaggio": "Reed Richards / Mr. Fantastic"
+      },
+      {
+        "attore": "Vanessa Kirby",
+        "personaggio": "Sue Storm / Donna Invisibile"
+      },
+      {
+        "attore": "Patrick Stewart",
+        "personaggio": "Charles Xavier / Professor X"
+      }
+    ],
+    "prerequisiti": [
+      92,
+      129,
+      131
+    ],
+    "collegati": [
+      113,
+      117,
+      124
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 92,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 131,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "TITOLO NON ANCORA USCITO (previsto per il 18 dicembre 2026): sono riportati solo il cast e i collegamenti annunciati ufficialmente. Ambientazione e anno restano a null perche' non dichiarati; l'unico riferimento ufficiale e' che la storia si colloca quattordici mesi dopo Thunderbolts. Dati provvisori."
+  },
+  "139": {
+    "ambientazione": null,
+    "annoAmbientazione": null,
+    "cast": [
+      {
+        "attore": "Paul Bettany",
+        "personaggio": "Vision"
+      },
+      {
+        "attore": "James Spader",
+        "personaggio": "Ultron"
+      },
+      {
+        "attore": "Todd Stashwick",
+        "personaggio": "Paladin"
+      },
+      {
+        "attore": "T'Nia Miller",
+        "personaggio": "Jocasta"
+      },
+      {
+        "attore": "Emily Hampshire",
+        "personaggio": "E.D.I.T.H."
+      },
+      {
+        "attore": "Orla Brady",
+        "personaggio": "F.R.I.D.A.Y."
+      }
+    ],
+    "prerequisiti": [
+      49,
+      97
+    ],
+    "collegati": [
+      89,
+      92,
+      123
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 97,
+        "relazione": "sequel"
+      },
+      {
+        "ordine": 123,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "TITOLO NON ANCORA USCITO (previsto per il 14 ottobre 2026, titolo ufficiale VisionQuest): riportati solo cast e premessa annunciati da Marvel, cioe' la ricerca dei ricordi da parte della Visione Bianca. Ambientazione e anno a null. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along. Dati provvisori."
+  },
+  "140": {
+    "ambientazione": null,
+    "annoAmbientazione": null,
+    "cast": [
+      {
+        "attore": "Hudson Thames",
+        "personaggio": "Peter Parker / Spider-Man (voce)"
+      },
+      {
+        "attore": "Colman Domingo",
+        "personaggio": "Norman Osborn (voce)"
+      },
+      {
+        "attore": "Grace Song",
+        "personaggio": "Nico Minoru (voce)"
+      },
+      {
+        "attore": "Zeno Robinson",
+        "personaggio": "Harry Osborn (voce)"
+      },
+      {
+        "attore": "Hugh Dancy",
+        "personaggio": "Otto Octavius / Dottor Octopus (voce)"
+      },
+      {
+        "attore": "Cathy Ang",
+        "personaggio": "Pearl Pangan (voce)"
+      }
+    ],
+    "prerequisiti": [
+      126
+    ],
+    "collegati": [
+      46,
+      105,
+      128
+    ],
+    "sequelPrequel": [
+      {
+        "ordine": 126,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "TITOLO NON ANCORA USCITO: al D23 del 15 agosto 2026 Disney ha spostato l'uscita a gennaio 2027. Sono riportati solo il cast annunciato e gli elementi mostrati nel trailer ufficiale; ambientazione e anno restano a null, anche perche' la serie si svolge in una linea temporale alternativa senza anno dichiarato. Dati provvisori."
+  }
+}

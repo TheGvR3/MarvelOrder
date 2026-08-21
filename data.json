@@ -8,7 +8,7 @@
     "episodi": null,
     "uscita": "2004-04-16",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Pre-MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -34,7 +34,7 @@
     "episodi": null,
     "uscita": "2015-01-06",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -47,7 +47,7 @@
     "episodi": null,
     "uscita": "2016-01-19",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -73,7 +73,7 @@
     "episodi": null,
     "uscita": "1998-08-21",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Pre-MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -86,46 +86,46 @@
     "episodi": null,
     "uscita": "2002-03-22",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Pre-MCU",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 8,
     "ordine": 8,
-    "titolo": "Blade Trinity",
+    "titolo": "Blade: Trinity",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2004-12-08",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Pre-MCU",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 9,
     "ordine": 9,
-    "titolo": "Blade: La Serie",
+    "titolo": "Blade - La serie",
     "tipo": "Serie TV",
     "stagione": 1,
     "episodi": null,
     "uscita": "2006-06-28",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Pre-MCU",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 10,
     "ordine": 10,
-    "titolo": "X-Men: L’inizio",
+    "titolo": "X-Men: L'inizio",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2011-06-03",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -138,20 +138,20 @@
     "episodi": null,
     "uscita": "2005-07-08",
     "uscitaRaw": null,
-    "categoria": "Tim Story",
+    "categoria": "Fantastici 4 (Fox)",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 12,
     "ordine": 12,
-    "titolo": "X-Men le Origini: Wolverine",
+    "titolo": "X-Men le origini - Wolverine",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2009-05-01",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -177,7 +177,7 @@
     "episodi": null,
     "uscita": "2000-07-14",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -190,7 +190,7 @@
     "episodi": null,
     "uscita": "2007-06-15",
     "uscitaRaw": null,
-    "categoria": "Tim Story",
+    "categoria": "Fantastici 4 (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -203,7 +203,7 @@
     "episodi": null,
     "uscita": "2003-05-02",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -229,7 +229,7 @@
     "episodi": null,
     "uscita": "2006-05-26",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -242,7 +242,7 @@
     "episodi": null,
     "uscita": "2002-05-03",
     "uscitaRaw": null,
-    "categoria": "Sam Raimi/MCU",
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": true,
     "fase": null
   },
@@ -255,20 +255,20 @@
     "episodi": null,
     "uscita": "2003-02-14",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Pre-MCU",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 21,
     "ordine": 21,
-    "titolo": "Wolverine: L’Immortale",
+    "titolo": "Wolverine: L'Immortale",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2013-07-26",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -281,7 +281,7 @@
     "episodi": null,
     "uscita": "2004-06-30",
     "uscitaRaw": null,
-    "categoria": "Sam Raimi/MCU",
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": true,
     "fase": null
   },
@@ -294,7 +294,7 @@
     "episodi": null,
     "uscita": "2005-01-14",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Pre-MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -307,7 +307,7 @@
     "episodi": null,
     "uscita": "2014-05-23",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -333,7 +333,7 @@
     "episodi": null,
     "uscita": "2007-05-04",
     "uscitaRaw": null,
-    "categoria": "Sam Raimi/MCU",
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": true,
     "fase": null
   },
@@ -359,7 +359,7 @@
     "episodi": null,
     "uscita": "2011-09-13",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -372,7 +372,7 @@
     "episodi": null,
     "uscita": "2011-10-25",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -411,7 +411,7 @@
     "episodi": null,
     "uscita": "2016-05-27",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -424,20 +424,20 @@
     "episodi": null,
     "uscita": "2012-07-03",
     "uscitaRaw": null,
-    "categoria": "Marc Webb/MCU",
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": true,
     "fase": null
   },
   {
     "id": 34,
     "ordine": 34,
-    "titolo": "Fantastic 4: I Fantastici 4",
+    "titolo": "Fantastic 4 - I Fantastici Quattro",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2015-08-07",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Fantastici 4 (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -450,7 +450,7 @@
     "episodi": null,
     "uscita": "2019-06-07",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -463,7 +463,7 @@
     "episodi": null,
     "uscita": "2014-05-02",
     "uscitaRaw": null,
-    "categoria": "Marc Webb/MCU",
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": true,
     "fase": null
   },
@@ -476,7 +476,7 @@
     "episodi": null,
     "uscita": "2012-09-25",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -502,7 +502,7 @@
     "episodi": null,
     "uscita": "2014-02-04",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -515,7 +515,7 @@
     "episodi": "1-7",
     "uscita": "2013-09-24",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -541,7 +541,7 @@
     "episodi": "8-16",
     "uscita": "2013-11-19",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -567,7 +567,7 @@
     "episodi": "17-22",
     "uscita": "2014-04-08",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -593,7 +593,7 @@
     "episodi": null,
     "uscita": "2015-04-10",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -606,7 +606,7 @@
     "episodi": null,
     "uscita": "2015-11-20",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -619,7 +619,7 @@
     "episodi": "1-19",
     "uscita": "2014-09-23",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -645,7 +645,7 @@
     "episodi": "20-22",
     "uscita": "2015-05-05",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -671,7 +671,7 @@
     "episodi": null,
     "uscita": "2016-09-30",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -686,7 +686,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 54,
@@ -699,7 +699,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 55,
@@ -710,7 +710,7 @@
     "episodi": null,
     "uscita": "2016-03-18",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -736,7 +736,7 @@
     "episodi": null,
     "uscita": "2016-02-12",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -762,7 +762,7 @@
     "episodi": null,
     "uscita": "2017-03-17",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -775,7 +775,7 @@
     "episodi": "1-19",
     "uscita": "2015-09-29",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -814,7 +814,7 @@
     "episodi": "20-22",
     "uscita": "2016-05-10",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -827,7 +827,7 @@
     "episodi": null,
     "uscita": "2016-12-13",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -853,7 +853,7 @@
     "episodi": null,
     "uscita": "2017-08-18",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -879,7 +879,7 @@
     "episodi": "1-6",
     "uscita": "2016-09-20",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -905,7 +905,7 @@
     "episodi": "7-22",
     "uscita": "2016-11-29",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -944,7 +944,7 @@
     "episodi": null,
     "uscita": "2017-09-29",
     "uscitaRaw": null,
-    "categoria": "XMEN/MCU",
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -957,7 +957,7 @@
     "episodi": null,
     "uscita": "2017-11-21",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -970,7 +970,7 @@
     "episodi": null,
     "uscita": "2017-11-17",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -983,7 +983,7 @@
     "episodi": null,
     "uscita": "2018-03-08",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -996,7 +996,7 @@
     "episodi": null,
     "uscita": "2018-06-07",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -1009,7 +1009,7 @@
     "episodi": null,
     "uscita": "2019-04-04",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -1022,7 +1022,7 @@
     "episodi": null,
     "uscita": "2018-06-22",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -1035,7 +1035,7 @@
     "episodi": null,
     "uscita": "2018-09-07",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -1048,7 +1048,7 @@
     "episodi": null,
     "uscita": "2018-10-19",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -1061,7 +1061,7 @@
     "episodi": null,
     "uscita": "2018-12-21",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -1074,7 +1074,7 @@
     "episodi": null,
     "uscita": "2019-01-18",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -1087,7 +1087,7 @@
     "episodi": null,
     "uscita": "2019-06-14",
     "uscitaRaw": null,
-    "categoria": "MCU",
+    "categoria": "Marvel Netflix",
     "obbligatorio": false,
     "fase": null
   },
@@ -1113,7 +1113,7 @@
     "episodi": null,
     "uscita": "2018-05-18",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -1126,7 +1126,7 @@
     "episodi": null,
     "uscita": "2019-12-13",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -1139,7 +1139,7 @@
     "episodi": "1-22",
     "uscita": "2017-12-01",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
@@ -1165,20 +1165,20 @@
     "episodi": "1-13",
     "uscita": "2019-05-10",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 91,
     "ordine": 91,
-    "titolo": "The new Mutants",
+    "titolo": "The New Mutants",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2020-08-28",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -1204,14 +1204,14 @@
     "episodi": null,
     "uscita": "2018-10-05",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 94,
     "ordine": 94,
-    "titolo": "Shang-chi e la leggenda dei dieci anelli",
+    "titolo": "Shang-Chi e la leggenda dei Dieci Anelli",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
@@ -1243,14 +1243,14 @@
     "episodi": "1-13",
     "uscita": "2020-05-27",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Marvel Television",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 97,
     "ordine": 97,
-    "titolo": "Wanda Vision",
+    "titolo": "WandaVision",
     "tipo": "Serie TV",
     "stagione": 1,
     "episodi": null,
@@ -1258,7 +1258,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 98,
@@ -1271,7 +1271,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 99,
@@ -1284,12 +1284,12 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 100,
     "ordine": 100,
-    "titolo": "What If",
+    "titolo": "What If...?",
     "tipo": "Serie TV",
     "stagione": 1,
     "episodi": null,
@@ -1297,7 +1297,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 101,
@@ -1308,7 +1308,7 @@
     "episodi": null,
     "uscita": "2024-02-14",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": false,
     "fase": null
   },
@@ -1323,7 +1323,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 103,
@@ -1341,20 +1341,20 @@
   {
     "id": 104,
     "ordine": 104,
-    "titolo": "Venom La Furia Di Carnage",
+    "titolo": "Venom - La furia di Carnage",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2021-10-01",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 105,
     "ordine": 105,
-    "titolo": "Spiderman: No Way Home",
+    "titolo": "Spider-Man: No Way Home",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
@@ -1375,12 +1375,12 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 107,
     "ordine": 107,
-    "titolo": "She Hulk: Attorney at Law",
+    "titolo": "She-Hulk: Attorney at Law",
     "tipo": "Serie TV",
     "stagione": 1,
     "episodi": null,
@@ -1388,7 +1388,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 108,
@@ -1399,14 +1399,14 @@
     "episodi": null,
     "uscita": "2022-04-01",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 109,
     "ordine": 109,
-    "titolo": "Dr Strange nel Multiverso della Follia",
+    "titolo": "Doctor Strange nel Multiverso della Follia",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
@@ -1433,14 +1433,14 @@
     "id": 111,
     "ordine": 111,
     "titolo": "Licantropus",
-    "tipo": "Film",
+    "tipo": "One Shot/Other",
     "stagione": null,
     "episodi": null,
     "uscita": "2022-10-07",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 112,
@@ -1453,12 +1453,12 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 4
   },
   {
     "id": 113,
     "ordine": 113,
-    "titolo": "Black Panther: Wakanda Forever (2022)",
+    "titolo": "Black Panther: Wakanda Forever",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
@@ -1505,7 +1505,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 117,
@@ -1518,7 +1518,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 118,
@@ -1536,7 +1536,7 @@
   {
     "id": 119,
     "ordine": 119,
-    "titolo": "What If",
+    "titolo": "What If...?",
     "tipo": "Serie TV",
     "stagione": 2,
     "episodi": null,
@@ -1544,18 +1544,18 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 120,
     "ordine": 120,
-    "titolo": "Logan: The Wolverine",
+    "titolo": "Logan - The Wolverine",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2017-03-03",
     "uscitaRaw": null,
-    "categoria": "XMEN",
+    "categoria": "X-Men (Fox)",
     "obbligatorio": false,
     "fase": null
   },
@@ -1568,20 +1568,20 @@
     "episodi": null,
     "uscita": "2024-01-09",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 122,
     "ordine": 122,
-    "titolo": "Kraven: Il Cacciatore",
+    "titolo": "Kraven - Il cacciatore",
     "tipo": "Film",
     "stagione": null,
     "episodi": null,
     "uscita": "2024-12-13",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "Sony / Spider-Man",
     "obbligatorio": false,
     "fase": null
   },
@@ -1596,7 +1596,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 124,
@@ -1614,7 +1614,7 @@
   {
     "id": 125,
     "ordine": 125,
-    "titolo": "What If",
+    "titolo": "What If...?",
     "tipo": "Serie TV",
     "stagione": 3,
     "episodi": null,
@@ -1622,18 +1622,18 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": true,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 126,
     "ordine": 126,
-    "titolo": "Il Vostro Amichevole Spiderman Di Quartiere",
+    "titolo": "Il tuo amichevole Spider-Man di quartiere",
     "tipo": "Serie TV",
     "stagione": 1,
     "episodi": null,
     "uscita": "2025-01-29",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -1661,7 +1661,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 129,
@@ -1687,7 +1687,7 @@
     "uscitaRaw": null,
     "categoria": "MCU",
     "obbligatorio": false,
-    "fase": null
+    "fase": 5
   },
   {
     "id": 131,
@@ -1711,7 +1711,7 @@
     "episodi": null,
     "uscita": "2025-08-01",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -1724,7 +1724,7 @@
     "episodi": null,
     "uscita": "2025-09-24",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   },
@@ -1733,7 +1733,7 @@
     "ordine": 134,
     "titolo": "Wonder Man",
     "tipo": "Miniserie",
-    "stagione": 1,
+    "stagione": null,
     "episodi": null,
     "uscita": "2026-01-27",
     "uscitaRaw": null,
@@ -1798,24 +1798,24 @@
     "ordine": 139,
     "titolo": "Vision Quest",
     "tipo": "Serie TV",
-    "stagione": null,
+    "stagione": 1,
     "episodi": null,
     "uscita": "2026-10-14",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 140,
     "ordine": 140,
-    "titolo": "Il Vostro Amichevole Spiderman Di Quartiere",
+    "titolo": "Il tuo amichevole Spider-Man di quartiere",
     "tipo": "Serie TV",
     "stagione": 2,
     "episodi": null,
     "uscita": "2027-01-01",
     "uscitaRaw": null,
-    "categoria": null,
+    "categoria": "MCU",
     "obbligatorio": false,
     "fase": null
   }
