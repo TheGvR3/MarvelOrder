@@ -58,6 +58,14 @@
         </button>
 
         <p class="result-count" role="status" aria-live="polite"><span id="result-count">140</span> <span id="result-count-label">titoli</span></p>
+
+        <div class="progress" id="progress" hidden>
+          <div class="progress-bar" role="progressbar" aria-labelledby="progress-text" aria-valuemin="0" aria-valuemax="140" aria-valuenow="0">
+            <span class="progress-fill" id="progress-fill"></span>
+          </div>
+          <p class="progress-text" id="progress-text">0 di 140 visti</p>
+          <button type="button" id="reset-visti" class="progress-reset">Azzera</button>
+        </div>
       </div>
 
       <div id="filters-panel" class="filters">
@@ -80,10 +88,24 @@
           </select>
         </div>
 
+        <div class="filter-group">
+          <label for="fase-filter">Fase</label>
+          <select id="fase-filter">
+            <option value="">Tutte</option>
+          </select>
+        </div>
+
         <div class="filter-group filter-checkbox">
           <label>
             <input type="checkbox" id="required-only">
             Solo visione essenziale
+          </label>
+        </div>
+
+        <div class="filter-group filter-checkbox">
+          <label>
+            <input type="checkbox" id="hide-watched">
+            Nascondi i già visti
           </label>
         </div>
       </div>

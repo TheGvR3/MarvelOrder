@@ -18,14 +18,14 @@ python -m http.server 8000     # or: npx serve .
 
 ## Architecture
 
-**State → render.** A single `state` object (`mode`, `search`, `tipo`, `categoria`, `requiredOnly`) drives everything. Every event handler mutates `state` and calls `render()`, which re-runs the whole pipeline and rebuilds `#timeline` from scratch: `getFiltered()` → `getSorted()` → `groupItems()` → `buildCard()` per item. There is no diffing or partial update — adding a control means adding a `state` field, a listener that sets it, and a clause in `getFiltered()`.
+**State → render.** A single `state` object (`mode`, `search`, `tipo`, `categoria`, `fase`, `requiredOnly`, `hideWatched`, `visti`) drives everything. Every event handler mutates `state` and calls `render()`, which re-runs the whole pipeline and rebuilds `#timeline` from scratch: `getFiltered()` → `getSorted()` → `groupItems()` → `buildCard()` per item. There is no diffing or partial update — adding a control means adding a `state` field, a listener that sets it, and a clause in `getFiltered()`.
 
 **Three view modes.** `state.mode` is `'fase' | 'uscita' | 'cronologico'`, set by the `.mode-btn` tabs via `data-mode`. Sorting and grouping are coupled per mode, so a new mode needs a branch in both `getSorted()` and `groupItems()`:
 
 | mode | sort | group heading |
 |---|---|---|
 | `fase` | `fase` (null → 99), then `SAGA_ORDER` rank *among the fase-less only*, then release date, then `ordine` | `PHASE_LABELS`, then `categoria` |
-| `uscita` | release date, then `ordine` | decade (`1990s`) |
+| `uscita` | `dataVisione()` (Italian date, US as fallback), then `ordine` | year (`2008`) |
 | `cronologico` | `ordine` (curated narrative order) | none — one unlabelled group |
 
 Grouping is a *run-length* pass over the already-sorted list, not a bucket-by-key, so a label repeats whenever the sort interleaves it. Each mode's sort is built so that never happens:
@@ -45,7 +45,13 @@ Grouping is a *run-length* pass over the already-sorted list, not a bucket-by-ke
 
 Focus handling has three parts that are easy to break: `trapFocus` cycles Tab inside the dialog, `body.modal-open` stops the page behind from scrolling, and `openModal` records `lastFocusedEl` **only when the overlay was closed** — the season chips inside the modal call `openModal` on a sibling, so recording unconditionally would capture a chip that is about to be destroyed. `closeModal` checks `isConnected` before restoring, because a `render()` in between detaches the original node.
 
+**Watched titles.** `state.visti` is a Set of `ordine`, persisted to `localStorage` under `marvelsite:visti`. Every read and write is wrapped in try/catch — private browsing and blocked third-party storage make `localStorage` *throw*, not return null, and the site has to keep working without persistence. `init()` drops any stored `ordine` that no longer exists in the data.
+
+**`ordine` is doing two jobs and that is a known liability.** It is both the narrative position *and* the identity used by `dettagli.json` keys, cross-references, DOM ids, `siblings` and the persisted watched list. Inserting a title in the middle therefore renumbers everything and silently reassigns a visitor's watched list to the wrong titles. `id` exists in the data, is always equal to `ordine`, and is otherwise unused — it is the intended escape hatch: make `id` the immutable key, let `ordine` become a free-floating position. Do that migration *before* inserting any title.
+
 **Search normalization.** `normalize()` lowercases, folds curly apostrophes onto `'`, and strips diacritics; `linkSeries()` precomputes `item.searchKey` from it and the search box runs its input through the same function. Comparing raw strings meant `L'inizio` typed with the other apostrophe found nothing.
+
+`searchKey` also folds in the entry's cast — actors *and* character names — so "Chris Evans" or "Scarlet Witch" are findable. This is why `init()` must parse `dettagli.json` **before** calling `linkSeries()`. Coverage is limited by the data: each entry lists 4-6 leading roles, so an actor is found where they star, not everywhere they appear.
 
 **Toast.** `announce()` creates `#toast` on demand (a `role="status"` live region) and auto-hides it. `jumpToItem()` uses it because reaching a filtered-out sibling silently wipes every filter.
 
@@ -58,6 +64,8 @@ Array of 140 objects. Fields: `id` (unused, always equal to `ordine`), `ordine` 
 `categoria` is a closed set of 7 values covering 140/140: `MCU`, `Marvel Television`, `Marvel Netflix`, `X-Men (Fox)`, `Fantastici 4 (Fox)`, `Sony / Spider-Man`, `Pre-MCU`. Adding a value means adding it to `SAGA_ORDER` in [script.js](script.js) too, otherwise it sorts last in the `fase` view.
 
 `fase` is null for 82 entries and that is correct: only Marvel Studios titles belong to an official Phase. Fox, Sony, Netflix, Marvel Television and pre-MCU titles are grouped by `categoria` instead.
+
+`uscitaItalia` (136/140) is the Italian theatrical or platform release; it is null only where no Italian distribution exists (the two `WHIH Newsfront` entries, `Slingshot`) or the title is unreleased. **It is the date the UI shows and sorts by** — `dataVisione()` falls back to `uscita` — because the `uscita` view promises the order the audience saw them in, and this audience is Italian. Do not assume Italy is later: on 47 of the 103 entries where the two differ the Italian date is *earlier* (Europe releases on Wednesday, the US on Friday). The large gaps are historical — Blade is 504 days.
 
 `stagione`/`episodi` stay null on `Film` and on `Miniserie`. The `tipo` and `categoria` dropdowns are populated from the data at load, so new values appear as filters automatically.
 

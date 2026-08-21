@@ -12,6 +12,13 @@
     tipoFilter: document.getElementById('tipo-filter'),
     catFilter: document.getElementById('cat-filter'),
     requiredOnly: document.getElementById('required-only'),
+    faseFilter: document.getElementById('fase-filter'),
+    hideWatched: document.getElementById('hide-watched'),
+    progress: document.getElementById('progress'),
+    progressBar: document.querySelector('#progress .progress-bar'),
+    progressFill: document.getElementById('progress-fill'),
+    progressText: document.getElementById('progress-text'),
+    resetVisti: document.getElementById('reset-visti'),
     modeBtns: Array.from(document.querySelectorAll('.mode-btn')),
     filtersToggle: document.getElementById('filters-toggle'),
     filtersPanel: document.getElementById('filters-panel'),
@@ -29,8 +36,43 @@
     search: '',
     tipo: '',
     categoria: '',
+    fase: '',
     requiredOnly: false,
+    hideWatched: false,
+    visti: new Set(),   // ordine dei titoli gia' visti, persistiti in localStorage
   };
+
+  // ============================================================
+  // TITOLI VISTI
+  // ============================================================
+  const STORAGE_KEY = 'marvelsite:visti';
+
+  // localStorage puo' lanciare (navigazione privata, cookie di terze parti bloccati):
+  // il sito deve funzionare comunque, semplicemente senza ricordare nulla.
+  function caricaVisti() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return new Set();
+      const arr = JSON.parse(raw);
+      return new Set(Array.isArray(arr) ? arr.filter(Number.isInteger) : []);
+    } catch (err) {
+      return new Set();
+    }
+  }
+
+  function salvaVisti() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([...state.visti].sort((a, b) => a - b)));
+    } catch (err) {
+      /* spazio esaurito o storage non disponibile: si perde solo la persistenza */
+    }
+  }
+
+  function toggleVisto(ordine) {
+    if (state.visti.has(ordine)) state.visti.delete(ordine);
+    else state.visti.add(ordine);
+    salvaVisti();
+  }
 
   const MONTHS = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
   const PHASE_LABELS = { 1: 'Fase Uno', 2: 'Fase Due', 3: 'Fase Tre', 4: 'Fase Quattro', 5: 'Fase Cinque', 6: 'Fase Sei' };
@@ -60,10 +102,16 @@
     return `${day} ${MONTHS[month - 1]} ${year}`;
   }
 
-  function decadeLabel(iso) {
-    const year = Number(String(iso).slice(0, 4));
-    if (!Number.isFinite(year)) return 'Uscita da definire';
-    return `${Math.floor(year / 10) * 10}s`;
+  // Il sito e' italiano e la vista "Uscita" promette l'ordine in cui il pubblico
+  // li ha visti: vale la data italiana, con quella USA come ripiego dove manca
+  // (4 titoli mai distribuiti in Italia).
+  function dataVisione(item) {
+    return item.uscitaItalia || item.uscita;
+  }
+
+  function annoUscita(iso) {
+    const anno = String(iso).slice(0, 4);
+    return /^\d{4}$/.test(anno) ? anno : 'Uscita da definire';
   }
 
   // Apostrofi curvi e dritti convivono nei dati e gli accenti si digitano a fatica:
@@ -94,7 +142,11 @@
     data.forEach(item => {
       item.displayTitle = item.titolo;
       item.seasonNumber = item.stagione || null;
-      item.searchKey = normalize(item.titolo);
+      // 426 attori e 473 personaggi erano nei dati ma invisibili alla ricerca:
+      // cercare "Tom Holland" o "Scarlet Witch" non trovava nulla.
+      const det = state.dettagli[item.ordine];
+      const cast = det && det.cast ? det.cast.map(c => `${c.attore} ${c.personaggio}`).join(' ') : '';
+      item.searchKey = normalize(`${item.titolo} ${cast}`);
       const key = `${item.titolo}::${item.tipo}`;
       if (!byKey.has(key)) byKey.set(key, []);
       byKey.get(key).push(item);
@@ -123,10 +175,11 @@
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const raw = await res.json();
       if (!Array.isArray(raw)) throw new Error('formato inatteso: atteso un array');
-      state.data = linkSeries(raw);
+      // i dettagli vanno letti prima di linkSeries: searchKey indicizza anche il cast
       if (resDet && resDet.ok) {
         try { state.dettagli = await resDet.json(); } catch (e) { state.dettagli = {}; }
       }
+      state.data = linkSeries(raw);
     } catch (err) {
       const hint = location.protocol === 'file:'
         ? 'Stai aprendo la pagina dal filesystem: servila con un piccolo server HTTP (per esempio <code>python -m http.server</code>).'
@@ -135,6 +188,10 @@
       return;
     }
     if (els.totalCount) els.totalCount.textContent = state.data.length;
+    state.visti = caricaVisti();
+    // un ordine rimasto in localStorage e non piu' presente nei dati va scartato
+    const esistenti = new Set(state.data.map(d => d.ordine));
+    [...state.visti].forEach(o => { if (!esistenti.has(o)) state.visti.delete(o); });
     populateFilters();
     bindEvents();
     render({ animate: true });
@@ -156,6 +213,18 @@
       opt.textContent = c;
       els.catFilter.appendChild(opt);
     });
+
+    const fasi = Array.from(new Set(state.data.map(d => d.fase).filter(f => f != null))).sort((a, b) => a - b);
+    fasi.forEach(f => {
+      const opt = document.createElement('option');
+      opt.value = String(f);
+      opt.textContent = PHASE_LABELS[f] || `Fase ${f}`;
+      els.faseFilter.appendChild(opt);
+    });
+    const senza = document.createElement('option');
+    senza.value = 'nessuna';
+    senza.textContent = 'Senza fase ufficiale';
+    els.faseFilter.appendChild(senza);
   }
 
   function bindEvents() {
@@ -196,6 +265,22 @@
       state.requiredOnly = els.requiredOnly.checked;
       render();
     });
+    els.faseFilter.addEventListener('change', () => {
+      state.fase = els.faseFilter.value;
+      render();
+    });
+    els.hideWatched.addEventListener('change', () => {
+      state.hideWatched = els.hideWatched.checked;
+      render();
+    });
+    els.resetVisti.addEventListener('click', () => {
+      if (!state.visti.size) return;
+      const quanti = state.visti.size;
+      state.visti.clear();
+      salvaVisti();
+      render();
+      announce(quanti === 1 ? 'Segnato come non visto 1 titolo.' : `Segnati come non visti ${quanti} titoli.`);
+    });
 
     els.resetBtn.addEventListener('click', () => {
       resetFilters();
@@ -215,11 +300,15 @@
     state.search = '';
     state.tipo = '';
     state.categoria = '';
+    state.fase = '';
     state.requiredOnly = false;
+    state.hideWatched = false;
     els.search.value = '';
     els.tipoFilter.value = '';
     els.catFilter.value = '';
+    els.faseFilter.value = '';
     els.requiredOnly.checked = false;
+    els.hideWatched.checked = false;
   }
 
   function getFiltered() {
@@ -227,16 +316,19 @@
       if (state.search && !item.searchKey.includes(state.search)) return false;
       if (state.tipo && item.tipo !== state.tipo) return false;
       if (state.categoria && item.categoria !== state.categoria) return false;
+      if (state.fase === 'nessuna' ? item.fase != null : state.fase && String(item.fase) !== state.fase) return false;
       if (state.requiredOnly && !item.obbligatorio) return false;
+      if (state.hideWatched && state.visti.has(item.ordine)) return false;
       return true;
     });
   }
 
   // I titoli senza data vanno in fondo; a parita' di data decide l'ordine narrativo.
   function byDateThenOrder(a, b) {
-    if (a.uscita && b.uscita) return a.uscita.localeCompare(b.uscita) || a.ordine - b.ordine;
-    if (a.uscita) return -1;
-    if (b.uscita) return 1;
+    const da = dataVisione(a), db = dataVisione(b);
+    if (da && db) return da.localeCompare(db) || a.ordine - b.ordine;
+    if (da) return -1;
+    if (db) return 1;
     return a.ordine - b.ordine;
   }
 
@@ -273,7 +365,7 @@
     } else {
       let current = null;
       list.forEach(item => {
-        const key = item.uscita ? decadeLabel(item.uscita) : 'Uscita da definire';
+        const key = dataVisione(item) ? annoUscita(dataVisione(item)) : 'Uscita da definire';
         if (!current || current.label !== key) {
           current = { label: key, items: [] };
           groups.push(current);
@@ -370,7 +462,8 @@
   // ============================================================
   let lastFocusedEl = null;
 
-  function buildMetaBadges(item) {
+  // conData:false nella scheda, dove il riquadro .modal-uscite dice gia' tutto
+  function buildMetaBadges(item, conData) {
     const wrap = document.createElement('div');
     wrap.className = 'modal-meta';
 
@@ -400,11 +493,20 @@
       wrap.appendChild(reqBadge);
     }
 
+    if (conData === false) return wrap;
+
     const dateBadge = document.createElement('span');
-    const pretty = formatDate(item.uscita);
+    const pretty = formatDate(dataVisione(item));
     if (pretty) {
       dateBadge.className = 'badge-date';
       dateBadge.textContent = pretty;
+      // dove le due date divergono la card mostra l'italiana: dichiaralo,
+      // altrimenti sembra sbagliata a chi ha in mente quella americana
+      if (item.uscitaItalia && item.uscitaItalia !== item.uscita) {
+        dateBadge.title = `Uscita italiana. Negli Stati Uniti: ${formatDate(item.uscita) || 'data non disponibile'}`;
+      } else if (!item.uscitaItalia) {
+        dateBadge.title = 'Data di uscita originale: il titolo non ha avuto una distribuzione italiana identificabile';
+      }
     } else {
       dateBadge.className = 'badge-date is-tbd';
       dateBadge.textContent = item.uscitaRaw ? `Uscita: ${item.uscitaRaw}` : 'Uscita da definire';
@@ -445,7 +547,35 @@
       els.modalBody.appendChild(sub);
     }
 
-    els.modalBody.appendChild(buildMetaBadges(item));
+    els.modalBody.appendChild(buildMetaBadges(item, false));
+
+    const uscite = document.createElement('dl');
+    uscite.className = 'modal-uscite';
+    function rigaData(etichetta, iso, nota) {
+      const pretty = formatDate(iso);
+      const dt = document.createElement('dt');
+      dt.textContent = etichetta;
+      const dd = document.createElement('dd');
+      dd.textContent = pretty || nota || 'non disponibile';
+      if (!pretty) dd.className = 'is-tbd';
+      uscite.appendChild(dt);
+      uscite.appendChild(dd);
+    }
+    rigaData('Italia', item.uscitaItalia, 'nessuna distribuzione italiana identificata');
+    rigaData('Stati Uniti', item.uscita, null);
+    if (item.uscitaItalia && item.uscita) {
+      const giorni = Math.round((new Date(item.uscitaItalia) - new Date(item.uscita)) / 86400000);
+      if (giorni !== 0) {
+        const scarto = document.createElement('p');
+        scarto.className = 'modal-scarto';
+        const g = Math.abs(giorni);
+        scarto.textContent = giorni < 0
+          ? `In Italia ${g} giorn${g === 1 ? 'o' : 'i'} prima`
+          : `In Italia ${g} giorn${g === 1 ? 'o' : 'i'} dopo`;
+        uscite.appendChild(scarto);
+      }
+    }
+    els.modalBody.appendChild(uscite);
 
     if (item.siblings && item.siblings.length) {
       const seasonsWrap = buildSeasonsRow(item, {
@@ -608,7 +738,9 @@
 
   function buildCard(item, displayIndex) {
     const li = document.createElement('article');
-    li.className = 'tl-item' + (item.obbligatorio ? '' : ' is-optional');
+    li.className = 'tl-item'
+      + (item.obbligatorio ? '' : ' is-optional')
+      + (state.visti.has(item.ordine) ? ' is-visto' : '');
     li.style.animationDelay = (Math.min(displayIndex, 12) * 0.02) + 's';
     li.id = `tl-item-${item.ordine}`;
 
@@ -655,6 +787,22 @@
       titleWrap.appendChild(sub);
     }
     top.appendChild(titleWrap);
+
+    const visto = document.createElement('button');
+    visto.type = 'button';
+    visto.className = 'visto-btn';
+    visto.setAttribute('aria-pressed', state.visti.has(item.ordine) ? 'true' : 'false');
+    visto.setAttribute('aria-label', `Segna "${item.displayTitle}" come ${state.visti.has(item.ordine) ? 'non visto' : 'visto'}`);
+    visto.title = state.visti.has(item.ordine) ? 'Segna come non visto' : 'Segna come visto';
+    visto.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true" width="14" height="14"><path d="M2 8.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    visto.addEventListener('click', e => {
+      e.stopPropagation();          // non deve aprire la scheda
+      toggleVisto(item.ordine);
+      render();
+    });
+    visto.addEventListener('keydown', e => e.stopPropagation());
+    top.appendChild(visto);
+
     card.appendChild(top);
 
     if (item.siblings && item.siblings.length) {
@@ -683,6 +831,19 @@
     return li;
   }
 
+  function aggiornaProgresso() {
+    if (!els.progress) return;
+    const visti = state.visti.size, totale = state.data.length;
+    els.progress.hidden = visti === 0;
+    if (!totale) return;
+    const perc = Math.round((visti / totale) * 100);
+    els.progressFill.style.width = perc + '%';
+    els.progressText.textContent = `${visti} di ${totale} visti`;
+    els.progressBar.setAttribute('aria-valuenow', String(visti));
+    els.progressBar.setAttribute('aria-valuemax', String(totale));
+    els.progressBar.setAttribute('aria-valuetext', `${visti} di ${totale} titoli visti, ${perc} per cento`);
+  }
+
   function render(opts) {
     const animate = !!(opts && opts.animate);
     const keepScroll = window.scrollY;
@@ -692,6 +853,7 @@
 
     els.resultCount.textContent = filtered.length;
     if (els.resultCountLabel) els.resultCountLabel.textContent = filtered.length === 1 ? 'titolo' : 'titoli';
+    aggiornaProgresso();
     els.timeline.classList.toggle('no-anim', !animate);
     els.timeline.innerHTML = '';
 
