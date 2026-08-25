@@ -21,13 +21,24 @@
 
 <div class="noise-overlay" aria-hidden="true"></div>
 
-<header class="site-header">
+<header class="site-header" id="top">
   <div class="header-inner">
     <div class="brand">
       <span class="brand-mark">MCU//</span>
       <h1>Ordine Cronologico<span class="brand-sub">Marvel Watch Order</span></h1>
     </div>
     <p class="header-tagline"><span id="total-count">151</span> titoli, tre modi di guardarli: la mappa ufficiale delle Fasi, l'ordine in cui li ha visti il pubblico, l'ordine in cui li vive l'universo.</p>
+    <nav class="site-nav" aria-label="Pagine del sito">
+      <a class="nav-link" href="mappa.html">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M6.6 7.6l6.8-2.2M6.6 12.4l6.8 2.2M6.3 10.6l7.4-4.2" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <circle cx="4.5" cy="10" r="2.6" fill="currentColor"/>
+          <circle cx="15" cy="4.5" r="2.1" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="15" cy="15.5" r="2.1" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+        <span>La mappa degli universi</span>
+      </a>
+    </nav>
   </div>
 </header>
 
@@ -142,6 +153,11 @@
   </div>
 </div>
 
+<a class="to-top" href="#top" aria-label="Torna in cima alla pagina" title="Torna su">
+  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3.5M3.5 8L8 3.4 12.5 8" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script src="comune.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

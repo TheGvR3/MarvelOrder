@@ -1,0 +1,449 @@
+/* ============================================================
+   MAPPA DEGLI UNIVERSI
+   ============================================================
+   Foglio della sola mappa.html, caricato dopo style.css e appoggiato ai suoi
+   token: qui non si ridefinisce nessun colore di base, si usano --bg, --ink,
+   --line e compagnia. I colori dei nodi non stanno qui ma in comune.js, uno
+   per universo, perche' li deve leggere anche il JavaScript che li disegna.
+
+   Il diagramma e' un SVG con viewBox fisso 1200x820: il file CSS gli da' una
+   scatola, lo zoom e lo spostamento vivono in un transform su <g id="scena">.
+   ============================================================ */
+
+/* === IMPAGINATO === */
+/* La mappa e' l'unico blocco del sito piu' largo di --container: un grafo di
+   151 nodi dentro 1180px rende i punti grandi cinque pixel. L'intestazione e i
+   controlli restano allineati al resto. */
+.mappa-wrap{
+  position:relative;
+  max-width:1540px;
+  margin:24px auto 0;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 340px;
+  gap:20px;
+  align-items:start;
+}
+.mappa-canvas{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(208,16,42,0.07), transparent 70%),
+    var(--bg-raised);
+  overflow:hidden;
+}
+/* Il rapporto e' quello del viewBox: senza, il riquadro resta piu' stretto in
+   proporzione e il browser aggiunge due fasce vuote sopra e sotto, rimpicciolendo
+   tutto per niente. */
+#mappa{
+  display:block;
+  width:100%;
+  aspect-ratio:1200 / 820;
+  height:auto;
+  max-height:78vh;
+  touch-action:none;         /* il pizzico lo gestiamo noi, non il browser */
+  cursor:grab;
+}
+#mappa.is-trascinando{ cursor:grabbing; }
+
+.mappa-avviso{
+  max-width:var(--container);
+  margin:18px auto 0;
+  padding:14px 18px;
+  border:1px solid var(--red-dim);
+  border-radius:var(--radius);
+  background:rgba(208,16,42,0.08);
+  color:var(--ink-dim);
+  font-size:13.5px;
+}
+.mappa-avviso code{ color:var(--gold); }
+
+.mappa-hint{
+  margin:0;
+  padding:9px 14px;
+  border-top:1px solid var(--line);
+  color:var(--ink-faint);
+  font-size:11.5px;
+  letter-spacing:0.02em;
+}
+
+/* Un grafo SVG con 151 nodi e' 151 fermate del tabulatore: chi non lo vede deve
+   poterlo scavalcare e leggere l'elenco dei ponti, che dice le stesse cose in
+   parole. Il collegamento e' nel flusso ma invisibile finche' non riceve il
+   fuoco: nasconderlo con display:none lo toglierebbe anche alla tastiera. */
+.skip-mappa{
+  position:absolute;
+  width:1px; height:1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  clip-path:inset(50%);
+  white-space:nowrap;
+}
+.skip-mappa:focus{
+  left:24px; top:8px;
+  width:auto; height:auto;
+  overflow:visible;
+  clip:auto; clip-path:none;
+  z-index:6;
+  padding:9px 14px;
+  background:var(--red); color:#fff;
+  text-decoration:none; font-size:12.5px; font-weight:600;
+  border-radius:var(--radius);
+}
+
+/* === STRUMENTI === */
+.mappa-tools{
+  position:absolute; right:12px; top:12px;
+  display:flex; flex-direction:column; gap:6px;
+}
+.mappa-tools button{
+  width:36px; height:36px;
+  border:1px solid var(--line-strong);
+  border-radius:var(--radius);
+  background:rgba(19,19,24,0.92);
+  color:var(--ink-dim);
+  font-size:17px; line-height:1;
+  cursor:pointer;
+}
+.mappa-tools button.is-largo{
+  width:auto; height:auto;
+  padding:8px 10px;
+  font-size:11px; font-weight:600; letter-spacing:0.04em;
+}
+@media (hover:hover) and (pointer:fine){
+  .mappa-tools button:hover{ color:var(--ink); border-color:var(--gold); }
+}
+
+/* === IL GRAFO === */
+.nodo{ cursor:pointer; }
+.nodo .corpo{
+  stroke:var(--bg);
+  stroke-width:1.5;
+  transition:opacity 0.18s ease;
+}
+.nodo .alone{ fill:none; stroke:currentColor; stroke-width:0; }
+.nodo .presa{ fill:transparent; }   /* bersaglio generoso per il dito */
+
+/* Il pieno dice "essenziale", il vuoto "facoltativo": la stessa distinzione che
+   nella linea temporale sbiadisce la card. */
+.nodo-titolo .corpo{ fill-opacity:0.32; stroke-width:1.6; }
+.nodo-titolo .corpo{ stroke:currentColor; }
+.nodo-titolo{ color:var(--ink-faint); }
+.nodo-titolo.is-essenziale .corpo{ fill-opacity:1; stroke:var(--bg); }
+
+.nodo-universo .corpo{ fill-opacity:0.9; stroke:rgba(255,255,255,0.16); stroke-width:1.4; }
+
+.etichetta-universo{
+  font-family:var(--font-display);
+  font-size:16px; letter-spacing:0.05em;
+  fill:var(--ink);
+  pointer-events:none;
+}
+.etichetta-conta{
+  font-family:var(--font-body);
+  font-size:10.5px; letter-spacing:0.04em;
+  fill:var(--ink-faint);
+  pointer-events:none;
+}
+.etichetta-ammasso{
+  font-family:var(--font-display);
+  font-size:15px; letter-spacing:0.06em;
+  opacity:0.55;
+  pointer-events:none;
+}
+/* 151 etichette tutte insieme sarebbero illeggibili: il nome del titolo esce
+   solo quando quel punto e' acceso. */
+.etichetta-titolo{
+  font-family:var(--font-body);
+  font-size:9px; font-weight:600;
+  fill:var(--ink);
+  paint-order:stroke;
+  stroke:var(--bg); stroke-width:3px; stroke-linejoin:round;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.15s ease;
+}
+.nodo-titolo.is-scelto .etichetta-titolo,
+.nodo-titolo.is-vicino .etichetta-titolo,
+.nodo-titolo.is-trovato .etichetta-titolo{ opacity:1; }
+
+.arco{
+  fill:none;
+  stroke:var(--ink-faint);
+  stroke-opacity:0.18;
+  stroke-linecap:round;
+  transition:stroke-opacity 0.18s ease;
+}
+.arco-sequela{ stroke:var(--gold); stroke-width:1.4; stroke-opacity:0.22; }
+.arco-prerequisito{ stroke:#8ea2c9; stroke-width:1.1; stroke-opacity:0.17; }
+.arco-collegato{ stroke:var(--ink-faint); stroke-width:0.9; stroke-dasharray:3 4; stroke-opacity:0.11; }
+/* un filo che esce dal proprio universo e' l'informazione piu' rara della mappa */
+.arco-ponte-titoli{ stroke:var(--red); stroke-opacity:0.3; stroke-width:1.2; stroke-dasharray:none; }
+.arco-ponte{ stroke:var(--red); stroke-opacity:0.42; cursor:pointer; }
+
+/* === FUOCO === */
+/* Con 405 fili accesi non si legge niente: quando qualcosa e' selezionato tutto
+   il resto scende molto, e resta come contesto invece che come rumore. */
+#mappa.is-fuoco .nodo.is-spento{ opacity:0.14; }
+#mappa.is-fuoco .arco.is-spento{ stroke-opacity:0.045; }
+.arco.is-acceso{ stroke-opacity:0.95; }
+.nodo.is-scelto .corpo{ stroke:var(--gold); stroke-width:2.4; }
+.nodo-titolo.is-scelto .corpo{ fill-opacity:1; }
+.nodo.is-scelto .alone{ stroke:var(--gold); stroke-width:1.4; stroke-opacity:0.5; }
+.nodo-titolo.is-trovato .corpo{ stroke:var(--gold); stroke-width:2.2; }
+.nodo-universo.is-trovato .corpo{ stroke:var(--gold); stroke-width:2.6; }
+.nodo:focus{ outline:none; }
+.nodo:focus-visible .alone{ stroke:var(--gold); stroke-width:2; stroke-opacity:1; }
+
+@media (hover:hover) and (pointer:fine){
+  .nodo:hover .corpo{ stroke:var(--gold); stroke-width:2; }
+}
+
+/* === PANNELLO === */
+.mappa-panel{ position:sticky; top:84px; }
+.pannello{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--bg-card);
+  padding:18px;
+  max-height:min(74vh, 720px);
+  overflow-y:auto;
+}
+.pannello.is-bloccato{ border-color:var(--line-strong); }
+.pannello-vuoto{
+  margin:0; color:var(--ink-faint); font-size:13px; line-height:1.6;
+}
+.pannello-occhiello{
+  margin:0 0 4px;
+  font-size:10.5px; text-transform:uppercase; letter-spacing:0.1em;
+  color:var(--ink-faint);
+}
+.pannello-titolo{
+  margin:0 0 12px;
+  font-family:var(--font-display);
+  font-size:26px; font-weight:400; letter-spacing:0.02em;
+  line-height:1.1;
+  color:var(--ink);
+}
+.pannello-desc{
+  margin:0 0 14px;
+  font-size:13px; line-height:1.6; color:var(--ink-dim);
+}
+.pannello-nota{
+  margin:0 0 14px;
+  font-size:12.5px; line-height:1.55; color:var(--ink-faint);
+  border-left:2px solid var(--line-strong);
+  padding-left:10px;
+}
+.pannello-dati{
+  display:grid; grid-template-columns:auto 1fr; gap:4px 12px;
+  margin:0 0 14px;
+  font-size:12.5px;
+}
+.pannello-dati dt{ color:var(--ink-faint); }
+.pannello-dati dd{ margin:0; color:var(--ink); }
+.pannello-sez{
+  margin:14px 0 6px;
+  font-size:10.5px; text-transform:uppercase; letter-spacing:0.09em;
+  font-weight:700; color:var(--gold);
+}
+.pannello-lista{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:2px; }
+.pannello-coppie li{
+  display:flex; flex-direction:column; gap:1px;
+  padding:6px 0;
+  border-bottom:1px solid var(--line);
+}
+.pannello-fra{
+  font-size:10px; text-transform:uppercase; letter-spacing:0.07em;
+  color:var(--ink-faint);
+  padding-left:18px;
+}
+.pannello-voce{
+  display:flex; align-items:center; gap:8px;
+  width:100%;
+  background:none; border:none;
+  padding:6px 4px;
+  color:var(--ink-dim);
+  font-size:12.5px; text-align:left;
+  cursor:pointer;
+  border-radius:var(--radius);
+}
+.pannello-voce-testo{ flex:1; min-width:0; }
+.pannello-pallino{ width:8px; height:8px; border-radius:50%; flex:none; }
+.pannello-peso{
+  font-family:var(--font-display); font-size:13px; color:var(--gold);
+}
+@media (hover:hover) and (pointer:fine){
+  .pannello-voce:hover{ background:var(--bg-card-hover); color:var(--ink); }
+}
+.pannello-azione{
+  display:block;
+  margin-top:16px;
+  padding:11px 14px;
+  border:1px solid var(--line-strong);
+  border-radius:var(--radius);
+  background:var(--bg-raised);
+  color:var(--ink-dim);
+  font-size:12.5px; font-weight:600;
+  text-align:center; text-decoration:none;
+  width:100%;
+  cursor:pointer;
+}
+.pannello-chiudi{
+  display:block; width:100%;
+  margin-top:8px;
+  padding:9px;
+  background:none; border:none;
+  color:var(--ink-faint);
+  font-size:11.5px; letter-spacing:0.04em;
+  cursor:pointer;
+}
+@media (hover:hover) and (pointer:fine){
+  .pannello-azione:hover{ color:var(--ink); border-color:var(--gold); }
+  .pannello-chiudi:hover{ color:var(--ink-dim); }
+}
+
+/* === LEGENDA E SEZIONI === */
+.legenda-wrap, .ponti-wrap{
+  max-width:var(--container);
+  margin:44px auto 0;
+  padding:0 24px;
+}
+.sezione-titolo{
+  margin:0 0 8px;
+  font-family:var(--font-display);
+  font-size:clamp(26px, 4vw, 38px);
+  font-weight:400; letter-spacing:0.03em;
+  color:var(--ink);
+}
+.sezione-intro{
+  margin:0 0 20px;
+  max-width:70ch;
+  font-size:13.5px; line-height:1.65; color:var(--ink-dim);
+}
+.legenda{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(230px, 1fr));
+  gap:6px;
+}
+.legenda-voce{
+  display:flex; align-items:center; gap:10px;
+  padding:9px 12px;
+  min-height:44px;
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  color:var(--ink-dim);
+  font-size:12.5px; text-align:left;
+  cursor:pointer;
+}
+.legenda-voce.is-attivo{ border-color:var(--gold); color:var(--ink); }
+.legenda-pallino{ width:11px; height:11px; border-radius:50%; flex:none; }
+.legenda-nome{ flex:1; min-width:0; }
+.legenda-conta{ font-family:var(--font-display); font-size:14px; color:var(--ink-faint); }
+@media (hover:hover) and (pointer:fine){
+  .legenda-voce:hover{ background:var(--bg-card-hover); color:var(--ink); }
+}
+
+.legenda-simboli{
+  display:flex; flex-wrap:wrap; gap:8px 22px;
+  margin-top:18px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+}
+.legenda-simboli p{
+  display:flex; align-items:center; gap:8px;
+  margin:0;
+  font-size:12px; color:var(--ink-faint);
+}
+.simbolo{ width:14px; height:14px; flex:none; }
+.simbolo-film{ border-radius:50%; border:1.6px solid var(--ink-faint); background:rgba(166,165,173,0.3); }
+.simbolo-serie{ border-radius:2px; border:1.6px solid var(--ink-faint); background:rgba(166,165,173,0.3); }
+.simbolo-essenziale{ border-radius:50%; background:var(--ink-faint); }
+.simbolo-sequela, .simbolo-prerequisito, .simbolo-collegato{ height:0; border-top:2px solid var(--gold); width:22px; }
+.simbolo-prerequisito{ border-top-color:#8ea2c9; }
+.simbolo-collegato{ border-top-style:dashed; border-top-color:var(--ink-faint); }
+
+/* fieldset dei tipi di legame: deve stare in riga con le altre tendine */
+.filter-legami{
+  border:none; margin:0; padding:0;
+  display:flex; flex-direction:column; gap:2px;
+}
+.filter-legami legend{
+  padding:0;
+  font-size:10.5px; text-transform:uppercase; letter-spacing:0.09em;
+  color:var(--ink-faint);
+}
+.filter-legami label{
+  display:flex; align-items:center; gap:7px;
+  font-size:12.5px; color:var(--ink-dim);
+  cursor:pointer;
+}
+.filter-legami input{ accent-color:var(--red); width:16px; height:16px; }
+
+/* === ELENCO DEI PONTI === */
+.ponti-lista{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
+  gap:14px;
+}
+.ponte{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:var(--bg-card);
+  padding:14px 16px;
+}
+.ponte-titolo{
+  display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+  margin:0 0 10px;
+  font-family:var(--font-display);
+  font-size:17px; font-weight:400; letter-spacing:0.03em;
+}
+.ponte-segno{ color:var(--ink-faint); }
+.ponte-peso{
+  margin-left:auto;
+  font-family:var(--font-body);
+  font-size:10.5px; text-transform:uppercase; letter-spacing:0.07em;
+  color:var(--ink-faint);
+}
+.ponte-coppie{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+.ponte-coppie li{
+  display:flex; flex-direction:column; gap:1px;
+  font-size:12.5px;
+}
+.ponte-coppie a{ color:var(--ink-dim); text-decoration:none; border-bottom:1px solid transparent; align-self:start; }
+.ponte-fra{
+  font-size:10px; text-transform:uppercase; letter-spacing:0.07em;
+  color:var(--ink-faint);
+}
+@media (hover:hover) and (pointer:fine){
+  .ponte-coppie a:hover{ color:var(--ink); border-bottom-color:var(--red); }
+}
+
+.pagina-mappa .site-footer{ margin-top:56px; }
+
+/* === SCHERMI STRETTI === */
+/* Stessa soglia del resto del sito: 859.98/860, e non 859/860, perche' fra i
+   due interi c'e' un intervallo che con lo zoom del browser resta scoperto. */
+@media (max-width:859.98px){
+  .mappa-wrap{
+    grid-template-columns:minmax(0,1fr);
+    padding:0 16px;
+    margin-top:16px;
+  }
+  /* Il riquadro tiene il rapporto della disposizione anche qui: darglielo
+     verticale non fa crescere il grafo, che resta largo quanto la scatola, e
+     aggiunge solo vuoto sopra e sotto. Si guadagna larghezza togliendo i
+     margini laterali e facendo arrivare la tela ai bordi dello schermo. */
+  #mappa{ max-height:none; }
+  .mappa-wrap{ padding:0; }
+  .mappa-canvas{ border-left:none; border-right:none; border-radius:0; }
+  .mappa-panel{ padding:0 16px; }
+  .mappa-panel{ position:static; }
+  .pannello{ max-height:none; }
+  .legenda-wrap, .ponti-wrap{ padding:0 16px; margin-top:34px; }
+  .ponti-lista{ grid-template-columns:minmax(0,1fr); }
+  .mappa-hint{ font-size:10.5px; }
+  .to-top{ right:12px; bottom:12px; }
+}

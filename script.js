@@ -95,34 +95,9 @@
     return i === -1 ? SAGA_ORDER.length : i;
   };
 
-  // `categoria` e' una tassonomia di produzione, non di finzione: tiene separati
-  // MCU, Marvel Television e Marvel Netflix che sono lo stesso universo, e tiene
-  // insieme dentro "Sony / Spider-Man" e "Pre-MCU" continuita' che non si toccano.
-  // `universo` e' la lettura di finzione, ed e' quella che ordina la Cronologia.
-  // L'ordine di questo array e' l'ordine delle sezioni: la linea principale apre,
-  // gli universi paralleli seguono per dimensione.
-  const UNIVERSI = [
-    { id: 'terra-616',    nome: 'Terra-616',                       terra: 'Marvel Studios, Marvel Television e Marvel Netflix' },
-    { id: 'terra-10005',  nome: 'Terra-10005',                     terra: 'X-Men e Deadpool, Fox' },
-    { id: 'terra-688',    nome: 'Terra-688',                       terra: 'Universo Sony: Venom, Morbius, Madame Web, Kraven' },
-    { id: 'terra-26320',  nome: 'Terra-26320',                     terra: 'Blade, trilogia e serie' },
-    { id: 'terra-96283',  nome: 'Terra-96283',                     terra: 'Spider-Man, trilogia di Sam Raimi' },
-    { id: 'terra-1610',   nome: 'Terra-1610',                      terra: 'Spider-Verse, la trilogia animata di Miles Morales' },
-    { id: 'legion',       nome: 'Universo di Legion',              terra: 'FX, parallelo ai film X-Men. Marvel non gli ha assegnato una Terra' },
-    { id: 'terra-120703', nome: 'Terra-120703',                    terra: 'The Amazing Spider-Man, duologia di Marc Webb' },
-    { id: 'terra-121698', nome: 'Terra-121698',                    terra: 'I Fantastici 4, dittico di Tim Story' },
-    { id: 'terra-701306', nome: 'Terra-701306',                    terra: 'Daredevil ed Elektra, 2003-2005' },
-    { id: 'terra-86445',  nome: 'Terra-86445',                     terra: 'Il tuo amichevole Spider-Man di quartiere' },
-    { id: 'terra-121347', nome: 'Terra-121347',                    terra: 'Ghost Rider, i due film con Nicolas Cage' },
-    { id: 'the-gifted',   nome: 'Universo di The Gifted',          terra: 'Fox, linea temporale in cui gli X-Men sono spariti. Nessuna Terra assegnata' },
-    { id: 'terra-15866',  nome: 'Terra-15866',                     terra: 'Fantastic Four, reboot di Josh Trank' },
-    { id: 'terra-58732',  nome: 'Terra-58732',                     terra: 'The Punisher, 2004' },
-    { id: 'terra-828',    nome: 'Terra-828',                       terra: 'The Fantastic Four: First Steps' },
-    { id: 'terra-400083', nome: 'Terra-400083',                    terra: 'Hulk, il film di Ang Lee del 2003' },
-    { id: 'terra-47281',  nome: 'Terra-47281',                     terra: 'Punisher - Zona di guerra, 2008' },
-    { id: 'helstrom',     nome: 'Universo di Helstrom',            terra: 'Hulu, dichiarato fuori dall\'MCU dal suo showrunner. Nessuna Terra assegnata' },
-    { id: 'multiverso',   nome: 'Multiverso',                      terra: 'What If...? e Marvel Zombies: nessuna Terra unica' },
-  ];
+  // La tabella vive in comune.js perche' anche la mappa (mappa.js) ne ha
+  // bisogno, e due copie divergerebbero in silenzio.
+  const UNIVERSI = window.MARVEL_UNIVERSI;
   const UNIVERSI_BY_ID = new Map(UNIVERSI.map((u, i) => [u.id, Object.assign({ rank: i }, u)]));
   const universoInfo = id => UNIVERSI_BY_ID.get(id) || null;
   const universoRank = id => {
@@ -159,16 +134,9 @@
     return /^\d{4}$/.test(anno) ? anno : 'Uscita da definire';
   }
 
-  // Apostrofi curvi e dritti convivono nei dati e gli accenti si digitano a fatica:
-  // la ricerca confronta forme normalizzate, non le stringhe grezze.
-  function normalize(str) {
-    return String(str == null ? '' : str)
-      .toLowerCase()
-      .replace(/[‘’ʼ´`]/g, "'")
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/\s+/g, ' ')
-      .trim();
-  }
+  // La normalizzazione vive in comune.js: la usa anche la mappa, e due varianti
+  // vorrebbero dire che la stessa ricerca trova cose diverse nelle due pagine.
+  const normalize = window.MARVEL_NORMALIZE;
 
   // Groups multi-season / multi-part entries so a part isn't shown as an
   // unrelated standalone show. Grouping key is titolo+tipo (a film and a
@@ -182,17 +150,10 @@
   }
 
   // Un'unita' e' cio' che il sito conta come un titolo: la stagione intera, non
-  // il blocco di episodi in cui e' spezzata. Agents of S.H.I.E.L.D. occupa 12
-  // voci in data.json ma sono 7 stagioni: quattro sono divise in due o tre
-  // blocchi perche' un film si incastra a meta' (Thor: The Dark World dentro la
-  // 1, Age of Ultron dentro la 2, Civil War dentro la 3, Doctor Strange dentro
-  // la 4). Quella divisione serve solo nella Cronologia, dove l'incastro e'
-  // il punto; nelle Fasi e nell'Uscita e' rumore.
-  function unitaKey(item) {
-    return item.stagione != null
-      ? `${item.titolo}::${item.tipo}::${item.stagione}`
-      : `id::${item.id}`;
-  }
+  // il blocco di episodi in cui e' spezzata (vedi comune.js). Quella divisione
+  // serve solo nella Cronologia, dove l'incastro e' il punto; nelle Fasi e
+  // nell'Uscita e' rumore.
+  const unitaKey = window.MARVEL_UNITA_KEY;
 
   const staCollassando = () => state.mode !== 'cronologico';
 
@@ -318,6 +279,20 @@
     populateFilters();
     bindEvents();
     render({ animate: true });
+    apriDaHash();
+    window.addEventListener('hashchange', apriDaHash);
+  }
+
+  // index.html#t-<id> arriva dalla mappa: porta la card in vista e ne apre la
+  // scheda. L'id e' l'identita' immutabile, non la posizione, quindi il link
+  // regge anche se l'ordine narrativo cambia.
+  function apriDaHash() {
+    const m = /^#t-(\d+)$/.exec(location.hash || '');
+    if (!m) return;
+    const item = findItemById(Number(m[1]));
+    if (!item) return;
+    jumpToItem(item.id);
+    openModal(item.unita && staCollassando() ? item.unita.primo : item);
   }
 
   function populateFilters() {

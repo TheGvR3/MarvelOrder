@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La mappa degli universi Marvel — Come si collegano</title>
+<meta name="description" content="I venti universi Marvel e i ponti narrativi che li tengono insieme: ogni punto è un film o una stagione, ogni filo un rimando fra due storie.">
+<meta name="theme-color" content="#0a0a0d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23d0102a'/%3E%3Cpath d='M7 24V8h4l5 9 5-9h4v16h-4v-8l-5 8-5-8v8z' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La mappa degli universi Marvel">
+<meta property="og:description" content="I venti universi Marvel e i ponti narrativi che li tengono insieme.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mappa.css">
+</head>
+<body class="pagina-mappa">
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">MCU//</span>
+      <h1>La mappa degli universi<span class="brand-sub">Come si collegano</span></h1>
+    </div>
+    <p class="header-tagline"><span id="conta-titoli">151</span> titoli in <span id="conta-universi">20</span> universi, tenuti insieme da <span id="conta-ponti">17</span> ponti narrativi. Ogni punto è un film o una stagione, ogni filo un rimando dichiarato fra due storie.</p>
+    <nav class="site-nav" aria-label="Pagine del sito">
+      <a class="nav-link" href="index.html">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M4 4.5v11M4 6h12M4 10h9M4 14h12" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>Torna alla linea temporale</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="controls" aria-label="Filtri della mappa">
+    <div class="controls-inner">
+
+      <div class="controls-top">
+        <div class="mode-switch" role="tablist" aria-label="Livello della mappa">
+          <button class="mode-btn is-active" data-modo="universi" role="tab" aria-selected="true">
+            <span class="mode-num">01</span>
+            <span class="mode-label">Universi<em>come si toccano</em></span>
+          </button>
+          <button class="mode-btn" data-modo="titoli" role="tab" aria-selected="false">
+            <span class="mode-num">02</span>
+            <span class="mode-label">Titoli<em>punto per punto</em></span>
+          </button>
+        </div>
+
+        <button id="mappa-filtri-toggle" class="filters-toggle" type="button" aria-expanded="false" aria-controls="mappa-filtri">
+          <span>Filtri</span>
+          <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <p class="result-count" role="status" aria-live="polite"><span id="mappa-conta">…</span></p>
+      </div>
+
+      <div id="mappa-filtri" class="filters">
+        <div class="filter-group">
+          <label for="mappa-cerca">Cerca</label>
+          <input type="search" id="mappa-cerca" placeholder="Titolo o universo…" autocomplete="off">
+        </div>
+
+        <div class="filter-group">
+          <label for="mappa-universo">Isola un universo</label>
+          <select id="mappa-universo">
+            <option value="">Tutti</option>
+          </select>
+        </div>
+
+        <fieldset class="filter-group filter-legami">
+          <legend>Tipo di legame</legend>
+          <label><input type="checkbox" data-legame="sequela" checked> Sequel e prequel</label>
+          <label><input type="checkbox" data-legame="prerequisito" checked> Prerequisiti</label>
+          <label><input type="checkbox" data-legame="collegato" checked> Rimandi</label>
+        </fieldset>
+
+        <div class="filter-group filter-checkbox" id="mappa-essenziali-box" hidden>
+          <label>
+            <input type="checkbox" id="mappa-essenziali">
+            Solo visione essenziale
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p id="mappa-avviso" class="mappa-avviso" hidden></p>
+
+  <section class="mappa-wrap" aria-label="Mappa">
+    <a class="skip-mappa" href="#indice-ponti">Salta la mappa e leggi l'elenco dei ponti</a>
+
+    <div class="mappa-canvas">
+      <svg id="mappa" viewBox="0 0 1200 820" preserveAspectRatio="xMidYMid meet"
+           role="application" aria-label="Mappa dei venti universi Marvel e dei ponti narrativi fra loro"></svg>
+
+      <div class="mappa-tools">
+        <button type="button" id="zoom-piu" aria-label="Ingrandisci">+</button>
+        <button type="button" id="zoom-meno" aria-label="Rimpicciolisci">−</button>
+        <button type="button" id="reinquadra" class="is-largo">Reinquadra</button>
+      </div>
+
+      <p class="mappa-hint">Trascina per spostare · rotella o pizzico per lo zoom · tocca un punto per accenderne i collegamenti</p>
+    </div>
+
+    <aside class="mappa-panel" aria-label="Dettaglio della selezione">
+      <div id="mappa-pannello" class="pannello"></div>
+    </aside>
+  </section>
+
+  <section class="legenda-wrap" aria-label="Legenda">
+    <h2 class="sezione-titolo">I venti universi</h2>
+    <p class="sezione-intro">Diciassette portano una sigla che Marvel usa davvero: 616, 10005, 828 e 1610 sono dette a schermo, le altre vengono dall'Official Handbook. Legion, The Gifted e Helstrom una sigla non ce l'hanno, e qui non gliene viene inventata una. Tocca un universo per isolarlo sulla mappa.</p>
+    <div id="legenda" class="legenda"></div>
+
+    <div class="legenda-simboli">
+      <p><span class="simbolo simbolo-film" aria-hidden="true"></span> Film</p>
+      <p><span class="simbolo simbolo-serie" aria-hidden="true"></span> Serie, miniserie e altro</p>
+      <p><span class="simbolo simbolo-essenziale" aria-hidden="true"></span> Visione essenziale</p>
+      <p><span class="simbolo simbolo-sequela" aria-hidden="true"></span> Sequel o prequel</p>
+      <p><span class="simbolo simbolo-prerequisito" aria-hidden="true"></span> Prerequisito</p>
+      <p><span class="simbolo simbolo-collegato" aria-hidden="true"></span> Rimando</p>
+    </div>
+  </section>
+
+  <section id="indice-ponti" class="ponti-wrap" aria-label="Elenco dei ponti fra universi">
+    <h2 class="sezione-titolo">I ponti, uno per uno</h2>
+    <p class="sezione-intro">Ogni riga è una coppia di titoli che si rimandano l'un l'altro attraversando il confine fra due universi. È la stessa cosa che disegna la mappa, scritta per esteso: i nomi portano alla scheda nella linea temporale.</p>
+    <div id="ponti-lista" class="ponti-lista"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>I collegamenti vengono dalle schede dei singoli titoli: prerequisiti, sequel/prequel e rimandi · Le sigle degli universi sono quelle dichiarate a schermo o dall'Official Handbook, mai inventate.</p>
+</footer>
+
+<a class="to-top" href="#top" aria-label="Torna in cima alla pagina" title="Torna su">
+  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3.5M3.5 8L8 3.4 12.5 8" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script src="comune.js"></script>
+<script src="mappa.js"></script>
+</body>
+</html>
