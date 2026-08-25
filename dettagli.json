@@ -32,7 +32,8 @@
     "collegati": [
       75,
       83,
-      136
+      136,
+      146
     ],
     "sequelPrequel": [],
     "note": "L'anno non è mai dichiarato nel film: si assume il presente dell'uscita. Continuità autonoma, slegata sia dall'MCU sia dal Punisher Netflix; il sequel Punisher - Zona di guerra (2008) non è presente in questa lista."
@@ -546,7 +547,8 @@
       2,
       89,
       92,
-      116
+      116,
+      141
     ],
     "sequelPrequel": [
       {
@@ -1181,7 +1183,8 @@
       25,
       28,
       31,
-      127
+      127,
+      143
     ],
     "sequelPrequel": [],
     "note": "Bruce Banner è interpretato da Edward Norton, sostituito da Mark Ruffalo a partire da The Avengers. Non ha mai avuto un sequel diretto; la scena finale con Tony Stark viene ripresa e spiegata dal one-shot Il consulente (ordine 28)."
@@ -4626,6 +4629,10 @@
       {
         "id": 93,
         "relazione": "prequel"
+      },
+      {
+        "id": 147,
+        "relazione": "sequel"
       }
     ],
     "note": "L'anno non è dichiarato: un fermo immagine su un articolo del Daily Bugle indica ottobre 2020. Nella scena post-credit Eddie viene trasportato nell'MCU dall'incantesimo di Spider-Man: No Way Home, che è però ambientato nel 2024."
@@ -4838,7 +4845,7 @@
     "sequelPrequel": [
       {
         "id": 69,
-        "relazione": "sequel"
+        "relazione": "prequel"
       },
       {
         "id": 97,
@@ -4889,7 +4896,7 @@
     "sequelPrequel": [
       {
         "id": 72,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "Si apre agganciandosi al viaggio di Thor con i Guardiani della Galassia lasciato in sospeso da Endgame."
@@ -4965,7 +4972,7 @@
     "sequelPrequel": [
       {
         "id": 115,
-        "relazione": "prequel"
+        "relazione": "sequel"
       }
     ],
     "note": "Speciale natalizio che fa da ponte diretto verso Guardiani della Galassia Vol. 3: rivela il legame di sangue tra Mantis e Quill."
@@ -5012,7 +5019,7 @@
     "sequelPrequel": [
       {
         "id": 65,
-        "relazione": "sequel"
+        "relazione": "prequel"
       },
       {
         "id": 130,
@@ -5063,7 +5070,7 @@
     "sequelPrequel": [
       {
         "id": 85,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "Presenta Kang come antagonista della Saga del Multiverso; il ruolo e' stato poi ridimensionato dopo l'uscita di Jonathan Majors dal franchise."
@@ -5110,7 +5117,7 @@
     "sequelPrequel": [
       {
         "id": 51,
-        "relazione": "sequel"
+        "relazione": "prequel"
       },
       {
         "id": 112,
@@ -5202,7 +5209,7 @@
     "sequelPrequel": [
       {
         "id": 99,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "annoAmbientazione lasciato a null: la stagione si svolge quasi interamente alla TVA, che per definizione esiste fuori dal tempo, e i salti temporali coprono epoche diverse.",
@@ -5246,12 +5253,13 @@
     "collegati": [
       92,
       130,
-      138
+      138,
+      141
     ],
     "sequelPrequel": [
       {
         "id": 13,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "La serie Ms. Marvel, che introduce Kamala Khan e ne prepara direttamente l'arco, non e' presente in questo elenco di 140 titoli."
@@ -5296,7 +5304,7 @@
     "sequelPrequel": [
       {
         "id": 100,
-        "relazione": "sequel"
+        "relazione": "prequel"
       },
       {
         "id": 125,
@@ -5348,7 +5356,7 @@
     "sequelPrequel": [
       {
         "id": 21,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "L'anno 2029 e' esplicitato nel film; chiude l'arco di Wolverine nella saga Fox, ripreso poi in Deadpool & Wolverine."
@@ -5530,7 +5538,7 @@
     "sequelPrequel": [
       {
         "id": 86,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "Chiude formalmente l'universo Fox e lo assorbe nel MCU; e' pieno di camei che presuppongono la conoscenza dei film X-Men e Fantastici 4 della Fox."
@@ -5670,7 +5678,7 @@
     "sequelPrequel": [
       {
         "id": 98,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "Recupera Samuel Sterns da L'incredibile Hulk e il Celestiale emerso in Eternals, ora fonte dell'adamantio. Un invito mostrato sullo schermo data l'azione all'aprile 2027."
@@ -5718,7 +5726,7 @@
     "sequelPrequel": [
       {
         "id": 81,
-        "relazione": "sequel"
+        "relazione": "prequel"
       },
       {
         "id": 135,
@@ -6018,7 +6026,7 @@
     "sequelPrequel": [
       {
         "id": 128,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "Riporta Jessica Jones e Luke Cage nel MCU; si coordina con lo speciale The Punisher: One Last Kill e con Spider-Man: Brand New Day. L'anno e' dedotto dalla continuita' con la prima stagione, non dichiarato sullo schermo."
@@ -6056,7 +6064,7 @@
     "sequelPrequel": [
       {
         "id": 75,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "Speciale di circa 51 minuti scritto dallo stesso Bernthal; si svolge in contemporanea alla seconda stagione di Daredevil: Rinascita e precede l'apparizione di Castle in Spider-Man: Brand New Day. L'anno e' dedotto da quella continuita', non e' dichiarato."
@@ -6103,7 +6111,7 @@
     "sequelPrequel": [
       {
         "id": 105,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "annoAmbientazione dedotto: il film e' dichiarato ambientato circa quattro anni dopo No Way Home, collocato nel dicembre 2024 dalle cronologie MCU. Marvel non ha mai indicato un anno esplicito."
@@ -6150,14 +6158,18 @@
     "sequelPrequel": [
       {
         "id": 92,
-        "relazione": "sequel"
+        "relazione": "prequel"
       },
       {
         "id": 131,
         "relazione": "sequel"
+      },
+      {
+        "id": 142,
+        "relazione": "sequel"
       }
     ],
-    "note": "TITOLO NON ANCORA USCITO (previsto per il 18 dicembre 2026): sono riportati solo il cast e i collegamenti annunciati ufficialmente. Ambientazione e anno restano a null perche' non dichiarati; l'unico riferimento ufficiale e' che la storia si colloca quattordici mesi dopo Thunderbolts. Dati provvisori.",
+    "note": "TITOLO NON ANCORA USCITO (previsto per il 18 dicembre 2026): sono riportati solo il cast e i collegamenti annunciati ufficialmente. L'ambientazione resta a null perche' non dichiarata; l'unico riferimento ufficiale e' che la storia si colloca quattordici mesi dopo Thunderbolts, e l'anno che compare e' una stima. Dati provvisori.",
     "annoStimato": true,
     "annoNota": "Stimato: non ancora uscito, collocato dopo Spider-Man: Brand New Day."
   },
@@ -6206,10 +6218,10 @@
       },
       {
         "id": 123,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
-    "note": "TITOLO NON ANCORA USCITO (previsto per il 14 ottobre 2026, titolo ufficiale VisionQuest): riportati solo cast e premessa annunciati da Marvel, cioe' la ricerca dei ricordi da parte della Visione Bianca. Ambientazione e anno a null. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along. Dati provvisori.",
+    "note": "TITOLO NON ANCORA USCITO (previsto per il 14 ottobre 2026, titolo ufficiale VisionQuest): riportati solo cast e premessa annunciati da Marvel, cioe' la ricerca dei ricordi da parte della Visione Bianca. L'ambientazione resta a null; l'anno che compare e' una stima. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along. Dati provvisori.",
     "annoStimato": true,
     "annoNota": "Stimato: non ancora uscito, collocato dopo Agatha All Along."
   },
@@ -6253,11 +6265,616 @@
     "sequelPrequel": [
       {
         "id": 126,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "TITOLO NON ANCORA USCITO: al D23 del 15 agosto 2026 Disney ha spostato l'uscita a gennaio 2027. Sono riportati solo il cast annunciato e gli elementi mostrati nel trailer ufficiale; ambientazione e anno restano a null, anche perche' la serie si svolge in una linea temporale alternativa senza anno dichiarato. Dati provvisori.",
     "annoStimato": true,
     "annoNota": "Stimato: prosegue l’anno scolastico iniziato nella prima stagione."
+  },
+  "141": {
+    "ambientazione": "Jersey City ai giorni nostri, dopo il Blip, con un lungo ritorno all'India e al Pakistan della Partizione del 1947",
+    "annoAmbientazione": 2025,
+    "cast": [
+      {
+        "attore": "Iman Vellani",
+        "personaggio": "Kamala Khan / Ms. Marvel"
+      },
+      {
+        "attore": "Matt Lintz",
+        "personaggio": "Bruno Carrelli"
+      },
+      {
+        "attore": "Yasmeen Fletcher",
+        "personaggio": "Nakia Bahadir"
+      },
+      {
+        "attore": "Zenobia Shroff",
+        "personaggio": "Muneeba Khan"
+      },
+      {
+        "attore": "Mohan Kapur",
+        "personaggio": "Yusuf Khan"
+      },
+      {
+        "attore": "Aramis Knight",
+        "personaggio": "Kareem / Pugnale Rosso"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      13,
+      118
+    ],
+    "sequelPrequel": [
+      {
+        "id": 118,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Introduce Kamala Khan, che The Marvels riprende come coprotagonista: guardarlo prima non e' obbligatorio ma cambia parecchio. L'anno non e' dichiarato sullo schermo, e' la collocazione standard post-Blip come per le altre serie Disney+ della Fase 4."
+  },
+  "142": {
+    "ambientazione": null,
+    "annoAmbientazione": 2029,
+    "annoStimato": true,
+    "annoNota": "Stimato: non ancora uscito, collocato dopo Avengers: Doomsday.",
+    "cast": [],
+    "prerequisiti": [
+      92,
+      138,
+      131
+    ],
+    "collegati": [
+      129,
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "id": 138,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "TITOLO NON ANCORA USCITO (previsto per il 17 dicembre 2027): chiude la Saga del Multiverso e segue direttamente Avengers: Doomsday. Il cast non e’ stato annunciato ufficialmente e resta vuoto invece di essere riempito con indiscrezioni. Dati provvisori."
+  },
+  "143": {
+    "ambientazione": "California ai primi anni Duemila, tra il laboratorio di Berkeley, il deserto del Nevada e San Francisco",
+    "annoAmbientazione": 2003,
+    "cast": [
+      {
+        "attore": "Eric Bana",
+        "personaggio": "Bruce Banner / Hulk"
+      },
+      {
+        "attore": "Jennifer Connelly",
+        "personaggio": "Betty Ross"
+      },
+      {
+        "attore": "Sam Elliott",
+        "personaggio": "Generale Thaddeus Ross"
+      },
+      {
+        "attore": "Nick Nolte",
+        "personaggio": "David Banner"
+      },
+      {
+        "attore": "Josh Lucas",
+        "personaggio": "Glenn Talbot"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      27
+    ],
+    "sequelPrequel": [],
+    "note": "Il film di Ang Lee non e' il prequel de L'incredibile Hulk del 2008: sono due continuita' separate, e il secondo riparte da zero. Compaiono gli stessi personaggi, Bruce Banner e il generale Ross, ma interpretati da altri attori e con un'origine diversa."
+  },
+  "144": {
+    "ambientazione": "Texas ai giorni nostri, con un prologo nel West dell’Ottocento",
+    "annoAmbientazione": 2007,
+    "cast": [
+      {
+        "attore": "Nicolas Cage",
+        "personaggio": "Johnny Blaze / Ghost Rider"
+      },
+      {
+        "attore": "Eva Mendes",
+        "personaggio": "Roxanne Simpson"
+      },
+      {
+        "attore": "Wes Bentley",
+        "personaggio": "Blackheart"
+      },
+      {
+        "attore": "Sam Elliott",
+        "personaggio": "Carter Slade / Il Custode"
+      },
+      {
+        "attore": "Peter Fonda",
+        "personaggio": "Mefisto"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 145,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Prodotto da Sony su licenza, fuori da qualsiasi altra continuita' della lista. Non ha legami con lo Ghost Rider di Agents of S.H.I.E.L.D., che e' Robbie Reyes e appartiene a Terra-616."
+  },
+  "145": {
+    "ambientazione": "Europa dell’Est ai giorni nostri, fra Turchia e Romania",
+    "annoAmbientazione": 2012,
+    "cast": [
+      {
+        "attore": "Nicolas Cage",
+        "personaggio": "Johnny Blaze / Ghost Rider"
+      },
+      {
+        "attore": "Idris Elba",
+        "personaggio": "Moreau"
+      },
+      {
+        "attore": "Ciarán Hinds",
+        "personaggio": "Roarke / Mefisto"
+      },
+      {
+        "attore": "Violante Placido",
+        "personaggio": "Nadya"
+      },
+      {
+        "attore": "Johnny Whitworth",
+        "personaggio": "Ray Carrigan / Blackout"
+      }
+    ],
+    "prerequisiti": [
+      144
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 144,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Seguito diretto del film del 2007, con lo stesso interprete ma un tono e una regia completamente diversi. Uscito nel 2012, quando l'MCU era gia' avviato, ma senza alcun rapporto con esso."
+  },
+  "146": {
+    "ambientazione": "New York ai giorni nostri, sei anni dopo che Frank Castle ha cominciato la sua guerra",
+    "annoAmbientazione": 2008,
+    "cast": [
+      {
+        "attore": "Ray Stevenson",
+        "personaggio": "Frank Castle / Punisher"
+      },
+      {
+        "attore": "Dominic West",
+        "personaggio": "Billy Russoti / Jigsaw"
+      },
+      {
+        "attore": "Julie Benz",
+        "personaggio": "Angela Donatelli"
+      },
+      {
+        "attore": "Colin Salmon",
+        "personaggio": "Paul Budiansky"
+      },
+      {
+        "attore": "Doug Hutchison",
+        "personaggio": "Loony Bin Jim"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [
+      1
+    ],
+    "sequelPrequel": [],
+    "note": "Non e' il seguito del Punisher del 2004: e' un riavvio, con un altro interprete e un'altra continuita'. In Italia la distribuzione in sala fu annullata e il film usci' direttamente in DVD il 7 ottobre 2009, dieci mesi dopo gli Stati Uniti."
+  },
+  "147": {
+    "ambientazione": "Messico e Stati Uniti ai giorni nostri, subito dopo il ritorno di Eddie dal salto multiversale",
+    "annoAmbientazione": 2024,
+    "cast": [
+      {
+        "attore": "Tom Hardy",
+        "personaggio": "Eddie Brock / Venom"
+      },
+      {
+        "attore": "Chiwetel Ejiofor",
+        "personaggio": "Rex Strickland"
+      },
+      {
+        "attore": "Juno Temple",
+        "personaggio": "Teddy Payne"
+      },
+      {
+        "attore": "Rhys Ifans",
+        "personaggio": "Martin Moon"
+      },
+      {
+        "attore": "Stephen Graham",
+        "personaggio": "Patrick Mulligan"
+      }
+    ],
+    "prerequisiti": [
+      93,
+      104
+    ],
+    "collegati": [
+      105
+    ],
+    "sequelPrequel": [
+      {
+        "id": 104,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Chiude la trilogia di Venom. Riprende esplicitamente dalla scena post-titoli di Spider-Man: No Way Home, che ha rispedito Eddie nel suo universo lasciando indietro un frammento di simbionte."
+  },
+  "148": {
+    "ambientazione": "Un ospedale psichiatrico fuori dal tempo, in un mondo dall’estetica deliberatamente anacronistica",
+    "annoAmbientazione": 2017,
+    "annoStimato": true,
+    "annoNota": "La serie rifiuta di datarsi: mescola arredi, moda e tecnologia di decenni diversi. Collocata sull’anno di trasmissione.",
+    "cast": [
+      {
+        "attore": "Dan Stevens",
+        "personaggio": "David Haller"
+      },
+      {
+        "attore": "Rachel Keller",
+        "personaggio": "Sydney \"Syd\" Barrett"
+      },
+      {
+        "attore": "Aubrey Plaza",
+        "personaggio": "Lenny Busker"
+      },
+      {
+        "attore": "Jean Smart",
+        "personaggio": "Melanie Bird"
+      },
+      {
+        "attore": "Bill Irwin",
+        "personaggio": "Cary Loudermilk"
+      },
+      {
+        "attore": "Jeremie Harris",
+        "personaggio": "Ptonomy Wallace"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 149,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Prodotta da FX su licenza Fox, in un universo parallelo a quello dei film X-Men: nessun crossover, mai. David Haller e' nei fumetti il figlio di Charles Xavier, ma la serie tiene il legame volutamente sfocato."
+  },
+  "149": {
+    "ambientazione": "Un anno dopo la prima stagione, fra la Divisione 3 e i labirinti mentali di Amahl Farouk",
+    "annoAmbientazione": 2018,
+    "annoStimato": true,
+    "annoNota": "Come la prima stagione: la serie non si data. Collocata sull’anno di trasmissione.",
+    "cast": [
+      {
+        "attore": "Dan Stevens",
+        "personaggio": "David Haller"
+      },
+      {
+        "attore": "Rachel Keller",
+        "personaggio": "Sydney \"Syd\" Barrett"
+      },
+      {
+        "attore": "Aubrey Plaza",
+        "personaggio": "Lenny Busker"
+      },
+      {
+        "attore": "Navid Negahban",
+        "personaggio": "Amahl Farouk / Re delle Ombre"
+      },
+      {
+        "attore": "Bill Irwin",
+        "personaggio": "Cary Loudermilk"
+      },
+      {
+        "attore": "Jean Smart",
+        "personaggio": "Melanie Bird"
+      }
+    ],
+    "prerequisiti": [
+      148
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 148,
+        "relazione": "prequel"
+      },
+      {
+        "id": 150,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Seconda delle tre stagioni. Sposta il baricentro sul Re delle Ombre e sul dubbio se David sia ancora il protagonista o sia diventato l’antagonista."
+  },
+  "150": {
+    "ambientazione": "Il tempo stesso diventa il campo di battaglia: la stagione finale si muove avanti e indietro lungo la vita di David",
+    "annoAmbientazione": 2019,
+    "annoStimato": true,
+    "annoNota": "Come le precedenti: la serie non si data, e l’ultima stagione viaggia nel tempo. Collocata sull’anno di trasmissione.",
+    "cast": [
+      {
+        "attore": "Dan Stevens",
+        "personaggio": "David Haller"
+      },
+      {
+        "attore": "Rachel Keller",
+        "personaggio": "Sydney \"Syd\" Barrett"
+      },
+      {
+        "attore": "Aubrey Plaza",
+        "personaggio": "Lenny Busker"
+      },
+      {
+        "attore": "Navid Negahban",
+        "personaggio": "Amahl Farouk / Re delle Ombre"
+      },
+      {
+        "attore": "Lauren Tsai",
+        "personaggio": "Switch"
+      },
+      {
+        "attore": "Harry Lloyd",
+        "personaggio": "Charles Xavier"
+      }
+    ],
+    "prerequisiti": [
+      148,
+      149
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 149,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Stagione conclusiva. Charles Xavier compare finalmente in scena, interpretato da Harry Lloyd, ma resta un Xavier di questo universo e non quello dei film."
+  },
+  "151": {
+    "ambientazione": "Stati Uniti ai giorni nostri, in una linea temporale dove gli X-Men sono spariti e i mutanti sono braccati",
+    "annoAmbientazione": 2017,
+    "cast": [
+      {
+        "attore": "Stephen Moyer",
+        "personaggio": "Reed Strucker"
+      },
+      {
+        "attore": "Amy Acker",
+        "personaggio": "Caitlin Strucker"
+      },
+      {
+        "attore": "Sean Teale",
+        "personaggio": "Marcos Diaz / Eclipse"
+      },
+      {
+        "attore": "Natalie Alyn Lind",
+        "personaggio": "Lauren Strucker"
+      },
+      {
+        "attore": "Percy Hynes White",
+        "personaggio": "Andy Strucker"
+      },
+      {
+        "attore": "Emma Dumont",
+        "personaggio": "Lorna Dane / Polaris"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 152,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Prodotta da Fox in una linea temporale distinta da quella dei film: gli X-Men sono scomparsi dopo un evento mai mostrato, e la serie parte da li'. Nessun personaggio dei film compare."
+  },
+  "152": {
+    "ambientazione": "Pochi mesi dopo la prima stagione, con il Circolo Interno che raccoglie i mutanti sopravvissuti",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Stephen Moyer",
+        "personaggio": "Reed Strucker"
+      },
+      {
+        "attore": "Amy Acker",
+        "personaggio": "Caitlin Strucker"
+      },
+      {
+        "attore": "Sean Teale",
+        "personaggio": "Marcos Diaz / Eclipse"
+      },
+      {
+        "attore": "Emma Dumont",
+        "personaggio": "Lorna Dane / Polaris"
+      },
+      {
+        "attore": "Grace Byers",
+        "personaggio": "Reeva Payge"
+      },
+      {
+        "attore": "Natalie Alyn Lind",
+        "personaggio": "Lauren Strucker"
+      }
+    ],
+    "prerequisiti": [
+      151
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 151,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "Seconda e ultima stagione: la serie e’ stata cancellata subito dopo, e il finale resta aperto."
+  },
+  "153": {
+    "ambientazione": "Portland ai giorni nostri, fra un ospedale psichiatrico e le indagini di una coppia di fratelli figli di un serial killer",
+    "annoAmbientazione": 2020,
+    "cast": [
+      {
+        "attore": "Tom Austen",
+        "personaggio": "Daimon Helstrom"
+      },
+      {
+        "attore": "Sydney Lemmon",
+        "personaggio": "Ana Helstrom"
+      },
+      {
+        "attore": "Elizabeth Marvel",
+        "personaggio": "Victoria Helstrom"
+      },
+      {
+        "attore": "Robert Wisdom",
+        "personaggio": "Henry / Il Custode"
+      },
+      {
+        "attore": "June Carryl",
+        "personaggio": "Dottoressa Louise Hastings"
+      },
+      {
+        "attore": "Ariana Guerra",
+        "personaggio": "Gabriella Rosetti"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [],
+    "note": "Ultima produzione di Marvel Television prima della chiusura della divisione. Lo showrunner Paul Zbyszewski ha dichiarato che non e' ambientata nell'MCU, malgrado un riferimento alla Roxxon: qui e' trattata come una continuita' a se'. In Italia e' arrivata solo il 23 febbraio 2021, con Star su Disney+, quattro mesi dopo gli Stati Uniti."
+  },
+  "154": {
+    "ambientazione": "Brooklyn ai giorni nostri, nell’universo di Miles Morales, invaso da Spider-Man venuti da altre realta’",
+    "annoAmbientazione": 2018,
+    "cast": [
+      {
+        "attore": "Shameik Moore",
+        "personaggio": "Miles Morales (voce)"
+      },
+      {
+        "attore": "Jake Johnson",
+        "personaggio": "Peter B. Parker (voce)"
+      },
+      {
+        "attore": "Hailee Steinfeld",
+        "personaggio": "Gwen Stacy / Spider-Gwen (voce)"
+      },
+      {
+        "attore": "Mahershala Ali",
+        "personaggio": "Aaron Davis / Prowler (voce)"
+      },
+      {
+        "attore": "Liev Schreiber",
+        "personaggio": "Wilson Fisk / Kingpin (voce)"
+      },
+      {
+        "attore": "Nicolas Cage",
+        "personaggio": "Spider-Man Noir (voce)"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 155,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Universo animato indipendente, designato Terra-1610 nel film seguente. Non e' collegato ne' ai film di Raimi e Webb ne' a quelli MCU, malgrado li citi apertamente."
+  },
+  "155": {
+    "ambientazione": "Un anno e mezzo dopo il primo film, fra l’universo di Gwen, Mumbattan e la Societa’ dei Ragni a Nueva York",
+    "annoAmbientazione": 2023,
+    "cast": [
+      {
+        "attore": "Shameik Moore",
+        "personaggio": "Miles Morales (voce)"
+      },
+      {
+        "attore": "Hailee Steinfeld",
+        "personaggio": "Gwen Stacy / Spider-Gwen (voce)"
+      },
+      {
+        "attore": "Oscar Isaac",
+        "personaggio": "Miguel O'Hara / Spider-Man 2099 (voce)"
+      },
+      {
+        "attore": "Jason Schwartzman",
+        "personaggio": "Jonathan Ohnn / La Macchia (voce)"
+      },
+      {
+        "attore": "Issa Rae",
+        "personaggio": "Jessica Drew / Spider-Woman (voce)"
+      },
+      {
+        "attore": "Daniel Kaluuya",
+        "personaggio": "Hobie Brown / Spider-Punk (voce)"
+      }
+    ],
+    "prerequisiti": [
+      154
+    ],
+    "collegati": [
+      156
+    ],
+    "sequelPrequel": [
+      {
+        "id": 154,
+        "relazione": "prequel"
+      },
+      {
+        "id": 156,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Primo tempo di una storia in due parti: finisce a meta', e senza il terzo film resta sospeso. E' il film che pronuncia la designazione Terra-1610 e mostra dal vivo l'universo Sony di Venom."
+  },
+  "156": {
+    "ambientazione": null,
+    "annoAmbientazione": 2023,
+    "annoStimato": true,
+    "annoNota": "Stimato: non ancora uscito, riprende esattamente dove finisce Across the Spider-Verse.",
+    "cast": [
+      {
+        "attore": "Shameik Moore",
+        "personaggio": "Miles Morales (voce)"
+      },
+      {
+        "attore": "Hailee Steinfeld",
+        "personaggio": "Gwen Stacy / Spider-Gwen (voce)"
+      },
+      {
+        "attore": "Oscar Isaac",
+        "personaggio": "Miguel O'Hara / Spider-Man 2099 (voce)"
+      }
+    ],
+    "prerequisiti": [
+      154,
+      155
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 155,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "TITOLO NON ANCORA USCITO: annunciato per giugno 2027 ma con data ancora in movimento, motivo per cui il campo uscita resta vuoto e la card mostra \"giugno 2027\" cosi’ com’e’. Conclude la storia lasciata a meta’ da Across the Spider-Verse. Dati provvisori."
   }
 }

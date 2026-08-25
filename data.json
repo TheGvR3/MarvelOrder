@@ -9,7 +9,7 @@
     "uscita": "2004-04-16",
     "uscitaItalia": "2004-07-02",
     "uscitaRaw": null,
-    "categoria": "Pre-MCU",
+    "categoria": "Altre licenze",
     "universo": "terra-58732",
     "obbligatorio": false,
     "fase": null
@@ -84,7 +84,7 @@
     "uscita": "1998-08-21",
     "uscitaItalia": "2000-01-07",
     "uscitaRaw": null,
-    "categoria": "Pre-MCU",
+    "categoria": "Altre licenze",
     "universo": "terra-26320",
     "obbligatorio": false,
     "fase": null
@@ -99,7 +99,7 @@
     "uscita": "2002-03-22",
     "uscitaItalia": "2002-08-16",
     "uscitaRaw": null,
-    "categoria": "Pre-MCU",
+    "categoria": "Altre licenze",
     "universo": "terra-26320",
     "obbligatorio": false,
     "fase": null
@@ -114,7 +114,7 @@
     "uscita": "2004-12-08",
     "uscitaItalia": "2005-03-04",
     "uscitaRaw": null,
-    "categoria": "Pre-MCU",
+    "categoria": "Altre licenze",
     "universo": "terra-26320",
     "obbligatorio": false,
     "fase": null
@@ -129,7 +129,7 @@
     "uscita": "2006-06-28",
     "uscitaItalia": "2008-09-22",
     "uscitaRaw": null,
-    "categoria": "Pre-MCU",
+    "categoria": "Altre licenze",
     "universo": "terra-26320",
     "obbligatorio": false,
     "fase": null
@@ -294,14 +294,29 @@
     "uscita": "2003-02-14",
     "uscitaItalia": "2003-04-04",
     "uscitaRaw": null,
-    "categoria": "Pre-MCU",
+    "categoria": "Altre licenze",
     "universo": "terra-701306",
     "obbligatorio": false,
     "fase": null
   },
   {
-    "id": 21,
+    "id": 143,
     "ordine": 21,
+    "titolo": "Hulk",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": "2003-06-20",
+    "uscitaItalia": "2003-08-29",
+    "uscitaRaw": null,
+    "categoria": "Altre licenze",
+    "universo": "terra-400083",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 21,
+    "ordine": 22,
     "titolo": "Wolverine: L'Immortale",
     "tipo": "Film",
     "stagione": null,
@@ -316,7 +331,7 @@
   },
   {
     "id": 22,
-    "ordine": 22,
+    "ordine": 23,
     "titolo": "Spider-Man 2",
     "tipo": "Film",
     "stagione": null,
@@ -331,7 +346,7 @@
   },
   {
     "id": 23,
-    "ordine": 23,
+    "ordine": 24,
     "titolo": "Elektra",
     "tipo": "Film",
     "stagione": null,
@@ -339,14 +354,14 @@
     "uscita": "2005-01-14",
     "uscitaItalia": "2005-02-04",
     "uscitaRaw": null,
-    "categoria": "Pre-MCU",
+    "categoria": "Altre licenze",
     "universo": "terra-701306",
     "obbligatorio": false,
     "fase": null
   },
   {
     "id": 24,
-    "ordine": 24,
+    "ordine": 25,
     "titolo": "X-Men: Giorni di un futuro passato",
     "tipo": "Film",
     "stagione": null,
@@ -361,7 +376,7 @@
   },
   {
     "id": 25,
-    "ordine": 25,
+    "ordine": 26,
     "titolo": "Iron Man 2",
     "tipo": "Film",
     "stagione": null,
@@ -376,7 +391,7 @@
   },
   {
     "id": 26,
-    "ordine": 26,
+    "ordine": 27,
     "titolo": "Spider-Man 3",
     "tipo": "Film",
     "stagione": null,
@@ -390,8 +405,38 @@
     "fase": null
   },
   {
+    "id": 144,
+    "ordine": 28,
+    "titolo": "Ghost Rider",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": "2007-02-16",
+    "uscitaItalia": "2007-03-16",
+    "uscitaRaw": null,
+    "categoria": "Altre licenze",
+    "universo": "terra-121347",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 146,
+    "ordine": 29,
+    "titolo": "Punisher - Zona di guerra",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": "2008-12-05",
+    "uscitaItalia": "2009-10-07",
+    "uscitaRaw": null,
+    "categoria": "Altre licenze",
+    "universo": "terra-47281",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
     "id": 27,
-    "ordine": 27,
+    "ordine": 30,
     "titolo": "L'incredibile Hulk",
     "tipo": "Film",
     "stagione": null,
@@ -406,7 +451,7 @@
   },
   {
     "id": 28,
-    "ordine": 28,
+    "ordine": 31,
     "titolo": "Marvel One-Shots: Il consulente",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -421,7 +466,7 @@
   },
   {
     "id": 29,
-    "ordine": 29,
+    "ordine": 32,
     "titolo": "Marvel One-Shots: Scena comica nel raggiungere il martello di Thor",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -436,7 +481,7 @@
   },
   {
     "id": 30,
-    "ordine": 30,
+    "ordine": 33,
     "titolo": "Thor",
     "tipo": "Film",
     "stagione": null,
@@ -451,7 +496,7 @@
   },
   {
     "id": 31,
-    "ordine": 31,
+    "ordine": 34,
     "titolo": "The Avengers",
     "tipo": "Film",
     "stagione": null,
@@ -466,7 +511,7 @@
   },
   {
     "id": 32,
-    "ordine": 32,
+    "ordine": 35,
     "titolo": "X-Men: Apocalypse",
     "tipo": "Film",
     "stagione": null,
@@ -481,7 +526,7 @@
   },
   {
     "id": 33,
-    "ordine": 33,
+    "ordine": 36,
     "titolo": "The Amazing Spider-Man",
     "tipo": "Film",
     "stagione": null,
@@ -495,8 +540,23 @@
     "fase": null
   },
   {
+    "id": 145,
+    "ordine": 37,
+    "titolo": "Ghost Rider - Spirito di vendetta",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": "2012-02-17",
+    "uscitaItalia": "2012-03-23",
+    "uscitaRaw": null,
+    "categoria": "Altre licenze",
+    "universo": "terra-121347",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
     "id": 34,
-    "ordine": 34,
+    "ordine": 38,
     "titolo": "Fantastic 4 - I Fantastici Quattro",
     "tipo": "Film",
     "stagione": null,
@@ -511,7 +571,7 @@
   },
   {
     "id": 35,
-    "ordine": 35,
+    "ordine": 39,
     "titolo": "X-Men: Dark Phoenix",
     "tipo": "Film",
     "stagione": null,
@@ -526,7 +586,7 @@
   },
   {
     "id": 36,
-    "ordine": 36,
+    "ordine": 40,
     "titolo": "The Amazing Spider-Man 2: Il potere di Electro",
     "tipo": "Film",
     "stagione": null,
@@ -541,7 +601,7 @@
   },
   {
     "id": 37,
-    "ordine": 37,
+    "ordine": 41,
     "titolo": "Marvel One-Shots: Item 47",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -556,7 +616,7 @@
   },
   {
     "id": 38,
-    "ordine": 38,
+    "ordine": 42,
     "titolo": "Iron Man 3",
     "tipo": "Film",
     "stagione": null,
@@ -571,7 +631,7 @@
   },
   {
     "id": 39,
-    "ordine": 39,
+    "ordine": 43,
     "titolo": "Marvel One-Shots: All Hail the King",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -586,7 +646,7 @@
   },
   {
     "id": 40,
-    "ordine": 40,
+    "ordine": 44,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -601,7 +661,7 @@
   },
   {
     "id": 41,
-    "ordine": 41,
+    "ordine": 45,
     "titolo": "Thor: The Dark World",
     "tipo": "Film",
     "stagione": null,
@@ -616,7 +676,7 @@
   },
   {
     "id": 42,
-    "ordine": 42,
+    "ordine": 46,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -631,7 +691,7 @@
   },
   {
     "id": 43,
-    "ordine": 43,
+    "ordine": 47,
     "titolo": "Captain America: The Winter Soldier",
     "tipo": "Film",
     "stagione": null,
@@ -646,7 +706,7 @@
   },
   {
     "id": 44,
-    "ordine": 44,
+    "ordine": 48,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -661,7 +721,7 @@
   },
   {
     "id": 45,
-    "ordine": 45,
+    "ordine": 49,
     "titolo": "Guardiani della Galassia",
     "tipo": "Film",
     "stagione": null,
@@ -676,7 +736,7 @@
   },
   {
     "id": 46,
-    "ordine": 46,
+    "ordine": 50,
     "titolo": "Daredevil",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -691,7 +751,7 @@
   },
   {
     "id": 47,
-    "ordine": 47,
+    "ordine": 51,
     "titolo": "Jessica Jones",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -706,7 +766,7 @@
   },
   {
     "id": 48,
-    "ordine": 48,
+    "ordine": 52,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -721,7 +781,7 @@
   },
   {
     "id": 49,
-    "ordine": 49,
+    "ordine": 53,
     "titolo": "Avengers: Age of Ultron",
     "tipo": "Film",
     "stagione": null,
@@ -736,7 +796,7 @@
   },
   {
     "id": 50,
-    "ordine": 50,
+    "ordine": 54,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -751,7 +811,7 @@
   },
   {
     "id": 51,
-    "ordine": 51,
+    "ordine": 55,
     "titolo": "Guardiani della Galassia Vol. 2",
     "tipo": "Film",
     "stagione": null,
@@ -766,7 +826,7 @@
   },
   {
     "id": 52,
-    "ordine": 52,
+    "ordine": 56,
     "titolo": "Luke Cage",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -781,7 +841,7 @@
   },
   {
     "id": 53,
-    "ordine": 53,
+    "ordine": 57,
     "titolo": "I Am Groot",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -796,7 +856,7 @@
   },
   {
     "id": 54,
-    "ordine": 54,
+    "ordine": 58,
     "titolo": "I Am Groot",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -811,7 +871,7 @@
   },
   {
     "id": 55,
-    "ordine": 55,
+    "ordine": 59,
     "titolo": "Daredevil",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -826,7 +886,7 @@
   },
   {
     "id": 56,
-    "ordine": 56,
+    "ordine": 60,
     "titolo": "WHIH Newsfront",
     "tipo": "One Shot/Other",
     "stagione": 1,
@@ -841,7 +901,7 @@
   },
   {
     "id": 57,
-    "ordine": 57,
+    "ordine": 61,
     "titolo": "Deadpool",
     "tipo": "Film",
     "stagione": null,
@@ -856,7 +916,7 @@
   },
   {
     "id": 58,
-    "ordine": 58,
+    "ordine": 62,
     "titolo": "Ant-Man",
     "tipo": "Film",
     "stagione": null,
@@ -871,7 +931,7 @@
   },
   {
     "id": 59,
-    "ordine": 59,
+    "ordine": 63,
     "titolo": "Iron Fist",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -886,7 +946,7 @@
   },
   {
     "id": 60,
-    "ordine": 60,
+    "ordine": 64,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 3,
@@ -901,7 +961,7 @@
   },
   {
     "id": 61,
-    "ordine": 61,
+    "ordine": 65,
     "titolo": "WHIH Newsfront",
     "tipo": "One Shot/Other",
     "stagione": 2,
@@ -916,7 +976,7 @@
   },
   {
     "id": 62,
-    "ordine": 62,
+    "ordine": 66,
     "titolo": "Captain America: Civil War",
     "tipo": "Film",
     "stagione": null,
@@ -931,7 +991,7 @@
   },
   {
     "id": 63,
-    "ordine": 63,
+    "ordine": 67,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 3,
@@ -946,7 +1006,7 @@
   },
   {
     "id": 64,
-    "ordine": 64,
+    "ordine": 68,
     "titolo": "Marvel's Agents of S.H.I.E.L.D.: Slingshot",
     "tipo": "One Shot/Other",
     "stagione": 1,
@@ -961,7 +1021,7 @@
   },
   {
     "id": 65,
-    "ordine": 65,
+    "ordine": 69,
     "titolo": "Black Panther",
     "tipo": "Film",
     "stagione": null,
@@ -976,7 +1036,7 @@
   },
   {
     "id": 66,
-    "ordine": 66,
+    "ordine": 70,
     "titolo": "The Defenders",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -991,7 +1051,7 @@
   },
   {
     "id": 67,
-    "ordine": 67,
+    "ordine": 71,
     "titolo": "Black Widow",
     "tipo": "Film",
     "stagione": null,
@@ -1006,7 +1066,7 @@
   },
   {
     "id": 68,
-    "ordine": 68,
+    "ordine": 72,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 4,
@@ -1021,7 +1081,7 @@
   },
   {
     "id": 69,
-    "ordine": 69,
+    "ordine": 73,
     "titolo": "Doctor Strange",
     "tipo": "Film",
     "stagione": null,
@@ -1036,7 +1096,7 @@
   },
   {
     "id": 70,
-    "ordine": 70,
+    "ordine": 74,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 4,
@@ -1051,7 +1111,7 @@
   },
   {
     "id": 71,
-    "ordine": 71,
+    "ordine": 75,
     "titolo": "Spider-Man: Homecoming",
     "tipo": "Film",
     "stagione": null,
@@ -1066,7 +1126,7 @@
   },
   {
     "id": 72,
-    "ordine": 72,
+    "ordine": 76,
     "titolo": "Thor: Ragnarok",
     "tipo": "Film",
     "stagione": null,
@@ -1081,7 +1141,7 @@
   },
   {
     "id": 73,
-    "ordine": 73,
+    "ordine": 77,
     "titolo": "Inhumans",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1096,7 +1156,7 @@
   },
   {
     "id": 74,
-    "ordine": 74,
+    "ordine": 78,
     "titolo": "Runaways",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1111,7 +1171,7 @@
   },
   {
     "id": 75,
-    "ordine": 75,
+    "ordine": 79,
     "titolo": "The Punisher",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1126,7 +1186,7 @@
   },
   {
     "id": 76,
-    "ordine": 76,
+    "ordine": 80,
     "titolo": "Jessica Jones",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -1141,7 +1201,7 @@
   },
   {
     "id": 77,
-    "ordine": 77,
+    "ordine": 81,
     "titolo": "Cloak & Dagger",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1156,7 +1216,7 @@
   },
   {
     "id": 78,
-    "ordine": 78,
+    "ordine": 82,
     "titolo": "Cloak & Dagger",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -1171,7 +1231,7 @@
   },
   {
     "id": 79,
-    "ordine": 79,
+    "ordine": 83,
     "titolo": "Luke Cage",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -1186,7 +1246,7 @@
   },
   {
     "id": 80,
-    "ordine": 80,
+    "ordine": 84,
     "titolo": "Iron Fist",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -1201,7 +1261,7 @@
   },
   {
     "id": 81,
-    "ordine": 81,
+    "ordine": 85,
     "titolo": "Daredevil",
     "tipo": "Serie TV",
     "stagione": 3,
@@ -1216,7 +1276,7 @@
   },
   {
     "id": 82,
-    "ordine": 82,
+    "ordine": 86,
     "titolo": "Runaways",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -1231,7 +1291,7 @@
   },
   {
     "id": 83,
-    "ordine": 83,
+    "ordine": 87,
     "titolo": "The Punisher",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -1246,7 +1306,7 @@
   },
   {
     "id": 84,
-    "ordine": 84,
+    "ordine": 88,
     "titolo": "Jessica Jones",
     "tipo": "Serie TV",
     "stagione": 3,
@@ -1261,7 +1321,7 @@
   },
   {
     "id": 85,
-    "ordine": 85,
+    "ordine": 89,
     "titolo": "Ant-Man and the Wasp",
     "tipo": "Film",
     "stagione": null,
@@ -1276,7 +1336,7 @@
   },
   {
     "id": 86,
-    "ordine": 86,
+    "ordine": 90,
     "titolo": "Deadpool 2",
     "tipo": "Film",
     "stagione": null,
@@ -1291,7 +1351,7 @@
   },
   {
     "id": 87,
-    "ordine": 87,
+    "ordine": 91,
     "titolo": "Runaways",
     "tipo": "Serie TV",
     "stagione": 3,
@@ -1306,7 +1366,7 @@
   },
   {
     "id": 88,
-    "ordine": 88,
+    "ordine": 92,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 5,
@@ -1321,7 +1381,7 @@
   },
   {
     "id": 89,
-    "ordine": 89,
+    "ordine": 93,
     "titolo": "Avengers: Infinity War",
     "tipo": "Film",
     "stagione": null,
@@ -1336,7 +1396,7 @@
   },
   {
     "id": 90,
-    "ordine": 90,
+    "ordine": 94,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 6,
@@ -1351,7 +1411,7 @@
   },
   {
     "id": 91,
-    "ordine": 91,
+    "ordine": 95,
     "titolo": "The New Mutants",
     "tipo": "Film",
     "stagione": null,
@@ -1365,8 +1425,83 @@
     "fase": null
   },
   {
+    "id": 148,
+    "ordine": 96,
+    "titolo": "Legion",
+    "tipo": "Serie TV",
+    "stagione": 1,
+    "episodi": null,
+    "uscita": "2017-02-08",
+    "uscitaItalia": "2017-02-13",
+    "uscitaRaw": null,
+    "categoria": "X-Men (Fox)",
+    "universo": "legion",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 149,
+    "ordine": 97,
+    "titolo": "Legion",
+    "tipo": "Serie TV",
+    "stagione": 2,
+    "episodi": null,
+    "uscita": "2018-04-03",
+    "uscitaItalia": "2018-04-04",
+    "uscitaRaw": null,
+    "categoria": "X-Men (Fox)",
+    "universo": "legion",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 150,
+    "ordine": 98,
+    "titolo": "Legion",
+    "tipo": "Serie TV",
+    "stagione": 3,
+    "episodi": null,
+    "uscita": "2019-06-24",
+    "uscitaItalia": "2019-07-03",
+    "uscitaRaw": null,
+    "categoria": "X-Men (Fox)",
+    "universo": "legion",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 151,
+    "ordine": 99,
+    "titolo": "The Gifted",
+    "tipo": "Serie TV",
+    "stagione": 1,
+    "episodi": null,
+    "uscita": "2017-10-02",
+    "uscitaItalia": "2017-10-18",
+    "uscitaRaw": null,
+    "categoria": "X-Men (Fox)",
+    "universo": "the-gifted",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 152,
+    "ordine": 100,
+    "titolo": "The Gifted",
+    "tipo": "Serie TV",
+    "stagione": 2,
+    "episodi": null,
+    "uscita": "2018-09-25",
+    "uscitaItalia": "2018-10-15",
+    "uscitaRaw": null,
+    "categoria": "X-Men (Fox)",
+    "universo": "the-gifted",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
     "id": 92,
-    "ordine": 92,
+    "ordine": 101,
     "titolo": "Avengers: Endgame",
     "tipo": "Film",
     "stagione": null,
@@ -1381,7 +1516,7 @@
   },
   {
     "id": 93,
-    "ordine": 93,
+    "ordine": 102,
     "titolo": "Venom",
     "tipo": "Film",
     "stagione": null,
@@ -1396,7 +1531,7 @@
   },
   {
     "id": 94,
-    "ordine": 94,
+    "ordine": 103,
     "titolo": "Shang-Chi e la leggenda dei Dieci Anelli",
     "tipo": "Film",
     "stagione": null,
@@ -1411,7 +1546,7 @@
   },
   {
     "id": 95,
-    "ordine": 95,
+    "ordine": 104,
     "titolo": "Spider-Man: Far From Home",
     "tipo": "Film",
     "stagione": null,
@@ -1426,7 +1561,7 @@
   },
   {
     "id": 96,
-    "ordine": 96,
+    "ordine": 105,
     "titolo": "Agents of S.H.I.E.L.D.",
     "tipo": "Serie TV",
     "stagione": 7,
@@ -1440,8 +1575,23 @@
     "fase": null
   },
   {
+    "id": 153,
+    "ordine": 106,
+    "titolo": "Helstrom",
+    "tipo": "Serie TV",
+    "stagione": 1,
+    "episodi": null,
+    "uscita": "2020-10-16",
+    "uscitaItalia": "2021-02-23",
+    "uscitaRaw": null,
+    "categoria": "Marvel Television",
+    "universo": "helstrom",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
     "id": 97,
-    "ordine": 97,
+    "ordine": 107,
     "titolo": "WandaVision",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1456,7 +1606,7 @@
   },
   {
     "id": 98,
-    "ordine": 98,
+    "ordine": 108,
     "titolo": "The Falcon and The Winter Soldier",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1471,7 +1621,7 @@
   },
   {
     "id": 99,
-    "ordine": 99,
+    "ordine": 109,
     "titolo": "Loki",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1486,7 +1636,7 @@
   },
   {
     "id": 100,
-    "ordine": 100,
+    "ordine": 110,
     "titolo": "What If...?",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1501,7 +1651,7 @@
   },
   {
     "id": 101,
-    "ordine": 101,
+    "ordine": 111,
     "titolo": "Madame Web",
     "tipo": "Film",
     "stagione": null,
@@ -1516,7 +1666,7 @@
   },
   {
     "id": 102,
-    "ordine": 102,
+    "ordine": 112,
     "titolo": "Hawkeye",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1531,7 +1681,7 @@
   },
   {
     "id": 103,
-    "ordine": 103,
+    "ordine": 113,
     "titolo": "Eternals",
     "tipo": "Film",
     "stagione": null,
@@ -1546,7 +1696,7 @@
   },
   {
     "id": 104,
-    "ordine": 104,
+    "ordine": 114,
     "titolo": "Venom - La furia di Carnage",
     "tipo": "Film",
     "stagione": null,
@@ -1561,7 +1711,7 @@
   },
   {
     "id": 105,
-    "ordine": 105,
+    "ordine": 115,
     "titolo": "Spider-Man: No Way Home",
     "tipo": "Film",
     "stagione": null,
@@ -1576,7 +1726,7 @@
   },
   {
     "id": 106,
-    "ordine": 106,
+    "ordine": 116,
     "titolo": "Moon Knight",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1590,8 +1740,23 @@
     "fase": 4
   },
   {
+    "id": 141,
+    "ordine": 117,
+    "titolo": "Ms. Marvel",
+    "tipo": "Serie TV",
+    "stagione": 1,
+    "episodi": null,
+    "uscita": "2022-06-08",
+    "uscitaItalia": "2022-06-08",
+    "uscitaRaw": null,
+    "categoria": "MCU",
+    "universo": "terra-616",
+    "obbligatorio": false,
+    "fase": 4
+  },
+  {
     "id": 107,
-    "ordine": 107,
+    "ordine": 118,
     "titolo": "She-Hulk: Attorney at Law",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1606,7 +1771,7 @@
   },
   {
     "id": 108,
-    "ordine": 108,
+    "ordine": 119,
     "titolo": "Morbius",
     "tipo": "Film",
     "stagione": null,
@@ -1621,7 +1786,7 @@
   },
   {
     "id": 109,
-    "ordine": 109,
+    "ordine": 120,
     "titolo": "Doctor Strange nel Multiverso della Follia",
     "tipo": "Film",
     "stagione": null,
@@ -1636,7 +1801,7 @@
   },
   {
     "id": 110,
-    "ordine": 110,
+    "ordine": 121,
     "titolo": "Thor: Love and Thunder",
     "tipo": "Film",
     "stagione": null,
@@ -1651,7 +1816,7 @@
   },
   {
     "id": 111,
-    "ordine": 111,
+    "ordine": 122,
     "titolo": "Licantropus",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -1666,7 +1831,7 @@
   },
   {
     "id": 112,
-    "ordine": 112,
+    "ordine": 123,
     "titolo": "Guardiani della Galassia Holiday Special",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -1681,7 +1846,7 @@
   },
   {
     "id": 113,
-    "ordine": 113,
+    "ordine": 124,
     "titolo": "Black Panther: Wakanda Forever",
     "tipo": "Film",
     "stagione": null,
@@ -1696,7 +1861,7 @@
   },
   {
     "id": 114,
-    "ordine": 114,
+    "ordine": 125,
     "titolo": "Ant-Man and the Wasp: Quantumania",
     "tipo": "Film",
     "stagione": null,
@@ -1711,7 +1876,7 @@
   },
   {
     "id": 115,
-    "ordine": 115,
+    "ordine": 126,
     "titolo": "Guardiani della Galassia Vol. 3",
     "tipo": "Film",
     "stagione": null,
@@ -1726,7 +1891,7 @@
   },
   {
     "id": 116,
-    "ordine": 116,
+    "ordine": 127,
     "titolo": "Secret Invasion",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1741,7 +1906,7 @@
   },
   {
     "id": 117,
-    "ordine": 117,
+    "ordine": 128,
     "titolo": "Loki",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -1756,7 +1921,7 @@
   },
   {
     "id": 118,
-    "ordine": 118,
+    "ordine": 129,
     "titolo": "The Marvels",
     "tipo": "Film",
     "stagione": null,
@@ -1771,7 +1936,7 @@
   },
   {
     "id": 119,
-    "ordine": 119,
+    "ordine": 130,
     "titolo": "What If...?",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -1786,7 +1951,7 @@
   },
   {
     "id": 120,
-    "ordine": 120,
+    "ordine": 131,
     "titolo": "Logan - The Wolverine",
     "tipo": "Film",
     "stagione": null,
@@ -1801,7 +1966,7 @@
   },
   {
     "id": 121,
-    "ordine": 121,
+    "ordine": 132,
     "titolo": "Echo",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1816,7 +1981,7 @@
   },
   {
     "id": 122,
-    "ordine": 122,
+    "ordine": 133,
     "titolo": "Kraven - Il cacciatore",
     "tipo": "Film",
     "stagione": null,
@@ -1830,8 +1995,68 @@
     "fase": null
   },
   {
+    "id": 147,
+    "ordine": 134,
+    "titolo": "Venom: The Last Dance",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": "2024-10-25",
+    "uscitaItalia": "2024-10-24",
+    "uscitaRaw": null,
+    "categoria": "Sony / Spider-Man",
+    "universo": "terra-688",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 154,
+    "ordine": 135,
+    "titolo": "Spider-Man - Un nuovo universo",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": "2018-12-14",
+    "uscitaItalia": "2018-12-25",
+    "uscitaRaw": null,
+    "categoria": "Sony / Spider-Man",
+    "universo": "terra-1610",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 155,
+    "ordine": 136,
+    "titolo": "Spider-Man: Across the Spider-Verse",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": "2023-06-02",
+    "uscitaItalia": "2023-06-01",
+    "uscitaRaw": null,
+    "categoria": "Sony / Spider-Man",
+    "universo": "terra-1610",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 156,
+    "ordine": 137,
+    "titolo": "Spider-Man: Beyond the Spider-Verse",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": null,
+    "uscitaItalia": null,
+    "uscitaRaw": "giugno 2027",
+    "categoria": "Sony / Spider-Man",
+    "universo": "terra-1610",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
     "id": 123,
-    "ordine": 123,
+    "ordine": 138,
     "titolo": "Agatha All Along",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1846,7 +2071,7 @@
   },
   {
     "id": 124,
-    "ordine": 124,
+    "ordine": 139,
     "titolo": "Deadpool & Wolverine",
     "tipo": "Film",
     "stagione": null,
@@ -1861,7 +2086,7 @@
   },
   {
     "id": 125,
-    "ordine": 125,
+    "ordine": 140,
     "titolo": "What If...?",
     "tipo": "Serie TV",
     "stagione": 3,
@@ -1876,7 +2101,7 @@
   },
   {
     "id": 126,
-    "ordine": 126,
+    "ordine": 141,
     "titolo": "Il tuo amichevole Spider-Man di quartiere",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1891,7 +2116,7 @@
   },
   {
     "id": 127,
-    "ordine": 127,
+    "ordine": 142,
     "titolo": "Captain America: Brave New World",
     "tipo": "Film",
     "stagione": null,
@@ -1906,7 +2131,7 @@
   },
   {
     "id": 128,
-    "ordine": 128,
+    "ordine": 143,
     "titolo": "Daredevil: Rinascita",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1921,7 +2146,7 @@
   },
   {
     "id": 129,
-    "ordine": 129,
+    "ordine": 144,
     "titolo": "Thunderbolts",
     "tipo": "Film",
     "stagione": null,
@@ -1936,7 +2161,7 @@
   },
   {
     "id": 130,
-    "ordine": 130,
+    "ordine": 145,
     "titolo": "Ironheart",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1951,7 +2176,7 @@
   },
   {
     "id": 131,
-    "ordine": 131,
+    "ordine": 146,
     "titolo": "The Fantastic Four: First Steps",
     "tipo": "Film",
     "stagione": null,
@@ -1966,7 +2191,7 @@
   },
   {
     "id": 132,
-    "ordine": 132,
+    "ordine": 147,
     "titolo": "Eyes of Wakanda",
     "tipo": "Miniserie",
     "stagione": null,
@@ -1981,7 +2206,7 @@
   },
   {
     "id": 133,
-    "ordine": 133,
+    "ordine": 148,
     "titolo": "Marvel Zombies",
     "tipo": "Miniserie",
     "stagione": null,
@@ -1996,7 +2221,7 @@
   },
   {
     "id": 134,
-    "ordine": 134,
+    "ordine": 149,
     "titolo": "Wonder Man",
     "tipo": "Miniserie",
     "stagione": null,
@@ -2011,7 +2236,7 @@
   },
   {
     "id": 135,
-    "ordine": 135,
+    "ordine": 150,
     "titolo": "Daredevil: Rinascita",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -2026,7 +2251,7 @@
   },
   {
     "id": 136,
-    "ordine": 136,
+    "ordine": 151,
     "titolo": "The Punisher: One Last Kill",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -2041,7 +2266,7 @@
   },
   {
     "id": 137,
-    "ordine": 137,
+    "ordine": 152,
     "titolo": "Spider-Man: Brand New Day",
     "tipo": "Film",
     "stagione": null,
@@ -2056,7 +2281,7 @@
   },
   {
     "id": 138,
-    "ordine": 138,
+    "ordine": 153,
     "titolo": "Avengers: Doomsday",
     "tipo": "Film",
     "stagione": null,
@@ -2071,7 +2296,7 @@
   },
   {
     "id": 139,
-    "ordine": 139,
+    "ordine": 154,
     "titolo": "Vision Quest",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -2086,7 +2311,7 @@
   },
   {
     "id": 140,
-    "ordine": 140,
+    "ordine": 155,
     "titolo": "Il tuo amichevole Spider-Man di quartiere",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -2098,5 +2323,20 @@
     "universo": "terra-86445",
     "obbligatorio": false,
     "fase": null
+  },
+  {
+    "id": 142,
+    "ordine": 156,
+    "titolo": "Avengers: Secret Wars",
+    "tipo": "Film",
+    "stagione": null,
+    "episodi": null,
+    "uscita": "2027-12-17",
+    "uscitaItalia": "2027-12-15",
+    "uscitaRaw": null,
+    "categoria": "MCU",
+    "universo": "terra-616",
+    "obbligatorio": true,
+    "fase": 6
   }
 ]
