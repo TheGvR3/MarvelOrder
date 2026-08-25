@@ -53,7 +53,14 @@ Three consequences that are easy to break:
 
 **Series linking.** `linkSeries()` runs once at load and mutates each item in place, adding `displayTitle`, `seasonNumber`, and (for multi-part titles) `siblings`. The grouping key is `titolo::tipo`, so a film and a TV series with the same name are never merged. Ordering within a group is season, then `episodeStart()` — a season can be split into episode blocks (`"1-7"`, `"8-16"`). `siblings` is what powers the season chips.
 
-**Cross-references by `ordine`.** `ordine` is the stable identity used everywhere: DOM ids are `tl-item-${ordine}`, `siblings` store `ordine`, and `findItemByOrdine()` resolves them. `id` in the data is unused by the app. `jumpToItem()` clears all filters and re-renders if the target card is currently filtered out.
+**`id` is identity, `ordine` is position.** They used to be the same field, which meant inserting a title in the middle renumbered everything and silently moved the cross-references, the DOM anchors and the visitor's watched list onto the wrong titles. Now:
+
+- `id` is immutable and never reused. DOM ids are `tl-item-${id}`, `siblings` carry `id`, `findItemById()` resolves them, `dettagli.json` is keyed by `id`, and `state.visti` / `localStorage` store `id`.
+- `ordine` is free to change. It survives only as the narrative position: the sort tiebreaker in all three views, the `#062` on the card and in the modal eyebrow, and the "posizione #N" in a season chip's tooltip.
+
+The two are still numerically equal on the first 140 entries — the migration kept them aligned so `dettagli.json` needed no remapping — but nothing may assume that. **Give a new entry the next free `id`, never the `id` of the position it occupies.**
+
+`jumpToItem()` clears all filters and re-renders if the target card is currently filtered out.
 
 **Shared season row.** `buildSeasonsRow()` builds the same chip row for both the timeline card and the modal; the caller supplies `labelText`, `className`, and `onSelect` (`jumpToItem` in the card, `openModal` in the modal).
 
@@ -65,8 +72,6 @@ Focus handling has three parts that are easy to break: `trapFocus` cycles Tab in
 
 **Watched titles.** `state.visti` is a Set of `ordine`, persisted to `localStorage` under `marvelsite:visti`. Every read and write is wrapped in try/catch — private browsing and blocked third-party storage make `localStorage` *throw*, not return null, and the site has to keep working without persistence. `init()` drops any stored `ordine` that no longer exists in the data.
 
-**`ordine` is doing two jobs and that is a known liability.** It is both the narrative position *and* the identity used by `dettagli.json` keys, cross-references, DOM ids, `siblings` and the persisted watched list. Inserting a title in the middle therefore renumbers everything and silently reassigns a visitor's watched list to the wrong titles. `id` exists in the data, is always equal to `ordine`, and is otherwise unused — it is the intended escape hatch: make `id` the immutable key, let `ordine` become a free-floating position. Do that migration *before* inserting any title.
-
 **Search normalization.** `normalize()` lowercases, folds curly apostrophes onto `'`, and strips diacritics; `linkSeries()` precomputes `item.searchKey` from it and the search box runs its input through the same function. Comparing raw strings meant `L'inizio` typed with the other apostrophe found nothing.
 
 `searchKey` also indexes a dot-stripped copy of the title, so `S.H.I.E.L.D.` is found by typing `shield` — which is how everyone types it. Five titles gain a second form (`What If...?` → `What If?`, `Vol. 2` → `Vol 2`).
@@ -77,7 +82,7 @@ Focus handling has three parts that are easy to break: `trapFocus` cycles Tab in
 
 ## data.json
 
-Array of 140 objects. Fields: `id` (unused, always equal to `ordine`), `ordine` (1-based narrative position and item identity), `titolo`, `tipo` (`Film` | `Serie TV` | `Miniserie` | `One Shot/Other`), `stagione`, `episodi` (`"1-7"` style block, nullable), `uscita` (`YYYY-MM-DD`), `uscitaRaw` (currently null everywhere; kept for dates that cannot be parsed, shown verbatim when `uscita` is null), `categoria`, `obbligatorio` (drives the "Solo visione essenziale" filter and the dimmed `is-optional` card style), `fase` (1–6 or null).
+Array of 140 objects. Fields: `id` (immutable identity, never reused), `ordine` (1-based narrative position, free to change), `titolo`, `tipo` (`Film` | `Serie TV` | `Miniserie` | `One Shot/Other`), `stagione`, `episodi` (`"1-7"` style block, nullable), `uscita` (`YYYY-MM-DD`), `uscitaRaw` (currently null everywhere; kept for dates that cannot be parsed, shown verbatim when `uscita` is null), `categoria`, `obbligatorio` (drives the "Solo visione essenziale" filter and the dimmed `is-optional` card style), `fase` (1–6 or null).
 
 **`uscita` and `categoria` are now populated on all 140 entries**, and the code paths for their absence exist only as a safety net — don't add an entry that relies on them. Release dates use the **US/original** date throughout (the Italian date differs by up to 17 months for older films, e.g. Blade: US 1998-08-21, Italy 2000-01-07); mixing the two conventions silently reorders the `uscita` view.
 
@@ -95,9 +100,9 @@ Array of 140 objects. Fields: `id` (unused, always equal to `ordine`), `ordine` 
 
 ## dettagli.json
 
-An object keyed by `ordine` (string keys — it is JSON), one entry per title, ~150 KB. Fetched **in parallel with `data.json` and allowed to fail**: `init()` swallows a missing or malformed `dettagli.json` and the site runs with the modal sections hidden. Keep it that way — this file is researched data, `data.json` is the spreadsheet export, and they have different provenance and update cadence. Merging them would mean losing all of this on the next re-export from the .xlsx.
+An object keyed by `id` (string keys — it is JSON), one entry per title, ~150 KB. Fetched **in parallel with `data.json` and allowed to fail**: `init()` swallows a missing or malformed `dettagli.json` and the site runs with the modal sections hidden. Keep it that way — this file is researched data, `data.json` is the spreadsheet export, and they have different provenance and update cadence. Merging them would mean losing all of this on the next re-export from the .xlsx.
 
-Fields per entry: `ambientazione` (free Italian prose, 137/140), `annoAmbientazione` (integer, 140/140), `annoStimato` (`true` on the 6 deduced years, absent otherwise), `annoNota` (why that year, on the 7 titles that needed one), `cast` (`{attore, personaggio}`, 140/140), `prerequisiti` / `collegati` (arrays of `ordine`), `sequelPrequel` (`{ordine, relazione}` with `relazione` in `sequel|prequel|spin-off`), `note`.
+Fields per entry: `ambientazione` (free Italian prose, 137/140), `annoAmbientazione` (integer, 140/140), `annoStimato` (`true` on the 6 deduced years, absent otherwise), `annoNota` (why that year, on the 7 titles that needed one), `cast` (`{attore, personaggio}`, 140/140), `prerequisiti` / `collegati` (arrays of `id`), `sequelPrequel` (`{id, relazione}` with `relazione` in `sequel|prequel|spin-off`), `note`.
 
 `annoAmbientazione` is **negative for BC settings** (Eyes of Wakanda is `-1260`) — `annoLabel()` handles the sign. It is now populated on all 140, but 7 of those years were not documented and had to be placed: Loki S2 (the TVA is outside time), `What If...?` S2 and S3 (multiverse anthologies), the second season of the animated Spider-Man, and the three unreleased titles. Six of the seven carry `annoStimato: true` and the UI renders them as *circa 2028*, dimmed, with `annoNota` as the tooltip. **Keep that distinction.** Dropping the flag would turn a deduction into a fact on a site whose whole point is getting the order right. The seventh, `Il tuo amichevole Spider-Man` S1, is documented (autumn 2015) and is not flagged.
 

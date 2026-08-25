@@ -71,9 +71,9 @@
     }
   }
 
-  function toggleVisto(ordine) {
-    if (state.visti.has(ordine)) state.visti.delete(ordine);
-    else state.visti.add(ordine);
+  function toggleVisto(id) {
+    if (state.visti.has(id)) state.visti.delete(id);
+    else state.visti.add(id);
     salvaVisti();
   }
 
@@ -126,7 +126,7 @@
   // annoAmbientazione vive in dettagli.json, che puo' mancare: senza anno il
   // titolo scivola in fondo al proprio universo invece di rompere l'ordinamento.
   function annoAmb(item) {
-    const det = state.dettagli[item.ordine];
+    const det = state.dettagli[item.id];
     return det && Number.isInteger(det.annoAmbientazione) ? det.annoAmbientazione : null;
   }
 
@@ -184,7 +184,7 @@
   function unitaKey(item) {
     return item.stagione != null
       ? `${item.titolo}::${item.tipo}::${item.stagione}`
-      : `ordine::${item.ordine}`;
+      : `id::${item.id}`;
   }
 
   const staCollassando = () => state.mode !== 'cronologico';
@@ -212,12 +212,12 @@
 
   // Una stagione e' vista quando lo sono tutti i suoi blocchi. Spuntarne due su
   // tre non e' "vista": e' un terzo stato, e la card lo dichiara.
-  const unitaVista = u => u.items.every(i => state.visti.has(i.ordine));
-  const unitaParziale = u => !unitaVista(u) && u.items.some(i => state.visti.has(i.ordine));
+  const unitaVista = u => u.items.every(i => state.visti.has(i.id));
+  const unitaParziale = u => !unitaVista(u) && u.items.some(i => state.visti.has(i.id));
 
   function toggleUnita(u) {
     const tutti = unitaVista(u);
-    u.items.forEach(i => { if (tutti) state.visti.delete(i.ordine); else state.visti.add(i.ordine); });
+    u.items.forEach(i => { if (tutti) state.visti.delete(i.id); else state.visti.add(i.id); });
     salvaVisti();
   }
 
@@ -244,7 +244,7 @@
       item.seasonNumber = item.stagione || null;
       // 426 attori e 473 personaggi erano nei dati ma invisibili alla ricerca:
       // cercare "Tom Holland" o "Scarlet Witch" non trovava nulla.
-      const det = state.dettagli[item.ordine];
+      const det = state.dettagli[item.id];
       const cast = det && det.cast ? det.cast.map(c => `${c.attore} ${c.personaggio}`).join(' ') : '';
       // Gli acronimi puntati vanno indicizzati anche senza punti: "S.H.I.E.L.D."
       // non veniva trovato scrivendo "shield", che e' come lo cerca chiunque.
@@ -267,12 +267,12 @@
         const k = unitaKey(other);
         if (gia.has(k)) return;
         gia.add(k);
-        perStagione.push({ ordine: other.ordine, season: other.seasonNumber, episodi: null, key: k });
+        perStagione.push({ id: other.id, ordine: other.ordine, season: other.seasonNumber, episodi: null, key: k });
       });
       group.forEach(item => {
         item.siblings = group
           .filter(other => other !== item)
-          .map(other => ({ ordine: other.ordine, season: other.seasonNumber, episodi: other.episodi }));
+          .map(other => ({ id: other.id, ordine: other.ordine, season: other.seasonNumber, episodi: other.episodi }));
         item.siblingsStagioni = perStagione.filter(other => other.key !== unitaKey(item));
       });
     });
@@ -306,8 +306,8 @@
     if (els.totalCount) els.totalCount.textContent = state.unita.size;
     state.visti = caricaVisti();
     // un ordine rimasto in localStorage e non piu' presente nei dati va scartato
-    const esistenti = new Set(state.data.map(d => d.ordine));
-    [...state.visti].forEach(o => { if (!esistenti.has(o)) state.visti.delete(o); });
+    const esistenti = new Set(state.data.map(d => d.id));
+    [...state.visti].forEach(x => { if (!esistenti.has(x)) state.visti.delete(x); });
     populateFilters();
     bindEvents();
     render({ animate: true });
@@ -454,7 +454,7 @@
       if (state.universo && item.universo !== state.universo) return false;
       if (state.fase === 'nessuna' ? item.fase != null : state.fase && String(item.fase) !== state.fase) return false;
       if (state.requiredOnly && !item.obbligatorio) return false;
-      if (state.hideWatched && state.visti.has(item.ordine)) return false;
+      if (state.hideWatched && state.visti.has(item.id)) return false;
       return true;
     });
   }
@@ -552,8 +552,8 @@
     return part.episodi ? `S${part.season} · ${part.episodi.replace('-', '–')}` : `S${part.season}`;
   }
 
-  function findItemByOrdine(ordine) {
-    return state.data.find(i => i.ordine === ordine);
+  function findItemById(id) {
+    return state.data.find(i => i.id === id);
   }
 
   // labelText/onSelect let the same row work both in the timeline card
@@ -568,19 +568,19 @@
     row.appendChild(label);
 
     const all = (parts || item.siblings)
-      .concat([self || { ordine: item.ordine, season: item.seasonNumber, episodi: item.episodi }])
+      .concat([self || { id: item.id, ordine: item.ordine, season: item.seasonNumber, episodi: item.episodi }])
       .sort((a, b) => (a.season || 0) - (b.season || 0) || episodeStart({ episodi: a.episodi }) - episodeStart({ episodi: b.episodi }));
 
     all.forEach(s => {
       const chip = document.createElement('button');
       chip.type = 'button';
-      chip.className = 'season-chip' + (s.ordine === item.ordine ? ' is-current' : '');
+      chip.className = 'season-chip' + (s.id === item.id ? ' is-current' : '');
       chip.textContent = chipLabel(s);
-      if (s.ordine !== item.ordine) {
+      if (s.id !== item.id) {
         chip.title = `Vai a ${chipLabel(s)} (posizione #${s.ordine})`;
         chip.addEventListener('click', e => {
           e.stopPropagation();
-          onSelect(s.ordine);
+          onSelect(s.id);
         });
       } else {
         chip.disabled = true;
@@ -591,21 +591,21 @@
     return row;
   }
 
-  function jumpToItem(ordine) {
+  function jumpToItem(id) {
     // il blocco di destinazione puo' essere accorpato dentro la card della sua
     // stagione: in quel caso la card visibile e' quella del primo blocco
     if (staCollassando()) {
-      const dest = findItemByOrdine(ordine);
-      if (dest && dest.unita) ordine = dest.unita.primo.ordine;
+      const dest = findItemById(id);
+      if (dest && dest.unita) id = dest.unita.primo.id;
     }
-    let target = document.getElementById(`tl-item-${ordine}`);
+    let target = document.getElementById(`tl-item-${id}`);
     if (!target) {
       // the sibling season is hidden by an active filter: clear filters so it's reachable,
       // and say so — otherwise the result count silently jumps back to the full list.
       resetFilters();
       render();
       announce('Filtri azzerati per mostrare la parte selezionata.');
-      target = document.getElementById(`tl-item-${ordine}`);
+      target = document.getElementById(`tl-item-${id}`);
       if (!target) return;
     }
     target.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -771,8 +771,8 @@
     }
     els.modalBody.appendChild(uscite);
 
-    const apriScheda = ordine => {
-      const sibling = findItemByOrdine(ordine);
+    const apriScheda = id => {
+      const sibling = findItemById(id);
       if (sibling) openModal(sibling);
     };
 
@@ -784,7 +784,7 @@
           className: 'modal-seasons',
           onSelect: apriScheda,
           parts: parti,
-          self: staCollassando() ? { ordine: item.ordine, season: item.seasonNumber, episodi: null } : null,
+          self: staCollassando() ? { id: item.id, ordine: item.ordine, season: item.seasonNumber, episodi: null } : null,
         }));
       }
     }
@@ -799,13 +799,13 @@
         onSelect: apriScheda,
         parts: unitaMod.items
           .filter(b => b !== item)
-          .map(b => ({ ordine: b.ordine, season: b.seasonNumber, episodi: b.episodi })),
+          .map(b => ({ id: b.id, ordine: b.ordine, season: b.seasonNumber, episodi: b.episodi })),
       }));
     }
 
     const sections = document.createElement('div');
     sections.className = 'modal-sections';
-    const det = state.dettagli[item.ordine] || null;
+    const det = state.dettagli[item.id] || null;
 
     // una sezione senza dati non viene emessa: cinque scatole con la stessa frase
     // di attesa erano peggio che non mostrarle affatto
@@ -824,13 +824,13 @@
     const giaMostrati = new Set();
 
     // riga di collegamenti ad altri titoli: aprono la loro scheda, come i chip stagione
-    function titleLinks(ordini, etichetta) {
-      const validi = (ordini || [])
-        .filter(o => !giaMostrati.has(o))
-        .map(findItemByOrdine)
+    function titleLinks(ids, etichetta) {
+      const validi = (ids || [])
+        .filter(x => !giaMostrati.has(x))
+        .map(findItemById)
         .filter(Boolean);
       if (!validi.length) return null;
-      validi.forEach(v => giaMostrati.add(v.ordine));
+      validi.forEach(v => giaMostrati.add(v.id));
       const wrap = document.createElement('div');
       wrap.className = 'link-row';
       validi.forEach(other => {
@@ -901,8 +901,8 @@
         if (!det.sequelPrequel || !det.sequelPrequel.length) return null;
         const wrap = document.createElement('div');
         ['prequel', 'sequel', 'spin-off'].forEach(rel => {
-          const ordini = det.sequelPrequel.filter(x => x.relazione === rel).map(x => x.ordine);
-          const row = titleLinks(ordini, rel);
+          const ids = det.sequelPrequel.filter(x => x.relazione === rel).map(x => x.id);
+          const row = titleLinks(ids, rel);
           if (!row) return;
           const lab = document.createElement('p');
           lab.className = 'rel-label';
@@ -972,7 +972,7 @@
     // il singolo blocco: lo stato "visto" segue la stessa unita'
     const unita = item.unita;
     const collassa = staCollassando() && unita.items.length > 1;
-    const eVisto = collassa ? unitaVista(unita) : state.visti.has(item.ordine);
+    const eVisto = collassa ? unitaVista(unita) : state.visti.has(item.id);
     const eParziale = collassa && unitaParziale(unita);
 
     const li = document.createElement('article');
@@ -981,7 +981,7 @@
       + (eVisto ? ' is-visto' : '')
       + (eParziale ? ' is-visto-parziale' : '');
     li.style.animationDelay = (Math.min(displayIndex, 12) * 0.02) + 's';
-    li.id = `tl-item-${item.ordine}`;
+    li.id = `tl-item-${item.id}`;
 
     const dot = document.createElement('span');
     dot.className = 'tl-dot';
@@ -1042,7 +1042,7 @@
     visto.setAttribute('aria-label', `Segna ${cosaSegna} come ${eVisto ? 'non vista' : 'vista'}`);
     visto.title = eParziale
       ? (() => {
-          const fatti = unita.items.filter(i => state.visti.has(i.ordine)).length;
+          const fatti = unita.items.filter(i => state.visti.has(i.id)).length;
           return `Stagione vista in parte (${fatti} blocc${fatti === 1 ? 'o' : 'hi'} su ${unita.items.length}). Segna tutta la stagione`;
         })()
       : (eVisto ? 'Segna come non visto' : 'Segna come visto');
@@ -1050,7 +1050,7 @@
     visto.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true" width="14" height="14"><path d="M2 8.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     visto.addEventListener('click', e => {
       e.stopPropagation();          // non deve aprire la scheda
-      if (collassa) toggleUnita(unita); else toggleVisto(item.ordine);
+      if (collassa) toggleUnita(unita); else toggleVisto(item.id);
       render();
     });
     visto.addEventListener('keydown', e => e.stopPropagation());
@@ -1065,7 +1065,7 @@
         className: 'card-seasons',
         onSelect: jumpToItem,
         parts: parti,
-        self: staCollassando() ? { ordine: item.ordine, season: item.seasonNumber, episodi: null } : null,
+        self: staCollassando() ? { id: item.id, ordine: item.ordine, season: item.seasonNumber, episodi: null } : null,
       }));
     }
 
@@ -1074,7 +1074,7 @@
     card.appendChild(meta);
 
     if (state.mode === 'cronologico') {
-      const det = state.dettagli[item.ordine];
+      const det = state.dettagli[item.id];
       const anno = det && annoLabel(det.annoAmbientazione);
       if (anno) {
         const amb = document.createElement('p');
