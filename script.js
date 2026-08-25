@@ -82,7 +82,7 @@
   // I titoli senza fase (Fox, Sony, TV, pre-MCU) finivano tutti in un unico blocco da 82 card.
   // Qui definisce l'ordine con cui le saghe si susseguono dopo le sei Fasi.
   const SAGA_ORDER = [
-    'Pre-MCU',
+    'Altre licenze',
     'X-Men (Fox)',
     'Fantastici 4 (Fox)',
     'Sony / Spider-Man',
@@ -107,13 +107,20 @@
     { id: 'terra-688',    nome: 'Terra-688',                       terra: 'Universo Sony: Venom, Morbius, Madame Web, Kraven' },
     { id: 'terra-26320',  nome: 'Terra-26320',                     terra: 'Blade, trilogia e serie' },
     { id: 'terra-96283',  nome: 'Terra-96283',                     terra: 'Spider-Man, trilogia di Sam Raimi' },
+    { id: 'terra-1610',   nome: 'Terra-1610',                      terra: 'Spider-Verse, la trilogia animata di Miles Morales' },
+    { id: 'legion',       nome: 'Universo di Legion',              terra: 'FX, parallelo ai film X-Men. Marvel non gli ha assegnato una Terra' },
     { id: 'terra-120703', nome: 'Terra-120703',                    terra: 'The Amazing Spider-Man, duologia di Marc Webb' },
     { id: 'terra-121698', nome: 'Terra-121698',                    terra: 'I Fantastici 4, dittico di Tim Story' },
     { id: 'terra-701306', nome: 'Terra-701306',                    terra: 'Daredevil ed Elektra, 2003-2005' },
     { id: 'terra-86445',  nome: 'Terra-86445',                     terra: 'Il tuo amichevole Spider-Man di quartiere' },
+    { id: 'terra-121347', nome: 'Terra-121347',                    terra: 'Ghost Rider, i due film con Nicolas Cage' },
+    { id: 'the-gifted',   nome: 'Universo di The Gifted',          terra: 'Fox, linea temporale in cui gli X-Men sono spariti. Nessuna Terra assegnata' },
     { id: 'terra-15866',  nome: 'Terra-15866',                     terra: 'Fantastic Four, reboot di Josh Trank' },
     { id: 'terra-58732',  nome: 'Terra-58732',                     terra: 'The Punisher, 2004' },
     { id: 'terra-828',    nome: 'Terra-828',                       terra: 'The Fantastic Four: First Steps' },
+    { id: 'terra-400083', nome: 'Terra-400083',                    terra: 'Hulk, il film di Ang Lee del 2003' },
+    { id: 'terra-47281',  nome: 'Terra-47281',                     terra: 'Punisher - Zona di guerra, 2008' },
+    { id: 'helstrom',     nome: 'Universo di Helstrom',            terra: 'Hulu, dichiarato fuori dall\'MCU dal suo showrunner. Nessuna Terra assegnata' },
     { id: 'multiverso',   nome: 'Multiverso',                      terra: 'What If...? e Marvel Zombies: nessuna Terra unica' },
   ];
   const UNIVERSI_BY_ID = new Map(UNIVERSI.map((u, i) => [u.id, Object.assign({ rank: i }, u)]));
