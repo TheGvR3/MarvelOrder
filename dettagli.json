@@ -1677,7 +1677,7 @@
     "sequelPrequel": [
       {
         "id": 38,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "Rivela che il vero Mandarino esiste: filo narrativo ripreso in Shang-Chi e la leggenda dei Dieci Anelli, dove Slattery ricompare."
@@ -4849,7 +4849,7 @@
       },
       {
         "id": 97,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "WandaVision e' un prerequisito narrativo di fatto: l'arco di Wanda parte direttamente dal finale della serie."
@@ -5308,7 +5308,7 @@
       },
       {
         "id": 125,
-        "relazione": "prequel"
+        "relazione": "sequel"
       }
     ],
     "note": "annoAmbientazione a null: e' un'antologia multiversale in cui ogni episodio ha una collocazione temporale propria.",
@@ -5584,7 +5584,7 @@
     "sequelPrequel": [
       {
         "id": 119,
-        "relazione": "sequel"
+        "relazione": "prequel"
       }
     ],
     "note": "annoAmbientazione a null: antologia multiversale senza una collocazione temporale unica. Stagione conclusiva della serie.",
@@ -6162,7 +6162,7 @@
       },
       {
         "id": 131,
-        "relazione": "sequel"
+        "relazione": "prequel"
       },
       {
         "id": 142,
@@ -6214,7 +6214,7 @@
     "sequelPrequel": [
       {
         "id": 97,
-        "relazione": "sequel"
+        "relazione": "prequel"
       },
       {
         "id": 123,
