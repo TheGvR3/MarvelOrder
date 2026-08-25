@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Static single-page site (no build step, no dependencies, no tests) that renders a Marvel watch-order timeline of 140 titles. All UI text and all data fields are in Italian — keep new strings and field names in Italian for consistency.
+Static single-page site (no build step, no dependencies, no tests) that renders a Marvel watch-order timeline of 140 entries — **135 titles**, because five of them are extra blocks of a season that is already listed (see **Units**). All UI text and all data fields are in Italian — keep new strings and field names in Italian for consistency.
 
 Five files matter: [index.html](index.html) (static shell + modal markup), [script.js](script.js) (all logic, one IIFE), [style.css](style.css), [data.json](data.json) (the 140 entries), [dettagli.json](dettagli.json) (per-title research powering the modal). `Marvel_Ordine_Cronologico.xlsx` is the original spreadsheet `data.json` was extracted from; it is not read at runtime.
 
@@ -39,6 +39,18 @@ Grouping is a *run-length* pass over the already-sorted list, not a bucket-by-ke
 
 The `fase` view deliberately keeps grouping by `categoria`. Grouping it by universe would collapse the Marvel Television and Marvel Netflix blocks into Terra-616 and put them in conflict with the six Phases, which are also Terra-616. The universe is declared in the divider's `sublabel` instead (`Sony / Spider-Man` reads `Terra-96283 · Terra-120703 · Terra-688`), so nothing is hidden and no group is broken.
 
+**Units — the site counts seasons, not rows.** `data.json` has 140 entries but only **135 units**: a unit is `titolo::tipo::stagione` (or the entry itself when `stagione` is null). Agents of S.H.I.E.L.D. occupies 12 rows for 7 seasons, because four of its seasons are cut into blocks — `episodi: "1-7"`, `"8-16"` — so that a film can be watched in the middle. Thor: The Dark World falls inside season 1, Age of Ultron inside season 2, Civil War inside season 3, Doctor Strange inside season 4. It is the only series that is split.
+
+`buildUnita()` runs once at load and builds `state.unita` (a Map keyed by unit), setting `item.unitaKey` and `item.unita` on every entry, plus `primo` (the first block, whose date is the season's start) and `dataFine` (the last block's date, present only when the season really straddles more than one).
+
+`collassaUnita()` then drops every non-first block **except in `cronologico`**, where the split is the whole point. So the timeline renders 135 cards in `fase` and `uscita` and 140 in `cronologico`. It runs *after* `getSorted()`, which is what makes the surviving block the earliest one in that view's order.
+
+Three consequences that are easy to break:
+
+- **The count is always in units**, even in `cronologico` where the cards are more numerous — `contaUnita(filtered)`, not `filtered.length`. Otherwise the same selection reports two different numbers depending on the open tab. The empty-state check uses `sorted.length`, which is the card count.
+- **A season is watched only when all its blocks are.** `unitaVista()` / `unitaParziale()` derive that from `state.visti`, which still stores plain `ordine` values — the storage format did not change. A partially watched season renders `aria-pressed="mixed"` and `.is-visto-parziale`; clicking the collapsed checkbox calls `toggleUnita()`, which marks or clears every block at once. The progress bar counts fully watched units out of 135.
+- **The season chips mirror the cards.** `linkSeries()` precomputes two lists: `siblings` (every part, used in `cronologico`) and `siblingsStagioni` (one per unit, used elsewhere). Passing the wrong one puts 12 chips under a card that stands for 7 seasons. `buildSeasonsRow()` takes an explicit `parts`/`self` pair for this. `jumpToItem()` resolves a block to `unita.primo.ordine` while collapsing, because the block's own card is not in the DOM.
+
 **Series linking.** `linkSeries()` runs once at load and mutates each item in place, adding `displayTitle`, `seasonNumber`, and (for multi-part titles) `siblings`. The grouping key is `titolo::tipo`, so a film and a TV series with the same name are never merged. Ordering within a group is season, then `episodeStart()` — a season can be split into episode blocks (`"1-7"`, `"8-16"`). `siblings` is what powers the season chips.
 
 **Cross-references by `ordine`.** `ordine` is the stable identity used everywhere: DOM ids are `tl-item-${ordine}`, `siblings` store `ordine`, and `findItemByOrdine()` resolves them. `id` in the data is unused by the app. `jumpToItem()` clears all filters and re-renders if the target card is currently filtered out.
@@ -57,6 +69,8 @@ Focus handling has three parts that are easy to break: `trapFocus` cycles Tab in
 
 **Search normalization.** `normalize()` lowercases, folds curly apostrophes onto `'`, and strips diacritics; `linkSeries()` precomputes `item.searchKey` from it and the search box runs its input through the same function. Comparing raw strings meant `L'inizio` typed with the other apostrophe found nothing.
 
+`searchKey` also indexes a dot-stripped copy of the title, so `S.H.I.E.L.D.` is found by typing `shield` — which is how everyone types it. Five titles gain a second form (`What If...?` → `What If?`, `Vol. 2` → `Vol 2`).
+
 `searchKey` also folds in the entry's cast — actors *and* character names — so "Chris Evans" or "Scarlet Witch" are findable. This is why `init()` must parse `dettagli.json` **before** calling `linkSeries()`. Coverage is limited by the data: each entry lists 4-6 leading roles, so an actor is found where they star, not everywhere they appear.
 
 **Toast.** `announce()` creates `#toast` on demand (a `role="status"` live region) and auto-hides it. `jumpToItem()` uses it because reaching a filtered-out sibling silently wipes every filter.
@@ -74,6 +88,8 @@ Array of 140 objects. Fields: `id` (unused, always equal to `ordine`), `ordine` 
 `fase` is null for 82 entries and that is correct: only Marvel Studios titles belong to an official Phase. Fox, Sony, Netflix, Marvel Television and pre-MCU titles are grouped by `categoria` instead.
 
 `uscitaItalia` (136/140) is the Italian theatrical or platform release; it is null only where no Italian distribution exists (the two `WHIH Newsfront` entries, `Slingshot`) or the title is unreleased. **It is the date the UI shows and sorts by** — `dataVisione()` falls back to `uscita` — because the `uscita` view promises the order the audience saw them in, and this audience is Italian. Do not assume Italy is later: on 47 of the 103 entries where the two differ the Italian date is *earlier* (Europe releases on Wednesday, the US on Friday). The large gaps are historical — Blade is 504 days.
+
+`episodi` marks a **partial** block only. It used to also carry whole-season ranges (`"1-22"` on season 5), which said nothing and made the card read *Stagione 5 · Episodi 1–22*; those are now null. A non-null `episodi` therefore means "this season is split", and that is what `buildUnita()` and the UI rely on. 9 entries carry one, all of them Agents of S.H.I.E.L.D.
 
 `stagione`/`episodi` stay null on `Film` and on `Miniserie`. The `tipo` and `categoria` dropdowns are populated from the data at load, so new values appear as filters automatically.
 

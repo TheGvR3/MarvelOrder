@@ -954,3 +954,28 @@ body.modal-open{ overflow:hidden; }
   line-height:1.5;
   color:var(--ink-faint);
 }
+
+
+/* ============================================================
+   STAGIONI ACCORPATE
+   ============================================================ */
+
+/* Una stagione spezzata in blocchi e' una card sola nelle Fasi e nell'Uscita.
+   Se ne hai visti alcuni ma non tutti non e' ne' vista ne' da vedere: la
+   spunta resta vuota ma bordata, e aria-pressed vale "mixed". */
+.visto-btn.is-parziale{
+  border-color:var(--gold);
+  color:var(--gold);
+  background:rgba(209,164,65,0.10);
+}
+.visto-btn.is-parziale svg{ opacity:0.45; }
+
+.card-blocchi{
+  color:var(--ink-faint);
+  font-style:italic;
+  text-transform:none;
+  letter-spacing:0;
+}
+
+/* riga dei blocchi dentro la scheda: stessa grammatica delle stagioni */
+.modal-blocchi{ margin-top:10px; }
