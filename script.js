@@ -139,6 +139,7 @@
   // La normalizzazione vive in comune.js: la usa anche la mappa, e due varianti
   // vorrebbero dire che la stessa ricerca trova cose diverse nelle due pagine.
   const normalize = window.MARVEL_NORMALIZE;
+  const trova = window.MARVEL_TROVA;
 
   // Groups multi-season / multi-part entries so a part isn't shown as an
   // unrelated standalone show. Grouping key is titolo+tipo (a film and a
@@ -444,7 +445,7 @@
 
   function getFiltered() {
     return state.data.filter(item => {
-      if (state.search && !item.searchKey.includes(state.search)) return false;
+      if (state.search && !trova(item.searchKey, state.search)) return false;
       if (state.tipo && item.tipo !== state.tipo) return false;
       if (state.categoria && item.categoria !== state.categoria) return false;
       if (state.universo && item.universo !== state.universo) return false;
@@ -1100,14 +1101,27 @@
 
   function aggiornaProgresso() {
     if (!els.progress) return;
-    let visti = 0;
-    state.unita.forEach(u => { if (unitaVista(u)) visti++; });
-    const totale = state.unita.size;
-    els.progress.hidden = visti === 0;
+    // Col filtro Doomsday la barra conta la lista, non il sito: e' il "quanto
+    // mi manca" che serve prima del film. Si vede anche a zero, perche' li'
+    // sapere da dove si parte e' gia' un'informazione. Il conto resta in
+    // stagioni come ovunque: Loki vale due, quindi 16 e non i 15 titoli
+    // dichiarati da Disney+.
+    const lista = state.listaDoomsday;
+    let visti = 0, totale = 0;
+    state.unita.forEach(u => {
+      if (lista && !inLista(u.items[0], 'doomsday')) return;
+      totale++;
+      if (unitaVista(u)) visti++;
+    });
+    els.progress.hidden = visti === 0 && !lista;
+    els.progress.classList.toggle('is-doomsday', lista);
+    // accanto al conto della lista "Azzera" sembrerebbe valere per la lista
+    // sola, e invece cancella tutti i visti: in questa vista non si offre
+    els.resetVisti.hidden = lista;
     if (!totale) return;
     const perc = Math.round((visti / totale) * 100);
     els.progressFill.style.width = perc + '%';
-    els.progressText.textContent = `${visti} di ${totale} visti`;
+    els.progressText.textContent = lista ? `Lista Doomsday: ${visti} di ${totale} visti` : `${visti} di ${totale} visti`;
     els.progressBar.setAttribute('aria-valuenow', String(visti));
     els.progressBar.setAttribute('aria-valuemax', String(totale));
     els.progressBar.setAttribute('aria-valuetext', `${visti} di ${totale} titoli visti, ${perc} per cento`);

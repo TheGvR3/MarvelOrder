@@ -854,6 +854,12 @@ body.modal-open{ overflow:hidden; }
   letter-spacing:0.04em;
   color:var(--gold);
 }
+/* display:flex qui sopra batte il [hidden] del browser: senza questa riga la
+   barra restava a "0 di 156 visti" anche quando aggiornaProgresso la nascondeva */
+.progress[hidden]{ display:none; }
+/* col filtro Doomsday la barra conta la lista e ne prende il colore */
+.progress.is-doomsday .progress-fill{ background:var(--green); }
+.progress.is-doomsday .progress-text{ color:var(--green); }
 .progress-reset{
   flex:0 0 auto;
   background:transparent;

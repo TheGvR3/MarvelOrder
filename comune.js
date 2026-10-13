@@ -75,6 +75,17 @@ window.MARVEL_UNITA_KEY = function unitaKey(item) {
    normalizzassero in modo diverso, "shield" troverebbe la serie in una e non
    nell'altra.
    ============================================================ */
+/* Il confronto: chiave e query gia' normalizzate. Oltre alla forma intera vale
+   quella compatta, solo lettere e cifre: "vision quest" non trovava VisionQuest
+   e "spiderman" non trovava Spider-Man, che e' come lo scrive chiunque. Sta qui
+   per la stessa ragione di normalize: una regola sola per le due pagine. */
+window.MARVEL_TROVA = function trova(chiave, query) {
+  if (!query) return true;
+  if (chiave.indexOf(query) !== -1) return true;
+  const q = query.replace(/[^a-z0-9]/g, '');
+  return q.length > 1 && chiave.replace(/[^a-z0-9]/g, '').indexOf(q) !== -1;
+};
+
 window.MARVEL_NORMALIZE = function normalize(str) {
   return String(str == null ? '' : str)
     .toLowerCase()

@@ -27,6 +27,7 @@
   const UNIVERSI = window.MARVEL_UNIVERSI;
   const unitaKey = window.MARVEL_UNITA_KEY;
   const normalize = window.MARVEL_NORMALIZE;
+  const trova = window.MARVEL_TROVA;
 
   const SCONOSCIUTO = { id: '', nome: 'Universo non classificato', colore: '#6b6a73', terra: '', rank: UNIVERSI.length };
   const INFO = new Map(UNIVERSI.map((u, i) => [u.id, Object.assign({ rank: i }, u)]));
@@ -434,7 +435,7 @@
     if (state.universo && p.a.id !== state.universo && p.b.id !== state.universo) return false;
     return universoVisibile(p.a) && universoVisibile(p.b);
   }
-  const cercato = n => state.cerca && n.cerca.indexOf(state.cerca) !== -1;
+  const cercato = n => !!state.cerca && trova(n.cerca, state.cerca);
 
   // ============================================================
   // DISEGNO
@@ -661,10 +662,38 @@
     return b;
   }
 
+  // Sotto gli 860px il pannello stava sotto la mappa, fuori dallo schermo: si
+  // toccava un punto e non succedeva niente di visibile. Ora, con una selezione,
+  // diventa un foglio che sale dal basso (CSS: .mappa-panel.is-aperto).
+  const STRETTO = window.matchMedia('(max-width:859.98px)');
+
+  // Il foglio copre la meta' bassa dello schermo: se la mappa ci finisce sotto,
+  // la pagina scorre quanto basta a lasciarla visibile sopra, senza farla
+  // passare sotto la barra dei controlli. La barra e' sticky a top:0, quindi il
+  // limite e' la sua altezza, non dove si trova adesso: prima di agganciarsi
+  // e' ancora nel flusso, e scorre insieme alla pagina.
+  function scopriMappa() {
+    const r = els.svg.getBoundingClientRect();
+    const barra = document.querySelector('.controls');
+    const cima = barra ? barra.offsetHeight : 0;
+    const libero = window.innerHeight - els.pannello.getBoundingClientRect().height;
+    const coperto = r.bottom - libero;
+    if (coperto <= 0) return;
+    const delta = Math.min(coperto, r.top - cima);
+    if (delta > 0) window.scrollBy({ top: delta, behavior: 'smooth' });
+  }
+
   function pannello() {
     const box = els.pannello;
     box.innerHTML = '';
     const scelta = state.sel || state.hover;
+    const foglio = box.closest('.mappa-panel');
+    const eraAperto = foglio.classList.contains('is-aperto');
+    foglio.classList.toggle('is-aperto', !!state.sel);
+    if (state.sel && !eraAperto && STRETTO.matches) {
+      requestAnimationFrame(scopriMappa);
+      box.scrollTop = 0;
+    }
 
     if (!scelta) {
       box.appendChild(h('p', 'pannello-vuoto', state.modo === 'universi'
@@ -673,6 +702,15 @@
       return;
     }
     box.classList.toggle('is-bloccato', !!state.sel);
+
+    if (state.sel) {
+      // visibile solo nel foglio: su desktop chiude il "Deseleziona" in fondo
+      const x = h('button', 'pannello-x', '×');
+      x.type = 'button';
+      x.setAttribute('aria-label', 'Chiudi');
+      x.addEventListener('click', () => { state.sel = null; applicaFuoco(); });
+      box.appendChild(x);
+    }
 
     if (scelta.genere === 'universo') pannelloUniverso(box, scelta.dato);
     else if (scelta.genere === 'ponte') pannelloPonte(box, scelta.dato);
@@ -884,45 +922,113 @@
     return { x: (ev.clientX - r.left - offX) / scala, y: (ev.clientY - r.top - offY) / scala };
   }
 
-  function trascinamento() {
-    const attivi = new Map();
-    let ultimoDue = null, mosso = false;
+  // Due dita: lo zoom segue la distanza fra le dita e lo spostamento il loro
+  // punto medio. Prima si ingrandisce attorno al punto medio di prima, poi si
+  // trasla di quanto si e' mosso: cosi' il contenuto resta sotto le dita.
+  function pizzico(prima, ora) {
+    const mp = { x: (prima[0].x + prima[1].x) / 2, y: (prima[0].y + prima[1].y) / 2 };
+    const mo = { x: (ora[0].x + ora[1].x) / 2, y: (ora[0].y + ora[1].y) / 2 };
+    const dp = Math.hypot(prima[0].x - prima[1].x, prima[0].y - prima[1].y);
+    const dO = Math.hypot(ora[0].x - ora[1].x, ora[0].y - ora[1].y);
+    if (dp > 0) zoom(dO / dp, mp.x, mp.y);
+    state.vista.x += mo.x - mp.x;
+    state.vista.y += mo.y - mp.y;
+    applicaVista();
+  }
 
+  let timerAvvisoDita = null;
+  function mostraAvvisoDita() {
+    const el = document.getElementById('avviso-dita');
+    if (!el) return;
+    el.classList.add('is-visibile');
+    clearTimeout(timerAvvisoDita);
+    timerAvvisoDita = setTimeout(nascondiAvvisoDita, 1400);
+  }
+  function nascondiAvvisoDita() {
+    const el = document.getElementById('avviso-dita');
+    if (el) el.classList.remove('is-visibile');
+  }
+
+  function trascinamento() {
+    // Il riferimento va aggiornato a ogni movimento. Lasciato fermo al punto di
+    // partenza, ogni pointermove risommava l'intero spostamento dall'inizio del
+    // gesto: un dito che scorreva di 1 cm mandava la mappa via di 1+2+3... cm.
+    // Lo spostamento e' in unita' del viewBox come il translate, quindi non va
+    // moltiplicato per lo zoom.
+    let prima = null, mosso = false;
+
+    // Mouse e penna. Il touch ha il suo ramo sotto.
     els.svg.addEventListener('pointerdown', ev => {
-      attivi.set(ev.pointerId, inLogico(ev));
+      if (ev.pointerType === 'touch' || ev.button !== 0) return;
+      prima = inLogico(ev);
       mosso = false;
       els.svg.setPointerCapture(ev.pointerId);
       els.svg.classList.add('is-trascinando');
     });
     els.svg.addEventListener('pointermove', ev => {
-      if (!attivi.has(ev.pointerId)) return;
+      if (!prima || ev.pointerType === 'touch') return;
       const ora = inLogico(ev);
-      const prima = attivi.get(ev.pointerId);
-      if (attivi.size === 1) {
-        const dx = (ora.x - prima.x) * state.vista.k, dy = (ora.y - prima.y) * state.vista.k;
-        if (Math.abs(dx) + Math.abs(dy) > 1) mosso = true;
-        state.vista.x += dx; state.vista.y += dy;
-        applicaVista();
-        // il puntatore e' rimasto fermo sul contenuto: il riferimento non cambia
-      } else if (attivi.size === 2) {
-        attivi.set(ev.pointerId, ora);
-        const [a, b] = [...attivi.values()];
-        const d = Math.hypot(a.x - b.x, a.y - b.y);
-        if (ultimoDue) zoom(d / ultimoDue, (a.x + b.x) / 2, (a.y + b.y) / 2);
-        ultimoDue = d;
-        mosso = true;
-      }
+      const dx = ora.x - prima.x, dy = ora.y - prima.y;
+      if (!mosso && Math.hypot(dx, dy) < 3) return;   // un clic tremolante resta un clic
+      mosso = true;
+      state.vista.x += dx; state.vista.y += dy;
+      prima = ora;
+      applicaVista();
     });
     const fine = ev => {
-      attivi.delete(ev.pointerId);
-      if (attivi.size < 2) ultimoDue = null;
-      if (!attivi.size) els.svg.classList.remove('is-trascinando');
+      if (ev.pointerType === 'touch') return;
+      prima = null;
+      els.svg.classList.remove('is-trascinando');
     };
     els.svg.addEventListener('pointerup', fine);
     els.svg.addEventListener('pointercancel', fine);
 
+    // Touch: un dito scorre la pagina, due dita muovono la mappa. Con
+    // touch-action:none la mappa, larga quanto lo schermo, si prendeva ogni
+    // tocco e la pagina non si poteva piu' scorrere passandoci sopra.
+    // touch-action:pan-x pan-y lascia lo scorrimento al browser e gli toglie
+    // lo zoom della pagina, che qui sarebbe sempre quello sbagliato.
+    let dita = null, avvisoMostrato = 0, partenza = null;
+    const punti = ev => [...ev.touches].slice(0, 2).map(t => inLogico(t));
+    els.svg.addEventListener('touchstart', ev => {
+      if (ev.touches.length === 1) {
+        partenza = { x: ev.touches[0].clientX, y: ev.touches[0].clientY };
+        mosso = false;
+      }
+      if (ev.touches.length >= 2) {
+        dita = punti(ev);
+        mosso = true;
+        nascondiAvvisoDita();
+      }
+    }, { passive: true });
+    els.svg.addEventListener('touchmove', ev => {
+      if (ev.touches.length >= 2 && dita) {
+        // a scorrimento gia' partito il browser non lo lascia piu' annullare
+        if (!ev.cancelable) return;
+        ev.preventDefault();
+        const ora = punti(ev);
+        pizzico(dita, ora);
+        dita = ora;
+        return;
+      }
+      if (ev.touches.length === 1 && partenza && !dita) {
+        const t = ev.touches[0];
+        if (Math.hypot(t.clientX - partenza.x, t.clientY - partenza.y) > 12) {
+          mosso = true;
+          const adesso = Date.now();
+          if (adesso - avvisoMostrato > 4000) { avvisoMostrato = adesso; mostraAvvisoDita(); }
+        }
+      }
+    }, { passive: false });
+    const fineTocco = ev => {
+      if (ev.touches.length < 2) dita = null;
+      if (!ev.touches.length) partenza = null;
+    };
+    els.svg.addEventListener('touchend', fineTocco);
+    els.svg.addEventListener('touchcancel', fineTocco);
+
     els.svg.addEventListener('click', ev => {
-      if (mosso) return;                       // fine di un trascinamento, non un clic
+      if (mosso) { mosso = false; return; }    // fine di un trascinamento, non un clic
       if (ev.target === els.svg || ev.target.id === 'scena') { state.sel = null; applicaFuoco(); }
     });
 

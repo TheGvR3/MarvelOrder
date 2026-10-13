@@ -42,7 +42,9 @@
   aspect-ratio:1200 / 820;
   height:auto;
   max-height:78vh;
-  touch-action:none;         /* il pizzico lo gestiamo noi, non il browser */
+  /* un dito scorre la pagina (al browser), due dita muovono la mappa (a noi):
+     touch-action:none intrappolava ogni tocco in una tela larga quanto lo schermo */
+  touch-action:pan-x pan-y;
   cursor:grab;
 }
 #mappa.is-trascinando{ cursor:grabbing; }
@@ -58,6 +60,33 @@
   font-size:13.5px;
 }
 .mappa-avviso code{ color:var(--gold); }
+
+/* Compare quando si trascina la mappa con un dito: quel gesto ora scorre la
+   pagina, e senza una parola sembrerebbe che la mappa non risponda. */
+.mappa-avviso-dita{
+  position:absolute;
+  inset:0;
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(10,10,13,0.62);
+  color:var(--ink);
+  font-size:15px;
+  font-weight:600;
+  text-align:center;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity 0.25s ease;
+}
+.mappa-avviso-dita.is-visibile{ opacity:1; }
+
+.hint-touch{ display:none; }
+@media (pointer:coarse){
+  .hint-mouse{ display:none; }
+  .hint-touch{ display:inline; }
+}
 
 .mappa-hint{
   margin:0;
@@ -299,6 +328,17 @@
   font-size:11.5px; letter-spacing:0.04em;
   cursor:pointer;
 }
+/* chiusura del foglio su mobile; su desktop basta "Deseleziona" */
+.pannello-x{
+  display:none;
+  position:absolute; top:4px; right:4px;
+  width:44px; height:44px;
+  align-items:center; justify-content:center;
+  background:none; border:none;
+  color:var(--ink-dim);
+  font-size:26px; line-height:1;
+  cursor:pointer;
+}
 @media (hover:hover) and (pointer:fine){
   .pannello-azione:hover{ color:var(--ink); border-color:var(--gold); }
   .pannello-chiudi:hover{ color:var(--ink-dim); }
@@ -439,9 +479,44 @@
   #mappa{ max-height:none; }
   .mappa-wrap{ padding:0; }
   .mappa-canvas{ border-left:none; border-right:none; border-radius:0; }
-  .mappa-panel{ padding:0 16px; }
-  .mappa-panel{ position:static; }
-  .pannello{ max-height:none; }
+  /* Il pannello sotto la mappa finiva fuori dallo schermo: si toccava un punto
+     e non succedeva niente di visibile. Con una selezione diventa un foglio che
+     sale dal basso, alto al massimo meta' schermo perche' la mappa resti sopra;
+     senza selezione sparisce, le istruzioni stanno gia' sotto la mappa. */
+  .mappa-panel{
+    position:fixed; left:0; right:0; bottom:0;
+    top:auto;                 /* il top:84px dello sticky desktop lo stirava a tutto schermo */
+    z-index:30;
+    padding:0;
+    transform:translateY(100%);
+    visibility:hidden;
+    transition:transform 0.25s ease, visibility 0s linear 0.25s;
+  }
+  .mappa-panel.is-aperto{
+    transform:none;
+    visibility:visible;
+    transition:transform 0.25s ease;
+  }
+  .mappa-panel .pannello{
+    position:relative;
+    max-height:52vh;
+    max-height:52dvh;
+    border-width:1px 0 0;
+    border-radius:12px 12px 0 0;
+    padding:24px 16px calc(18px + env(safe-area-inset-bottom));
+    box-shadow:0 -14px 36px rgba(0,0,0,0.55);
+    overscroll-behavior:contain;
+  }
+  /* maniglia: dice "foglio" a colpo d'occhio */
+  .mappa-panel .pannello::before{
+    content:'';
+    position:absolute; top:9px; left:50%;
+    width:36px; height:4px; margin-left:-18px;
+    border-radius:2px;
+    background:var(--line-strong);
+  }
+  .pannello-x{ display:flex; }
+  .mappa-panel .pannello-occhiello, .mappa-panel .pannello-titolo{ padding-right:40px; }
   .legenda-wrap, .ponti-wrap{ padding:0 16px; margin-top:34px; }
   .ponti-lista{ grid-template-columns:minmax(0,1fr); }
   .mappa-hint{ font-size:10.5px; }
