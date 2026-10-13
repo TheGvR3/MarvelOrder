@@ -17,6 +17,7 @@
   --red:           #d0102a;
   --red-dim:       #7a1420;
   --gold:          #d1a441;
+  --green:         #3fb26b;     /* lista ufficiale "Countdown to Avengers: Doomsday" */
 
   --font-display:  'Bebas Neue', 'Arial Narrow', sans-serif;
   --font-body:     'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -427,6 +428,13 @@ button{ font-family:inherit; }
   color:#1a1408;
   font-weight:700;
 }
+.badge-doomsday{
+  border-color:var(--green);
+  color:var(--green);
+  background:rgba(63,178,107,0.1);
+  font-weight:700;
+}
+.filter-doomsday input{ accent-color:var(--green); }
 .badge-date{
   margin-left:auto;
   margin-left:auto;

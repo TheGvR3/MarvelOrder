@@ -4,9 +4,9 @@
 
    Due letture dello stesso grafo, scelte con le schede in alto:
 
-     universi  20 nodi, uno per universo, e i 17 ponti che li collegano.
+     universi  21 nodi, uno per universo, e i 17 ponti che li collegano.
                E' la risposta alla domanda "come si toccano fra loro".
-     titoli    151 nodi, uno per unita' (la stagione intera, non il blocco di
+     titoli    156 nodi, uno per unita' (la stagione intera, non il blocco di
                episodi: vedi comune.js), raggruppati per universo.
 
    Gli archi vengono da dettagli.json: prerequisiti, sequel/prequel e collegati.
@@ -235,7 +235,7 @@
   // ============================================================
   // DISPOSIZIONE
   // ============================================================
-  // Simulazione a forze deliberatamente semplice: 151 nodi sono pochi, girano
+  // Simulazione a forze deliberatamente semplice: 156 nodi sono pochi, girano
   // in una manciata di millisecondi in O(n^2) e non serve nessuna libreria.
   // Il numero di passi e' fisso, quindi il risultato e' sempre lo stesso.
   function simula(nodi, archi, opz) {
@@ -946,10 +946,10 @@
       b.setAttribute('aria-selected', attivo ? 'true' : 'false');
     });
     els.svg.setAttribute('aria-label', modo === 'universi'
-      ? 'Mappa dei venti universi Marvel e dei ponti narrativi fra loro'
-      : 'Mappa dei 151 titoli Marvel raggruppati per universo e collegati fra loro');
+      ? 'Mappa dei ventuno universi Marvel e dei ponti narrativi fra loro'
+      : 'Mappa dei 156 titoli Marvel raggruppati per universo e collegati fra loro');
     // "solo essenziale" e' una proprieta' del singolo titolo: applicata ai
-    // venti nodi-universo non vorrebbe dire niente, quindi sparisce.
+    // ventuno nodi-universo non vorrebbe dire niente, quindi sparisce.
     els.essenzialiBox.hidden = modo === 'universi';
     disegna();
     inquadra();

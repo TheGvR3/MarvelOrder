@@ -13,10 +13,10 @@
    universi paralleli seguono per dimensione, il Multiverso resta in fondo
    perche' e' un residuo e non un posto.
 
-   Diciassette righe su venti portano una sigla che Marvel usa davvero: 616,
+   Diciassette righe su ventuno portano una sigla che Marvel usa davvero: 616,
    10005, 828 e 1610 sono dette a schermo, le altre vengono dall'Official
-   Handbook. Legion, The Gifted e Helstrom una sigla non ce l'hanno, quindi
-   portano un nome descrittivo. Non colmare quel buco inventandone una: un
+   Handbook. Legion, The Gifted, Helstrom e Spider-Noir una sigla non ce l'hanno,
+   quindi portano un nome descrittivo. Non colmare quel buco inventandone una: un
    Terra-NNNNN plausibile, una volta finito nei dati, e' indistinguibile da uno
    vero.
 
@@ -42,6 +42,7 @@ window.MARVEL_UNIVERSI = [
   { id: 'terra-400083', nome: 'Terra-400083',           colore: '#6fae3a', terra: 'Hulk, il film di Ang Lee del 2003' },
   { id: 'terra-47281',  nome: 'Terra-47281',            colore: '#5c6470', terra: 'Punisher - Zona di guerra, 2008' },
   { id: 'helstrom',     nome: 'Universo di Helstrom',   colore: '#b0518f', terra: "Hulu, dichiarato fuori dall'MCU dal suo showrunner. Nessuna Terra assegnata" },
+  { id: 'spider-noir',  nome: 'Universo di Spider-Noir', colore: '#b8a27a', terra: "MGM+ e Prime Video, la New York degli anni Trenta. Non e' lo Spider-Noir dello Spider-Verse. Nessuna Terra assegnata" },
   { id: 'multiverso',   nome: 'Multiverso',             colore: '#c9c6d1', terra: 'What If...? e Marvel Zombies: nessuna Terra unica' },
 ];
 
@@ -49,7 +50,7 @@ window.MARVEL_UNIVERSI = [
    UNITA' — cosa il sito conta come "un titolo"
    ============================================================
 
-   data.json ha 156 voci ma i titoli sono 151: un'unita' e' la stagione intera,
+   data.json ha 161 voci ma i titoli sono 156: un'unita' e' la stagione intera,
    non il blocco di episodi in cui e' spezzata. Agents of S.H.I.E.L.D. occupa 12
    voci per 7 stagioni, perche' quattro sono divise in due o tre blocchi
    affinche' un film si incastri a meta'.

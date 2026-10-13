@@ -12,7 +12,7 @@
 
 /* === IMPAGINATO === */
 /* La mappa e' l'unico blocco del sito piu' largo di --container: un grafo di
-   151 nodi dentro 1180px rende i punti grandi cinque pixel. L'intestazione e i
+   156 nodi dentro 1180px rende i punti grandi cinque pixel. L'intestazione e i
    controlli restano allineati al resto. */
 .mappa-wrap{
   position:relative;
@@ -68,7 +68,7 @@
   letter-spacing:0.02em;
 }
 
-/* Un grafo SVG con 151 nodi e' 151 fermate del tabulatore: chi non lo vede deve
+/* Un grafo SVG con 156 nodi e' 156 fermate del tabulatore: chi non lo vede deve
    poterlo scavalcare e leggere l'elenco dei ponti, che dice le stesse cose in
    parole. Il collegamento e' nel flusso ma invisibile finche' non riceve il
    fuoco: nasconderlo con display:none lo toglierebbe anche alla tastiera. */
@@ -152,7 +152,7 @@
   opacity:0.55;
   pointer-events:none;
 }
-/* 151 etichette tutte insieme sarebbero illeggibili: il nome del titolo esce
+/* 156 etichette tutte insieme sarebbero illeggibili: il nome del titolo esce
    solo quando quel punto e' acceso. */
 .etichetta-titolo{
   font-family:var(--font-body);
@@ -183,7 +183,7 @@
 .arco-ponte{ stroke:var(--red); stroke-opacity:0.42; cursor:pointer; }
 
 /* === FUOCO === */
-/* Con 405 fili accesi non si legge niente: quando qualcosa e' selezionato tutto
+/* Con 416 fili accesi non si legge niente: quando qualcosa e' selezionato tutto
    il resto scende molto, e resta come contesto invece che come rumore. */
 #mappa.is-fuoco .nodo.is-spento{ opacity:0.14; }
 #mappa.is-fuoco .arco.is-spento{ stroke-opacity:0.045; }

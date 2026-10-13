@@ -602,7 +602,7 @@
         "relazione": "sequel"
       }
     ],
-    "note": "L'anno non è mai dichiarato: la didascalia iniziale parla solo di un \"futuro non troppo lontano\". Le cronologie ricostruite a posteriori lo collocano nei primi anni Duemila; 2000 è quindi una stima."
+    "note": "L'anno non è mai dichiarato: la didascalia iniziale parla solo di un \"futuro non troppo lontano\". Le cronologie ricostruite a posteriori lo collocano nei primi anni Duemila; 2000 è quindi una stima. Marvel lo inserisce nella lista ufficiale Disney+ \"Countdown to Avengers: Doomsday\" (agosto 2026), i quindici titoli da vedere prima del film."
   },
   "15": {
     "ambientazione": "presente narrativo, poco dopo il primo film",
@@ -693,7 +693,7 @@
         "relazione": "sequel"
       }
     ],
-    "note": "Come il primo film non dichiara mai l'anno: si assume il presente dell'uscita."
+    "note": "Come il primo film non dichiara mai l'anno: si assume il presente dell'uscita. Marvel lo inserisce nella lista ufficiale Disney+ \"Countdown to Avengers: Doomsday\" (agosto 2026), i quindici titoli da vedere prima del film."
   },
   "17": {
     "ambientazione": "presente narrativo, fine anni Duemila; Afghanistan e Malibu",
@@ -4179,7 +4179,7 @@
       130
     ],
     "sequelPrequel": [],
-    "note": "Chiarisce l'inganno del \"Mandarino\" di Iron Man 3 e del corto All Hail the King. Nella scena post-credit compaiono Wong, Bruce Banner e Carol Danvers."
+    "note": "Chiarisce l'inganno del \"Mandarino\" di Iron Man 3 e del corto All Hail the King. Nella scena post-credit compaiono Wong, Bruce Banner e Carol Danvers. Marvel lo inserisce nella lista ufficiale Disney+ \"Countdown to Avengers: Doomsday\" (agosto 2026), i quindici titoli da vedere prima del film."
   },
   "95": {
     "ambientazione": "Estate 2024, circa otto mesi dopo Endgame, in viaggio d'istruzione tra Venezia, Praga, Berlino e Londra",
@@ -5541,7 +5541,7 @@
         "relazione": "prequel"
       }
     ],
-    "note": "Chiude formalmente l'universo Fox e lo assorbe nel MCU; e' pieno di camei che presuppongono la conoscenza dei film X-Men e Fantastici 4 della Fox."
+    "note": "Chiude formalmente l'universo Fox e lo assorbe nel MCU; e' pieno di camei che presuppongono la conoscenza dei film X-Men e Fantastici 4 della Fox. Marvel lo inserisce nella lista ufficiale Disney+ \"Countdown to Avengers: Doomsday\" (agosto 2026), i quindici titoli da vedere prima del film."
   },
   "125": {
     "ambientazione": "In realta' alternative del multiverso e nel Piano Osservazionale, dove l'Osservatore viene processato dai suoi simili",
@@ -6027,6 +6027,10 @@
       {
         "id": 128,
         "relazione": "prequel"
+      },
+      {
+        "id": 158,
+        "relazione": "sequel"
       }
     ],
     "note": "Riporta Jessica Jones e Luke Cage nel MCU; si coordina con lo speciale The Punisher: One Last Kill e con Spider-Man: Brand New Day. L'anno e' dedotto dalla continuita' con la prima stagione, non dichiarato sullo schermo."
@@ -6221,7 +6225,7 @@
         "relazione": "prequel"
       }
     ],
-    "note": "TITOLO NON ANCORA USCITO (previsto per il 14 ottobre 2026, titolo ufficiale VisionQuest): riportati solo cast e premessa annunciati da Marvel, cioe' la ricerca dei ricordi da parte della Visione Bianca. L'ambientazione resta a null; l'anno che compare e' una stima. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along. Dati provvisori.",
+    "note": "TITOLO NON ANCORA USCITO (previsto per il 14 ottobre 2026): riportati solo cast e premessa annunciati da Marvel, cioe' la ricerca dei ricordi da parte della Visione Bianca. L'ambientazione resta a null; l'anno che compare e' una stima. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along. Dati provvisori.",
     "annoStimato": true,
     "annoNota": "Stimato: non ancora uscito, collocato dopo Agatha All Along."
   },
@@ -6268,7 +6272,7 @@
         "relazione": "prequel"
       }
     ],
-    "note": "TITOLO NON ANCORA USCITO: al D23 del 15 agosto 2026 Disney ha spostato l'uscita a gennaio 2027. Sono riportati solo il cast annunciato e gli elementi mostrati nel trailer ufficiale; ambientazione e anno restano a null, anche perche' la serie si svolge in una linea temporale alternativa senza anno dichiarato. Dati provvisori.",
+    "note": "TITOLO NON ANCORA USCITO: al D23 del 15 agosto 2026 Disney ha spostato l'uscita a gennaio 2027, e al New York Comic Con dell'8 ottobre 2026 Marvel ha fissato la data al 13 gennaio 2027. Sono riportati solo il cast annunciato e gli elementi mostrati nel trailer ufficiale; ambientazione e anno restano a null, anche perche' la serie si svolge in una linea temporale alternativa senza anno dichiarato. Dati provvisori.",
     "annoStimato": true,
     "annoNota": "Stimato: prosegue l’anno scolastico iniziato nella prima stagione."
   },
@@ -6876,5 +6880,132 @@
       }
     ],
     "note": "TITOLO NON ANCORA USCITO: annunciato per giugno 2027 ma con data ancora in movimento, motivo per cui il campo uscita resta vuoto e la card mostra \"giugno 2027\" cosi’ com’e’. Conclude la storia lasciata a meta’ da Across the Spider-Verse. Dati provvisori."
+  },
+  "157": {
+    "ambientazione": "New York nel 1933, in piena Grande Depressione, in un mondo alternativo: Ben Reilly, investigatore privato sul viale del tramonto, e' l'unico supereroe della citta' e torna in azione contro la malavita di Silvermane",
+    "annoAmbientazione": 1933,
+    "cast": [
+      {
+        "attore": "Nicolas Cage",
+        "personaggio": "Ben Reilly / The Spider"
+      },
+      {
+        "attore": "Lamorne Morris",
+        "personaggio": "Joe \"Robbie\" Robertson"
+      },
+      {
+        "attore": "Li Jun Li",
+        "personaggio": "Cat Hardy"
+      },
+      {
+        "attore": "Brendan Gleeson",
+        "personaggio": "Finbar \"Finn\" Byrne / Silvermane"
+      },
+      {
+        "attore": "Jack Huston",
+        "personaggio": "Flint Marko / Sandman"
+      },
+      {
+        "attore": "Abraham Popoola",
+        "personaggio": "Lonnie Lincoln / Tombstone"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [],
+    "note": "Otto episodi, tutti usciti insieme: su MGM+ negli Stati Uniti il 25 maggio 2026, su Prime Video nel resto del mondo (Italia compresa) il 27, in bianco e nero o a colori a scelta. Cage aveva gia' dato la voce a Spider-Man Noir in Spider-Man - Un nuovo universo, ma questo e' un altro personaggio in un altro universo: nessun legame narrativo con lo Spider-Verse ne' con i film Sony."
+  },
+  "158": {
+    "ambientazione": null,
+    "annoAmbientazione": 2028,
+    "annoStimato": true,
+    "annoNota": "Stimato: sei mesi dopo la seconda stagione, che e' collocata nel 2027.",
+    "cast": [
+      {
+        "attore": "Charlie Cox",
+        "personaggio": "Matt Murdock / Daredevil"
+      },
+      {
+        "attore": "Vincent D'Onofrio",
+        "personaggio": "Wilson Fisk / Kingpin"
+      },
+      {
+        "attore": "Deborah Ann Woll",
+        "personaggio": "Karen Page"
+      },
+      {
+        "attore": "Krysten Ritter",
+        "personaggio": "Jessica Jones"
+      },
+      {
+        "attore": "Mike Colter",
+        "personaggio": "Luke Cage"
+      },
+      {
+        "attore": "Finn Jones",
+        "personaggio": "Danny Rand / Iron Fist"
+      }
+    ],
+    "prerequisiti": [
+      135
+    ],
+    "collegati": [
+      66,
+      136,
+      137
+    ],
+    "sequelPrequel": [
+      {
+        "id": 135,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "TITOLO NON ANCORA USCITO (atteso a marzo 2027, nessuna data ufficiale): Marvel ha annunciato otto episodi, ultima stagione della serie. Premessa dichiarata: sei mesi dopo la seconda stagione, Murdock e' in prigione per aver rivelato di essere Daredevil e Fisk e' in esilio. Tornano Jessica Jones, Luke Cage, Iron Fist ed Elektra. Dati provvisori."
+  },
+  "159": {
+    "ambientazione": null,
+    "annoAmbientazione": 2023,
+    "annoStimato": true,
+    "annoNota": "Stimato: nessuna ambientazione annunciata, collocato con la serie Marvel Zombies da cui nasce.",
+    "cast": [],
+    "prerequisiti": [
+      133
+    ],
+    "collegati": [
+      98,
+      129
+    ],
+    "sequelPrequel": [],
+    "note": "TITOLO NON ANCORA USCITO (atteso per Halloween 2027): uno dei tre speciali animati annunciati al New York Comic Con dell'8 ottobre 2026, uno per Halloween dal 2027 al 2029. Il titolo indica Bucky Barnes come protagonista; trama e cast non sono stati annunciati. Dati provvisori."
+  },
+  "160": {
+    "ambientazione": null,
+    "annoAmbientazione": 2023,
+    "annoStimato": true,
+    "annoNota": "Stimato: nessuna ambientazione annunciata, collocato con la serie Marvel Zombies da cui nasce.",
+    "cast": [],
+    "prerequisiti": [
+      133
+    ],
+    "collegati": [
+      106
+    ],
+    "sequelPrequel": [],
+    "note": "TITOLO NON ANCORA USCITO (atteso per Halloween 2028): uno dei tre speciali animati annunciati al New York Comic Con dell'8 ottobre 2026, uno per Halloween dal 2027 al 2029. Il titolo indica Moon Knight come protagonista; trama e cast non sono stati annunciati. Dati provvisori."
+  },
+  "161": {
+    "ambientazione": null,
+    "annoAmbientazione": 2023,
+    "annoStimato": true,
+    "annoNota": "Stimato: nessuna ambientazione annunciata, collocato con la serie Marvel Zombies da cui nasce.",
+    "cast": [],
+    "prerequisiti": [
+      133
+    ],
+    "collegati": [
+      115
+    ],
+    "sequelPrequel": [],
+    "note": "TITOLO NON ANCORA USCITO (atteso per Halloween 2029): uno dei tre speciali animati annunciati al New York Comic Con dell'8 ottobre 2026, uno per Halloween dal 2027 al 2029. Il titolo indica i Guardiani della Galassia, ed e' annunciato come la conclusione di Marvel Zombies; trama e cast non sono stati annunciati. Dati provvisori."
   }
 }

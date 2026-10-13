@@ -13,6 +13,7 @@
     catFilter: document.getElementById('cat-filter'),
     universoFilter: document.getElementById('universo-filter'),
     requiredOnly: document.getElementById('required-only'),
+    listaDoomsday: document.getElementById('lista-doomsday'),
     faseFilter: document.getElementById('fase-filter'),
     hideWatched: document.getElementById('hide-watched'),
     progress: document.getElementById('progress'),
@@ -41,6 +42,7 @@
     universo: '',
     fase: '',
     requiredOnly: false,
+    listaDoomsday: false,
     hideWatched: false,
     visti: new Set(),   // ordine dei titoli gia' visti, persistiti in localStorage
   };
@@ -380,6 +382,10 @@
       state.requiredOnly = els.requiredOnly.checked;
       render();
     });
+    els.listaDoomsday.addEventListener('change', () => {
+      state.listaDoomsday = els.listaDoomsday.checked;
+      render();
+    });
     els.faseFilter.addEventListener('change', () => {
       state.fase = els.faseFilter.value;
       render();
@@ -418,6 +424,7 @@
     state.universo = '';
     state.fase = '';
     state.requiredOnly = false;
+    state.listaDoomsday = false;
     state.hideWatched = false;
     els.search.value = '';
     els.tipoFilter.value = '';
@@ -425,7 +432,14 @@
     if (els.universoFilter) els.universoFilter.value = '';
     els.faseFilter.value = '';
     els.requiredOnly.checked = false;
+    els.listaDoomsday.checked = false;
     els.hideWatched.checked = false;
+  }
+
+  // Le liste ufficiali di preparazione a un film ("liste" in data.json): campo
+  // presente solo sui titoli che ne fanno parte.
+  function inLista(item, lista) {
+    return Array.isArray(item.liste) && item.liste.includes(lista);
   }
 
   function getFiltered() {
@@ -436,6 +450,7 @@
       if (state.universo && item.universo !== state.universo) return false;
       if (state.fase === 'nessuna' ? item.fase != null : state.fase && String(item.fase) !== state.fase) return false;
       if (state.requiredOnly && !item.obbligatorio) return false;
+      if (state.listaDoomsday && !inLista(item, 'doomsday')) return false;
       if (state.hideWatched && state.visti.has(item.id)) return false;
       return true;
     });
@@ -655,6 +670,16 @@
       reqBadge.className = 'badge badge-required';
       reqBadge.textContent = 'Essenziale';
       wrap.appendChild(reqBadge);
+    }
+
+    // Non coincide con Essenziale: e' la preparazione a un film solo, e dentro
+    // ci sono due X-Men della Fox che per il resto della storia non servono.
+    if (inLista(item, 'doomsday')) {
+      const listaBadge = document.createElement('span');
+      listaBadge.className = 'badge badge-doomsday';
+      listaBadge.textContent = 'Doomsday';
+      listaBadge.title = 'Nella lista ufficiale Disney+ "Countdown to Avengers: Doomsday"';
+      wrap.appendChild(listaBadge);
     }
 
     if (conData === false) return wrap;
