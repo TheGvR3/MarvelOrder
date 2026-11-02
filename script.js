@@ -13,7 +13,7 @@
     catFilter: document.getElementById('cat-filter'),
     universoFilter: document.getElementById('universo-filter'),
     requiredOnly: document.getElementById('required-only'),
-    listaDoomsday: document.getElementById('lista-doomsday'),
+    percorso: document.getElementById('percorso-filter'),
     faseFilter: document.getElementById('fase-filter'),
     hideWatched: document.getElementById('hide-watched'),
     progress: document.getElementById('progress'),
@@ -42,7 +42,7 @@
     universo: '',
     fase: '',
     requiredOnly: false,
-    listaDoomsday: false,
+    percorso: '',   // '' | chiave di PERCORSI
     hideWatched: false,
     visti: new Set(),   // ordine dei titoli gia' visti, persistiti in localStorage
   };
@@ -383,9 +383,10 @@
       state.requiredOnly = els.requiredOnly.checked;
       render();
     });
-    els.listaDoomsday.addEventListener('change', () => {
-      state.listaDoomsday = els.listaDoomsday.checked;
-      render();
+    els.percorso.addEventListener('change', () => {
+      state.percorso = els.percorso.value;
+      aggiornaLinguette();
+      render({ animate: true });
     });
     els.faseFilter.addEventListener('change', () => {
       state.fase = els.faseFilter.value;
@@ -425,7 +426,7 @@
     state.universo = '';
     state.fase = '';
     state.requiredOnly = false;
-    state.listaDoomsday = false;
+    state.percorso = '';
     state.hideWatched = false;
     els.search.value = '';
     els.tipoFilter.value = '';
@@ -433,14 +434,50 @@
     if (els.universoFilter) els.universoFilter.value = '';
     els.faseFilter.value = '';
     els.requiredOnly.checked = false;
-    els.listaDoomsday.checked = false;
+    els.percorso.value = '';
+    aggiornaLinguette();
     els.hideWatched.checked = false;
   }
 
-  // Le liste ufficiali di preparazione a un film ("liste" in data.json): campo
-  // presente solo sui titoli che ne fanno parte.
+  // I percorsi ("liste" in data.json, campo presente solo sui titoli che ne
+  // fanno parte). Doomsday e' la lista ufficiale Disney+ e non ha un ordine
+  // suo: filtra, e le tre viste restano. La saga X-Men invece si guarda in un
+  // ordine preciso, che e' gia' quello del campo "ordine": il percorso lo usa
+  // al posto della vista e numera le card dalla prima all'ultima.
+  const PERCORSI = {
+    doomsday: { nome: 'Lista Doomsday' },
+    xmen: {
+      nome: 'Saga X-Men',
+      ordinato: true,
+      sottotitolo: "Ordine di visione consigliato: X-Men, Wolverine, Deadpool e le serie",
+    },
+  };
+
   function inLista(item, lista) {
     return Array.isArray(item.liste) && item.liste.includes(lista);
+  }
+
+  function percorsoOrdinato() {
+    const p = PERCORSI[state.percorso];
+    return !!(p && p.ordinato);
+  }
+
+  // Con un percorso ordinato le linguette non avrebbero effetto: meglio
+  // spegnerle che lasciarle cliccabili senza che cambi niente.
+  function aggiornaLinguette() {
+    const spente = percorsoOrdinato();
+    els.modeBtns.forEach(b => {
+      b.disabled = spente;
+      b.title = spente ? 'Questo percorso ha un suo ordine di visione: scegli «Tutti i titoli» per tornare alle viste' : '';
+    });
+  }
+
+  // Posizione di ogni titolo nel percorso intero, non fra quelli visibili:
+  // cercando o nascondendo i visti, un film resta il numero 7 e non diventa il 3.
+  function posizioniPercorso() {
+    if (!percorsoOrdinato()) return null;
+    const tutti = collassaUnita(state.data.filter(i => inLista(i, state.percorso)).sort((a, b) => a.ordine - b.ordine));
+    return new Map(tutti.map((item, i) => [item.id, i + 1]));
   }
 
   function getFiltered() {
@@ -451,7 +488,7 @@
       if (state.universo && item.universo !== state.universo) return false;
       if (state.fase === 'nessuna' ? item.fase != null : state.fase && String(item.fase) !== state.fase) return false;
       if (state.requiredOnly && !item.obbligatorio) return false;
-      if (state.listaDoomsday && !inLista(item, 'doomsday')) return false;
+      if (state.percorso && !inLista(item, state.percorso)) return false;
       if (state.hideWatched && state.visti.has(item.id)) return false;
       return true;
     });
@@ -468,6 +505,7 @@
 
   function getSorted(list) {
     const copy = list.slice();
+    if (percorsoOrdinato()) return copy.sort((a, b) => a.ordine - b.ordine);
     if (state.mode === 'cronologico') {
       // Universo prima, poi l'anno in cui e' ambientato, poi l'ordine curato come
       // spareggio: annoAmbientazione ha la precisione dell'anno e 21 anni ne
@@ -490,6 +528,13 @@
   function groupItems(list) {
     // returns array of { label, sublabel, items: [] }
     const groups = [];
+    if (percorsoOrdinato()) {
+      // una sezione sola: spezzarla per universo ripeterebbe Terra-10005 due
+      // volte, perche' Legion e The Gifted stanno fra New Mutants e Logan
+      const p = PERCORSI[state.percorso];
+      if (list.length) groups.push({ label: p.nome, sublabel: p.sottotitolo, items: list });
+      return groups;
+    }
     if (state.mode === 'cronologico') {
       // Una sezione per universo, e dentro la sezione il tempo scorre in avanti.
       // Mescolarli per anno puro metterebbe First Steps (1964, Terra-828) in mezzo
@@ -1015,7 +1060,13 @@
 
     const order = document.createElement('span');
     order.className = 'card-order';
-    order.textContent = String(item.ordine).padStart(3, '0');
+    const pos = state.posizioni && state.posizioni.get(item.id);
+    if (pos) {
+      order.textContent = String(pos).padStart(2, '0');
+      order.title = `Numero ${pos} del percorso · #${String(item.ordine).padStart(3, '0')} nell'ordine narrativo`;
+    } else {
+      order.textContent = String(item.ordine).padStart(3, '0');
+    }
     top.appendChild(order);
 
     const titleWrap = document.createElement('div');
@@ -1101,27 +1152,27 @@
 
   function aggiornaProgresso() {
     if (!els.progress) return;
-    // Col filtro Doomsday la barra conta la lista, non il sito: e' il "quanto
-    // mi manca" che serve prima del film. Si vede anche a zero, perche' li'
-    // sapere da dove si parte e' gia' un'informazione. Il conto resta in
-    // stagioni come ovunque: Loki vale due, quindi 16 e non i 15 titoli
+    // Con un percorso la barra conta il percorso, non il sito: e' il "quanto
+    // mi manca" che serve. Si vede anche a zero, perche' li' sapere da dove si
+    // parte e' gia' un'informazione. Il conto resta in stagioni come ovunque:
+    // Loki vale due, quindi la lista Doomsday fa 16 e non i 15 titoli
     // dichiarati da Disney+.
-    const lista = state.listaDoomsday;
+    const lista = state.percorso;
     let visti = 0, totale = 0;
     state.unita.forEach(u => {
-      if (lista && !inLista(u.items[0], 'doomsday')) return;
+      if (lista && !inLista(u.items[0], lista)) return;
       totale++;
       if (unitaVista(u)) visti++;
     });
     els.progress.hidden = visti === 0 && !lista;
-    els.progress.classList.toggle('is-doomsday', lista);
+    els.progress.classList.toggle('is-doomsday', lista === 'doomsday');
     // accanto al conto della lista "Azzera" sembrerebbe valere per la lista
     // sola, e invece cancella tutti i visti: in questa vista non si offre
-    els.resetVisti.hidden = lista;
+    els.resetVisti.hidden = !!lista;
     if (!totale) return;
     const perc = Math.round((visti / totale) * 100);
     els.progressFill.style.width = perc + '%';
-    els.progressText.textContent = lista ? `Lista Doomsday: ${visti} di ${totale} visti` : `${visti} di ${totale} visti`;
+    els.progressText.textContent = lista ? `${PERCORSI[lista].nome}: ${visti} di ${totale} visti` : `${visti} di ${totale} visti`;
     els.progressBar.setAttribute('aria-valuenow', String(visti));
     els.progressBar.setAttribute('aria-valuemax', String(totale));
     els.progressBar.setAttribute('aria-valuetext', `${visti} di ${totale} titoli visti, ${perc} per cento`);
@@ -1133,6 +1184,7 @@
     const filtered = getFiltered();
     const sorted = collassaUnita(getSorted(filtered));
     const groups = groupItems(sorted);
+    state.posizioni = posizioniPercorso();
 
     // Il conto e' sempre in stagioni, anche nella Cronologia dove le card sono
     // di piu': altrimenti la stessa selezione darebbe due numeri diversi a

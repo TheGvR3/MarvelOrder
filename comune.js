@@ -13,7 +13,7 @@
    universi paralleli seguono per dimensione, il Multiverso resta in fondo
    perche' e' un residuo e non un posto.
 
-   Diciassette righe su ventuno portano una sigla che Marvel usa davvero: 616,
+   Diciotto righe su ventidue portano una sigla che Marvel usa davvero: 616,
    10005, 828 e 1610 sono dette a schermo, le altre vengono dall'Official
    Handbook. Legion, The Gifted, Helstrom e Spider-Noir una sigla non ce l'hanno,
    quindi portano un nome descrittivo. Non colmare quel buco inventandone una: un
@@ -30,6 +30,7 @@ window.MARVEL_UNIVERSI = [
   { id: 'terra-96283',  nome: 'Terra-96283',            colore: '#d1642a', terra: 'Spider-Man, trilogia di Sam Raimi' },
   { id: 'terra-1610',   nome: 'Terra-1610',             colore: '#e0479a', terra: 'Spider-Verse, la trilogia animata di Miles Morales' },
   { id: 'legion',       nome: 'Universo di Legion',     colore: '#4fbfa8', terra: 'FX, parallelo ai film X-Men. Marvel non gli ha assegnato una Terra' },
+  { id: 'terra-92131',  nome: 'Terra-92131',            colore: '#e8cf4a', terra: "X-Men '97, seguito della serie animata del 1992" },
   { id: 'terra-120703', nome: 'Terra-120703',           colore: '#d19a2a', terra: 'The Amazing Spider-Man, duologia di Marc Webb' },
   { id: 'terra-121698', nome: 'Terra-121698',           colore: '#3fa3d1', terra: 'I Fantastici 4, dittico di Tim Story' },
   { id: 'terra-701306', nome: 'Terra-701306',           colore: '#a34d2a', terra: 'Daredevil ed Elektra, 2003-2005' },
@@ -50,7 +51,7 @@ window.MARVEL_UNIVERSI = [
    UNITA' — cosa il sito conta come "un titolo"
    ============================================================
 
-   data.json ha 161 voci ma i titoli sono 156: un'unita' e' la stagione intera,
+   data.json ha 165 voci ma i titoli sono 160: un'unita' e' la stagione intera,
    non il blocco di episodi in cui e' spezzata. Agents of S.H.I.E.L.D. occupa 12
    voci per 7 stagioni, perche' quattro sono divise in due o tre blocchi
    affinche' un film si incastri a meta'.

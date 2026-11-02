@@ -150,6 +150,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -180,6 +183,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -211,7 +217,8 @@
     "universo": "terra-10005",
     "obbligatorio": true,
     "liste": [
-      "doomsday"
+      "doomsday",
+      "xmen"
     ],
     "fase": null
   },
@@ -244,7 +251,8 @@
     "universo": "terra-10005",
     "obbligatorio": true,
     "liste": [
-      "doomsday"
+      "doomsday",
+      "xmen"
     ],
     "fase": null
   },
@@ -276,6 +284,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -321,6 +332,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -366,6 +380,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -489,6 +506,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -534,6 +554,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -864,6 +887,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -1299,6 +1325,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -1377,6 +1406,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -1833,6 +1865,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "terra-10005",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -1894,13 +1929,14 @@
     "universo": "terra-616",
     "obbligatorio": true,
     "liste": [
-      "doomsday"
+      "doomsday",
+      "xmen"
     ],
     "fase": 5
   },
   {
     "id": 125,
-    "ordine": 141,
+    "ordine": 144,
     "titolo": "What If...?",
     "tipo": "Serie TV",
     "stagione": 3,
@@ -1915,7 +1951,7 @@
   },
   {
     "id": 126,
-    "ordine": 142,
+    "ordine": 145,
     "titolo": "Il tuo amichevole Spider-Man di quartiere",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1930,7 +1966,7 @@
   },
   {
     "id": 127,
-    "ordine": 143,
+    "ordine": 146,
     "titolo": "Captain America: Brave New World",
     "tipo": "Film",
     "stagione": null,
@@ -1948,7 +1984,7 @@
   },
   {
     "id": 128,
-    "ordine": 144,
+    "ordine": 147,
     "titolo": "Daredevil: Rinascita",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1963,7 +1999,7 @@
   },
   {
     "id": 129,
-    "ordine": 145,
+    "ordine": 148,
     "titolo": "Thunderbolts",
     "tipo": "Film",
     "stagione": null,
@@ -1981,7 +2017,7 @@
   },
   {
     "id": 130,
-    "ordine": 146,
+    "ordine": 149,
     "titolo": "Ironheart",
     "tipo": "Serie TV",
     "stagione": 1,
@@ -1996,7 +2032,7 @@
   },
   {
     "id": 131,
-    "ordine": 147,
+    "ordine": 150,
     "titolo": "The Fantastic Four: First Steps",
     "tipo": "Film",
     "stagione": null,
@@ -2014,7 +2050,7 @@
   },
   {
     "id": 132,
-    "ordine": 148,
+    "ordine": 151,
     "titolo": "Eyes of Wakanda",
     "tipo": "Miniserie",
     "stagione": null,
@@ -2029,7 +2065,7 @@
   },
   {
     "id": 133,
-    "ordine": 149,
+    "ordine": 152,
     "titolo": "Marvel Zombies",
     "tipo": "Miniserie",
     "stagione": null,
@@ -2044,7 +2080,7 @@
   },
   {
     "id": 134,
-    "ordine": 150,
+    "ordine": 153,
     "titolo": "Wonder Man",
     "tipo": "Miniserie",
     "stagione": null,
@@ -2059,7 +2095,7 @@
   },
   {
     "id": 135,
-    "ordine": 151,
+    "ordine": 154,
     "titolo": "Daredevil: Rinascita",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -2074,7 +2110,7 @@
   },
   {
     "id": 136,
-    "ordine": 152,
+    "ordine": 155,
     "titolo": "The Punisher: One Last Kill",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -2089,7 +2125,7 @@
   },
   {
     "id": 137,
-    "ordine": 153,
+    "ordine": 156,
     "titolo": "Spider-Man: Brand New Day",
     "tipo": "Film",
     "stagione": null,
@@ -2104,7 +2140,7 @@
   },
   {
     "id": 138,
-    "ordine": 154,
+    "ordine": 157,
     "titolo": "Avengers: Doomsday",
     "tipo": "Film",
     "stagione": null,
@@ -2119,12 +2155,12 @@
   },
   {
     "id": 139,
-    "ordine": 155,
+    "ordine": 158,
     "titolo": "VisionQuest",
     "tipo": "Serie TV",
     "stagione": 1,
     "episodi": null,
-    "uscita": "2026-10-14",
+    "uscita": "2026-10-13",
     "uscitaItalia": "2026-10-14",
     "uscitaRaw": null,
     "categoria": "MCU",
@@ -2134,7 +2170,7 @@
   },
   {
     "id": 140,
-    "ordine": 156,
+    "ordine": 159,
     "titolo": "Il tuo amichevole Spider-Man di quartiere",
     "tipo": "Serie TV",
     "stagione": 2,
@@ -2164,7 +2200,7 @@
   },
   {
     "id": 142,
-    "ordine": 159,
+    "ordine": 162,
     "titolo": "Avengers: Secret Wars",
     "tipo": "Film",
     "stagione": null,
@@ -2265,6 +2301,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "legion",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -2280,6 +2319,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "legion",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -2295,6 +2337,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "legion",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -2310,6 +2355,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "the-gifted",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -2325,6 +2373,9 @@
     "categoria": "X-Men (Fox)",
     "universo": "the-gifted",
     "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
     "fase": null
   },
   {
@@ -2404,7 +2455,7 @@
   },
   {
     "id": 158,
-    "ordine": 157,
+    "ordine": 160,
     "titolo": "Daredevil: Rinascita",
     "tipo": "Serie TV",
     "stagione": 3,
@@ -2419,7 +2470,7 @@
   },
   {
     "id": 159,
-    "ordine": 158,
+    "ordine": 161,
     "titolo": "Marvel Zombies: The Winter Soldier",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -2434,7 +2485,7 @@
   },
   {
     "id": 160,
-    "ordine": 160,
+    "ordine": 164,
     "titolo": "Marvel Zombies: The Fist of Khonshu",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -2449,7 +2500,7 @@
   },
   {
     "id": 161,
-    "ordine": 161,
+    "ordine": 165,
     "titolo": "Marvel Zombies: The Last Guardian",
     "tipo": "One Shot/Other",
     "stagione": null,
@@ -2459,6 +2510,75 @@
     "uscitaRaw": "Halloween 2029",
     "categoria": "MCU",
     "universo": "multiverso",
+    "obbligatorio": false,
+    "fase": null
+  },
+  {
+    "id": 162,
+    "ordine": 141,
+    "titolo": "X-Men '97",
+    "tipo": "Serie TV",
+    "stagione": 1,
+    "episodi": null,
+    "uscita": "2024-03-20",
+    "uscitaItalia": "2024-03-20",
+    "uscitaRaw": null,
+    "categoria": "MCU",
+    "universo": "terra-92131",
+    "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
+    "fase": null
+  },
+  {
+    "id": 163,
+    "ordine": 142,
+    "titolo": "X-Men '97",
+    "tipo": "Serie TV",
+    "stagione": 2,
+    "episodi": null,
+    "uscita": "2026-07-01",
+    "uscitaItalia": "2026-07-01",
+    "uscitaRaw": null,
+    "categoria": "MCU",
+    "universo": "terra-92131",
+    "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
+    "fase": null
+  },
+  {
+    "id": 164,
+    "ordine": 143,
+    "titolo": "X-Men '97",
+    "tipo": "Serie TV",
+    "stagione": 3,
+    "episodi": null,
+    "uscita": null,
+    "uscitaItalia": null,
+    "uscitaRaw": "2027",
+    "categoria": "MCU",
+    "universo": "terra-92131",
+    "obbligatorio": false,
+    "liste": [
+      "xmen"
+    ],
+    "fase": null
+  },
+  {
+    "id": 165,
+    "ordine": 163,
+    "titolo": "Zodiac",
+    "tipo": "Serie TV",
+    "stagione": 1,
+    "episodi": null,
+    "uscita": null,
+    "uscitaItalia": null,
+    "uscitaRaw": "2028",
+    "categoria": "MCU",
+    "universo": "terra-616",
     "obbligatorio": false,
     "fase": null
   }

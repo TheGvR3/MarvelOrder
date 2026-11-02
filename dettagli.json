@@ -6178,32 +6178,34 @@
     "annoNota": "Stimato: non ancora uscito, collocato dopo Spider-Man: Brand New Day."
   },
   "139": {
-    "ambientazione": null,
-    "annoAmbientazione": 2027,
+    "ambientazione": "Circa diciotto mesi dopo Agatha All Along: la Visione Bianca, che ha ritrovato i ricordi alla fine di WandaVision, vive nascosta dialogando con le intelligenze artificiali che porta nel suo codice. Quando sulla sua testa viene messa una taglia fugge insieme a un ragazzo misterioso che potrebbe essere suo figlio Tommy reincarnato",
+    "annoAmbientazione": 2028,
+    "annoStimato": true,
+    "annoNota": "Dedotto: la serie si colloca diciotto mesi dopo Agatha All Along (2026), quindi a cavallo fra 2027 e 2028; nessun anno e' detto a schermo.",
     "cast": [
       {
         "attore": "Paul Bettany",
-        "personaggio": "Vision"
+        "personaggio": "Visione"
       },
       {
         "attore": "James Spader",
         "personaggio": "Ultron"
       },
       {
-        "attore": "Todd Stashwick",
-        "personaggio": "Paladin"
+        "attore": "Ruaridh Mollica",
+        "personaggio": "Tommy Maximoff / Thomas Shepherd"
       },
       {
-        "attore": "T'Nia Miller",
-        "personaggio": "Jocasta"
+        "attore": "Todd Stashwick",
+        "personaggio": "Paul Denning / Paladin"
       },
       {
         "attore": "Emily Hampshire",
         "personaggio": "E.D.I.T.H."
       },
       {
-        "attore": "Orla Brady",
-        "personaggio": "F.R.I.D.A.Y."
+        "attore": "T'Nia Miller",
+        "personaggio": "Jo Carrington / Jocasta"
       }
     ],
     "prerequisiti": [
@@ -6225,9 +6227,7 @@
         "relazione": "prequel"
       }
     ],
-    "note": "TITOLO NON ANCORA USCITO (previsto per il 14 ottobre 2026): riportati solo cast e premessa annunciati da Marvel, cioe' la ricerca dei ricordi da parte della Visione Bianca. L'ambientazione resta a null; l'anno che compare e' una stima. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along. Dati provvisori.",
-    "annoStimato": true,
-    "annoNota": "Stimato: non ancora uscito, collocato dopo Agatha All Along."
+    "note": "Otto episodi su Disney+ dal 13 ottobre 2026 negli Stati Uniti (14 in Italia), finale il 10 novembre. Chiude la trilogia iniziata con WandaVision e proseguita con Agatha All Along: tornano anche J.A.R.V.I.S., F.R.I.D.A.Y. e altre IA della storia di Tony Stark."
   },
   "140": {
     "ambientazione": null,
@@ -7007,5 +7007,122 @@
     ],
     "sequelPrequel": [],
     "note": "TITOLO NON ANCORA USCITO (atteso per Halloween 2029): uno dei tre speciali animati annunciati al New York Comic Con dell'8 ottobre 2026, uno per Halloween dal 2027 al 2029. Il titolo indica i Guardiani della Galassia, ed e' annunciato come la conclusione di Marvel Zombies; trama e cast non sono stati annunciati. Dati provvisori."
+  },
+  "162": {
+    "ambientazione": "Negli anni Novanta, un anno dopo l'attentato in cui il Professor X e' stato quasi ucciso e portato via dagli Shi'ar: gli X-Men proseguono senza di lui, e Magneto eredita la guida della scuola",
+    "annoAmbientazione": 1997,
+    "annoStimato": true,
+    "annoNota": "Stimato: la serie riprende un anno dopo la fine di quella del 1992-1997, senza un anno detto a schermo.",
+    "cast": [
+      {
+        "attore": "Ray Chase",
+        "personaggio": "Scott Summers / Ciclope (voce)"
+      },
+      {
+        "attore": "Jennifer Hale",
+        "personaggio": "Jean Grey (voce)"
+      },
+      {
+        "attore": "Alison Sealy-Smith",
+        "personaggio": "Ororo Munroe / Tempesta (voce)"
+      },
+      {
+        "attore": "Cal Dodd",
+        "personaggio": "Logan / Wolverine (voce)"
+      },
+      {
+        "attore": "Lenore Zann",
+        "personaggio": "Rogue (voce)"
+      },
+      {
+        "attore": "Matthew Waterson",
+        "personaggio": "Erik Lehnsherr / Magneto (voce)"
+      }
+    ],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 163,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Seguito diretto di X-Men, la serie animata del 1992-1997, che in questa lista non c'e': si parte da dove quella finiva. Dieci episodi su Disney+ dal 20 marzo 2024. Universo a se', designato Terra-92131 dall'Official Handbook: nessun legame con i film Fox ne' con l'MCU."
+  },
+  "163": {
+    "ambientazione": "Gli X-Men, dispersi nel tempo dal finale della prima stagione fra l'antico Egitto e il futuro remoto, devono tornare negli anni Novanta per fermare Apocalisse",
+    "annoAmbientazione": 1997,
+    "annoStimato": true,
+    "annoNota": "Stimato: il presente della serie resta negli anni Novanta, con lunghe parti nel passato e nel futuro.",
+    "cast": [
+      {
+        "attore": "Ray Chase",
+        "personaggio": "Scott Summers / Ciclope (voce)"
+      },
+      {
+        "attore": "Jennifer Hale",
+        "personaggio": "Jean Grey (voce)"
+      },
+      {
+        "attore": "Alison Sealy-Smith",
+        "personaggio": "Ororo Munroe / Tempesta (voce)"
+      },
+      {
+        "attore": "Cal Dodd",
+        "personaggio": "Logan / Wolverine (voce)"
+      },
+      {
+        "attore": "Lenore Zann",
+        "personaggio": "Rogue (voce)"
+      },
+      {
+        "attore": "Chris Potter",
+        "personaggio": "Nathan Summers / Cable (voce)"
+      }
+    ],
+    "prerequisiti": [
+      162
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 162,
+        "relazione": "prequel"
+      },
+      {
+        "id": 164,
+        "relazione": "sequel"
+      }
+    ],
+    "note": "Seguito diretto di X-Men, la serie animata del 1992-1997, che in questa lista non c'e': si parte da dove quella finiva. Nove episodi su Disney+ dal 1 luglio al 12 agosto 2026."
+  },
+  "164": {
+    "ambientazione": null,
+    "annoAmbientazione": 1997,
+    "annoStimato": true,
+    "annoNota": "Stimato: non ancora uscita, collocata dopo la seconda stagione.",
+    "cast": [],
+    "prerequisiti": [
+      163
+    ],
+    "collegati": [],
+    "sequelPrequel": [
+      {
+        "id": 163,
+        "relazione": "prequel"
+      }
+    ],
+    "note": "TITOLO NON ANCORA USCITO (atteso nel 2027, nessuna data): al New York Comic Con dell'8 ottobre 2026 Marvel ha mostrato le prime immagini, con il ritorno della Confraternita dei mutanti e il matrimonio di Gambit e Rogue, e ha confermato che e' gia' prevista una quarta stagione. Cast non annunciato. Dati provvisori."
+  },
+  "165": {
+    "ambientazione": null,
+    "annoAmbientazione": 2029,
+    "annoStimato": true,
+    "annoNota": "Stimato: non ancora uscita, collocata dopo Avengers: Secret Wars.",
+    "cast": [],
+    "prerequisiti": [],
+    "collegati": [],
+    "sequelPrequel": [],
+    "note": "TITOLO NON ANCORA USCITO (atteso su Disney+ nel 2028): serie spionistica di Marvel Television annunciata al New York Comic Con dell'8 ottobre 2026, riprese a Londra dalla primavera 2027. Trama e cast non annunciati. Nei fumetti Zodiac e' l'organizzazione rivale dello S.H.I.E.L.D., ma Marvel non ha detto quale versione usera'. La collocazione nell'MCU non e' confermata ufficialmente (Yahoo la indica come Fase 7): Terra-616 e' una supposizione. Dati provvisori."
   }
 }

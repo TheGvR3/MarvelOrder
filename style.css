@@ -163,6 +163,8 @@ button{ font-family:inherit; }
 }
 .mode-btn:last-child{ border-right:none; }
 .mode-btn.is-active{ background:var(--red); color:#fff; }
+/* spente da un percorso con un ordine suo (la saga X-Men) */
+.mode-btn:disabled{ opacity:0.4; cursor:not-allowed; }
 .mode-num{
   font-family:var(--font-display);
   font-size:13px;
@@ -434,7 +436,6 @@ button{ font-family:inherit; }
   background:rgba(63,178,107,0.1);
   font-weight:700;
 }
-.filter-doomsday input{ accent-color:var(--green); }
 .badge-date{
   margin-left:auto;
   margin-left:auto;
